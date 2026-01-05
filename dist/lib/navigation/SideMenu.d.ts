@@ -3,7 +3,6 @@ export interface SideMenuItem {
     key: string;
     label: string;
     icon?: React.ReactNode;
-    path?: string;
     children?: SideMenuItem[];
     onClick?: (item: SideMenuItem) => void;
     hidden?: boolean;
@@ -13,6 +12,7 @@ export interface SideMenuProps {
     items: SideMenuItem[];
     bottomItems?: SideMenuItem[];
     logo?: React.ReactNode;
+    arrowIcon?: React.ReactNode;
     collapsed?: boolean;
     onToggle?: (collapsed: boolean) => void;
     selectedKey?: string | null;

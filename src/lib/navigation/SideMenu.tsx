@@ -6,7 +6,6 @@ export interface SideMenuItem {
   key: string;
   label: string;
   icon?: React.ReactNode;
-  path?: string;
   children?: SideMenuItem[];
   onClick?: (item: SideMenuItem) => void;
   hidden?: boolean;
@@ -17,6 +16,7 @@ export interface SideMenuProps {
   items: SideMenuItem[];
   bottomItems?: SideMenuItem[];
   logo?: React.ReactNode;
+  arrowIcon?: React.ReactNode;
   collapsed?: boolean;
   onToggle?: (collapsed: boolean) => void;
   selectedKey?: string | null;
@@ -32,6 +32,7 @@ const SideMenu: React.FC<SideMenuProps> = ({
   items,
   bottomItems = [],
   logo,
+  arrowIcon,
   collapsed: collapsedProp,
   onToggle,
   selectedKey: selectedKeyProp,
@@ -203,7 +204,7 @@ const SideMenu: React.FC<SideMenuProps> = ({
     >
       <TopSection>
         <ArrowButton onClick={handleToggle} aria-label="Переключить меню">
-          <ArrowIcon $collapsed={collapsed}>❮</ArrowIcon>
+          {arrowIcon ?? <ArrowIcon $collapsed={collapsed}>❮</ArrowIcon>}
         </ArrowButton>
         {!collapsed && logo && <LogoWrapper>{logo}</LogoWrapper>}
       </TopSection>
@@ -219,6 +220,7 @@ const SideMenu: React.FC<SideMenuProps> = ({
       </MenuList>
 
       {contextMenuContent}
+      <RightBorder $collapsed={collapsed} />
     </SideMenuContainer>
   );
 };
@@ -236,7 +238,7 @@ const SideMenuContainer = styled.div<{
   background-color: rgba(249, 250, 250, 1);
   color: rgba(80, 85, 92, 1);
   position: relative;
-  padding: 16px;
+  padding: 22px 17px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -249,7 +251,7 @@ const TopSection = styled.div`
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 16px;
+  margin-bottom: 28px;
 `;
 
 const ArrowButton = styled.button`
@@ -277,6 +279,7 @@ const MenuList = styled.div`
   flex-direction: column;
   gap: 4px;
   height: 100%;
+  width: 100%;
 `;
 
 const ScrollableArea = styled.div`
@@ -301,7 +304,7 @@ const MenuItem = styled.div<{
   display: flex;
   align-items: center;
   gap: ${({ $collapsed }) => ($collapsed ? "0" : "12px")};
-  padding: ${({ $collapsed }) => ($collapsed ? "10px 8px" : "10px 12px")};
+  padding: ${({ $collapsed }) => ($collapsed ? "15px 0" : "15px 17px")};
   border-radius: 8px;
   cursor: ${({ $disabled }) => ($disabled ? "not-allowed" : "pointer")};
   color: ${({ $selected }) => ($selected ? "#000" : "#50555c")};
@@ -327,13 +330,13 @@ const IconWrapper = styled.div<{ $collapsed: boolean }>`
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 20px;
-  width: ${({ $collapsed }) => ($collapsed ? "24px" : "20px")};
+  min-width: 21px;
+  width: ${({ $collapsed }) => ($collapsed ? "24px" : "21px")};
 `;
 
 const SubMenu = styled.div`
-  margin-left: 14px;
-  padding-left: 8px;
+  margin-left: 45px;
+  padding-left: 0;
   border-left: 1px solid rgba(209, 213, 219, 0.8);
   display: flex;
   flex-direction: column;
@@ -350,7 +353,7 @@ const Divider = styled.div`
   height: 1px;
   width: 100%;
   background-color: rgba(209, 213, 219, 1);
-  margin: 12px 0;
+  margin: 14px 0;
 `;
 
 const ContextMenu = styled.div`
@@ -379,4 +382,15 @@ const ContextMenuItem = styled.div<{ $selected?: boolean }>`
       $selected ? "rgba(209, 213, 219, 1)" : "rgba(209, 213, 219, 0.5)"};
     color: #000;
   }
+`;
+
+const RightBorder = styled.div<{ $collapsed: boolean }>`
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background-color: rgba(209, 213, 219, 1);
+  transition: all 0.3s ease;
+  opacity: ${({ $collapsed }) => ($collapsed ? 0 : 1)};
 `;

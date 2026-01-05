@@ -35,7 +35,7 @@ export { default as CustomTitle } from "./lib/inputs/CustomTitle";
 export { default as PhotoViewerModal } from "./lib/modal/PhotoViewerModal";
 export { default as AuthCallModal } from "./lib/modal/AuthCallModal";
 export { default as SideMenu } from "./lib/navigation/SideMenu";
-export type { SideMenuItem, SideMenuProps, } from "./lib/navigation/SideMenu";
+export type { SideMenuItem, SideMenuProps } from "./lib/navigation/SideMenu";
 export { SideMenuContext } from "./lib/context/SideMenuContext";
 export { default as CustomPhoneInput } from "./lib/inputs/CustomPhoneInput";
 export { initiateCallAuth, confirmCallAuth, type UserType, type InitiateCallAuthResponse, type ConfirmCallAuthResponse, } from "./lib/api/authCall";
