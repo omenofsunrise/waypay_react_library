@@ -40,7 +40,7 @@ export { default as CountInfoTitle } from "./lib/inputs/CountInfoTitle";
 export { default as InputTitle } from "./lib/inputs/InputTitle";
 export { default as ModalInfoTitle } from "./lib/inputs/ModalInfoTitle";
 export { default as ToggleSwitch } from "./lib/inputs/ToggleSwitch";
-export { default as RadioButton } from "./lib/inputs/RadioButton";
+export { default as RadioButton } from "./lib/buttons/RadioButton";
 export { ProgressBar } from "./lib/inputs/ProgressBar";
 export { default as YandexMapSelector } from "./lib/map/YandexMapSelector";
 export { default as ColumnChart } from "./lib/charts/ColumnChart";

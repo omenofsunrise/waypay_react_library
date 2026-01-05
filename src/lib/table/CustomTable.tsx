@@ -324,8 +324,8 @@ const CustomTable: React.FC<CreditsTableProps> = ({
             <TableBody $fixedHeight={fixedHeight}>
               <AnimatePresence>
                 {data.map((row, rowIndex) => {
-                  const isTotalsRow = hasTotalsRow && rowIndex === data.length - 1;
-                  const isDebtRow = !isTotalsRow && checkDebt(row);
+                  const isTotalsRow = Boolean(hasTotalsRow && rowIndex === data.length - 1);
+                  const isDebtRow = !!(!isTotalsRow && checkDebt(row));
                   const rowStyle = getRowStyle(rowIndex, isTotalsRow, isDebtRow);
                   const hoverBackgroundColor = getHoverBackgroundColor(rowIndex, isTotalsRow, isDebtRow);
 

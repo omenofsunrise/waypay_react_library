@@ -72,7 +72,6 @@ const YandexMapSelector: React.FC<YandexMapSelectorProps> = ({
   onError,
 }) => {
   const [mapInstance, setMapInstance] = useState<any>(null);
-  const [placemarkInstance, setPlacemarkInstance] = useState<any>(null);
   const [searchQuery, setSearchQuery] = useState(initialAddress);
   const [selectedAddress, setSelectedAddress] = useState(initialAddress);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -107,7 +106,6 @@ const YandexMapSelector: React.FC<YandexMapSelectorProps> = ({
         });
 
         setMapInstance(localMap);
-        setPlacemarkInstance(placemark);
         setIsLoaded(true);
       } catch (error) {
         if (onError && error instanceof Error) {
@@ -162,8 +160,6 @@ const YandexMapSelector: React.FC<YandexMapSelectorProps> = ({
         const newPlacemark = new window.ymaps.Placemark(coords, {}, { draggable: draggablePlacemark });
         mapInstance.geoObjects.removeAll();
         mapInstance.geoObjects.add(newPlacemark);
-
-        setPlacemarkInstance(newPlacemark);
 
         const address = firstGeoObject.getAddressLine();
         setSelectedAddress(address);

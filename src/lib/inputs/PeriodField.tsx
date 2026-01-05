@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, type ReactNode } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import CustomCalendar from './CustomCalendar';
 import BaseModal, { ModalHeader, ModalTitle } from '../modal/BaseModal';

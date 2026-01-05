@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
-import CalendarIcon from '../../assets/ui/calendar.svg?react';
+import calendarIcon from '../../assets/ui/calendar.svg';
 
 interface DateInputProps {
   prefix?: string;
@@ -112,7 +112,7 @@ const CustomCalendar: React.FC<DateInputProps> = ({ prefix = 'Дата:', value 
     for (let i = 0; i < startDay; i++) {
       const day = prevMonthLastDay - startDay + i + 1;
       const date = new Date(year, month - 1, day);
-      const isSelected = selectedDate && date.getDate() === selectedDate.getDate() && date.getMonth() === selectedDate.getMonth() && date.getFullYear() === selectedDate.getFullYear();
+      const isSelected = !!(selectedDate && date.getDate() === selectedDate.getDate() && date.getMonth() === selectedDate.getMonth() && date.getFullYear() === selectedDate.getFullYear());
 
       days.push(
         <Day key={`prev-${day}`} selected={isSelected} onClick={() => handleDateSelect(date)} otherMonth>
@@ -123,7 +123,7 @@ const CustomCalendar: React.FC<DateInputProps> = ({ prefix = 'Дата:', value 
 
     for (let i = 1; i <= daysInMonth; i++) {
       const date = new Date(year, month, i);
-      const isSelected = selectedDate && date.getDate() === selectedDate.getDate() && date.getMonth() === selectedDate.getMonth() && date.getFullYear() === selectedDate.getFullYear();
+      const isSelected = !!(selectedDate && date.getDate() === selectedDate.getDate() && date.getMonth() === selectedDate.getMonth() && date.getFullYear() === selectedDate.getFullYear());
 
       days.push(
         <Day key={`current-${i}`} selected={isSelected} onClick={() => handleDateSelect(date)}>
@@ -135,7 +135,7 @@ const CustomCalendar: React.FC<DateInputProps> = ({ prefix = 'Дата:', value 
     const remainingDays = totalDays - days.length;
     for (let i = 1; i <= remainingDays; i++) {
       const date = new Date(year, month + 1, i);
-      const isSelected = selectedDate && date.getDate() === selectedDate.getDate() && date.getMonth() === selectedDate.getMonth() && date.getFullYear() === selectedDate.getFullYear();
+      const isSelected = !!(selectedDate && date.getDate() === selectedDate.getDate() && date.getMonth() === selectedDate.getMonth() && date.getFullYear() === selectedDate.getFullYear());
 
       days.push(
         <Day key={`next-${i}`} selected={isSelected} onClick={() => handleDateSelect(date)} otherMonth>
@@ -191,7 +191,7 @@ const CustomCalendar: React.FC<DateInputProps> = ({ prefix = 'Дата:', value 
       <Field onClick={() => setIsPickerOpen(!isPickerOpen)}>
         {prefix && <Prefix>{prefix}</Prefix>}
         <DateText isEmpty={!selectedDate}>{formatDisplayDate()}</DateText>
-        <CalendarIcon className="ml-2" style={{ fontSize: '20px' }} />
+        <CalendarIconImage src={calendarIcon} alt="Календарь" />
       </Field>
 
       {isPickerOpen && (
@@ -327,6 +327,12 @@ const Prefix = styled.span`
 const DateText = styled.span<{ isEmpty: boolean }>`
   flex-grow: 1;
   color: ${({ isEmpty }) => (isEmpty ? 'rgba(80, 85, 92, 1)' : '#000')};
+`;
+
+const CalendarIconImage = styled.img`
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
 `;
 
 const CalendarPopup = styled.div`
