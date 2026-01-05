@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 
-type InputType = 'number' | 'text' | 'fullname' | 'doc' | 'date' | 'rubles' | 'percents';
+type InputType = 'number' | 'text' | 'fullname' | 'doc' | 'date' | 'rubles' | 'percents' | 'phone';
 
 interface CustomInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   placeholder?: string;
@@ -155,6 +155,13 @@ const CustomInput: React.FC<CustomInputProps> = ({
         onChange(e);
         break;
 
+      case 'phone': {
+        const formattedPhone = formatPhoneNumber(newValue);
+        e.target.value = formattedPhone;
+        onChange(e);
+        break;
+      }
+
       case 'doc':
         newValue = newValue.replace(/\D/g, '');
         if (newValue.length > 4) {
@@ -194,6 +201,32 @@ const CustomInput: React.FC<CustomInputProps> = ({
         onChange(e);
         break;
     }
+  };
+
+  const formatPhoneNumber = (phoneValue: string): string => {
+    const cleaned = phoneValue.replace(/\D/g, '');
+    const withPrefix = cleaned.startsWith('8') || cleaned.length === 0 ? cleaned : `8${cleaned}`;
+    const trimmed = withPrefix.slice(0, 11);
+
+    let formatted = '';
+
+    if (trimmed.length > 0) {
+      formatted += '8';
+    }
+    if (trimmed.length > 1) {
+      formatted += ` (${trimmed.slice(1, 4)}`;
+    }
+    if (trimmed.length > 4) {
+      formatted += `) ${trimmed.slice(4, 7)}`;
+    }
+    if (trimmed.length > 7) {
+      formatted += `-${trimmed.slice(7, 9)}`;
+    }
+    if (trimmed.length > 9) {
+      formatted += `-${trimmed.slice(9, 11)}`;
+    }
+
+    return formatted;
   };
 
   const countDigitsBeforePosition = (str: string, position: number): number => {

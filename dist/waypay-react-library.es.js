@@ -34,11 +34,11 @@ function Ne() {
         return a.$$typeof === B ? null : a.displayName || a.name || null;
       if (typeof a == "string") return a;
       switch (a) {
-        case L:
+        case l:
           return "Fragment";
-        case R:
+        case w:
           return "Profiler";
-        case k:
+        case R:
           return "StrictMode";
         case D:
           return "Suspense";
@@ -51,21 +51,21 @@ function Ne() {
         switch (typeof a.tag == "number" && console.error(
           "Received an unexpected object in getComponentNameFromType(). This is likely a bug in React. Please file an issue."
         ), a.$$typeof) {
-          case l:
+          case g:
             return "Portal";
-          case z:
-            return a.displayName || "Context";
           case E:
-            return (a._context.displayName || "Context") + ".Consumer";
+            return a.displayName || "Context";
           case I:
-            var $ = a.render;
-            return a = a.displayName, a || (a = $.displayName || $.name || "", a = a !== "" ? "ForwardRef(" + a + ")" : "ForwardRef"), a;
-          case S:
-            return $ = a.displayName || null, $ !== null ? $ : e(a.type) || "Memo";
+            return (a._context.displayName || "Context") + ".Consumer";
+          case z:
+            var M = a.render;
+            return a = a.displayName, a || (a = M.displayName || M.name || "", a = a !== "" ? "ForwardRef(" + a + ")" : "ForwardRef"), a;
+          case L:
+            return M = a.displayName || null, M !== null ? M : e(a.type) || "Memo";
           case F:
-            $ = a._payload, a = a._init;
+            M = a._payload, a = a._init;
             try {
-              return e(a($));
+              return e(a(M));
             } catch {
             }
         }
@@ -77,33 +77,33 @@ function Ne() {
     function s(a) {
       try {
         n(a);
-        var $ = !1;
+        var M = !1;
       } catch {
-        $ = !0;
+        M = !0;
       }
-      if ($) {
-        $ = console;
-        var T = $.error, O = typeof Symbol == "function" && Symbol.toStringTag && a[Symbol.toStringTag] || a.constructor.name || "Object";
+      if (M) {
+        M = console;
+        var T = M.error, O = typeof Symbol == "function" && Symbol.toStringTag && a[Symbol.toStringTag] || a.constructor.name || "Object";
         return T.call(
-          $,
+          M,
           "The provided key is an unsupported type %s. This value must be coerced to a string before using it here.",
           O
         ), n(a);
       }
     }
     function i(a) {
-      if (a === L) return "<>";
+      if (a === l) return "<>";
       if (typeof a == "object" && a !== null && a.$$typeof === F)
         return "<...>";
       try {
-        var $ = e(a);
-        return $ ? "<" + $ + ">" : "<...>";
+        var M = e(a);
+        return M ? "<" + M + ">" : "<...>";
       } catch {
         return "<...>";
       }
     }
     function r() {
-      var a = v.A;
+      var a = y.A;
       return a === null ? null : a.getOwner();
     }
     function c() {
@@ -111,16 +111,16 @@ function Ne() {
     }
     function p(a) {
       if (d.call(a, "key")) {
-        var $ = Object.getOwnPropertyDescriptor(a, "key").get;
-        if ($ && $.isReactWarning) return !1;
+        var M = Object.getOwnPropertyDescriptor(a, "key").get;
+        if (M && M.isReactWarning) return !1;
       }
       return a.key !== void 0;
     }
-    function f(a, $) {
+    function f(a, M) {
       function T() {
         _ || (_ = !0, console.error(
           "%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://react.dev/link/special-props)",
-          $
+          M
         ));
       }
       T.isReactWarning = !0, Object.defineProperty(a, "key", {
@@ -128,23 +128,23 @@ function Ne() {
         configurable: !0
       });
     }
-    function y() {
+    function k() {
       var a = e(this.type);
       return P[a] || (P[a] = !0, console.error(
         "Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release."
       )), a = this.props.ref, a !== void 0 ? a : null;
     }
-    function x(a, $, T, O, H, X) {
+    function h(a, M, T, O, H, X) {
       var N = T.ref;
       return a = {
-        $$typeof: u,
+        $$typeof: j,
         type: a,
-        key: $,
+        key: M,
         props: T,
         _owner: O
       }, (N !== void 0 ? N : null) !== null ? Object.defineProperty(a, "ref", {
         enumerable: !1,
-        get: y
+        get: k
       }) : Object.defineProperty(a, "ref", { enumerable: !1, value: null }), a._store = {}, Object.defineProperty(a._store, "validated", {
         configurable: !1,
         enumerable: !1,
@@ -167,25 +167,25 @@ function Ne() {
         value: X
       }), Object.freeze && (Object.freeze(a.props), Object.freeze(a)), a;
     }
-    function b(a, $, T, O, H, X) {
-      var N = $.children;
+    function b(a, M, T, O, H, X) {
+      var N = M.children;
       if (N !== void 0)
         if (O)
-          if (j(N)) {
+          if (C(N)) {
             for (O = 0; O < N.length; O++)
-              g(N[O]);
+              x(N[O]);
             Object.freeze && Object.freeze(N);
           } else
             console.error(
               "React.jsx: Static children should always be an array. You are likely explicitly calling React.jsxs or React.jsxDEV. Use the Babel transform instead."
             );
-        else g(N);
-      if (d.call($, "key")) {
+        else x(N);
+      if (d.call(M, "key")) {
         N = e(a);
-        var q = Object.keys($).filter(function(Ae) {
+        var q = Object.keys(M).filter(function(Ae) {
           return Ae !== "key";
         });
-        O = 0 < q.length ? "{key: someKey, " + q.join(": ..., ") + ": ...}" : "{key: someKey}", C[N + O] || (q = 0 < q.length ? "{" + q.join(": ..., ") + ": ...}" : "{}", console.error(
+        O = 0 < q.length ? "{key: someKey, " + q.join(": ..., ") + ": ...}" : "{key: someKey}", $[N + O] || (q = 0 < q.length ? "{" + q.join(": ..., ") + ": ...}" : "{}", console.error(
           `A props object containing a "key" prop is being spread into JSX:
   let props = %s;
   <%s {...props} />
@@ -196,17 +196,17 @@ React keys must be passed directly to JSX without using spread:
           N,
           q,
           N
-        ), C[N + O] = !0);
+        ), $[N + O] = !0);
       }
-      if (N = null, T !== void 0 && (s(T), N = "" + T), p($) && (s($.key), N = "" + $.key), "key" in $) {
+      if (N = null, T !== void 0 && (s(T), N = "" + T), p(M) && (s(M.key), N = "" + M.key), "key" in M) {
         T = {};
-        for (var ne in $)
-          ne !== "key" && (T[ne] = $[ne]);
-      } else T = $;
+        for (var ne in M)
+          ne !== "key" && (T[ne] = M[ne]);
+      } else T = M;
       return N && f(
         T,
         typeof a == "function" ? a.displayName || a.name || "Unknown" : a
-      ), x(
+      ), h(
         a,
         N,
         T,
@@ -215,43 +215,43 @@ React keys must be passed directly to JSX without using spread:
         X
       );
     }
-    function g(a) {
+    function x(a) {
       m(a) ? a._store && (a._store.validated = 1) : typeof a == "object" && a !== null && a.$$typeof === F && (a._payload.status === "fulfilled" ? m(a._payload.value) && a._payload.value._store && (a._payload.value._store.validated = 1) : a._store && (a._store.validated = 1));
     }
     function m(a) {
-      return typeof a == "object" && a !== null && a.$$typeof === u;
+      return typeof a == "object" && a !== null && a.$$typeof === j;
     }
-    var h = G, u = /* @__PURE__ */ Symbol.for("react.transitional.element"), l = /* @__PURE__ */ Symbol.for("react.portal"), L = /* @__PURE__ */ Symbol.for("react.fragment"), k = /* @__PURE__ */ Symbol.for("react.strict_mode"), R = /* @__PURE__ */ Symbol.for("react.profiler"), E = /* @__PURE__ */ Symbol.for("react.consumer"), z = /* @__PURE__ */ Symbol.for("react.context"), I = /* @__PURE__ */ Symbol.for("react.forward_ref"), D = /* @__PURE__ */ Symbol.for("react.suspense"), Y = /* @__PURE__ */ Symbol.for("react.suspense_list"), S = /* @__PURE__ */ Symbol.for("react.memo"), F = /* @__PURE__ */ Symbol.for("react.lazy"), W = /* @__PURE__ */ Symbol.for("react.activity"), B = /* @__PURE__ */ Symbol.for("react.client.reference"), v = h.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, d = Object.prototype.hasOwnProperty, j = Array.isArray, M = console.createTask ? console.createTask : function() {
+    var u = G, j = /* @__PURE__ */ Symbol.for("react.transitional.element"), g = /* @__PURE__ */ Symbol.for("react.portal"), l = /* @__PURE__ */ Symbol.for("react.fragment"), R = /* @__PURE__ */ Symbol.for("react.strict_mode"), w = /* @__PURE__ */ Symbol.for("react.profiler"), I = /* @__PURE__ */ Symbol.for("react.consumer"), E = /* @__PURE__ */ Symbol.for("react.context"), z = /* @__PURE__ */ Symbol.for("react.forward_ref"), D = /* @__PURE__ */ Symbol.for("react.suspense"), Y = /* @__PURE__ */ Symbol.for("react.suspense_list"), L = /* @__PURE__ */ Symbol.for("react.memo"), F = /* @__PURE__ */ Symbol.for("react.lazy"), W = /* @__PURE__ */ Symbol.for("react.activity"), B = /* @__PURE__ */ Symbol.for("react.client.reference"), y = u.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, d = Object.prototype.hasOwnProperty, C = Array.isArray, S = console.createTask ? console.createTask : function() {
       return null;
     };
-    h = {
+    u = {
       react_stack_bottom_frame: function(a) {
         return a();
       }
     };
-    var _, P = {}, V = h.react_stack_bottom_frame.bind(
-      h,
+    var _, P = {}, V = u.react_stack_bottom_frame.bind(
+      u,
       c
-    )(), w = M(i(c)), C = {};
-    ee.Fragment = L, ee.jsx = function(a, $, T) {
-      var O = 1e4 > v.recentlyCreatedOwnerStacks++;
+    )(), v = S(i(c)), $ = {};
+    ee.Fragment = l, ee.jsx = function(a, M, T) {
+      var O = 1e4 > y.recentlyCreatedOwnerStacks++;
       return b(
         a,
-        $,
+        M,
         T,
         !1,
         O ? Error("react-stack-top-frame") : V,
-        O ? M(i(a)) : w
+        O ? S(i(a)) : v
       );
-    }, ee.jsxs = function(a, $, T) {
-      var O = 1e4 > v.recentlyCreatedOwnerStacks++;
+    }, ee.jsxs = function(a, M, T) {
+      var O = 1e4 > y.recentlyCreatedOwnerStacks++;
       return b(
         a,
-        $,
+        M,
         T,
         !0,
         O ? Error("react-stack-top-frame") : V,
-        O ? M(i(a)) : w
+        O ? S(i(a)) : v
       );
     };
   })()), ee;
@@ -264,25 +264,25 @@ var t = He();
 const Te = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
   const c = Z(null), [p, f] = A(null);
   U(() => {
-    const h = (u) => {
-      c.current && !c.current.contains(u.target) && i();
+    const u = (j) => {
+      c.current && !c.current.contains(j.target) && i();
     };
-    return document.addEventListener("mousedown", h), () => {
-      document.removeEventListener("mousedown", h);
+    return document.addEventListener("mousedown", u), () => {
+      document.removeEventListener("mousedown", u);
     };
   }, [i]);
-  const x = (() => {
+  const h = (() => {
     if (!c.current) return { x: e, y: n };
-    const h = c.current.offsetWidth, u = c.current.offsetHeight, l = window.innerWidth, L = window.innerHeight;
-    let k = e, R = n;
-    return k + h > l && (k = e - h), R + u > L && (R = n - u), { x: k, y: R };
-  })(), b = (h, u) => {
-    h.submenu ? f(p === u ? null : u) : h.action && (h.action(), i());
-  }, g = (h) => {
-    s[h].submenu && f(h);
-  }, m = (h) => {
-    const u = h.relatedTarget;
-    c.current?.contains(u) || f(null);
+    const u = c.current.offsetWidth, j = c.current.offsetHeight, g = window.innerWidth, l = window.innerHeight;
+    let R = e, w = n;
+    return R + u > g && (R = e - u), w + j > l && (w = n - j), { x: R, y: w };
+  })(), b = (u, j) => {
+    u.submenu ? f(p === j ? null : j) : u.action && (u.action(), i());
+  }, x = (u) => {
+    s[u].submenu && f(u);
+  }, m = (u) => {
+    const j = u.relatedTarget;
+    c.current?.contains(j) || f(null);
   };
   return /* @__PURE__ */ t.jsx(
     Ve,
@@ -294,41 +294,41 @@ const Te = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
       transition: { duration: 0.15 },
       style: {
         position: "absolute",
-        top: x.y,
-        left: x.x
+        top: h.y,
+        left: h.x
       },
-      onClick: (h) => h.stopPropagation(),
+      onClick: (u) => u.stopPropagation(),
       onMouseLeave: m,
       ...r,
-      children: s.map((h, u) => /* @__PURE__ */ t.jsxs(Ze, { $hasSubmenu: !!h.submenu, $disabled: h.disabled, children: [
+      children: s.map((u, j) => /* @__PURE__ */ t.jsxs(Ze, { $hasSubmenu: !!u.submenu, $disabled: u.disabled, children: [
         /* @__PURE__ */ t.jsx(
           Ue,
           {
-            onClick: (l) => {
-              l.stopPropagation(), h.disabled || b(h, u);
+            onClick: (g) => {
+              g.stopPropagation(), u.disabled || b(u, j);
             },
-            onMouseEnter: () => !h.disabled && g(u),
-            whileHover: h.disabled ? {} : { backgroundColor: "#f3f4f6" },
+            onMouseEnter: () => !u.disabled && x(j),
+            whileHover: u.disabled ? {} : { backgroundColor: "#f3f4f6" },
             initial: { backgroundColor: "#ffffff" },
-            $color: h.color,
-            $disabled: h.disabled,
+            $color: u.color,
+            $disabled: u.disabled,
             children: /* @__PURE__ */ t.jsxs(Xe, { children: [
-              h.label,
-              h.submenu && /* @__PURE__ */ t.jsx(Ge, { children: /* @__PURE__ */ t.jsx("svg", { width: "8", height: "12", viewBox: "0 0 8 12", fill: "none", children: /* @__PURE__ */ t.jsx("path", { d: "M1.5 1.5L6 6L1.5 10.5", stroke: "currentColor", strokeWidth: "2" }) }) })
+              u.label,
+              u.submenu && /* @__PURE__ */ t.jsx(Ge, { children: /* @__PURE__ */ t.jsx("svg", { width: "8", height: "12", viewBox: "0 0 8 12", fill: "none", children: /* @__PURE__ */ t.jsx("path", { d: "M1.5 1.5L6 6L1.5 10.5", stroke: "currentColor", strokeWidth: "2" }) }) })
             ] })
           }
         ),
-        h.submenu && p === u && /* @__PURE__ */ t.jsx(
+        u.submenu && p === j && /* @__PURE__ */ t.jsx(
           qe,
           {
             initial: { opacity: 0, x: 10 },
             animate: { opacity: 1, x: 0 },
             exit: { opacity: 0, x: 10 },
             transition: { duration: 0.15 },
-            children: /* @__PURE__ */ t.jsx(Te, { x: 0, y: -u * 40, items: h.submenu, onClose: () => f(null) })
+            children: /* @__PURE__ */ t.jsx(Te, { x: 0, y: -j * 40, items: u.submenu, onClose: () => f(null) })
           }
         )
-      ] }, u))
+      ] }, j))
     }
   );
 }, Ve = o(K.div)`
@@ -374,82 +374,82 @@ const Te = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
   sortConfig: c,
   onRowClick: p,
   selectedRow: f,
-  fixedHeight: y,
-  hasTotalsRow: x,
+  fixedHeight: k,
+  hasTotalsRow: h,
   debtChecker: b,
-  rowStyles: g = {},
+  rowStyles: x = {},
   isLoading: m
 }) => {
-  const [h, u] = A(null), [l, L] = A(null), k = Z(null), R = Z(null), E = 500, z = f !== void 0 ? f : h, I = (w) => {
-    !e[w].isSortable || !r || r(w);
-  }, Y = b || ((w) => {
-    const C = w[8];
-    return typeof C == "string" ? parseFloat(C.replace(/[^\d.]/g, "")) > 0 : !1;
-  }), S = (w) => {
-    f === void 0 && u(w === z ? null : w), p && p(n[w], w);
-  }, F = (w, C) => {
-    s && s(w, C);
-  }, W = (w, C) => {
+  const [u, j] = A(null), [g, l] = A(null), R = Z(null), w = Z(null), I = 500, E = f !== void 0 ? f : u, z = (v) => {
+    !e[v].isSortable || !r || r(v);
+  }, Y = b || ((v) => {
+    const $ = v[8];
+    return typeof $ == "string" ? parseFloat($.replace(/[^\d.]/g, "")) > 0 : !1;
+  }), L = (v) => {
+    f === void 0 && j(v === E ? null : v), p && p(n[v], v);
+  }, F = (v, $) => {
+    s && s(v, $);
+  }, W = (v, $) => {
     if (i.length === 0) return;
-    w.preventDefault();
-    const a = "touches" in w ? w.touches[0].clientX : w.clientX, $ = "touches" in w ? w.touches[0].clientY : w.clientY;
-    L({
+    v.preventDefault();
+    const a = "touches" in v ? v.touches[0].clientX : v.clientX, M = "touches" in v ? v.touches[0].clientY : v.clientY;
+    l({
       x: a,
-      y: $,
-      rowIndex: C
+      y: M,
+      rowIndex: $
     });
-  }, B = (w, C) => {
-    w.preventDefault(), W(w, C);
-  }, v = (w, C) => {
-    i.length !== 0 && (R.current && clearTimeout(R.current), R.current = window.setTimeout(() => {
-      W(w, C);
-    }, E));
+  }, B = (v, $) => {
+    v.preventDefault(), W(v, $);
+  }, y = (v, $) => {
+    i.length !== 0 && (w.current && clearTimeout(w.current), w.current = window.setTimeout(() => {
+      W(v, $);
+    }, I));
   }, d = () => {
-    R.current && (clearTimeout(R.current), R.current = null);
-  }, j = () => {
-    R.current && window.clearTimeout(R.current);
-  }, M = () => {
-    L(null);
+    w.current && (clearTimeout(w.current), w.current = null);
+  }, C = () => {
+    w.current && window.clearTimeout(w.current);
+  }, S = () => {
+    l(null);
   };
   U(() => {
-    const w = () => {
-      l && M();
+    const v = () => {
+      g && S();
     };
-    return document.addEventListener("click", w), () => {
-      document.removeEventListener("click", w), R.current && clearTimeout(R.current);
+    return document.addEventListener("click", v), () => {
+      document.removeEventListener("click", v), w.current && clearTimeout(w.current);
     };
-  }, [l]);
-  const _ = (w, C, a) => {
-    if (C)
+  }, [g]);
+  const _ = (v, $, a) => {
+    if ($)
       return { backgroundColor: "#FFFFFF", color: "#000000", fontWeight: "bold" };
-    const $ = g[w] || {};
-    return w === z ? {
-      backgroundColor: $.backgroundColor || "#007D88",
-      color: $.color || "#FFFFFF",
-      fontWeight: $.fontWeight || "normal"
+    const M = x[v] || {};
+    return v === E ? {
+      backgroundColor: M.backgroundColor || "#007D88",
+      color: M.color || "#FFFFFF",
+      fontWeight: M.fontWeight || "normal"
     } : a ? {
-      backgroundColor: $.backgroundColor || "#E8D8D8",
-      color: $.color || "inherit",
-      fontWeight: $.fontWeight || "normal"
-    } : n[w][n[w].length - 1] === !1 ? {
-      backgroundColor: $.backgroundColor || "#E8F5E8",
+      backgroundColor: M.backgroundColor || "#E8D8D8",
+      color: M.color || "inherit",
+      fontWeight: M.fontWeight || "normal"
+    } : n[v][n[v].length - 1] === !1 ? {
+      backgroundColor: M.backgroundColor || "#E8F5E8",
       color: "#1B5E20",
-      fontWeight: $.fontWeight || "normal"
+      fontWeight: M.fontWeight || "normal"
     } : {
-      backgroundColor: $.backgroundColor || "#FFFFFF",
-      color: $.color || "inherit",
-      fontWeight: $.fontWeight || "normal"
+      backgroundColor: M.backgroundColor || "#FFFFFF",
+      color: M.color || "inherit",
+      fontWeight: M.fontWeight || "normal"
     };
-  }, P = (w, C, a) => {
-    if (C) return "#FFFFFF";
-    const $ = _(w, C, a);
-    return $.hoverBackgroundColor ? $.hoverBackgroundColor : w === z ? "#007D88" : a ? "#E8D8D8CC" : n[w][n[w].length - 1] === !1 ? "#51D5B4CC" : "#F3F4F6";
+  }, P = (v, $, a) => {
+    if ($) return "#FFFFFF";
+    const M = _(v, $, a);
+    return M.hoverBackgroundColor ? M.hoverBackgroundColor : v === E ? "#007D88" : a ? "#E8D8D8CC" : n[v][n[v].length - 1] === !1 ? "#51D5B4CC" : "#F3F4F6";
   }, V = () => {
-    if (!l || i.length === 0) return null;
-    const w = (typeof i == "function" ? i(n[l.rowIndex]) : i).filter(
-      (C) => typeof C == "object" && (typeof C.shouldShow != "function" || C.shouldShow(n[l.rowIndex]))
+    if (!g || i.length === 0) return null;
+    const v = (typeof i == "function" ? i(n[g.rowIndex]) : i).filter(
+      ($) => typeof $ == "object" && (typeof $.shouldShow != "function" || $.shouldShow(n[g.rowIndex]))
     );
-    return w.length === 0 ? null : /* @__PURE__ */ t.jsx(
+    return v.length === 0 ? null : /* @__PURE__ */ t.jsx(
       tt,
       {
         initial: { opacity: 0, scale: 0.95 },
@@ -458,25 +458,25 @@ const Te = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
         transition: { duration: 0.15 },
         style: {
           position: "fixed",
-          left: l.x,
-          top: l.y,
+          left: g.x,
+          top: g.y,
           zIndex: 1e3
         },
-        onClick: (C) => C.stopPropagation(),
+        onClick: ($) => $.stopPropagation(),
         children: /* @__PURE__ */ t.jsx(
           Te,
           {
-            items: w.map((C) => {
+            items: v.map(($) => {
               const a = {
-                label: C.label,
-                color: C.color,
-                disabled: C.disabled
+                label: $.label,
+                color: $.color,
+                disabled: $.disabled
               };
-              return C.getSubmenu ? a.submenu = C.getSubmenu(n[l.rowIndex]) : C.action && (a.action = () => {
-                C.action(n[l.rowIndex], l.rowIndex), M();
+              return $.getSubmenu ? a.submenu = $.getSubmenu(n[g.rowIndex]) : $.action && (a.action = () => {
+                $.action(n[g.rowIndex], g.rowIndex), S();
               }), a;
             }),
-            onClose: M,
+            onClose: S,
             x: 0,
             y: 0
           }
@@ -484,27 +484,27 @@ const Te = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
       }
     );
   };
-  return /* @__PURE__ */ t.jsx(Qe, { ref: k, children: m ? /* @__PURE__ */ t.jsx(Je, { children: /* @__PURE__ */ t.jsx(Ke, {}) }) : /* @__PURE__ */ t.jsxs(t.Fragment, { children: [
+  return /* @__PURE__ */ t.jsx(Qe, { ref: R, children: m ? /* @__PURE__ */ t.jsx(Je, { children: /* @__PURE__ */ t.jsx(Ke, {}) }) : /* @__PURE__ */ t.jsxs(t.Fragment, { children: [
     /* @__PURE__ */ t.jsxs(et, { children: [
       /* @__PURE__ */ t.jsx(ot, { children: /* @__PURE__ */ t.jsx(he, { children: e.map(
-        (w, C) => !w.isHidden && /* @__PURE__ */ t.jsx(
+        (v, $) => !v.isHidden && /* @__PURE__ */ t.jsx(
           rt,
           {
-            $isSortable: w.isSortable,
-            $isActive: c?.key === C,
-            onClick: () => I(C),
-            $align: w.align || "center",
-            $isFirst: C === 0,
-            $isLast: C === e.length - 1,
-            children: /* @__PURE__ */ t.jsxs(it, { $align: w.align || "center", children: [
-              w.name,
-              w.isSortable && /* @__PURE__ */ t.jsx(
+            $isSortable: v.isSortable,
+            $isActive: c?.key === $,
+            onClick: () => z($),
+            $align: v.align || "center",
+            $isFirst: $ === 0,
+            $isLast: $ === e.length - 1,
+            children: /* @__PURE__ */ t.jsxs(it, { $align: v.align || "center", children: [
+              v.name,
+              v.isSortable && /* @__PURE__ */ t.jsx(
                 st,
                 {
-                  $direction: c?.key === C ? c.direction : "asc",
+                  $direction: c?.key === $ ? c.direction : "asc",
                   animate: {
-                    rotate: c?.key === C && c.direction === "desc" ? 180 : 0,
-                    color: c?.key === C ? "#007D88" : "#6B7280"
+                    rotate: c?.key === $ && c.direction === "desc" ? 180 : 0,
+                    color: c?.key === $ ? "#007D88" : "#6B7280"
                   },
                   transition: { duration: 0.2 },
                   children: /* @__PURE__ */ t.jsx("svg", { width: "12", height: "12", viewBox: "0 0 12 12", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ t.jsx(
@@ -518,11 +518,11 @@ const Te = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
               )
             ] })
           },
-          C
+          $
         )
       ) }) }),
-      /* @__PURE__ */ t.jsx(nt, { $fixedHeight: y, children: /* @__PURE__ */ t.jsx(ce, { children: n.map((w, C) => {
-        const a = !!(x && C === n.length - 1), $ = !!(!a && Y(w)), T = _(C, a, $), O = P(C, a, $);
+      /* @__PURE__ */ t.jsx(nt, { $fixedHeight: k, children: /* @__PURE__ */ t.jsx(ce, { children: n.map((v, $) => {
+        const a = !!(h && $ === n.length - 1), M = !!(!a && Y(v)), T = _($, a, M), O = P($, a, M);
         return /* @__PURE__ */ t.jsx(
           he,
           {
@@ -536,15 +536,15 @@ const Te = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
             },
             exit: { opacity: 0, y: 10 },
             transition: { duration: 0.2, ease: "easeOut" },
-            $isLast: C === n.length - 1,
-            $isSelected: C === z,
+            $isLast: $ === n.length - 1,
+            $isSelected: $ === E,
             $isTotalsRow: a,
-            onClick: () => !a && S(C),
-            onDoubleClick: () => !a && F(w, C),
-            onContextMenu: (H) => !a && B(H, C),
-            onTouchStart: (H) => !a && v(H, C),
+            onClick: () => !a && L($),
+            onDoubleClick: () => !a && F(v, $),
+            onContextMenu: (H) => !a && B(H, $),
+            onTouchStart: (H) => !a && y(H, $),
             onTouchEnd: d,
-            onTouchMove: j,
+            onTouchMove: C,
             whileHover: a ? {} : {
               backgroundColor: O,
               transition: { duration: 0.15 }
@@ -554,22 +554,22 @@ const Te = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
               color: T.color || "inherit",
               fontWeight: T.fontWeight || "normal"
             },
-            children: w.map(
+            children: v.map(
               (H, X) => !e[X]?.isHidden && /* @__PURE__ */ t.jsx(
                 at,
                 {
                   $align: e[X]?.align || "center",
                   $isFirst: X === 0,
-                  $isLast: X === w.length - 1,
+                  $isLast: X === v.length - 1,
                   $isTotalsCell: a,
-                  $isBeforeTotals: a && X < w.findIndex((N) => N === "Итого:"),
+                  $isBeforeTotals: a && X < v.findIndex((N) => N === "Итого:"),
                   children: H
                 },
                 X
               )
             )
           },
-          `row-${C}`
+          `row-${$}`
         );
       }) }) })
     ] }),
@@ -773,8 +773,8 @@ const Te = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
   disabledBg: c = "rgba(102, 177, 184, 1)",
   textColor: p = "white",
   fullWidth: f = !1,
-  minWidth: y,
-  ...x
+  minWidth: k,
+  ...h
 }) => /* @__PURE__ */ t.jsxs(
   ut,
   {
@@ -784,8 +784,8 @@ const Te = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
     $disabledBg: c,
     $textColor: p,
     $fullWidth: f,
-    $minWidth: y,
-    ...x,
+    $minWidth: k,
+    ...h,
     children: [
       n && /* @__PURE__ */ t.jsx(ht, { children: n }),
       /* @__PURE__ */ t.jsx("span", { children: e })
@@ -930,8 +930,8 @@ const Te = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
     if (s)
       try {
         await s();
-      } catch (y) {
-        console.error("Export error:", y);
+      } catch (k) {
+        console.error("Export error:", k);
       }
     c.onClick && c.onClick(f);
   };
@@ -1010,50 +1010,50 @@ const Te = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
   errorMessage: c,
   options: p,
   name: f,
-  disabled: y = !1,
-  required: x = !1,
+  disabled: k = !1,
+  required: h = !1,
   ...b
 }) => {
-  const [g, m] = G.useState(!1), [h, u] = G.useState(!1), l = G.useRef(null), L = !!(n && !s && !g), k = (D) => {
-    i && !y && i({
+  const [x, m] = G.useState(!1), [u, j] = G.useState(!1), g = G.useRef(null), l = !!(n && !s && !x), R = (D) => {
+    i && !k && i({
       target: { value: D, name: f }
-    }), u(!1), m(!1);
-  }, R = (D) => {
-    l.current && !l.current.contains(D.target) && (u(!1), m(!1));
-  }, E = () => {
-    y || (u(!h), m(!h));
+    }), j(!1), m(!1);
+  }, w = (D) => {
+    g.current && !g.current.contains(D.target) && (j(!1), m(!1));
+  }, I = () => {
+    k || (j(!u), m(!u));
   };
-  G.useEffect(() => (document.addEventListener("mousedown", R), () => {
-    document.removeEventListener("mousedown", R);
+  G.useEffect(() => (document.addEventListener("mousedown", w), () => {
+    document.removeEventListener("mousedown", w);
   }), []);
-  const z = p.find((D) => D.value === s), I = z ? z.label : "";
-  return /* @__PURE__ */ t.jsxs(vt, { ref: l, ...b, children: [
+  const E = p.find((D) => D.value === s), z = E ? E.label : "";
+  return /* @__PURE__ */ t.jsxs(vt, { ref: g, ...b, children: [
     /* @__PURE__ */ t.jsxs(yt, { children: [
       /* @__PURE__ */ t.jsxs(
         kt,
         {
           hasError: r,
-          isOpen: h,
-          disabled: y,
-          onClick: E,
-          onFocus: () => !y && m(!0),
+          isOpen: u,
+          disabled: k,
+          onClick: I,
+          onFocus: () => !k && m(!0),
           onBlur: () => m(!1),
-          tabIndex: y ? -1 : 0,
+          tabIndex: k ? -1 : 0,
           children: [
-            /* @__PURE__ */ t.jsx(jt, { children: I || e && /* @__PURE__ */ t.jsx(Ct, { children: e }) }),
-            /* @__PURE__ */ t.jsx($t, { isOpen: h, disabled: y, children: /* @__PURE__ */ t.jsx("svg", { width: "17", height: "9", viewBox: "0 0 17 9", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ t.jsx("path", { d: "M1.5 1L8.5 8L15.5 1", stroke: y ? "#CCCCCC" : "#50555C", strokeWidth: "1.5", strokeLinecap: "round", strokeLinejoin: "round" }) }) })
+            /* @__PURE__ */ t.jsx(jt, { children: z || e && /* @__PURE__ */ t.jsx(Ct, { children: e }) }),
+            /* @__PURE__ */ t.jsx($t, { isOpen: u, disabled: k, children: /* @__PURE__ */ t.jsx("svg", { width: "17", height: "9", viewBox: "0 0 17 9", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ t.jsx("path", { d: "M1.5 1L8.5 8L15.5 1", stroke: k ? "#CCCCCC" : "#50555C", strokeWidth: "1.5", strokeLinecap: "round", strokeLinejoin: "round" }) }) })
           ]
         }
       ),
-      h && /* @__PURE__ */ t.jsx(Mt, { children: p.map((D) => /* @__PURE__ */ t.jsxs(St, { $isSelected: D.value === s, onClick: () => k(D.value), children: [
+      u && /* @__PURE__ */ t.jsx(Mt, { children: p.map((D) => /* @__PURE__ */ t.jsxs(St, { $isSelected: D.value === s, onClick: () => R(D.value), children: [
         /* @__PURE__ */ t.jsx(Lt, { $isSelected: D.value === s, children: D.value === s && /* @__PURE__ */ t.jsx(Tt, {}) }),
         /* @__PURE__ */ t.jsx(Dt, { children: D.label })
       ] }, D.value)) })
     ] }),
-    n && /* @__PURE__ */ t.jsx(Et, { isVisible: L, children: n }),
+    n && /* @__PURE__ */ t.jsx(Et, { isVisible: l, children: n }),
     r && c && /* @__PURE__ */ t.jsx(Pt, { children: c }),
     /* @__PURE__ */ t.jsx(Rt, { name: f, value: s || "", onChange: () => {
-    }, tabIndex: -1, required: x, children: p.map((D) => /* @__PURE__ */ t.jsx("option", { value: D.value, children: D.label }, D.value)) })
+    }, tabIndex: -1, required: h, children: p.map((D) => /* @__PURE__ */ t.jsx("option", { value: D.value, children: D.label }, D.value)) })
   ] });
 }, vt = o.div`
   position: relative;
@@ -1183,10 +1183,10 @@ const Te = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
 `, bi = ({ checked: e = !1, onChange: n, className: s, label: i, disabled: r = !1 }) => {
   const [c, p] = A(!1), f = () => {
     r || !n || n(!e);
-  }, y = (x) => {
-    r || (x.key === "Enter" || x.key === " ") && (x.preventDefault(), f());
+  }, k = (h) => {
+    r || (h.key === "Enter" || h.key === " ") && (h.preventDefault(), f());
   };
-  return /* @__PURE__ */ t.jsxs(It, { className: s, onClick: f, onKeyPress: y, tabIndex: r ? -1 : 0, disabled: r, children: [
+  return /* @__PURE__ */ t.jsxs(It, { className: s, onClick: f, onKeyPress: k, tabIndex: r ? -1 : 0, disabled: r, children: [
     /* @__PURE__ */ t.jsx(
       zt,
       {
@@ -1238,10 +1238,10 @@ const Te = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
   height: 8px;
   opacity: ${(e) => e.disabled ? 0.6 : 1};
 `, Bt = "data:image/svg+xml,%3csvg%20width='18'%20height='18'%20viewBox='0%200%2018%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M14.625%202.8125H3.375C2.44302%202.8125%201.6875%203.56802%201.6875%204.5V14.625C1.6875%2015.557%202.44302%2016.3125%203.375%2016.3125H14.625C15.557%2016.3125%2016.3125%2015.557%2016.3125%2014.625V4.5C16.3125%203.56802%2015.557%202.8125%2014.625%202.8125Z'%20stroke='%2350555C'%20stroke-linejoin='round'/%3e%3cpath%20d='M10.4062%209C10.8722%209%2011.25%208.62224%2011.25%208.15625C11.25%207.69026%2010.8722%207.3125%2010.4062%207.3125C9.94026%207.3125%209.5625%207.69026%209.5625%208.15625C9.5625%208.62224%209.94026%209%2010.4062%209Z'%20fill='%2350555C'/%3e%3cpath%20d='M13.2188%209C13.6847%209%2014.0625%208.62224%2014.0625%208.15625C14.0625%207.69026%2013.6847%207.3125%2013.2188%207.3125C12.7528%207.3125%2012.375%207.69026%2012.375%208.15625C12.375%208.62224%2012.7528%209%2013.2188%209Z'%20fill='%2350555C'/%3e%3cpath%20d='M10.4062%2011.8125C10.8722%2011.8125%2011.25%2011.4347%2011.25%2010.9688C11.25%2010.5028%2010.8722%2010.125%2010.4062%2010.125C9.94026%2010.125%209.5625%2010.5028%209.5625%2010.9688C9.5625%2011.4347%209.94026%2011.8125%2010.4062%2011.8125Z'%20fill='%2350555C'/%3e%3cpath%20d='M13.2188%2011.8125C13.6847%2011.8125%2014.0625%2011.4347%2014.0625%2010.9688C14.0625%2010.5028%2013.6847%2010.125%2013.2188%2010.125C12.7528%2010.125%2012.375%2010.5028%2012.375%2010.9688C12.375%2011.4347%2012.7528%2011.8125%2013.2188%2011.8125Z'%20fill='%2350555C'/%3e%3cpath%20d='M4.78125%2011.8125C5.24724%2011.8125%205.625%2011.4347%205.625%2010.9688C5.625%2010.5028%205.24724%2010.125%204.78125%2010.125C4.31526%2010.125%203.9375%2010.5028%203.9375%2010.9688C3.9375%2011.4347%204.31526%2011.8125%204.78125%2011.8125Z'%20fill='%2350555C'/%3e%3cpath%20d='M7.59375%2011.8125C8.05974%2011.8125%208.4375%2011.4347%208.4375%2010.9688C8.4375%2010.5028%208.05974%2010.125%207.59375%2010.125C7.12776%2010.125%206.75%2010.5028%206.75%2010.9688C6.75%2011.4347%207.12776%2011.8125%207.59375%2011.8125Z'%20fill='%2350555C'/%3e%3cpath%20d='M4.78125%2014.625C5.24724%2014.625%205.625%2014.2472%205.625%2013.7812C5.625%2013.3153%205.24724%2012.9375%204.78125%2012.9375C4.31526%2012.9375%203.9375%2013.3153%203.9375%2013.7812C3.9375%2014.2472%204.31526%2014.625%204.78125%2014.625Z'%20fill='%2350555C'/%3e%3cpath%20d='M7.59375%2014.625C8.05974%2014.625%208.4375%2014.2472%208.4375%2013.7812C8.4375%2013.3153%208.05974%2012.9375%207.59375%2012.9375C7.12776%2012.9375%206.75%2013.3153%206.75%2013.7812C6.75%2014.2472%207.12776%2014.625%207.59375%2014.625Z'%20fill='%2350555C'/%3e%3cpath%20d='M10.4062%2014.625C10.8722%2014.625%2011.25%2014.2472%2011.25%2013.7812C11.25%2013.3153%2010.8722%2012.9375%2010.4062%2012.9375C9.94026%2012.9375%209.5625%2013.3153%209.5625%2013.7812C9.5625%2014.2472%209.94026%2014.625%2010.4062%2014.625Z'%20fill='%2350555C'/%3e%3cpath%20d='M4.5%201.6875V2.8125M13.5%201.6875V2.8125'%20stroke='%2350555C'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M16.3125%205.625H1.6875'%20stroke='%2350555C'%20stroke-linejoin='round'/%3e%3c/svg%3e", xe = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"], _t = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"], ge = ({ prefix: e = "Дата:", value: n = "", placeholder: s = "Выберите дату", onChange: i, onReset: r }) => {
-  const [c, p] = A(!1), [f, y] = A(/* @__PURE__ */ new Date()), [x, b] = A(n ? new Date(n) : null), [g, m] = A(!1), [h, u] = A(!1), l = Z(null), L = Z(null), k = Z(null);
+  const [c, p] = A(!1), [f, k] = A(/* @__PURE__ */ new Date()), [h, b] = A(n ? new Date(n) : null), [x, m] = A(!1), [u, j] = A(!1), g = Z(null), l = Z(null), R = Z(null);
   U(() => {
-    const d = (j) => {
-      l.current && !l.current.contains(j.target) && p(!1), L.current && !L.current.contains(j.target) && m(!1), k.current && !k.current.contains(j.target) && u(!1);
+    const d = (C) => {
+      g.current && !g.current.contains(C.target) && p(!1), l.current && !l.current.contains(C.target) && m(!1), R.current && !R.current.contains(C.target) && j(!1);
     };
     return document.addEventListener("mousedown", d), () => {
       document.removeEventListener("mousedown", d);
@@ -1249,67 +1249,67 @@ const Te = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
   }, []), U(() => {
     b(n ? new Date(n) : null);
   }, [n]);
-  const R = (d) => {
-    const j = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+  const w = (d) => {
+    const C = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
     b(d);
-    const M = j.toISOString().split("T")[0];
-    i?.(M), p(!1);
-  }, E = () => {
+    const S = C.toISOString().split("T")[0];
+    i?.(S), p(!1);
+  }, I = () => {
     const d = /* @__PURE__ */ new Date();
-    y(d);
-    const M = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate())).toISOString().split("T")[0];
-    i?.(M), p(!1);
-  }, z = () => {
+    k(d);
+    const S = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate())).toISOString().split("T")[0];
+    i?.(S), p(!1);
+  }, E = () => {
     b(null), i?.(""), r?.(), p(!1);
-  }, I = (d) => {
-    const j = new Date(f);
-    j.setMonth(d), y(j), m(!1);
+  }, z = (d) => {
+    const C = new Date(f);
+    C.setMonth(d), k(C), m(!1);
   }, D = (d) => {
-    const j = new Date(f);
-    j.setFullYear(d), y(j), u(!1);
+    const C = new Date(f);
+    C.setFullYear(d), k(C), j(!1);
   }, Y = () => {
-    const d = f.getFullYear(), j = f.getMonth(), M = new Date(d, j, 1), P = new Date(d, j + 1, 0).getDate(), V = M.getDay() === 0 ? 6 : M.getDay() - 1, w = [], C = 35, a = new Date(d, j, 0).getDate();
+    const d = f.getFullYear(), C = f.getMonth(), S = new Date(d, C, 1), P = new Date(d, C + 1, 0).getDate(), V = S.getDay() === 0 ? 6 : S.getDay() - 1, v = [], $ = 35, a = new Date(d, C, 0).getDate();
     for (let T = 0; T < V; T++) {
-      const O = a - V + T + 1, H = new Date(d, j - 1, O), X = !!(x && H.getDate() === x.getDate() && H.getMonth() === x.getMonth() && H.getFullYear() === x.getFullYear());
-      w.push(
-        /* @__PURE__ */ t.jsx(re, { selected: X, onClick: () => R(H), otherMonth: !0, children: O }, `prev-${O}`)
+      const O = a - V + T + 1, H = new Date(d, C - 1, O), X = !!(h && H.getDate() === h.getDate() && H.getMonth() === h.getMonth() && H.getFullYear() === h.getFullYear());
+      v.push(
+        /* @__PURE__ */ t.jsx(re, { selected: X, onClick: () => w(H), otherMonth: !0, children: O }, `prev-${O}`)
       );
     }
     for (let T = 1; T <= P; T++) {
-      const O = new Date(d, j, T), H = !!(x && O.getDate() === x.getDate() && O.getMonth() === x.getMonth() && O.getFullYear() === x.getFullYear());
-      w.push(
-        /* @__PURE__ */ t.jsx(re, { selected: H, onClick: () => R(O), children: T }, `current-${T}`)
+      const O = new Date(d, C, T), H = !!(h && O.getDate() === h.getDate() && O.getMonth() === h.getMonth() && O.getFullYear() === h.getFullYear());
+      v.push(
+        /* @__PURE__ */ t.jsx(re, { selected: H, onClick: () => w(O), children: T }, `current-${T}`)
       );
     }
-    const $ = C - w.length;
-    for (let T = 1; T <= $; T++) {
-      const O = new Date(d, j + 1, T), H = !!(x && O.getDate() === x.getDate() && O.getMonth() === x.getMonth() && O.getFullYear() === x.getFullYear());
-      w.push(
-        /* @__PURE__ */ t.jsx(re, { selected: H, onClick: () => R(O), otherMonth: !0, children: T }, `next-${T}`)
+    const M = $ - v.length;
+    for (let T = 1; T <= M; T++) {
+      const O = new Date(d, C + 1, T), H = !!(h && O.getDate() === h.getDate() && O.getMonth() === h.getMonth() && O.getFullYear() === h.getFullYear());
+      v.push(
+        /* @__PURE__ */ t.jsx(re, { selected: H, onClick: () => w(O), otherMonth: !0, children: T }, `next-${T}`)
       );
     }
-    return w;
-  }, S = () => x ? x.toLocaleDateString("ru-RU", {
+    return v;
+  }, L = () => h ? h.toLocaleDateString("ru-RU", {
     day: "2-digit",
     month: "2-digit",
     year: "numeric"
   }) : s, F = () => {
-    const d = (/* @__PURE__ */ new Date()).getFullYear(), j = [];
-    for (let M = d - 10; M <= d + 10; M++)
-      j.push(M);
-    return j;
+    const d = (/* @__PURE__ */ new Date()).getFullYear(), C = [];
+    for (let S = d - 10; S <= d + 10; S++)
+      C.push(S);
+    return C;
   }, W = (d) => {
-    d.preventDefault(), d.stopPropagation(), m(!g), u(!1);
+    d.preventDefault(), d.stopPropagation(), m(!x), j(!1);
   }, B = (d) => {
-    d.preventDefault(), d.stopPropagation(), u(!h), m(!1);
-  }, v = (d) => {
-    const j = d === "next" ? 1 : -1, M = new Date(f);
-    M.setMonth(M.getMonth() + j), y(M);
+    d.preventDefault(), d.stopPropagation(), j(!u), m(!1);
+  }, y = (d) => {
+    const C = d === "next" ? 1 : -1, S = new Date(f);
+    S.setMonth(S.getMonth() + C), k(S);
   };
-  return /* @__PURE__ */ t.jsxs(Ot, { ref: l, children: [
+  return /* @__PURE__ */ t.jsxs(Ot, { ref: g, children: [
     /* @__PURE__ */ t.jsxs(Yt, { onClick: () => p(!c), children: [
       e && /* @__PURE__ */ t.jsx(Wt, { children: e }),
-      /* @__PURE__ */ t.jsx(Nt, { isEmpty: !x, children: S() }),
+      /* @__PURE__ */ t.jsx(Nt, { isEmpty: !h, children: L() }),
       /* @__PURE__ */ t.jsx(Ht, { src: Bt, alt: "Календарь" })
     ] }),
     c && /* @__PURE__ */ t.jsxs(Vt, { className: "calendar-container", children: [
@@ -1318,41 +1318,41 @@ const Te = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
           we,
           {
             onClick: (d) => {
-              d.preventDefault(), d.stopPropagation(), v("prev");
+              d.preventDefault(), d.stopPropagation(), y("prev");
             },
             onMouseDown: (d) => d.preventDefault(),
             children: /* @__PURE__ */ t.jsx(ve, { direction: "right" })
           }
         ),
         /* @__PURE__ */ t.jsxs(Ut, { children: [
-          /* @__PURE__ */ t.jsxs(qt, { ref: L, children: [
+          /* @__PURE__ */ t.jsxs(qt, { ref: l, children: [
             /* @__PURE__ */ t.jsxs(Xt, { onClick: (d) => W(d), onMouseDown: (d) => d.preventDefault(), children: [
               xe[f.getMonth()],
-              /* @__PURE__ */ t.jsx(fe, { $open: g })
+              /* @__PURE__ */ t.jsx(fe, { $open: x })
             ] }),
-            g && /* @__PURE__ */ t.jsx(be, { $width: 120, onClick: (d) => d.stopPropagation(), children: xe.map((d, j) => /* @__PURE__ */ t.jsx(
+            x && /* @__PURE__ */ t.jsx(be, { $width: 120, onClick: (d) => d.stopPropagation(), children: xe.map((d, C) => /* @__PURE__ */ t.jsx(
               me,
               {
-                $selected: j === f.getMonth(),
-                onClick: (M) => {
-                  M.stopPropagation(), I(j);
+                $selected: C === f.getMonth(),
+                onClick: (S) => {
+                  S.stopPropagation(), z(C);
                 },
                 children: d
               },
               d
             )) })
           ] }),
-          /* @__PURE__ */ t.jsxs(Jt, { ref: k, children: [
+          /* @__PURE__ */ t.jsxs(Jt, { ref: R, children: [
             /* @__PURE__ */ t.jsxs(Gt, { onClick: (d) => B(d), onMouseDown: (d) => d.preventDefault(), children: [
               f.getFullYear(),
-              /* @__PURE__ */ t.jsx(fe, { $open: h })
+              /* @__PURE__ */ t.jsx(fe, { $open: u })
             ] }),
-            h && /* @__PURE__ */ t.jsx(be, { $width: 80, onClick: (d) => d.stopPropagation(), children: F().map((d) => /* @__PURE__ */ t.jsx(
+            u && /* @__PURE__ */ t.jsx(be, { $width: 80, onClick: (d) => d.stopPropagation(), children: F().map((d) => /* @__PURE__ */ t.jsx(
               me,
               {
                 $selected: d === f.getFullYear(),
-                onClick: (j) => {
-                  j.stopPropagation(), D(d);
+                onClick: (C) => {
+                  C.stopPropagation(), D(d);
                 },
                 children: d
               },
@@ -1364,7 +1364,7 @@ const Te = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
           we,
           {
             onClick: (d) => {
-              d.preventDefault(), d.stopPropagation(), v("next");
+              d.preventDefault(), d.stopPropagation(), y("next");
             },
             onMouseDown: (d) => d.preventDefault(),
             children: /* @__PURE__ */ t.jsx(ve, { direction: "left" })
@@ -1374,8 +1374,8 @@ const Te = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
       /* @__PURE__ */ t.jsx(Kt, { children: _t.map((d) => /* @__PURE__ */ t.jsx(Qt, { children: d }, d)) }),
       /* @__PURE__ */ t.jsx(eo, { children: Y() }),
       /* @__PURE__ */ t.jsxs(to, { children: [
-        /* @__PURE__ */ t.jsx(ye, { onClick: z, children: "Удалить" }),
-        /* @__PURE__ */ t.jsx(ye, { onClick: E, children: "Сегодня" })
+        /* @__PURE__ */ t.jsx(ye, { onClick: E, children: "Удалить" }),
+        /* @__PURE__ */ t.jsx(ye, { onClick: I, children: "Сегодня" })
       ] })
     ] })
   ] });
@@ -1590,81 +1590,90 @@ const Te = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
   errorMessage: p,
   ...f
 }) => {
-  const [y, x] = G.useState(!1), b = !!(n && !s && !y), g = (u) => {
+  const [k, h] = G.useState(!1), b = !!(n && !s && !k), x = (g) => {
     if (!r) return;
-    let l = u.target.value;
+    let l = g.target.value;
     switch (i) {
       case "number":
-        /^\d*$/.test(l) && r?.(u);
+        /^\d*$/.test(l) && r?.(g);
         break;
       case "rubles": {
-        const k = u.target.selectionStart, R = u.target.value;
-        let E = R.replace(/[^\d]/g, "");
+        const w = g.target.selectionStart, I = g.target.value;
+        let E = I.replace(/[^\d]/g, "");
         if (E === "") {
-          u.target.value = "", r(u);
+          g.target.value = "", r(g);
           break;
         }
         const z = parseInt(E, 10);
         if (!isNaN(z)) {
-          let I = z.toLocaleString("ru-RU");
-          I += " ₽";
-          const D = m(R, k || 0), Y = h(I, D);
-          u.target.value = I, r(u), setTimeout(() => {
-            u.target.setSelectionRange(Y, Y);
+          let D = z.toLocaleString("ru-RU");
+          D += " ₽";
+          const Y = u(I, w || 0), L = j(D, Y);
+          g.target.value = D, r(g), setTimeout(() => {
+            g.target.setSelectionRange(L, L);
           }, 0);
         }
         break;
       }
       case "percents": {
         l = l.replace(/[^\d.]/g, "");
-        const k = l.split(".");
-        k.length > 2 && (l = k[0] + "." + k.slice(1).join("")), k.length === 2 && k[1].length > 2 && (l = k[0] + "." + k[1].slice(0, 2));
-        const R = parseFloat(l);
-        if (isNaN(R) || (R > 100 ? l = "100" : R < 0 && (l = "0")), l && l !== "") {
+        const w = l.split(".");
+        w.length > 2 && (l = w[0] + "." + w.slice(1).join("")), w.length === 2 && w[1].length > 2 && (l = w[0] + "." + w[1].slice(0, 2));
+        const I = parseFloat(l);
+        if (isNaN(I) || (I > 100 ? l = "100" : I < 0 && (l = "0")), l && l !== "") {
           l += " %";
-          const E = u.target.selectionStart || 0, z = l.replace(" %", "");
-          u.target.value = l, r(u), setTimeout(() => {
-            E < z.length && u.target.setSelectionRange(E, E);
+          const E = g.target.selectionStart || 0, z = l.replace(" %", "");
+          g.target.value = l, r(g), setTimeout(() => {
+            E < z.length && g.target.setSelectionRange(E, E);
           }, 0);
         } else
-          u.target.value = l, r(u);
+          g.target.value = l, r(g);
         break;
       }
       case "fullname":
         l = l.replace(/[^a-zA-Zа-яА-ЯёЁ'\-\s]/g, ""), l = l.replace(/\s{2,}/g, " "), l = l.replace(/- /g, "-"), l = l.replace(/ -/g, " ");
-        let L = l.split(" ").filter((k) => k.length > 0);
-        L = L.slice(0, 3), l = L.map((k) => {
-          if (k.startsWith("-") && (k = k.substring(1)), (k.match(/-/g) || []).length > 1) {
-            const E = k.split("-");
-            k = E[0] + "-" + E.slice(1).join("");
+        let R = l.split(" ").filter((w) => w.length > 0);
+        R = R.slice(0, 3), l = R.map((w) => {
+          if (w.startsWith("-") && (w = w.substring(1)), (w.match(/-/g) || []).length > 1) {
+            const E = w.split("-");
+            w = E[0] + "-" + E.slice(1).join("");
           }
-          return k.includes("-") ? k.split("-").map((E, z) => E.length === 0 ? "" : (z > 0, E[0].toUpperCase() + E.slice(1).toLowerCase())).join("-") : k.length > 0 ? k[0].toUpperCase() + k.slice(1).toLowerCase() : "";
-        }).join(" "), l.length > 0 && l[l.length - 1] !== " " && u.target.value.length > 0 && u.target.value[u.target.value.length - 1] === " " && (l += " "), l.length > 100 && (l = l.slice(0, 100)), u.target.value = l, r(u);
+          return w.includes("-") ? w.split("-").map((E, z) => E.length === 0 ? "" : (z > 0, E[0].toUpperCase() + E.slice(1).toLowerCase())).join("-") : w.length > 0 ? w[0].toUpperCase() + w.slice(1).toLowerCase() : "";
+        }).join(" "), l.length > 0 && l[l.length - 1] !== " " && g.target.value.length > 0 && g.target.value[g.target.value.length - 1] === " " && (l += " "), l.length > 100 && (l = l.slice(0, 100)), g.target.value = l, r(g);
         break;
+      case "phone": {
+        const w = m(l);
+        g.target.value = w, r(g);
+        break;
+      }
       case "doc":
-        l = l.replace(/\D/g, ""), l.length > 4 && (l = `${l.slice(0, 4)} ${l.slice(4, 10)}`), l.length > 11 && (l = l.slice(0, 11)), u.target.value = l, r(u);
+        l = l.replace(/\D/g, ""), l.length > 4 && (l = `${l.slice(0, 4)} ${l.slice(4, 10)}`), l.length > 11 && (l = l.slice(0, 11)), g.target.value = l, r(g);
         break;
       case "date": {
-        l = l.replace(/\D/g, ""), l.length > 4 ? l = `${l.slice(0, 2)}.${l.slice(2, 4)}.${l.slice(4, 8)}` : l.length > 2 && (l = `${l.slice(0, 2)}.${l.slice(2, 4)}`), l.length > 10 && (l = l.slice(0, 10)), s?.length > l.length && [3, 6].includes(l.length) && (l = l.slice(0, l.length - 1)), u.target.value = l, r(u);
+        l = l.replace(/\D/g, ""), l.length > 4 ? l = `${l.slice(0, 2)}.${l.slice(2, 4)}.${l.slice(4, 8)}` : l.length > 2 && (l = `${l.slice(0, 2)}.${l.slice(2, 4)}`), l.length > 10 && (l = l.slice(0, 10)), s?.length > l.length && [3, 6].includes(l.length) && (l = l.slice(0, l.length - 1)), g.target.value = l, r(g);
         break;
       }
       default:
-        r(u);
+        r(g);
         break;
     }
-  }, m = (u, l) => {
-    let L = 0;
-    for (let k = 0; k < Math.min(l, u.length); k++)
-      /\d/.test(u[k]) && L++;
-    return L;
-  }, h = (u, l) => {
-    let L = 0;
-    for (let k = 0; k < u.length; k++) {
-      if (L >= l)
-        return k;
-      /\d/.test(u[k]) && L++;
+  }, m = (g) => {
+    const l = g.replace(/\D/g, ""), w = (l.startsWith("8") || l.length === 0 ? l : `8${l}`).slice(0, 11);
+    let I = "";
+    return w.length > 0 && (I += "8"), w.length > 1 && (I += ` (${w.slice(1, 4)}`), w.length > 4 && (I += `) ${w.slice(4, 7)}`), w.length > 7 && (I += `-${w.slice(7, 9)}`), w.length > 9 && (I += `-${w.slice(9, 11)}`), I;
+  }, u = (g, l) => {
+    let R = 0;
+    for (let w = 0; w < Math.min(l, g.length); w++)
+      /\d/.test(g[w]) && R++;
+    return R;
+  }, j = (g, l) => {
+    let R = 0;
+    for (let w = 0; w < g.length; w++) {
+      if (R >= l)
+        return w;
+      /\d/.test(g[w]) && R++;
     }
-    return u.length;
+    return g.length;
   };
   return /* @__PURE__ */ t.jsxs(no, { children: [
     /* @__PURE__ */ t.jsx(
@@ -1673,11 +1682,11 @@ const Te = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
         ...f,
         value: s,
         placeholder: b ? "" : e,
-        onFocus: () => x(!0),
-        onBlur: (u) => {
-          x(!1), f.onBlur?.(u);
+        onFocus: () => h(!0),
+        onBlur: (g) => {
+          h(!1), f.onBlur?.(g);
         },
-        onChange: g,
+        onChange: x,
         inputMode: i === "number" || i === "doc" || i === "date" || i === "rubles" || i === "percents" ? "numeric" : "text",
         maxLength: i === "doc" ? 11 : i === "date" ? 10 : void 0,
         hasError: c
@@ -1738,28 +1747,28 @@ const Te = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
   margin-top: 4px;
   display: block;
 `, mi = ({ total: e, current: n = 1, onChange: s, itemsPerPage: i = 10 }) => {
-  const r = Math.ceil(e / i), [c, p] = A(n), f = (x) => {
-    x < 1 || x > r || x === c || (p(x), s?.(x));
-  }, y = () => {
-    const x = [];
-    let g = 1, m = r;
+  const r = Math.ceil(e / i), [c, p] = A(n), f = (h) => {
+    h < 1 || h > r || h === c || (p(h), s?.(h));
+  }, k = () => {
+    const h = [];
+    let x = 1, m = r;
     if (r > 5) {
-      const h = Math.floor(2.5);
-      g = Math.max(c - h, 1), m = Math.min(c + h, r), c <= h + 1 ? m = 5 : c >= r - h && (g = r - 5 + 1);
+      const u = Math.floor(2.5);
+      x = Math.max(c - u, 1), m = Math.min(c + u, r), c <= u + 1 ? m = 5 : c >= r - u && (x = r - 5 + 1);
     }
-    for (let h = g; h <= m; h++)
-      x.push(
-        /* @__PURE__ */ t.jsx(te, { active: h === c, onClick: () => f(h), children: h }, h)
+    for (let u = x; u <= m; u++)
+      h.push(
+        /* @__PURE__ */ t.jsx(te, { active: u === c, onClick: () => f(u), children: u }, u)
       );
-    return g > 1 && (g > 2 && x.unshift(/* @__PURE__ */ t.jsx(te, { children: "..." }, "start-ellipsis")), x.unshift(
+    return x > 1 && (x > 2 && h.unshift(/* @__PURE__ */ t.jsx(te, { children: "..." }, "start-ellipsis")), h.unshift(
       /* @__PURE__ */ t.jsx(te, { active: c === 1, onClick: () => f(1), children: "1" }, 1)
-    )), m < r && (m < r - 1 && x.push(/* @__PURE__ */ t.jsx(te, { children: "..." }, "end-ellipsis")), x.push(
+    )), m < r && (m < r - 1 && h.push(/* @__PURE__ */ t.jsx(te, { children: "..." }, "end-ellipsis")), h.push(
       /* @__PURE__ */ t.jsx(te, { active: r === c, onClick: () => f(r), children: r }, r)
-    )), x;
+    )), h;
   };
   return /* @__PURE__ */ t.jsxs(ao, { children: [
     /* @__PURE__ */ t.jsx(ke, { disabled: c === 1, onClick: () => f(c - 1), children: /* @__PURE__ */ t.jsx("svg", { width: "7", height: "11", viewBox: "0 0 7 11", fill: "none", children: /* @__PURE__ */ t.jsx("path", { d: "M6 0.5L1 5.5L6 10.5", stroke: c === 1 ? "#ccc" : "black", strokeLinecap: "round", strokeLinejoin: "round" }) }) }),
-    y(),
+    k(),
     /* @__PURE__ */ t.jsx(ke, { disabled: c === r, onClick: () => f(c + 1), style: { transform: "rotate(180deg)" }, children: /* @__PURE__ */ t.jsx("svg", { width: "7", height: "11", viewBox: "0 0 7 11", fill: "none", children: /* @__PURE__ */ t.jsx("path", { d: "M6 0.5L1 5.5L6 10.5", stroke: c === r ? "#ccc" : "black", strokeLinecap: "round", strokeLinejoin: "round" }) }) })
   ] });
 }, ao = o.div`
@@ -1813,7 +1822,7 @@ const Te = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
   rows: p = 3,
   ...f
 }) => {
-  const [y, x] = G.useState(!1), b = !!(n && !s && !y);
+  const [k, h] = G.useState(!1), b = !!(n && !s && !k);
   return /* @__PURE__ */ t.jsxs(lo, { children: [
     /* @__PURE__ */ t.jsx(
       co,
@@ -1821,9 +1830,9 @@ const Te = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
         ...f,
         value: s,
         placeholder: b ? "" : e,
-        onFocus: () => x(!0),
-        onBlur: (g) => {
-          x(!1), f.onBlur?.(g);
+        onFocus: () => h(!0),
+        onBlur: (x) => {
+          h(!1), f.onBlur?.(x);
         },
         onChange: i,
         hasError: r,
@@ -1892,31 +1901,31 @@ const Te = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
   isSaveDisabled: c = !1,
   isSubmitting: p = !1,
   mode: f = "create",
-  hideSaveButton: y = !1,
-  hideCanselButton: x = !1,
+  hideSaveButton: k = !1,
+  hideCanselButton: h = !1,
   width: b = "562px",
-  saveButtonText: g = "Сохранить",
+  saveButtonText: x = "Сохранить",
   customLayout: m
 }) => {
-  const h = f === "view", u = Z(null), l = (L) => {
-    L.preventDefault(), s();
+  const u = f === "view", j = Z(null), g = (l) => {
+    l.preventDefault(), s();
   };
   return U(() => {
-    const L = (k) => {
-      k.key === "Escape" && n();
+    const l = (R) => {
+      R.key === "Escape" && n();
     };
-    return document.addEventListener("keydown", L), () => {
-      document.removeEventListener("keydown", L);
+    return document.addEventListener("keydown", l), () => {
+      document.removeEventListener("keydown", l);
     };
-  }, [n]), /* @__PURE__ */ t.jsx(xo, { children: /* @__PURE__ */ t.jsxs(go, { width: b, ref: u, children: [
+  }, [n]), /* @__PURE__ */ t.jsx(xo, { children: /* @__PURE__ */ t.jsxs(go, { width: b, ref: j, children: [
     /* @__PURE__ */ t.jsx(bo, { onClick: n, children: "×" }),
     /* @__PURE__ */ t.jsx(Ee, { children: /* @__PURE__ */ t.jsx(Pe, { children: e }) }),
     /* @__PURE__ */ t.jsx("div", { className: "modal-body", children: m }),
     /* @__PURE__ */ t.jsxs(fo, { onSubmit: i, children: [
       /* @__PURE__ */ t.jsx(mo, { children: r }),
       /* @__PURE__ */ t.jsxs(wo, { children: [
-        !x && /* @__PURE__ */ t.jsx(vo, { onClick: l, children: "Отменить" }),
-        !h && !y && /* @__PURE__ */ t.jsx(pt, { style: { minWidth: "136px", padding: "10p 20px", borderRadius: "10px", fontSize: "16px" }, type: "submit", disabled: c || p, children: p ? "Сохранение..." : g || "Сохранить" })
+        !h && /* @__PURE__ */ t.jsx(vo, { onClick: g, children: "Отменить" }),
+        !u && !k && /* @__PURE__ */ t.jsx(pt, { style: { minWidth: "136px", padding: "10p 20px", borderRadius: "10px", fontSize: "16px" }, type: "submit", disabled: c || p, children: p ? "Сохранение..." : x || "Сохранить" })
       ] })
     ] })
   ] }) });
@@ -2013,69 +2022,69 @@ const Te = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
   onChange: r,
   onCustomPeriodClick: c
 }) => {
-  const [p, f] = A(!1), [y, x] = A(!1), [b, g] = A(""), [m, h] = A(""), [u, l] = A(""), L = Z(null), k = Z(null);
+  const [p, f] = A(!1), [k, h] = A(!1), [b, x] = A(""), [m, u] = A(""), [j, g] = A(""), l = Z(null), R = Z(null);
   U(() => {
-    if (e === "Custom" && m && u) {
-      const S = D(m), F = D(u);
-      g(`С ${S} по ${F}`);
+    if (e === "Custom" && m && j) {
+      const L = D(m), F = D(j);
+      x(`С ${L} по ${F}`);
     } else {
-      const S = s.find((F) => F.value === e);
-      g(S ? S.label : "");
+      const L = s.find((F) => F.value === e);
+      x(L ? L.label : "");
     }
-  }, [e, s, m, u]), U(() => {
-    const S = (F) => {
-      L.current && !L.current.contains(F.target) && f(!1), y && k.current && !k.current.contains(F.target) && ([...document.querySelectorAll(".calendar-container, .arrow-button")].some((v) => v.contains(F.target)) || x(!1));
+  }, [e, s, m, j]), U(() => {
+    const L = (F) => {
+      l.current && !l.current.contains(F.target) && f(!1), k && R.current && !R.current.contains(F.target) && ([...document.querySelectorAll(".calendar-container, .arrow-button")].some((y) => y.contains(F.target)) || h(!1));
     };
-    return document.addEventListener("mousedown", S), () => {
-      document.removeEventListener("mousedown", S);
+    return document.addEventListener("mousedown", L), () => {
+      document.removeEventListener("mousedown", L);
     };
-  }, [y]);
-  const R = (S) => {
-    r?.(S.value), f(!1);
-  }, E = () => {
-    f(!1), c ? c() : x(!0);
-  }, z = () => {
-    r?.(""), g(""), h(""), l("");
+  }, [k]);
+  const w = (L) => {
+    r?.(L.value), f(!1);
   }, I = () => {
-    if (m && u) {
-      const S = D(m), F = D(u), W = `С ${S} по ${F}`;
-      r?.("Custom", m, u), g(W), x(!1);
+    f(!1), c ? c() : h(!0);
+  }, E = () => {
+    r?.(""), x(""), u(""), g("");
+  }, z = () => {
+    if (m && j) {
+      const L = D(m), F = D(j), W = `С ${L} по ${F}`;
+      r?.("Custom", m, j), x(W), h(!1);
     }
-  }, D = (S) => {
-    const F = new Date(S), W = String(F.getDate()).padStart(2, "0"), B = String(F.getMonth() + 1).padStart(2, "0"), v = F.getFullYear();
-    return `${W}.${B}.${v}`;
+  }, D = (L) => {
+    const F = new Date(L), W = String(F.getDate()).padStart(2, "0"), B = String(F.getMonth() + 1).padStart(2, "0"), y = F.getFullYear();
+    return `${W}.${B}.${y}`;
   }, Y = () => /* @__PURE__ */ t.jsxs(Ro, { children: [
     /* @__PURE__ */ t.jsx(Ee, { style: { margin: 0 }, children: /* @__PURE__ */ t.jsx(Pe, { style: { margin: 0 }, children: "Выбор периода" }) }),
-    /* @__PURE__ */ t.jsx(Io, { onClick: z, children: "Очистить период" })
+    /* @__PURE__ */ t.jsx(Io, { onClick: E, children: "Очистить период" })
   ] });
   return /* @__PURE__ */ t.jsxs(t.Fragment, { children: [
-    /* @__PURE__ */ t.jsxs(ko, { ref: L, children: [
+    /* @__PURE__ */ t.jsxs(ko, { ref: l, children: [
       /* @__PURE__ */ t.jsxs(jo, { onClick: () => f(!p), children: [
         /* @__PURE__ */ t.jsx(Co, { children: b || n }),
         /* @__PURE__ */ t.jsx($o, { $isOpen: p, children: "▼" })
       ] }),
       p && /* @__PURE__ */ t.jsxs(Mo, { children: [
-        s.map((S) => /* @__PURE__ */ t.jsxs(So, { onClick: () => R(S), $isSelected: e === S.value, children: [
-          /* @__PURE__ */ t.jsx(Lo, { $isSelected: e === S.value, children: e === S.value && /* @__PURE__ */ t.jsx(To, {}) }),
-          /* @__PURE__ */ t.jsx(Do, { children: S.label })
-        ] }, S.id)),
-        i && /* @__PURE__ */ t.jsx(Eo, { onClick: E, children: "Другой период" })
+        s.map((L) => /* @__PURE__ */ t.jsxs(So, { onClick: () => w(L), $isSelected: e === L.value, children: [
+          /* @__PURE__ */ t.jsx(Lo, { $isSelected: e === L.value, children: e === L.value && /* @__PURE__ */ t.jsx(To, {}) }),
+          /* @__PURE__ */ t.jsx(Do, { children: L.label })
+        ] }, L.id)),
+        i && /* @__PURE__ */ t.jsx(Eo, { onClick: I, children: "Другой период" })
       ] })
     ] }),
-    y && /* @__PURE__ */ t.jsx("div", { ref: k, children: /* @__PURE__ */ t.jsx(
+    k && /* @__PURE__ */ t.jsx("div", { ref: R, children: /* @__PURE__ */ t.jsx(
       ho,
       {
         title: "",
-        onClose: () => x(!1),
-        onCancel: () => x(!1),
-        onSave: (S) => {
-          S.preventDefault(), I();
+        onClose: () => h(!1),
+        onCancel: () => h(!1),
+        onSave: (L) => {
+          L.preventDefault(), z();
         },
         saveButtonText: "Выбрать",
         customLayout: /* @__PURE__ */ t.jsx(Y, {}),
         children: /* @__PURE__ */ t.jsxs(Po, { children: [
-          /* @__PURE__ */ t.jsx(je, { children: /* @__PURE__ */ t.jsx(ge, { value: m, onChange: (S) => h(S) }) }),
-          /* @__PURE__ */ t.jsx(je, { children: /* @__PURE__ */ t.jsx(ge, { value: u, onChange: (S) => l(S) }) })
+          /* @__PURE__ */ t.jsx(je, { children: /* @__PURE__ */ t.jsx(ge, { value: m, onChange: (L) => u(L) }) }),
+          /* @__PURE__ */ t.jsx(je, { children: /* @__PURE__ */ t.jsx(ge, { value: j, onChange: (L) => g(L) }) })
         ] })
       }
     ) })
@@ -2226,51 +2235,51 @@ const Te = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
   placeholder: c = "8 (999) 500-50-50",
   customPlaceholder: p,
   tabIndex: f,
-  disabled: y = !1,
-  hasError: x = !1,
+  disabled: k = !1,
+  hasError: h = !1,
   errorMessage: b
 }) => {
-  const [g, m] = G.useState(!1), h = G.useRef(null), u = !!(p && !n && !g), l = (E) => {
-    const I = E.replace(/\D/g, "").slice(0, 11);
+  const [x, m] = G.useState(!1), u = G.useRef(null), j = !!(p && !n && !x), g = (I) => {
+    const z = I.replace(/\D/g, "").slice(0, 11);
     let D = "";
-    return I.length > 0 && (D += "8"), I.length > 1 && (D += ` (${I.slice(1, 4)}`), I.length > 4 && (D += `) ${I.slice(4, 7)}`), I.length > 7 && (D += `-${I.slice(7, 9)}`), I.length > 9 && (D += `-${I.slice(9, 11)}`), D;
-  }, L = (E) => {
-    const z = l(E.target.value), I = {
-      ...E,
+    return z.length > 0 && (D += "8"), z.length > 1 && (D += ` (${z.slice(1, 4)}`), z.length > 4 && (D += `) ${z.slice(4, 7)}`), z.length > 7 && (D += `-${z.slice(7, 9)}`), z.length > 9 && (D += `-${z.slice(9, 11)}`), D;
+  }, l = (I) => {
+    const E = g(I.target.value), z = {
+      ...I,
       target: {
-        ...E.target,
+        ...I.target,
         name: e,
-        value: z
+        value: E
       }
     };
-    s(I);
-  }, k = (E) => {
-    m(!1), i?.(E);
-  }, R = (E) => {
-    r?.(E);
+    s(z);
+  }, R = (I) => {
+    m(!1), i?.(I);
+  }, w = (I) => {
+    r?.(I);
   };
   return /* @__PURE__ */ t.jsxs(zo, { children: [
     /* @__PURE__ */ t.jsx(
       Fo,
       {
-        ref: h,
+        ref: u,
         name: e,
         type: "tel",
         value: n,
-        onChange: L,
-        onKeyPress: R,
-        placeholder: u ? "" : c,
+        onChange: l,
+        onKeyPress: w,
+        placeholder: j ? "" : c,
         maxLength: 18,
         tabIndex: f,
-        disabled: y,
-        hasError: x,
+        disabled: k,
+        hasError: h,
         onFocus: () => m(!0),
-        onBlur: k,
+        onBlur: R,
         inputMode: "tel"
       }
     ),
-    p && /* @__PURE__ */ t.jsx(Ao, { isVisible: u, children: p }),
-    x && b && /* @__PURE__ */ t.jsx(Bo, { children: b })
+    p && /* @__PURE__ */ t.jsx(Ao, { isVisible: j, children: p }),
+    h && b && /* @__PURE__ */ t.jsx(Bo, { children: b })
   ] });
 }, zo = o.div`
   position: relative;
@@ -2384,10 +2393,10 @@ const Te = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
   onClear: c,
   disabled: p = !1,
   hasError: f = !1,
-  errorMessage: y = "",
-  customIcon: x
+  errorMessage: k = "",
+  customIcon: h
 }) => {
-  const g = x || /* @__PURE__ */ t.jsx("svg", { width: "27", height: "6", viewBox: "0 0 27 6", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ t.jsx("path", { d: "M2.915 0C1.31175 0 0 1.31175 0 2.915C0 4.51825 1.31175 5.83 2.915 5.83C4.51825 5.83 5.83 4.51825 5.83 2.915C5.83 1.31175 4.51825 0 2.915 0ZM23.32 0C21.7167 0 20.405 1.31175 20.405 2.915C20.405 4.51825 21.7167 5.83 23.32 5.83C24.9233 5.83 26.235 4.51825 26.235 2.915C26.235 1.31175 24.9233 0 23.32 0ZM13.1175 0C11.5142 0 10.2025 1.31175 10.2025 2.915C10.2025 4.51825 11.5142 5.83 13.1175 5.83C14.7207 5.83 16.0325 4.51825 16.0325 2.915C16.0325 1.31175 14.7207 0 13.1175 0Z", fill: "#50555C" }) });
+  const x = h || /* @__PURE__ */ t.jsx("svg", { width: "27", height: "6", viewBox: "0 0 27 6", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ t.jsx("path", { d: "M2.915 0C1.31175 0 0 1.31175 0 2.915C0 4.51825 1.31175 5.83 2.915 5.83C4.51825 5.83 5.83 4.51825 5.83 2.915C5.83 1.31175 4.51825 0 2.915 0ZM23.32 0C21.7167 0 20.405 1.31175 20.405 2.915C20.405 4.51825 21.7167 5.83 23.32 5.83C24.9233 5.83 26.235 4.51825 26.235 2.915C26.235 1.31175 24.9233 0 23.32 0ZM13.1175 0C11.5142 0 10.2025 1.31175 10.2025 2.915C10.2025 4.51825 11.5142 5.83 13.1175 5.83C14.7207 5.83 16.0325 4.51825 16.0325 2.915C16.0325 1.31175 14.7207 0 13.1175 0Z", fill: "#50555C" }) });
   return e === "view" ? /* @__PURE__ */ t.jsxs(Xo, { children: [
     /* @__PURE__ */ t.jsx(Go, { children: n || "Не указано" }),
     s && /* @__PURE__ */ t.jsx(qo, { children: s })
@@ -2396,8 +2405,8 @@ const Te = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
       /* @__PURE__ */ t.jsx(Uo, { type: "text", value: n || "", placeholder: i, readOnly: !0, disabled: p }),
       n && !p && /* @__PURE__ */ t.jsx(Ko, { type: "button", onClick: c, "aria-label": "Очистить", children: "×" })
     ] }),
-    !p && /* @__PURE__ */ t.jsx(Jo, { type: "button", onClick: r, "aria-label": "Выбрать", children: g }),
-    f && y && /* @__PURE__ */ t.jsx(Qo, { children: y })
+    !p && /* @__PURE__ */ t.jsx(Jo, { type: "button", onClick: r, "aria-label": "Выбрать", children: x }),
+    f && k && /* @__PURE__ */ t.jsx(Qo, { children: k })
   ] });
 }, Vo = o.div`
   display: flex;
@@ -2591,22 +2600,22 @@ const Te = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
     secondary: "rgba(37, 203, 161, 1)"
   }
 }) => {
-  const r = Z(null), [c, p] = A(!1), f = (g) => {
-    !s || !n || (g.preventDefault(), p(!0), b(g));
-  }, y = (g) => {
-    !c || !n || b(g);
-  }, x = () => {
+  const r = Z(null), [c, p] = A(!1), f = (x) => {
+    !s || !n || (x.preventDefault(), p(!0), b(x));
+  }, k = (x) => {
+    !c || !n || b(x);
+  }, h = () => {
     p(!1);
-  }, b = (g) => {
+  }, b = (x) => {
     if (!r.current || !n) return;
     const m = r.current.getBoundingClientRect();
-    let u = (g.clientX - m.left) / m.width * 100;
-    u = Math.max(0, Math.min(100, u)), n(Math.round(u));
+    let j = (x.clientX - m.left) / m.width * 100;
+    j = Math.max(0, Math.min(100, j)), n(Math.round(j));
   };
   return U(() => {
     if (c)
-      return document.addEventListener("mousemove", y), document.addEventListener("mouseup", x), () => {
-        document.removeEventListener("mousemove", y), document.removeEventListener("mouseup", x);
+      return document.addEventListener("mousemove", k), document.addEventListener("mouseup", h), () => {
+        document.removeEventListener("mousemove", k), document.removeEventListener("mouseup", h);
       };
   }, [c]), /* @__PURE__ */ t.jsxs(an, { ref: r, $draggable: s, onMouseDown: f, children: [
     /* @__PURE__ */ t.jsx(ln, { $secondaryColor: i.secondary }),
@@ -2677,89 +2686,89 @@ const un = (e) => typeof window > "u" ? Promise.reject(new Error("Window is not 
   zoom: c = 12,
   height: p = 400,
   width: f = "100%",
-  inputPlaceholder: y = "Введите адрес или название места",
-  searchButtonLabel: x = "Найти",
+  inputPlaceholder: k = "Введите адрес или название места",
+  searchButtonLabel: h = "Найти",
   draggablePlacemark: b = !0,
-  controls: g = pn,
+  controls: x = pn,
   showSearch: m = !0,
-  className: h,
-  style: u,
-  onError: l
+  className: u,
+  style: j,
+  onError: g
 }) => {
-  const [L, k] = A(null), [R, E] = A(n), [z, I] = A(n), [D, Y] = A(!1), S = Z(null);
+  const [l, R] = A(null), [w, I] = A(n), [E, z] = A(n), [D, Y] = A(!1), L = Z(null);
   U(() => {
-    let B = !1, v;
+    let B = !1, y;
     return (async () => {
       try {
-        const j = await un(r);
-        if (B || !S.current) return;
-        v = new j.Map(S.current, {
+        const C = await un(r);
+        if (B || !L.current) return;
+        y = new C.Map(L.current, {
           center: [s, i],
           zoom: c,
-          controls: g
+          controls: x
         });
-        const M = new j.Placemark([s, i], {}, { draggable: b });
-        v.geoObjects.add(M), v.events.add("click", (_) => {
+        const S = new C.Placemark([s, i], {}, { draggable: b });
+        y.geoObjects.add(S), y.events.add("click", (_) => {
           const P = _.get("coords");
-          F(P, M, v);
-        }), M.events.add("dragend", () => {
-          const _ = M.geometry.getCoordinates();
-          F(_, M, v);
-        }), k(v), Y(!0);
-      } catch (j) {
-        l && j instanceof Error && l(j);
+          F(P, S, y);
+        }), S.events.add("dragend", () => {
+          const _ = S.geometry.getCoordinates();
+          F(_, S, y);
+        }), R(y), Y(!0);
+      } catch (C) {
+        g && C instanceof Error && g(C);
       }
     })(), () => {
-      B = !0, v && v.destroy();
+      B = !0, y && y.destroy();
     };
-  }, [r, s, i, c, g, b, l]);
-  const F = async (B, v, d) => {
+  }, [r, s, i, c, x, b, g]);
+  const F = async (B, y, d) => {
     if (window.ymaps)
       try {
         const _ = (await window.ymaps.geocode(B)).geoObjects.get(0).getAddressLine();
-        v.geometry.setCoordinates(B), d.panTo(B, { flying: !0 }), I(_), E(_), e(_, B[0], B[1]);
-      } catch (j) {
-        l && j instanceof Error && l(j);
+        y.geometry.setCoordinates(B), d.panTo(B, { flying: !0 }), z(_), I(_), e(_, B[0], B[1]);
+      } catch (C) {
+        g && C instanceof Error && g(C);
       }
   }, W = async () => {
-    if (!(!R.trim() || !window.ymaps || !L))
+    if (!(!w.trim() || !window.ymaps || !l))
       try {
-        const v = (await window.ymaps.geocode(R)).geoObjects.get(0);
-        if (v) {
-          const d = v.geometry.getCoordinates(), j = v.properties.get("boundedBy");
-          L.setBounds(j, { checkZoomRange: !0 });
-          const M = new window.ymaps.Placemark(d, {}, { draggable: b });
-          L.geoObjects.removeAll(), L.geoObjects.add(M);
-          const _ = v.getAddressLine();
-          I(_), e(_, d[0], d[1]), M.events.add("dragend", () => {
-            const P = M.geometry.getCoordinates();
-            F(P, M, L);
+        const y = (await window.ymaps.geocode(w)).geoObjects.get(0);
+        if (y) {
+          const d = y.geometry.getCoordinates(), C = y.properties.get("boundedBy");
+          l.setBounds(C, { checkZoomRange: !0 });
+          const S = new window.ymaps.Placemark(d, {}, { draggable: b });
+          l.geoObjects.removeAll(), l.geoObjects.add(S);
+          const _ = y.getAddressLine();
+          z(_), e(_, d[0], d[1]), S.events.add("dragend", () => {
+            const P = S.geometry.getCoordinates();
+            F(P, S, l);
           });
         }
       } catch (B) {
-        l && B instanceof Error && l(B);
+        g && B instanceof Error && g(B);
       }
   };
-  return /* @__PURE__ */ t.jsxs(hn, { className: h, style: u, children: [
+  return /* @__PURE__ */ t.jsxs(hn, { className: u, style: j, children: [
     m && /* @__PURE__ */ t.jsxs(xn, { children: [
       /* @__PURE__ */ t.jsx(
         oo,
         {
           type: "text",
-          value: R,
-          onChange: (B) => E(B.target.value),
-          placeholder: y,
+          value: w,
+          onChange: (B) => I(B.target.value),
+          placeholder: k,
           onKeyPress: (B) => B.key === "Enter" && W(),
           disabled: !D
         }
       ),
-      /* @__PURE__ */ t.jsx(gn, { onClick: W, disabled: !D, children: x })
+      /* @__PURE__ */ t.jsx(gn, { onClick: W, disabled: !D, children: h })
     ] }),
     /* @__PURE__ */ t.jsxs(bn, { children: [
       "Выбранный адрес: ",
-      /* @__PURE__ */ t.jsx("strong", { children: z || "Не выбран" })
+      /* @__PURE__ */ t.jsx("strong", { children: E || "Не выбран" })
     ] }),
-    /* @__PURE__ */ t.jsx(fn, { ref: S, $height: p, $width: f }),
+    /* @__PURE__ */ t.jsx(fn, { ref: L, $height: p, $width: f }),
     /* @__PURE__ */ t.jsx(mn, { children: "📍 Кликните на карте или найдите адрес через поиск" })
   ] });
 }, hn = o.div`
@@ -2818,57 +2827,57 @@ function Ei(e) {
   return parseInt(n, 10);
 }
 const Pi = ({ title: e, data: n, maxValue: s, step: i, height: r = 300, titleFontSize: c }) => {
-  const [p, f] = A(null), y = [];
+  const [p, f] = A(null), k = [];
   for (let b = 0; b <= s; b += i)
-    y.push(b);
-  const x = n.length > 0 ? n[0].bars.map((b) => ({ name: b.name, color: b.color })) : [];
+    k.push(b);
+  const h = n.length > 0 ? n[0].bars.map((b) => ({ name: b.name, color: b.color })) : [];
   return /* @__PURE__ */ t.jsxs(wn, { children: [
     /* @__PURE__ */ t.jsxs(Re, { style: { marginTop: "0" }, children: [
       /* @__PURE__ */ t.jsx(Ie, { style: { fontSize: c }, children: e }),
-      /* @__PURE__ */ t.jsx(vn, { children: x.map((b, g) => /* @__PURE__ */ t.jsxs(yn, { children: [
+      /* @__PURE__ */ t.jsx(vn, { children: h.map((b, x) => /* @__PURE__ */ t.jsxs(yn, { children: [
         /* @__PURE__ */ t.jsx(kn, { color: b.color }),
         /* @__PURE__ */ t.jsx(jn, { children: b.name })
-      ] }, g)) })
+      ] }, x)) })
     ] }),
     /* @__PURE__ */ t.jsxs(Cn, { height: r, children: [
-      /* @__PURE__ */ t.jsx($n, { children: y.map((b, g) => /* @__PURE__ */ t.jsx(Mn, { children: b.toLocaleString() }, g)) }),
+      /* @__PURE__ */ t.jsx($n, { children: k.map((b, x) => /* @__PURE__ */ t.jsx(Mn, { children: b.toLocaleString() }, x)) }),
       /* @__PURE__ */ t.jsxs(Sn, { children: [
         /* @__PURE__ */ t.jsxs(Ln, { children: [
-          y.map((b, g) => {
+          k.map((b, x) => {
             const m = b / s * 100;
-            return /* @__PURE__ */ t.jsx(Tn, { position: 100 - m }, `line-${g}`);
+            return /* @__PURE__ */ t.jsx(Tn, { position: 100 - m }, `line-${x}`);
           }),
-          n.map((b, g) => /* @__PURE__ */ t.jsxs(Dn, { onMouseEnter: () => f(g), onMouseLeave: () => f(null), children: [
-            b.bars.map((m, h) => {
-              const u = b.bars.slice(h + 1).reduce((l, L) => l + L.value, 0);
+          n.map((b, x) => /* @__PURE__ */ t.jsxs(Dn, { onMouseEnter: () => f(x), onMouseLeave: () => f(null), children: [
+            b.bars.map((m, u) => {
+              const j = b.bars.slice(u + 1).reduce((g, l) => g + l.value, 0);
               return /* @__PURE__ */ t.jsx(
                 En,
                 {
                   height: m.value / s * 100,
-                  offset: u / s * 100,
+                  offset: j / s * 100,
                   color: m.color,
-                  isHovered: p !== null && p !== g
+                  isHovered: p !== null && p !== x
                 },
-                h
+                u
               );
             }),
-            p === g && /* @__PURE__ */ t.jsxs(In, { children: [
+            p === x && /* @__PURE__ */ t.jsxs(In, { children: [
               /* @__PURE__ */ t.jsxs(zn, { children: [
                 /* @__PURE__ */ t.jsxs(Fn, { children: [
                   "Всего: ",
                   Ce(b.total.toString())
                 ] }),
-                b.bars.map((m, h) => /* @__PURE__ */ t.jsxs(An, { children: [
+                b.bars.map((m, u) => /* @__PURE__ */ t.jsxs(An, { children: [
                   m.name,
                   ": ",
                   Ce(m.value.toString())
-                ] }, h))
+                ] }, u))
               ] }),
               /* @__PURE__ */ t.jsx(Bn, {})
             ] })
-          ] }, g))
+          ] }, x))
         ] }),
-        /* @__PURE__ */ t.jsx(Pn, { children: n.map((b, g) => /* @__PURE__ */ t.jsx(Rn, { style: { flex: 1, textAlign: "center" }, children: b.label }, g)) })
+        /* @__PURE__ */ t.jsx(Pn, { children: n.map((b, x) => /* @__PURE__ */ t.jsx(Rn, { style: { flex: 1, textAlign: "center" }, children: b.label }, x)) })
       ] })
     ] })
   ] });
@@ -3009,91 +3018,91 @@ const Pi = ({ title: e, data: n, maxValue: s, step: i, height: r = 300, titleFon
   maxY: c,
   minY: p,
   xStep: f,
-  yStep: y,
-  height: x = 300,
+  yStep: k,
+  height: h = 300,
   showLegend: b = !0,
-  xAxisCustomLabels: g,
+  xAxisCustomLabels: x,
   showTooltip: m = !0,
-  titleFontSize: h = "30px"
+  titleFontSize: u = "30px"
 }) => {
-  const [u, l] = A(null), [L, k] = A({ x: 0, y: 0 }), R = Z(null), E = Z(null), z = Math.max(...n.map((v) => v.x), r), I = [];
-  for (let v = 0; v <= z; v += f)
-    I.push(v);
+  const [j, g] = A(null), [l, R] = A({ x: 0, y: 0 }), w = Z(null), I = Z(null), E = Math.max(...n.map((y) => y.x), r), z = [];
+  for (let y = 0; y <= E; y += f)
+    z.push(y);
   const D = [];
-  for (let v = p; v <= c; v += y)
-    D.push(v);
-  const Y = g || I.map((v) => v.toString()), S = b ? Array.from(new Set(n.filter((v) => v.label).map((v) => v.label))).map((v) => {
-    const d = n.find((j) => j.label === v);
-    return { name: v, color: d.color };
+  for (let y = p; y <= c; y += k)
+    D.push(y);
+  const Y = x || z.map((y) => y.toString()), L = b ? Array.from(new Set(n.filter((y) => y.label).map((y) => y.label))).map((y) => {
+    const d = n.find((C) => C.label === y);
+    return { name: y, color: d.color };
   }) : [], F = {};
-  n.forEach((v) => {
-    const d = v.label || "default";
-    F[d] || (F[d] = []), F[d].push(v);
+  n.forEach((y) => {
+    const d = y.label || "default";
+    F[d] || (F[d] = []), F[d].push(y);
   });
-  const W = (v) => v / z * 100, B = (v) => {
+  const W = (y) => y / E * 100, B = (y) => {
     const d = c - p;
-    return 100 - (v - p) / d * 100;
+    return 100 - (y - p) / d * 100;
   };
   return U(() => {
-    if (u && E.current) {
-      const v = E.current.getBoundingClientRect(), d = W(u.x) / 100 * v.width, j = B(u.y) / 100 * v.height;
-      k({
-        x: d + v.left,
-        y: j + v.top
+    if (j && I.current) {
+      const y = I.current.getBoundingClientRect(), d = W(j.x) / 100 * y.width, C = B(j.y) / 100 * y.height;
+      R({
+        x: d + y.left,
+        y: C + y.top
       });
     }
-  }, [u, r, c, p]), /* @__PURE__ */ t.jsxs(On, { children: [
+  }, [j, r, c, p]), /* @__PURE__ */ t.jsxs(On, { children: [
     /* @__PURE__ */ t.jsxs(Re, { style: { marginTop: "0" }, children: [
-      /* @__PURE__ */ t.jsx(Ie, { style: { fontSize: h }, children: e }),
-      b && S.length > 0 && /* @__PURE__ */ t.jsx(Yn, { children: S.map((v, d) => /* @__PURE__ */ t.jsxs(Wn, { children: [
-        /* @__PURE__ */ t.jsx(Nn, { color: v.color }),
-        /* @__PURE__ */ t.jsx(Hn, { children: v.name })
+      /* @__PURE__ */ t.jsx(Ie, { style: { fontSize: u }, children: e }),
+      b && L.length > 0 && /* @__PURE__ */ t.jsx(Yn, { children: L.map((y, d) => /* @__PURE__ */ t.jsxs(Wn, { children: [
+        /* @__PURE__ */ t.jsx(Nn, { color: y.color }),
+        /* @__PURE__ */ t.jsx(Hn, { children: y.name })
       ] }, d)) })
     ] }),
-    /* @__PURE__ */ t.jsxs(Vn, { height: x, children: [
+    /* @__PURE__ */ t.jsxs(Vn, { height: h, children: [
       /* @__PURE__ */ t.jsxs(Zn, { children: [
-        D.map((v, d) => /* @__PURE__ */ t.jsx(Un, { children: v.toLocaleString() }, d)),
+        D.map((y, d) => /* @__PURE__ */ t.jsx(Un, { children: y.toLocaleString() }, d)),
         /* @__PURE__ */ t.jsx($e, { children: i })
       ] }),
-      /* @__PURE__ */ t.jsxs(Xn, { ref: E, children: [
-        D.map((v, d) => /* @__PURE__ */ t.jsx(Gn, { position: B(v) }, `hline-${d}`)),
-        Object.values(F).map((v, d) => v.map((j, M) => {
-          if (M === 0) return null;
-          const _ = v[M - 1], P = W(_.x), V = B(_.y), w = W(j.x), C = B(j.y);
+      /* @__PURE__ */ t.jsxs(Xn, { ref: I, children: [
+        D.map((y, d) => /* @__PURE__ */ t.jsx(Gn, { position: B(y) }, `hline-${d}`)),
+        Object.values(F).map((y, d) => y.map((C, S) => {
+          if (S === 0) return null;
+          const _ = y[S - 1], P = W(_.x), V = B(_.y), v = W(C.x), $ = B(C.y);
           return /* @__PURE__ */ t.jsx(
             "svg",
             {
               style: { position: "absolute", top: 0, left: 0, width: "100%", height: "100%", pointerEvents: "none", zIndex: 1 },
-              children: /* @__PURE__ */ t.jsx("line", { x1: `${P}%`, y1: `${V}%`, x2: `${w}%`, y2: `${C}%`, stroke: j.color, strokeWidth: "1" })
+              children: /* @__PURE__ */ t.jsx("line", { x1: `${P}%`, y1: `${V}%`, x2: `${v}%`, y2: `${$}%`, stroke: C.color, strokeWidth: "1" })
             },
-            `line-${d}-${M}`
+            `line-${d}-${S}`
           );
         })),
-        n.map((v, d) => /* @__PURE__ */ t.jsx(
+        n.map((y, d) => /* @__PURE__ */ t.jsx(
           qn,
           {
-            x: W(v.x),
-            y: B(v.y),
-            color: v.color,
-            onMouseEnter: () => l(v),
-            onMouseLeave: () => l(null),
-            isHovered: u?.label === v.label
+            x: W(y.x),
+            y: B(y.y),
+            color: y.color,
+            onMouseEnter: () => g(y),
+            onMouseLeave: () => g(null),
+            isHovered: j?.label === y.label
           },
           d
         ))
       ] })
     ] }),
-    m && u && /* @__PURE__ */ t.jsxs(Qn, { ref: R, style: { left: L.x, top: L.y }, children: [
+    m && j && /* @__PURE__ */ t.jsxs(Qn, { ref: w, style: { left: l.x, top: l.y }, children: [
       /* @__PURE__ */ t.jsxs(er, { children: [
-        u.name && /* @__PURE__ */ t.jsx(tr, { children: u.name }),
-        /* @__PURE__ */ t.jsx(or, { children: u.y.toLocaleString() })
+        j.name && /* @__PURE__ */ t.jsx(tr, { children: j.name }),
+        /* @__PURE__ */ t.jsx(or, { children: j.y.toLocaleString() })
       ] }),
       /* @__PURE__ */ t.jsx(nr, {})
     ] }),
     /* @__PURE__ */ t.jsxs(Jn, { children: [
-      Y.map((v, d) => {
-        const M = I[d] / z * 100;
-        return /* @__PURE__ */ t.jsx(Kn, { style: { left: `${M}%`, transform: "translateX(-50%)" }, children: v }, d);
+      Y.map((y, d) => {
+        const S = z[d] / E * 100;
+        return /* @__PURE__ */ t.jsx(Kn, { style: { left: `${S}%`, transform: "translateX(-50%)" }, children: y }, d);
       }),
       s && /* @__PURE__ */ t.jsx($e, { children: s })
     ] })
@@ -3221,20 +3230,20 @@ const Pi = ({ title: e, data: n, maxValue: s, step: i, height: r = 300, titleFon
   border-top: 6px solid rgba(0, 0, 0, 0.9);
 `, Ii = ({ images: e, initialIndex: n, onClose: s }) => {
   const [i, r] = A(n), [c, p] = A(0), f = () => {
-    r((g) => g > 0 ? g - 1 : e.length - 1), p(0);
-  }, y = () => {
-    r((g) => g < e.length - 1 ? g + 1 : 0), p(0);
-  }, x = () => {
-    p((g) => (g + 90) % 360);
-  }, b = (g) => {
-    g.key === "Escape" ? s() : g.key === "ArrowLeft" ? f() : g.key === "ArrowRight" ? y() : (g.key === "r" || g.key === "к") && x();
+    r((x) => x > 0 ? x - 1 : e.length - 1), p(0);
+  }, k = () => {
+    r((x) => x < e.length - 1 ? x + 1 : 0), p(0);
+  }, h = () => {
+    p((x) => (x + 90) % 360);
+  }, b = (x) => {
+    x.key === "Escape" ? s() : x.key === "ArrowLeft" ? f() : x.key === "ArrowRight" ? k() : (x.key === "r" || x.key === "к") && h();
   };
-  return /* @__PURE__ */ t.jsx(rr, { onClick: s, onKeyDown: b, tabIndex: 0, children: /* @__PURE__ */ t.jsxs(ir, { onClick: (g) => g.stopPropagation(), children: [
+  return /* @__PURE__ */ t.jsx(rr, { onClick: s, onKeyDown: b, tabIndex: 0, children: /* @__PURE__ */ t.jsxs(ir, { onClick: (x) => x.stopPropagation(), children: [
     /* @__PURE__ */ t.jsx(sr, { onClick: s, children: /* @__PURE__ */ t.jsxs("svg", { width: "24", height: "24", viewBox: "0 0 24 24", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: [
       /* @__PURE__ */ t.jsx("path", { d: "M18 6L6 18", stroke: "white", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round" }),
       /* @__PURE__ */ t.jsx("path", { d: "M6 6L18 18", stroke: "white", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round" })
     ] }) }),
-    /* @__PURE__ */ t.jsx(ar, { children: /* @__PURE__ */ t.jsx(lr, { onClick: x, title: "Повернуть (R)", children: /* @__PURE__ */ t.jsx("svg", { width: "24", height: "24", viewBox: "0 0 24 24", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ t.jsx(
+    /* @__PURE__ */ t.jsx(ar, { children: /* @__PURE__ */ t.jsx(lr, { onClick: h, title: "Повернуть (R)", children: /* @__PURE__ */ t.jsx("svg", { width: "24", height: "24", viewBox: "0 0 24 24", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ t.jsx(
       "path",
       {
         d: "M4.077 3C6.88767 5.202 8.48267 7.15733 8.862 8.866C9.24133 10.5753 9.29867 12.202 9.034 13.746H4L12.214 21L20 13.747H15.216C15.192 10.889 14.12 8.46 12 6.46C9.88 4.46 7.239 3.30667 4.077 3Z",
@@ -3247,9 +3256,9 @@ const Pi = ({ title: e, data: n, maxValue: s, step: i, height: r = 300, titleFon
     /* @__PURE__ */ t.jsxs(cr, { children: [
       /* @__PURE__ */ t.jsx(Me, { $position: "left", onClick: f, children: /* @__PURE__ */ t.jsx("svg", { width: "24", height: "24", viewBox: "0 0 24 24", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ t.jsx("path", { d: "M15 18L9 12L15 6", stroke: "white", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round" }) }) }),
       /* @__PURE__ */ t.jsx(dr, { src: e[i], alt: `Photo ${i + 1}`, $rotation: c }),
-      /* @__PURE__ */ t.jsx(Me, { $position: "right", onClick: y, children: /* @__PURE__ */ t.jsx("svg", { width: "24", height: "24", viewBox: "0 0 24 24", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ t.jsx("path", { d: "M9 18L15 12L9 6", stroke: "white", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round" }) }) })
+      /* @__PURE__ */ t.jsx(Me, { $position: "right", onClick: k, children: /* @__PURE__ */ t.jsx("svg", { width: "24", height: "24", viewBox: "0 0 24 24", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ t.jsx("path", { d: "M9 18L15 12L9 6", stroke: "white", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round" }) }) })
     ] }),
-    /* @__PURE__ */ t.jsx(pr, { children: e.map((g, m) => /* @__PURE__ */ t.jsx(
+    /* @__PURE__ */ t.jsx(pr, { children: e.map((x, m) => /* @__PURE__ */ t.jsx(
       ur,
       {
         $active: m === i,
@@ -3399,13 +3408,13 @@ const Pi = ({ title: e, data: n, maxValue: s, step: i, height: r = 300, titleFon
 `, hr = ({ isOpen: e, callPhone: n, error: s, onClose: i, isVerifying: r }) => {
   const [c, p] = A(!1);
   if (!e) return null;
-  const f = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent), y = () => {
+  const f = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent), k = () => {
     f ? window.location.href = `tel:${n}` : (navigator.clipboard.writeText(n), p(!0), setTimeout(() => p(!1), 2e3));
   };
-  return /* @__PURE__ */ t.jsx(xr, { onClick: i, children: /* @__PURE__ */ t.jsxs(gr, { onClick: (x) => x.stopPropagation(), children: [
+  return /* @__PURE__ */ t.jsx(xr, { onClick: i, children: /* @__PURE__ */ t.jsxs(gr, { onClick: (h) => h.stopPropagation(), children: [
     /* @__PURE__ */ t.jsx(fr, { children: "Подтверждение авторизации" }),
     /* @__PURE__ */ t.jsx(Se, { children: "Для завершения авторизации позвоните на номер:" }),
-    /* @__PURE__ */ t.jsxs(br, { onClick: y, title: f ? "Позвонить" : "Копировать номер", $clickable: !0, children: [
+    /* @__PURE__ */ t.jsxs(br, { onClick: k, title: f ? "Позвонить" : "Копировать номер", $clickable: !0, children: [
       n,
       !f && c && /* @__PURE__ */ t.jsx(mr, { children: "Скопировано!" })
     ] }),
@@ -3501,94 +3510,94 @@ const Pi = ({ title: e, data: n, maxValue: s, step: i, height: r = 300, titleFon
   onToggle: c,
   selectedKey: p,
   onSelect: f,
-  autoCollapseOnSelect: y = !1,
-  width: x = "315px",
+  autoCollapseOnSelect: k = !1,
+  width: h = "315px",
   collapsedWidth: b = "70px",
-  className: g,
+  className: x,
   style: m
 }) => {
-  const h = _e(kr), [u, l] = A(
-    r ?? h.collapsed ?? !1
-  ), [L, k] = A(null), [R, E] = A(
-    p ?? h.selectedSideMenuItem ?? null
-  ), [z, I] = A({
+  const u = _e(kr), [j, g] = A(
+    r ?? u.collapsed ?? !1
+  ), [l, R] = A(null), [w, I] = A(
+    p ?? u.selectedSideMenuItem ?? null
+  ), [E, z] = A({
     visible: !1,
     x: 0,
     y: 0,
     items: []
-  }), D = Z(null), Y = r ?? h.collapsed ?? u, S = (P) => {
-    l(P), h.toggleCollapsed(), c?.(P);
-  }, F = p ?? h.selectedSideMenuItem ?? R, W = (P) => {
-    E(P), h.setSelectedSideMenuItem(P);
+  }), D = Z(null), Y = r ?? u.collapsed ?? j, L = (P) => {
+    g(P), u.toggleCollapsed(), c?.(P);
+  }, F = p ?? u.selectedSideMenuItem ?? w, W = (P) => {
+    I(P), u.setSelectedSideMenuItem(P);
   };
   U(() => {
-    r !== void 0 && (l(r), r && k(null));
+    r !== void 0 && (g(r), r && R(null));
   }, [r]), U(() => {
     p !== void 0 && W(p);
   }, [p]), U(() => {
-    const P = () => I((V) => ({ ...V, visible: !1 }));
+    const P = () => z((V) => ({ ...V, visible: !1 }));
     return document.addEventListener("click", P), () => document.removeEventListener("click", P);
   }, []);
   const B = () => {
     const P = !Y;
-    S(P), P && k(null);
-  }, v = (P) => {
-    P.disabled || P.hidden || (W(P.key), f?.(P), P.onClick?.(P), y && (S(!0), k(null)));
+    L(P), P && R(null);
+  }, y = (P) => {
+    P.disabled || P.hidden || (W(P.key), f?.(P), P.onClick?.(P), k && (L(!0), R(null)));
   }, d = (P) => {
-    k((V) => V === P ? null : P);
-  }, j = (P, V) => {
-    const w = (P.children?.length || 0) > 0;
-    if (Y && w) {
+    R((V) => V === P ? null : P);
+  }, C = (P, V) => {
+    const v = (P.children?.length || 0) > 0;
+    if (Y && v) {
       V.stopPropagation();
-      const C = V.currentTarget.getBoundingClientRect();
-      I({
+      const $ = V.currentTarget.getBoundingClientRect();
+      z({
         visible: !0,
-        x: C.right + 6,
-        y: C.top,
+        x: $.right + 6,
+        y: $.top,
         items: P.children || []
       });
       return;
     }
-    w ? d(P.key) : v(P);
-  }, M = (P, V = !1) => P.filter((w) => !w.hidden).map((w) => {
-    const C = (w.children?.length || 0) > 0, a = L === w.key, $ = F === w.key || !!w.children && w.children.some((T) => T.key === F);
+    v ? d(P.key) : y(P);
+  }, S = (P, V = !1) => P.filter((v) => !v.hidden).map((v) => {
+    const $ = (v.children?.length || 0) > 0, a = l === v.key, M = F === v.key || !!v.children && v.children.some((T) => T.key === F);
     return /* @__PURE__ */ t.jsxs(G.Fragment, { children: [
       /* @__PURE__ */ t.jsxs(
         Tr,
         {
           $collapsed: Y,
-          $selected: $,
-          onClick: (T) => j(w, T),
-          $disabled: w.disabled,
-          title: w.label,
+          $selected: M,
+          onClick: (T) => C(v, T),
+          $disabled: v.disabled,
+          title: v.label,
           children: [
-            w.icon && /* @__PURE__ */ t.jsx(Er, { $collapsed: Y, children: w.icon }),
-            !Y && /* @__PURE__ */ t.jsx(Dr, { children: w.label }),
-            !Y && C && /* @__PURE__ */ t.jsx(Rr, { $expanded: a, children: "▾" })
+            v.icon && /* @__PURE__ */ t.jsx(Er, { $collapsed: Y, children: v.icon }),
+            !Y && /* @__PURE__ */ t.jsx(Dr, { children: v.label }),
+            !Y && $ && /* @__PURE__ */ t.jsx(Rr, { $expanded: a, children: "▾" })
           ]
         }
       ),
-      !Y && C && a && /* @__PURE__ */ t.jsx(Pr, { children: M(w.children || [], !0) })
-    ] }, w.key);
-  }), _ = Oe(() => z.visible ? /* @__PURE__ */ t.jsx(zr, { style: { left: z.x, top: z.y }, children: z.items.map((P) => /* @__PURE__ */ t.jsx(
+      !Y && $ && a && /* @__PURE__ */ t.jsx(Pr, { children: S(v.children || [], !0) })
+    ] }, v.key);
+  }), _ = Oe(() => E.visible ? /* @__PURE__ */ t.jsx(zr, { style: { left: E.x, top: E.y }, children: E.items.map((P) => /* @__PURE__ */ t.jsx(
     Fr,
     {
       onClick: () => {
-        v(P), I({ visible: !1, x: 0, y: 0, items: [] });
+        y(P), z({ visible: !1, x: 0, y: 0, items: [] });
       },
       $selected: F === P.key,
       children: P.label
     },
     P.key
-  )) }) : null, [z, F]);
+  )) }) : null, [E, F]);
   return /* @__PURE__ */ t.jsxs(
     jr,
     {
       ref: D,
       $collapsed: Y,
-      $width: x,
+      $width: h,
       $collapsedWidth: b,
-      className: g,
+      className: x,
       style: m,
       children: [
         /* @__PURE__ */ t.jsxs(Cr, { children: [
@@ -3596,10 +3605,10 @@ const Pi = ({ title: e, data: n, maxValue: s, step: i, height: r = 300, titleFon
           !Y && s && /* @__PURE__ */ t.jsx(Sr, { children: s })
         ] }),
         /* @__PURE__ */ t.jsxs(Lr, { children: [
-          /* @__PURE__ */ t.jsx(Le, { children: M(e) }),
+          /* @__PURE__ */ t.jsx(Le, { children: S(e) }),
           n.length > 0 && /* @__PURE__ */ t.jsxs(t.Fragment, { children: [
             /* @__PURE__ */ t.jsx(Ir, {}),
-            /* @__PURE__ */ t.jsx(Le, { children: M(n) })
+            /* @__PURE__ */ t.jsx(Le, { children: S(n) })
           ] })
         ] }),
         _,
@@ -3773,20 +3782,20 @@ const Pi = ({ title: e, data: n, maxValue: s, step: i, height: r = 300, titleFon
   }
 };
 async function Fe(e, n = {}) {
-  const { method: s = "GET", body: i, headers: r = {}, token: c } = n, p = async (y) => {
-    const x = {
+  const { method: s = "GET", body: i, headers: r = {}, token: c } = n, p = async (k) => {
+    const h = {
       "Content-Type": "application/json",
       ...r
     };
-    y && (x.Authorization = `Bearer ${y}`);
+    k && (h.Authorization = `Bearer ${k}`);
     const b = e.startsWith("http") ? e : `${ze}${e}`;
     return await fetch(b, {
       method: s,
-      headers: x,
+      headers: h,
       body: i ? JSON.stringify(i) : void 0
     });
-  }, f = async (y, x = !0) => {
-    const b = await p(y);
+  }, f = async (k, h = !0) => {
+    const b = await p(k);
     if (b.ok) {
       if (b.status === 204)
         return null;
@@ -3798,20 +3807,20 @@ async function Fe(e, n = {}) {
         return m;
       }
     }
-    if (b.status === 401 && x) {
+    if (b.status === 401 && h) {
       const m = await Yr();
       if (m)
         return f(m, !1);
     }
-    let g = `Request failed with status ${b.status}`;
+    let x = `Request failed with status ${b.status}`;
     try {
       const m = await b.json();
-      m && typeof m.error == "string" ? g = m.error : typeof m == "string" && (g = m);
+      m && typeof m.error == "string" ? x = m.error : typeof m == "string" && (x = m);
     } catch {
       const m = await b.text();
-      m && (g = m);
+      m && (x = m);
     }
-    throw new Error(g);
+    throw new Error(x);
   };
   return f(c);
 }
@@ -3857,59 +3866,59 @@ const Wr = (e, n) => Fe("/auth/call/initiate", {
   supportPhone: c = "8 989 924 24 24",
   supportLinkUrl: p = "https://info.waypay.one",
   supportLinkText: f = "info.waypay.one",
-  brand: y,
-  className: x,
+  brand: k,
+  className: h,
   style: b,
-  pollingIntervalMs: g = 3e3
+  pollingIntervalMs: x = 3e3
 }) => {
-  const [m, h] = A(!1), [u, l] = A(""), [L, k] = A(!1), [R, E] = A(""), [z, I] = A(""), [D, Y] = A(!1), S = Z(void 0);
+  const [m, u] = A(!1), [j, g] = A(""), [l, R] = A(!1), [w, I] = A(""), [E, z] = A(""), [D, Y] = A(!1), L = Z(void 0);
   U(() => () => {
-    S.current && clearInterval(S.current);
+    L.current && clearInterval(L.current);
   }, []);
-  const F = (j) => {
-    const M = j.replace(/\D/g, "");
-    return M ? M.startsWith("8") ? `+7${M.slice(1)}` : M.startsWith("7") ? `+${M}` : `+${M}` : "";
+  const F = (C) => {
+    const S = C.replace(/\D/g, "");
+    return S ? S.startsWith("8") ? `+7${S.slice(1)}` : S.startsWith("7") ? `+${S}` : `+${S}` : "";
   }, W = () => {
-    k(!1), S.current && window.clearInterval(S.current);
-  }, B = async (j) => {
-    if (j.preventDefault(), !u) {
-      I("Введите номер телефона");
+    R(!1), L.current && window.clearInterval(L.current);
+  }, B = async (C) => {
+    if (C.preventDefault(), !j) {
+      z("Введите номер телефона");
       return;
     }
-    h(!0), I("");
-    const M = F(u);
+    u(!0), z("");
+    const S = F(j);
     try {
-      const _ = await Wr(M, n);
-      E(_.call_phone), k(!0), v(M, _.check_id);
+      const _ = await Wr(S, n);
+      I(_.call_phone), R(!0), y(S, _.check_id);
     } catch (_) {
-      console.error("Auth error:", _), I("Не удалось инициировать авторизацию. Проверьте номер.");
+      console.error("Auth error:", _), z("Не удалось инициировать авторизацию. Проверьте номер.");
     } finally {
-      h(!1);
+      u(!1);
     }
-  }, v = (j, M) => {
-    S.current && window.clearInterval(S.current), S.current = window.setInterval(() => {
-      d(j, M);
-    }, g);
-  }, d = async (j, M) => {
+  }, y = (C, S) => {
+    L.current && window.clearInterval(L.current), L.current = window.setInterval(() => {
+      d(C, S);
+    }, x);
+  }, d = async (C, S) => {
     if (!D) {
       Y(!0);
       try {
-        const _ = await Nr(j, M, n);
-        _.access_token && _.refresh_token && (J.setTokens(_.access_token, _.refresh_token), S.current && window.clearInterval(S.current), k(!1), e(_.access_token));
+        const _ = await Nr(C, S, n);
+        _.access_token && _.refresh_token && (J.setTokens(_.access_token, _.refresh_token), L.current && window.clearInterval(L.current), R(!1), e(_.access_token));
       } catch (_) {
-        console.error("Verification error:", _), I("Ошибка проверки авторизации");
+        console.error("Verification error:", _), z("Ошибка проверки авторизации");
       } finally {
         Y(!1);
       }
     }
   };
-  return /* @__PURE__ */ t.jsxs(Hr, { className: x, style: b, children: [
+  return /* @__PURE__ */ t.jsxs(Hr, { className: h, style: b, children: [
     /* @__PURE__ */ t.jsxs(Vr, { children: [
-      /* @__PURE__ */ t.jsx(Zr, { children: y ?? /* @__PURE__ */ t.jsx(Ur, { children: "WayPay" }) }),
+      /* @__PURE__ */ t.jsx(Zr, { children: k ?? /* @__PURE__ */ t.jsx(Ur, { children: "WayPay" }) }),
       /* @__PURE__ */ t.jsxs(Xr, { onSubmit: B, children: [
         /* @__PURE__ */ t.jsx(Gr, { children: s }),
-        /* @__PURE__ */ t.jsx(qr, { children: /* @__PURE__ */ t.jsx(Jr, { children: /* @__PURE__ */ t.jsx(_r, { value: u, onChange: (j) => l(j), placeholder: r }) }) }),
-        z && /* @__PURE__ */ t.jsx(ni, { children: /* @__PURE__ */ t.jsx("span", { children: z }) }),
+        /* @__PURE__ */ t.jsx(qr, { children: /* @__PURE__ */ t.jsx(Jr, { children: /* @__PURE__ */ t.jsx(_r, { value: j, onChange: (C) => g(C), placeholder: r }) }) }),
+        E && /* @__PURE__ */ t.jsx(ni, { children: /* @__PURE__ */ t.jsx("span", { children: E }) }),
         /* @__PURE__ */ t.jsx(Kr, { type: "submit", disabled: m, children: m ? /* @__PURE__ */ t.jsxs(Qr, { children: [
           /* @__PURE__ */ t.jsx(le, {}),
           /* @__PURE__ */ t.jsx(le, {}),
@@ -3927,7 +3936,7 @@ const Wr = (e, n) => Fe("/auth/call/initiate", {
         /* @__PURE__ */ t.jsx(oi, { href: p, target: "_blank", rel: "noreferrer", children: f })
       ] })
     ] }),
-    /* @__PURE__ */ t.jsx(hr, { isOpen: L, onClose: W, callPhone: R, isVerifying: D, error: z })
+    /* @__PURE__ */ t.jsx(hr, { isOpen: l, onClose: W, callPhone: w, isVerifying: D, error: E })
   ] });
 }, Hr = o.div`
   display: flex;
@@ -4117,17 +4126,17 @@ const ii = (e) => {
       return "неверная дата";
     const s = /* @__PURE__ */ new Date();
     if (n > s) {
-      const b = Math.floor((n.getTime() - s.getTime()) / 1e3), g = Math.floor(b / 60), m = Math.floor(g / 60), h = Math.floor(m / 24);
-      return b < 10 ? "скоро" : b < 60 ? `через ${b} секунд` : g === 1 ? "через минуту" : g < 60 ? `через ${g} минут` : m === 1 ? "через час" : m < 24 ? `через ${m} часов` : h === 1 ? "завтра" : h < 7 ? `через ${h} дней` : "в будущем";
+      const b = Math.floor((n.getTime() - s.getTime()) / 1e3), x = Math.floor(b / 60), m = Math.floor(x / 60), u = Math.floor(m / 24);
+      return b < 10 ? "скоро" : b < 60 ? `через ${b} секунд` : x === 1 ? "через минуту" : x < 60 ? `через ${x} минут` : m === 1 ? "через час" : m < 24 ? `через ${m} часов` : u === 1 ? "завтра" : u < 7 ? `через ${u} дней` : "в будущем";
     }
-    const i = Math.floor((s.getTime() - n.getTime()) / 1e3), r = Math.floor(i / 60), c = Math.floor(r / 60), p = Math.floor(c / 24), f = Math.floor(p / 7), y = Math.floor(p / 30), x = Math.floor(p / 365);
+    const i = Math.floor((s.getTime() - n.getTime()) / 1e3), r = Math.floor(i / 60), c = Math.floor(r / 60), p = Math.floor(c / 24), f = Math.floor(p / 7), k = Math.floor(p / 30), h = Math.floor(p / 365);
     if (i < 10)
       return "только что";
     if (i < 60) {
       const b = Math.max(1, i);
       return b === 1 ? "секунду назад" : b < 5 ? `${b} секунды назад` : `${b} секунд назад`;
     }
-    return r < 60 ? r === 1 ? "минуту назад" : r < 5 ? `${r} минуты назад` : `${r} минут назад` : c < 24 ? c === 1 ? "час назад" : c < 5 ? `${c} часа назад` : `${c} часов назад` : p < 7 ? p === 1 ? "вчера" : p === 2 ? "позавчера" : `${p} дня назад` : f < 4 ? f === 1 ? "неделю назад" : f < 5 ? `${f} недели назад` : `${f} недель назад` : y < 12 ? y === 1 ? "месяц назад" : y < 5 ? `${y} месяца назад` : `${y} месяцев назад` : x === 1 ? "год назад" : x < 5 ? `${x} года назад` : `${x} лет назад`;
+    return r < 60 ? r === 1 ? "минуту назад" : r < 5 ? `${r} минуты назад` : `${r} минут назад` : c < 24 ? c === 1 ? "час назад" : c < 5 ? `${c} часа назад` : `${c} часов назад` : p < 7 ? p === 1 ? "вчера" : p === 2 ? "позавчера" : `${p} дня назад` : f < 4 ? f === 1 ? "неделю назад" : f < 5 ? `${f} недели назад` : `${f} недель назад` : k < 12 ? k === 1 ? "месяц назад" : k < 5 ? `${k} месяца назад` : `${k} месяцев назад` : h === 1 ? "год назад" : h < 5 ? `${h} года назад` : `${h} лет назад`;
   } catch (s) {
     return console.error("Ошибка форматирования относительного времени:", s), "ошибка даты";
   }
