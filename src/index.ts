@@ -9,7 +9,7 @@ export type {
 } from "./lib/table/CustomTable";
 export { default as AddButton } from "./lib/buttons/AddButton";
 export { default as BackButton } from "./lib/buttons/BackButton";
-export { default as DarkCyanButton } from "./lib/buttons/DarkCyanButton";
+export { default as DarkCyanButton } from "./lib/buttons/DefaultButton";
 export { default as DeleteButton } from "./lib/buttons/DeleteButton";
 export { default as EditButton } from "./lib/buttons/EditButton";
 export { default as ExportButton } from "./lib/buttons/ExportButton";

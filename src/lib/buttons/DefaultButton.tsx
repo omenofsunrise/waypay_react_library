@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import type { ButtonHTMLAttributes, ReactNode } from 'react';
+import styled from "styled-components";
+import type { ButtonHTMLAttributes, ReactNode } from "react";
 
 type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
   children?: ReactNode;
@@ -12,14 +12,14 @@ type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
   minWidth?: string;
 };
 
-const DarkCyanButton = ({
-  children = 'Подтвердить',
+const DefaultButton = ({
+  children = "Подтвердить",
   icon,
   disabled = false,
-  bg = 'rgba(0, 125, 136, 1)',
-  hoverBg = 'rgba(0, 150, 163, 1)',
-  disabledBg = 'rgba(102, 177, 184, 1)',
-  textColor = 'white',
+  bg = "rgba(0, 125, 136, 1)",
+  hoverBg = "rgba(0, 150, 163, 1)",
+  disabledBg = "rgba(102, 177, 184, 1)",
+  textColor = "white",
   fullWidth = false,
   minWidth,
   ...props
@@ -55,10 +55,11 @@ const ButtonContainer = styled.button<{
   justify-content: center;
   gap: 8px;
   padding: 8px 12px;
-  background-color: ${({ disabled, $bg, $disabledBg }) => (disabled ? $disabledBg : $bg)};
+  background-color: ${({ disabled, $bg, $disabledBg }) =>
+    disabled ? $disabledBg : $bg};
   border: none;
   border-radius: 10px;
-  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
+  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
   color: ${({ $textColor }) => $textColor};
   font-size: 15px;
   font-weight: 400;
@@ -67,11 +68,12 @@ const ButtonContainer = styled.button<{
   transition: background-color 0.2s ease;
   margin: 0;
   opacity: ${({ disabled }) => (disabled ? 0.7 : 1)};
-  width: ${({ $fullWidth }) => ($fullWidth ? '100%' : 'auto')};
-  min-width: ${({ $minWidth }) => $minWidth || 'auto'};
+  width: ${({ $fullWidth }) => ($fullWidth ? "100%" : "auto")};
+  min-width: ${({ $minWidth }) => $minWidth || "auto"};
 
   &:hover {
-    background-color: ${({ disabled, $hoverBg, $disabledBg }) => (disabled ? $disabledBg : $hoverBg)};
+    background-color: ${({ disabled, $hoverBg, $disabledBg }) =>
+      disabled ? $disabledBg : $hoverBg};
   }
 
   &:focus {
@@ -85,4 +87,4 @@ const IconWrapper = styled.span`
   align-items: center;
 `;
 
-export default DarkCyanButton;
+export default DefaultButton;

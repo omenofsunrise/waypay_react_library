@@ -1,8 +1,13 @@
-import React, { type ReactNode, useEffect, useRef } from 'react';
-import styled from 'styled-components';
-import DarkCyanButton from '../buttons/DarkCyanButton';
+import React, { type ReactNode, useEffect, useRef } from "react";
+import styled from "styled-components";
+import DarkCyanButton from "../buttons/DefaultButton";
 
-export type ModalMode = 'create' | 'edit' | 'view' | 'create-pool' | 'edit-pool';
+export type ModalMode =
+  | "create"
+  | "edit"
+  | "view"
+  | "create-pool"
+  | "edit-pool";
 
 interface ModalProps {
   title?: string;
@@ -28,14 +33,14 @@ const BaseModal: React.FC<ModalProps> = ({
   children,
   isSaveDisabled = false,
   isSubmitting = false,
-  mode = 'create',
+  mode = "create",
   hideSaveButton = false,
   hideCanselButton = false,
-  width = '562px',
-  saveButtonText = 'Сохранить',
+  width = "562px",
+  saveButtonText = "Сохранить",
   customLayout,
 }) => {
-  const isViewMode = mode === 'view';
+  const isViewMode = mode === "view";
   const modalRef = useRef<HTMLDivElement>(null);
 
   const handleCancel = (event: React.MouseEvent) => {
@@ -45,14 +50,14 @@ const BaseModal: React.FC<ModalProps> = ({
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
+      if (event.key === "Escape") {
         onClose();
       }
     };
 
-    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener("keydown", handleKeyDown);
     return () => {
-      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener("keydown", handleKeyDown);
     };
   }, [onClose]);
 
@@ -68,10 +73,21 @@ const BaseModal: React.FC<ModalProps> = ({
           <ModalContent>{children}</ModalContent>
 
           <ModalFooter>
-            {!hideCanselButton && <CancelButton onClick={handleCancel}>Отменить</CancelButton>}
+            {!hideCanselButton && (
+              <CancelButton onClick={handleCancel}>Отменить</CancelButton>
+            )}
             {!isViewMode && !hideSaveButton && (
-              <DarkCyanButton style={{ minWidth: '136px', padding: '10p 20px', borderRadius: '10px', fontSize: '16px' }} type="submit" disabled={isSaveDisabled || isSubmitting}>
-                {isSubmitting ? 'Сохранение...' : saveButtonText || 'Сохранить'}
+              <DarkCyanButton
+                style={{
+                  minWidth: "136px",
+                  padding: "10p 20px",
+                  borderRadius: "10px",
+                  fontSize: "16px",
+                }}
+                type="submit"
+                disabled={isSaveDisabled || isSubmitting}
+              >
+                {isSubmitting ? "Сохранение..." : saveButtonText || "Сохранить"}
               </DarkCyanButton>
             )}
           </ModalFooter>

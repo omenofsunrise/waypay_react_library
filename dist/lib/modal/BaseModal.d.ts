@@ -1,5 +1,5 @@
-import React, { type ReactNode } from 'react';
-export type ModalMode = 'create' | 'edit' | 'view' | 'create-pool' | 'edit-pool';
+import React, { type ReactNode } from "react";
+export type ModalMode = "create" | "edit" | "view" | "create-pool" | "edit-pool";
 interface ModalProps {
     title?: string;
     onClose: () => void;

@@ -1916,7 +1916,20 @@ const Te = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
       /* @__PURE__ */ t.jsx(mo, { children: r }),
       /* @__PURE__ */ t.jsxs(wo, { children: [
         !x && /* @__PURE__ */ t.jsx(vo, { onClick: l, children: "Отменить" }),
-        !h && !y && /* @__PURE__ */ t.jsx(pt, { style: { minWidth: "136px", padding: "10p 20px", borderRadius: "10px", fontSize: "16px" }, type: "submit", disabled: c || p, children: p ? "Сохранение..." : g || "Сохранить" })
+        !h && !y && /* @__PURE__ */ t.jsx(
+          pt,
+          {
+            style: {
+              minWidth: "136px",
+              padding: "10p 20px",
+              borderRadius: "10px",
+              fontSize: "16px"
+            },
+            type: "submit",
+            disabled: c || p,
+            children: p ? "Сохранение..." : g || "Сохранить"
+          }
+        )
       ] })
     ] })
   ] }) });
