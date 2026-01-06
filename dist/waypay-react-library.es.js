@@ -4182,7 +4182,7 @@ export {
   di as CustomTable,
   wi as CustomTextArea,
   Ie as CustomTitle,
-  pt as DarkCyanButton,
+  pt as DefaultButton,
   hi as DeleteButton,
   xi as EditButton,
   ji as EntitySelectContainer,

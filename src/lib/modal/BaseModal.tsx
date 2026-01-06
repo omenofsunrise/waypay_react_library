@@ -1,6 +1,6 @@
 import React, { type ReactNode, useEffect, useRef } from "react";
 import styled from "styled-components";
-import DarkCyanButton from "../buttons/DefaultButton";
+import DefaultButton from "../buttons/DefaultButton";
 
 export type ModalMode =
   | "create"
@@ -77,7 +77,7 @@ const BaseModal: React.FC<ModalProps> = ({
               <CancelButton onClick={handleCancel}>Отменить</CancelButton>
             )}
             {!isViewMode && !hideSaveButton && (
-              <DarkCyanButton
+              <DefaultButton
                 style={{
                   minWidth: "136px",
                   padding: "10p 20px",
@@ -88,7 +88,7 @@ const BaseModal: React.FC<ModalProps> = ({
                 disabled={isSaveDisabled || isSubmitting}
               >
                 {isSubmitting ? "Сохранение..." : saveButtonText || "Сохранить"}
-              </DarkCyanButton>
+              </DefaultButton>
             )}
           </ModalFooter>
         </ModalForm>
