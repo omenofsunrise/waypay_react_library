@@ -143,15 +143,7 @@ const AuthPage: React.FC<AuthPageProps> = ({
           )}
 
           <SubmitButton type="submit" disabled={isLoading}>
-            {isLoading ? (
-              <Loader>
-                <LoaderCircle />
-                <LoaderCircle />
-                <LoaderCircle />
-              </Loader>
-            ) : (
-              submitLabel
-            )}
+            {submitLabel}
           </SubmitButton>
         </AuthForm>
         <InfoText>
@@ -267,42 +259,6 @@ const SubmitButton = styled.button`
     cursor: not-allowed;
     transform: none;
     box-shadow: none;
-  }
-`;
-
-const Loader = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
-  height: 24px;
-`;
-
-const LoaderCircle = styled.div`
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: white;
-  animation: bounce 1s infinite ease-in-out;
-
-  &:nth-child(1) {
-    animation-delay: 0s;
-  }
-  &:nth-child(2) {
-    animation-delay: 0.2s;
-  }
-  &:nth-child(3) {
-    animation-delay: 0.4s;
-  }
-
-  @keyframes bounce {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-6px);
-    }
   }
 `;
 
