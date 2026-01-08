@@ -125,8 +125,6 @@ const AuthPage: React.FC<AuthPageProps> = ({
   return (
     <AuthContainer className={className} style={style}>
       <AuthCard>
-        <Logo>{brand ?? <LogoText>WayPay</LogoText>}</Logo>
-
         <AuthForm onSubmit={handleSubmit}>
           <Title>{title}</Title>
 
@@ -196,18 +194,6 @@ const AuthCard = styled.div`
   @media (max-width: 480px) {
     padding: 30px 20px;
   }
-`;
-
-const Logo = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-bottom: 0;
-`;
-
-const LogoText = styled.div`
-  font-size: 32px;
-  font-weight: 700;
-  color: rgba(0, 125, 136, 1);
 `;
 
 const AuthForm = styled.form`
