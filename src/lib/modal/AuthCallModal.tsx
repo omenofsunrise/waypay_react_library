@@ -42,11 +42,6 @@ const AuthCallModal = ({ isOpen, callPhone, error, onClose }: Props) => {
           После звонка система автоматически подтвердит вашу авторизацию.
         </ModalText>
         {error && <ErrorText>{error}</ErrorText>}
-        {onClose && (
-          <CloseButton type="button" onClick={onClose}>
-            Закрыть
-          </CloseButton>
-        )}
       </ModalContent>
     </ModalOverlay>
   );
@@ -122,16 +117,6 @@ const CopiedText = styled.span`
 const ErrorText = styled.div`
   color: #e74c3c;
   margin: 10px 0;
-`;
-
-const CloseButton = styled.button`
-  margin-top: 16px;
-  padding: 10px 16px;
-  border: none;
-  background: rgba(0, 125, 136, 1);
-  color: #fff;
-  border-radius: 8px;
-  cursor: pointer;
 `;
 
 export default AuthCallModal;
