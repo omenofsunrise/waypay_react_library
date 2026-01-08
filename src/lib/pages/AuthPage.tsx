@@ -1,9 +1,13 @@
-import React, { useEffect, useRef, useState } from 'react';
-import styled from 'styled-components';
-import CustomPhoneInput from '../inputs/CustomPhoneInput';
-import AuthCallModal from '../modal/AuthCallModal';
-import { confirmCallAuth, initiateCallAuth, type UserType } from '../api/authCall';
-import { authStorage } from '../utils/authStorage';
+import React, { useEffect, useRef, useState } from "react";
+import styled from "styled-components";
+import CustomPhoneInput from "../inputs/CustomPhoneInput";
+import AuthCallModal from "../modal/AuthCallModal";
+import {
+  confirmCallAuth,
+  initiateCallAuth,
+  type UserType,
+} from "../api/authCall";
+import { authStorage } from "../utils/authStorage";
 
 type AuthPageProps = {
   onLoginSuccess: (token: string) => void;
@@ -22,23 +26,22 @@ type AuthPageProps = {
 
 const AuthPage: React.FC<AuthPageProps> = ({
   onLoginSuccess,
-  userType = 'delivery_operator',
-  title = 'Авторизация',
-  submitLabel = 'Войти',
-  placeholder = '8 (xxx) xxx-xx-xx',
-  supportPhone = '8 989 924 24 24',
-  supportLinkUrl = 'https://info.waypay.one',
-  supportLinkText = 'info.waypay.one',
-  brand,
+  userType = "delivery_operator",
+  title = "Авторизация",
+  submitLabel = "Войти",
+  placeholder = "8 (xxx) xxx-xx-xx",
+  supportPhone = "8 989 924 24 24",
+  supportLinkUrl = "https://info.waypay.one",
+  supportLinkText = "info.waypay.one",
   className,
   style,
   pollingIntervalMs = 3000,
 }) => {
   const [isLoading, setIsLoading] = useState(false);
-  const [rawPhone, setRawPhone] = useState('');
+  const [rawPhone, setRawPhone] = useState("");
   const [showCallModal, setShowCallModal] = useState(false);
-  const [callPhone, setCallPhone] = useState('');
-  const [verificationError, setVerificationError] = useState('');
+  const [callPhone, setCallPhone] = useState("");
+  const [verificationError, setVerificationError] = useState("");
   const [isVerifying, setIsVerifying] = useState(false);
   const verificationInterval = useRef<number | undefined>(undefined);
 
@@ -51,10 +54,10 @@ const AuthPage: React.FC<AuthPageProps> = ({
   }, []);
 
   const normalizePhone = (value: string) => {
-    const digits = value.replace(/\D/g, '');
-    if (!digits) return '';
-    if (digits.startsWith('8')) return `+7${digits.slice(1)}`;
-    if (digits.startsWith('7')) return `+${digits}`;
+    const digits = value.replace(/\D/g, "");
+    if (!digits) return "";
+    if (digits.startsWith("8")) return `+7${digits.slice(1)}`;
+    if (digits.startsWith("7")) return `+${digits}`;
     return `+${digits}`;
   };
 
@@ -68,12 +71,12 @@ const AuthPage: React.FC<AuthPageProps> = ({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!rawPhone) {
-      setVerificationError('Введите номер телефона');
+      setVerificationError("Введите номер телефона");
       return;
     }
 
     setIsLoading(true);
-    setVerificationError('');
+    setVerificationError("");
     const normalizedPhone = normalizePhone(rawPhone);
 
     try {
@@ -82,8 +85,10 @@ const AuthPage: React.FC<AuthPageProps> = ({
       setShowCallModal(true);
       startVerificationPolling(normalizedPhone, response.check_id);
     } catch (error: unknown) {
-      console.error('Auth error:', error);
-      setVerificationError('Не удалось инициировать авторизацию. Проверьте номер.');
+      console.error("Auth error:", error);
+      setVerificationError(
+        "Не удалось инициировать авторизацию. Проверьте номер."
+      );
     } finally {
       setIsLoading(false);
     }
@@ -115,8 +120,8 @@ const AuthPage: React.FC<AuthPageProps> = ({
         onLoginSuccess(response.access_token);
       }
     } catch (error) {
-      console.error('Verification error:', error);
-      setVerificationError('Ошибка проверки авторизации');
+      console.error("Verification error:", error);
+      setVerificationError("Ошибка проверки авторизации");
     } finally {
       setIsVerifying(false);
     }
@@ -130,7 +135,11 @@ const AuthPage: React.FC<AuthPageProps> = ({
 
           <FormGroup>
             <InputContainer>
-              <CustomPhoneInput value={rawPhone} onChange={(value: string) => setRawPhone(value)} placeholder={placeholder} />
+              <CustomPhoneInput
+                value={rawPhone}
+                onChange={(value: string) => setRawPhone(value)}
+                placeholder={placeholder}
+              />
             </InputContainer>
           </FormGroup>
 
@@ -147,16 +156,22 @@ const AuthPage: React.FC<AuthPageProps> = ({
         <InfoText>
           Хотите получить доступ к нашим продуктам?
           <br />
-          Обратитесь по номеру <InfoPhone href={`tel:${supportPhone}`}>{supportPhone}</InfoPhone>
+          Обратитесь по номеру{" "}
+          <InfoPhone href={`tel:${supportPhone}`}>{supportPhone}</InfoPhone>
           <br />
-          или оставьте заявку на{' '}
+          или оставьте заявку на{" "}
           <InfoLink href={supportLinkUrl} target="_blank" rel="noreferrer">
             {supportLinkText}
           </InfoLink>
         </InfoText>
       </AuthCard>
 
-      <AuthCallModal isOpen={showCallModal} onClose={closeModal} callPhone={callPhone} error={verificationError} />
+      <AuthCallModal
+        isOpen={showCallModal}
+        onClose={closeModal}
+        callPhone={callPhone}
+        error={verificationError}
+      />
     </AuthContainer>
   );
 };
@@ -182,13 +197,17 @@ const AuthCard = styled.div`
   overflow: hidden;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, rgba(0, 125, 136, 1) 0%, rgba(37, 203, 161, 1) 100%);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 125, 136, 1) 0%,
+      rgba(37, 203, 161, 1) 100%
+    );
   }
 
   @media (max-width: 480px) {
@@ -219,7 +238,11 @@ const InputContainer = styled.div`
 `;
 
 const SubmitButton = styled.button`
-  background: linear-gradient(90deg, rgba(0, 125, 136, 1) 0%, rgba(37, 203, 161, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 125, 136, 1) 0%,
+    rgba(37, 203, 161, 1) 100%
+  );
   color: white;
   border: none;
   padding: 16px;
@@ -241,7 +264,11 @@ const SubmitButton = styled.button`
   }
 
   &:disabled {
-    background: linear-gradient(90deg, rgba(0, 125, 136, 0.5) 0%, rgba(37, 203, 161, 0.5) 100%);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 125, 136, 0.5) 0%,
+      rgba(37, 203, 161, 0.5) 100%
+    );
     cursor: not-allowed;
     transform: none;
     box-shadow: none;
