@@ -39,7 +39,7 @@ const Pagination: React.FC<PaginationProps> = ({ total, current = 1, onChange, i
 
     for (let i = startPage; i <= endPage; i++) {
       pages.push(
-        <PageNumber key={i} active={i === currentPage} onClick={() => handlePageChange(i)}>
+        <PageNumber key={i} $active={i === currentPage} onClick={() => handlePageChange(i)}>
           {i}
         </PageNumber>,
       );
@@ -50,7 +50,7 @@ const Pagination: React.FC<PaginationProps> = ({ total, current = 1, onChange, i
         pages.unshift(<PageNumber key="start-ellipsis">...</PageNumber>);
       }
       pages.unshift(
-        <PageNumber key={1} active={1 === currentPage} onClick={() => handlePageChange(1)}>
+        <PageNumber key={1} $active={1 === currentPage} onClick={() => handlePageChange(1)}>
           1
         </PageNumber>,
       );
@@ -61,7 +61,7 @@ const Pagination: React.FC<PaginationProps> = ({ total, current = 1, onChange, i
         pages.push(<PageNumber key="end-ellipsis">...</PageNumber>);
       }
       pages.push(
-        <PageNumber key={totalPages} active={totalPages === currentPage} onClick={() => handlePageChange(totalPages)}>
+        <PageNumber key={totalPages} $active={totalPages === currentPage} onClick={() => handlePageChange(totalPages)}>
           {totalPages}
         </PageNumber>,
       );
@@ -98,7 +98,7 @@ const StyledPagination = styled.div`
   margin-left: auto;
 `;
 
-const PageNumber = styled.div<{ active?: boolean }>`
+const PageNumber = styled.div<{ $active?: boolean }>`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -107,11 +107,11 @@ const PageNumber = styled.div<{ active?: boolean }>`
   border-radius: 10px;
   cursor: pointer;
   font-size: 14px;
-  color: ${({ active }) => (active ? 'white' : 'black')};
-  background-color: ${({ active }) => (active ? 'rgba(0, 125, 136, 1)' : 'transparent')};
+  color: ${({ $active }) => ($active ? 'white' : 'black')};
+  background-color: ${({ $active }) => ($active ? 'rgba(0, 125, 136, 1)' : 'transparent')};
 
   &:hover {
-    color: ${({ active }) => (active ? 'white' : 'rgba(0, 125, 136, 1)')};
+    color: ${({ $active }) => ($active ? 'white' : 'rgba(0, 125, 136, 1)')};
   }
 `;
 

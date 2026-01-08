@@ -1749,12 +1749,12 @@ const Te = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
     }
     for (let h = g; h <= m; h++)
       x.push(
-        /* @__PURE__ */ t.jsx(te, { active: h === c, onClick: () => f(h), children: h }, h)
+        /* @__PURE__ */ t.jsx(te, { $active: h === c, onClick: () => f(h), children: h }, h)
       );
     return g > 1 && (g > 2 && x.unshift(/* @__PURE__ */ t.jsx(te, { children: "..." }, "start-ellipsis")), x.unshift(
-      /* @__PURE__ */ t.jsx(te, { active: c === 1, onClick: () => f(1), children: "1" }, 1)
+      /* @__PURE__ */ t.jsx(te, { $active: c === 1, onClick: () => f(1), children: "1" }, 1)
     )), m < r && (m < r - 1 && x.push(/* @__PURE__ */ t.jsx(te, { children: "..." }, "end-ellipsis")), x.push(
-      /* @__PURE__ */ t.jsx(te, { active: r === c, onClick: () => f(r), children: r }, r)
+      /* @__PURE__ */ t.jsx(te, { $active: r === c, onClick: () => f(r), children: r }, r)
     )), x;
   };
   return /* @__PURE__ */ t.jsxs(ao, { children: [
@@ -1778,11 +1778,11 @@ const Te = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
   border-radius: 10px;
   cursor: pointer;
   font-size: 14px;
-  color: ${({ active: e }) => e ? "white" : "black"};
-  background-color: ${({ active: e }) => e ? "rgba(0, 125, 136, 1)" : "transparent"};
+  color: ${({ $active: e }) => e ? "white" : "black"};
+  background-color: ${({ $active: e }) => e ? "rgba(0, 125, 136, 1)" : "transparent"};
 
   &:hover {
-    color: ${({ active: e }) => e ? "white" : "rgba(0, 125, 136, 1)"};
+    color: ${({ $active: e }) => e ? "white" : "rgba(0, 125, 136, 1)"};
   }
 `, ke = o.button`
   display: flex;
@@ -3676,7 +3676,7 @@ const Pi = ({ title: e, data: n, maxValue: s, step: i, height: r = 300, titleFon
   gap: ${({ $collapsed: e }) => e ? "0" : "12px"};
   padding: ${({ $collapsed: e }) => e ? "15px 0" : "15px 17px"};
   border-radius: 8px;
-  cursor: ${({ $disabled: e }) => e ? "not-allowed" : "pointer"};
+  cursor: ${({ $disabled: e }) => e ? "not-чed" : "pointer"};
   color: ${({ $selected: e }) => e ? "#000" : "#50555c"};
   background-color: ${({ $selected: e }) => e ? "rgba(209, 213, 219, 1)" : "transparent"};
   transition: background-color 0.2s ease, color 0.2s ease;
