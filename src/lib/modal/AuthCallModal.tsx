@@ -1,15 +1,14 @@
-import { useState } from 'react';
-import styled from 'styled-components';
+import { useState } from "react";
+import styled from "styled-components";
 
 type Props = {
   isOpen: boolean;
   callPhone: string;
   error?: string;
   onClose?: () => void;
-  isVerifying?: boolean;
 };
 
-const AuthCallModal = ({ isOpen, callPhone, error, onClose, isVerifying }: Props) => {
+const AuthCallModal = ({ isOpen, callPhone, error, onClose }: Props) => {
   const [isCopied, setIsCopied] = useState(false);
 
   if (!isOpen) return null;
@@ -31,12 +30,17 @@ const AuthCallModal = ({ isOpen, callPhone, error, onClose, isVerifying }: Props
       <ModalContent onClick={(e) => e.stopPropagation()}>
         <ModalTitle>Подтверждение авторизации</ModalTitle>
         <ModalText>Для завершения авторизации позвоните на номер:</ModalText>
-        <CallPhoneNumber onClick={handlePhoneClick} title={isMobile ? 'Позвонить' : 'Копировать номер'} $clickable>
+        <CallPhoneNumber
+          onClick={handlePhoneClick}
+          title={isMobile ? "Позвонить" : "Копировать номер"}
+          $clickable
+        >
           {callPhone}
           {!isMobile && isCopied && <CopiedText>Скопировано!</CopiedText>}
         </CallPhoneNumber>
-        <ModalText>После звонка система автоматически подтвердит вашу авторизацию.</ModalText>
-        {isVerifying && <InfoText>Проверяем звонок...</InfoText>}
+        <ModalText>
+          После звонка система автоматически подтвердит вашу авторизацию.
+        </ModalText>
         {error && <ErrorText>{error}</ErrorText>}
         {onClose && (
           <CloseButton type="button" onClick={onClose}>
@@ -88,7 +92,7 @@ const CallPhoneNumber = styled.div<{ $clickable?: boolean }>`
   margin: 20px 0;
   color: rgba(0, 125, 136, 1);
   position: relative;
-  cursor: ${(props) => (props.$clickable ? 'pointer' : 'default')};
+  cursor: ${(props) => (props.$clickable ? "pointer" : "default")};
   transition: all 0.2s;
 
   ${(props) =>
@@ -118,12 +122,6 @@ const CopiedText = styled.span`
 const ErrorText = styled.div`
   color: #e74c3c;
   margin: 10px 0;
-`;
-
-const InfoText = styled.div`
-  color: #4b5563;
-  margin: 6px 0;
-  font-size: 14px;
 `;
 
 const CloseButton = styled.button`
