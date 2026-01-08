@@ -158,7 +158,7 @@ const AuthPage: React.FC<AuthPageProps> = ({
         </InfoText>
       </AuthCard>
 
-      <AuthCallModal isOpen={showCallModal} onClose={closeModal} callPhone={callPhone} isVerifying={isVerifying} error={verificationError} />
+      <AuthCallModal isOpen={showCallModal} onClose={closeModal} callPhone={callPhone} error={verificationError} />
     </AuthContainer>
   );
 };

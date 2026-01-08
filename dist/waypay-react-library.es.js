@@ -40,7 +40,7 @@ function We() {
           return "Profiler";
         case k:
           return "StrictMode";
-        case D:
+        case E:
           return "Suspense";
         case Y:
           return "SuspenseList";
@@ -55,7 +55,7 @@ function We() {
             return "Portal";
           case z:
             return a.displayName || "Context";
-          case E:
+          case D:
             return (a._context.displayName || "Context") + ".Consumer";
           case I:
             var $ = a.render;
@@ -221,7 +221,7 @@ React keys must be passed directly to JSX without using spread:
     function w(a) {
       return typeof a == "object" && a !== null && a.$$typeof === u;
     }
-    var h = G, u = /* @__PURE__ */ Symbol.for("react.transitional.element"), l = /* @__PURE__ */ Symbol.for("react.portal"), L = /* @__PURE__ */ Symbol.for("react.fragment"), k = /* @__PURE__ */ Symbol.for("react.strict_mode"), R = /* @__PURE__ */ Symbol.for("react.profiler"), E = /* @__PURE__ */ Symbol.for("react.consumer"), z = /* @__PURE__ */ Symbol.for("react.context"), I = /* @__PURE__ */ Symbol.for("react.forward_ref"), D = /* @__PURE__ */ Symbol.for("react.suspense"), Y = /* @__PURE__ */ Symbol.for("react.suspense_list"), S = /* @__PURE__ */ Symbol.for("react.memo"), F = /* @__PURE__ */ Symbol.for("react.lazy"), W = /* @__PURE__ */ Symbol.for("react.activity"), B = /* @__PURE__ */ Symbol.for("react.client.reference"), v = h.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, p = Object.prototype.hasOwnProperty, j = Array.isArray, M = console.createTask ? console.createTask : function() {
+    var h = G, u = /* @__PURE__ */ Symbol.for("react.transitional.element"), l = /* @__PURE__ */ Symbol.for("react.portal"), L = /* @__PURE__ */ Symbol.for("react.fragment"), k = /* @__PURE__ */ Symbol.for("react.strict_mode"), R = /* @__PURE__ */ Symbol.for("react.profiler"), D = /* @__PURE__ */ Symbol.for("react.consumer"), z = /* @__PURE__ */ Symbol.for("react.context"), I = /* @__PURE__ */ Symbol.for("react.forward_ref"), E = /* @__PURE__ */ Symbol.for("react.suspense"), Y = /* @__PURE__ */ Symbol.for("react.suspense_list"), S = /* @__PURE__ */ Symbol.for("react.memo"), F = /* @__PURE__ */ Symbol.for("react.lazy"), W = /* @__PURE__ */ Symbol.for("react.activity"), B = /* @__PURE__ */ Symbol.for("react.client.reference"), v = h.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, p = Object.prototype.hasOwnProperty, j = Array.isArray, M = console.createTask ? console.createTask : function() {
       return null;
     };
     h = {
@@ -380,7 +380,7 @@ const Le = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
   rowStyles: x = {},
   isLoading: w
 }) => {
-  const [h, u] = A(null), [l, L] = A(null), k = Z(null), R = Z(null), E = 500, z = b !== void 0 ? b : h, I = (m) => {
+  const [h, u] = A(null), [l, L] = A(null), k = Z(null), R = Z(null), D = 500, z = b !== void 0 ? b : h, I = (m) => {
     !e[m].isSortable || !r || r(m);
   }, Y = f || ((m) => {
     const C = m[8];
@@ -403,7 +403,7 @@ const Le = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
   }, v = (m, C) => {
     i.length !== 0 && (R.current && clearTimeout(R.current), R.current = window.setTimeout(() => {
       W(m, C);
-    }, E));
+    }, D));
   }, p = () => {
     R.current && (clearTimeout(R.current), R.current = null);
   }, j = () => {
@@ -1014,19 +1014,19 @@ const Le = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
   required: g = !1,
   ...f
 }) => {
-  const [x, w] = G.useState(!1), [h, u] = G.useState(!1), l = G.useRef(null), L = !!(n && !s && !x), k = (D) => {
+  const [x, w] = G.useState(!1), [h, u] = G.useState(!1), l = G.useRef(null), L = !!(n && !s && !x), k = (E) => {
     i && !y && i({
-      target: { value: D, name: b }
+      target: { value: E, name: b }
     }), u(!1), w(!1);
-  }, R = (D) => {
-    l.current && !l.current.contains(D.target) && (u(!1), w(!1));
-  }, E = () => {
+  }, R = (E) => {
+    l.current && !l.current.contains(E.target) && (u(!1), w(!1));
+  }, D = () => {
     y || (u(!h), w(!h));
   };
   G.useEffect(() => (document.addEventListener("mousedown", R), () => {
     document.removeEventListener("mousedown", R);
   }), []);
-  const z = d.find((D) => D.value === s), I = z ? z.label : "";
+  const z = d.find((E) => E.value === s), I = z ? z.label : "";
   return /* @__PURE__ */ t.jsxs(wt, { ref: l, ...f, children: [
     /* @__PURE__ */ t.jsxs(vt, { children: [
       /* @__PURE__ */ t.jsxs(
@@ -1035,7 +1035,7 @@ const Le = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
           hasError: r,
           isOpen: h,
           disabled: y,
-          onClick: E,
+          onClick: D,
           onFocus: () => !y && w(!0),
           onBlur: () => w(!1),
           tabIndex: y ? -1 : 0,
@@ -1045,15 +1045,15 @@ const Le = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
           ]
         }
       ),
-      h && /* @__PURE__ */ t.jsx($t, { children: d.map((D) => /* @__PURE__ */ t.jsxs(Mt, { $isSelected: D.value === s, onClick: () => k(D.value), children: [
-        /* @__PURE__ */ t.jsx(St, { $isSelected: D.value === s, children: D.value === s && /* @__PURE__ */ t.jsx(Lt, {}) }),
-        /* @__PURE__ */ t.jsx(Tt, { children: D.label })
-      ] }, D.value)) })
+      h && /* @__PURE__ */ t.jsx($t, { children: d.map((E) => /* @__PURE__ */ t.jsxs(Mt, { $isSelected: E.value === s, onClick: () => k(E.value), children: [
+        /* @__PURE__ */ t.jsx(St, { $isSelected: E.value === s, children: E.value === s && /* @__PURE__ */ t.jsx(Lt, {}) }),
+        /* @__PURE__ */ t.jsx(Tt, { children: E.label })
+      ] }, E.value)) })
     ] }),
     n && /* @__PURE__ */ t.jsx(Dt, { isVisible: L, children: n }),
     r && c && /* @__PURE__ */ t.jsx(Et, { children: c }),
     /* @__PURE__ */ t.jsx(Pt, { name: b, value: s || "", onChange: () => {
-    }, tabIndex: -1, required: g, children: d.map((D) => /* @__PURE__ */ t.jsx("option", { value: D.value, children: D.label }, D.value)) })
+    }, tabIndex: -1, required: g, children: d.map((E) => /* @__PURE__ */ t.jsx("option", { value: E.value, children: E.label }, E.value)) })
   ] });
 }, wt = o.div`
   position: relative;
@@ -1254,7 +1254,7 @@ const Le = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
     f(p);
     const M = j.toISOString().split("T")[0];
     i?.(M), d(!1);
-  }, E = () => {
+  }, D = () => {
     const p = /* @__PURE__ */ new Date();
     y(p);
     const M = new Date(Date.UTC(p.getFullYear(), p.getMonth(), p.getDate())).toISOString().split("T")[0];
@@ -1264,7 +1264,7 @@ const Le = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
   }, I = (p) => {
     const j = new Date(b);
     j.setMonth(p), y(j), w(!1);
-  }, D = (p) => {
+  }, E = (p) => {
     const j = new Date(b);
     j.setFullYear(p), y(j), u(!1);
   }, Y = () => {
@@ -1352,7 +1352,7 @@ const Le = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
               {
                 $selected: p === b.getFullYear(),
                 onClick: (j) => {
-                  j.stopPropagation(), D(p);
+                  j.stopPropagation(), E(p);
                 },
                 children: p
               },
@@ -1375,7 +1375,7 @@ const Le = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
       /* @__PURE__ */ t.jsx(Qt, { children: Y() }),
       /* @__PURE__ */ t.jsxs(eo, { children: [
         /* @__PURE__ */ t.jsx(ve, { onClick: z, children: "Удалить" }),
-        /* @__PURE__ */ t.jsx(ve, { onClick: E, children: "Сегодня" })
+        /* @__PURE__ */ t.jsx(ve, { onClick: D, children: "Сегодня" })
       ] })
     ] })
   ] });
@@ -1599,16 +1599,16 @@ const Le = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
         break;
       case "rubles": {
         const k = u.target.selectionStart, R = u.target.value;
-        let E = R.replace(/[^\d]/g, "");
-        if (E === "") {
+        let D = R.replace(/[^\d]/g, "");
+        if (D === "") {
           u.target.value = "", r(u);
           break;
         }
-        const z = parseInt(E, 10);
+        const z = parseInt(D, 10);
         if (!isNaN(z)) {
           let I = z.toLocaleString("ru-RU");
           I += " ₽";
-          const D = w(R, k || 0), Y = h(I, D);
+          const E = w(R, k || 0), Y = h(I, E);
           u.target.value = I, r(u), setTimeout(() => {
             u.target.setSelectionRange(Y, Y);
           }, 0);
@@ -1622,9 +1622,9 @@ const Le = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
         const R = parseFloat(l);
         if (isNaN(R) || (R > 100 ? l = "100" : R < 0 && (l = "0")), l && l !== "") {
           l += " %";
-          const E = u.target.selectionStart || 0, z = l.replace(" %", "");
+          const D = u.target.selectionStart || 0, z = l.replace(" %", "");
           u.target.value = l, r(u), setTimeout(() => {
-            E < z.length && u.target.setSelectionRange(E, E);
+            D < z.length && u.target.setSelectionRange(D, D);
           }, 0);
         } else
           u.target.value = l, r(u);
@@ -1635,10 +1635,10 @@ const Le = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
         let L = l.split(" ").filter((k) => k.length > 0);
         L = L.slice(0, 3), l = L.map((k) => {
           if (k.startsWith("-") && (k = k.substring(1)), (k.match(/-/g) || []).length > 1) {
-            const E = k.split("-");
-            k = E[0] + "-" + E.slice(1).join("");
+            const D = k.split("-");
+            k = D[0] + "-" + D.slice(1).join("");
           }
-          return k.includes("-") ? k.split("-").map((E, z) => E.length === 0 ? "" : (z > 0, E[0].toUpperCase() + E.slice(1).toLowerCase())).join("-") : k.length > 0 ? k[0].toUpperCase() + k.slice(1).toLowerCase() : "";
+          return k.includes("-") ? k.split("-").map((D, z) => D.length === 0 ? "" : (z > 0, D[0].toUpperCase() + D.slice(1).toLowerCase())).join("-") : k.length > 0 ? k[0].toUpperCase() + k.slice(1).toLowerCase() : "";
         }).join(" "), l.length > 0 && l[l.length - 1] !== " " && u.target.value.length > 0 && u.target.value[u.target.value.length - 1] === " " && (l += " "), l.length > 100 && (l = l.slice(0, 100)), u.target.value = l, r(u);
         break;
       case "doc":
@@ -2029,7 +2029,7 @@ const Le = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
   const [d, b] = A(!1), [y, g] = A(!1), [f, x] = A(""), [w, h] = A(""), [u, l] = A(""), L = Z(null), k = Z(null);
   U(() => {
     if (e === "Custom" && w && u) {
-      const S = D(w), F = D(u);
+      const S = E(w), F = E(u);
       x(`С ${S} по ${F}`);
     } else {
       const S = s.find((F) => F.value === e);
@@ -2045,16 +2045,16 @@ const Le = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
   }, [y]);
   const R = (S) => {
     r?.(S.value), b(!1);
-  }, E = () => {
+  }, D = () => {
     b(!1), c ? c() : g(!0);
   }, z = () => {
     r?.(""), x(""), h(""), l("");
   }, I = () => {
     if (w && u) {
-      const S = D(w), F = D(u), W = `С ${S} по ${F}`;
+      const S = E(w), F = E(u), W = `С ${S} по ${F}`;
       r?.("Custom", w, u), x(W), g(!1);
     }
-  }, D = (S) => {
+  }, E = (S) => {
     const F = new Date(S), W = String(F.getDate()).padStart(2, "0"), B = String(F.getMonth() + 1).padStart(2, "0"), v = F.getFullYear();
     return `${W}.${B}.${v}`;
   }, Y = () => /* @__PURE__ */ t.jsxs(Po, { children: [
@@ -2072,7 +2072,7 @@ const Le = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
           /* @__PURE__ */ t.jsx(So, { $isSelected: e === S.value, children: e === S.value && /* @__PURE__ */ t.jsx(Lo, {}) }),
           /* @__PURE__ */ t.jsx(To, { children: S.label })
         ] }, S.id)),
-        i && /* @__PURE__ */ t.jsx(Do, { onClick: E, children: "Другой период" })
+        i && /* @__PURE__ */ t.jsx(Do, { onClick: D, children: "Другой период" })
       ] })
     ] }),
     y && /* @__PURE__ */ t.jsx("div", { ref: k, children: /* @__PURE__ */ t.jsx(
@@ -2243,24 +2243,24 @@ const Le = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
   hasError: g = !1,
   errorMessage: f
 }) => {
-  const [x, w] = G.useState(!1), h = G.useRef(null), u = !!(d && !n && !x), l = (E) => {
-    const I = E.replace(/\D/g, "").slice(0, 11);
-    let D = "";
-    return I.length > 0 && (D += "8"), I.length > 1 && (D += ` (${I.slice(1, 4)}`), I.length > 4 && (D += `) ${I.slice(4, 7)}`), I.length > 7 && (D += `-${I.slice(7, 9)}`), I.length > 9 && (D += `-${I.slice(9, 11)}`), D;
-  }, L = (E) => {
-    const z = l(E.target.value), I = {
-      ...E,
+  const [x, w] = G.useState(!1), h = G.useRef(null), u = !!(d && !n && !x), l = (D) => {
+    const I = D.replace(/\D/g, "").slice(0, 11);
+    let E = "";
+    return I.length > 0 && (E += "8"), I.length > 1 && (E += ` (${I.slice(1, 4)}`), I.length > 4 && (E += `) ${I.slice(4, 7)}`), I.length > 7 && (E += `-${I.slice(7, 9)}`), I.length > 9 && (E += `-${I.slice(9, 11)}`), E;
+  }, L = (D) => {
+    const z = l(D.target.value), I = {
+      ...D,
       target: {
-        ...E.target,
+        ...D.target,
         name: e,
         value: z
       }
     };
     s(I);
-  }, k = (E) => {
-    w(!1), i?.(E);
-  }, R = (E) => {
-    r?.(E);
+  }, k = (D) => {
+    w(!1), i?.(D);
+  }, R = (D) => {
+    r?.(D);
   };
   return /* @__PURE__ */ t.jsxs(Io, { children: [
     /* @__PURE__ */ t.jsx(
@@ -2699,7 +2699,7 @@ const pn = (e) => typeof window > "u" ? Promise.reject(new Error("Window is not 
   style: u,
   onError: l
 }) => {
-  const [L, k] = A(null), [R, E] = A(n), [z, I] = A(n), [D, Y] = A(!1), S = Z(null);
+  const [L, k] = A(null), [R, D] = A(n), [z, I] = A(n), [E, Y] = A(!1), S = Z(null);
   U(() => {
     let B = !1, v;
     return (async () => {
@@ -2730,7 +2730,7 @@ const pn = (e) => typeof window > "u" ? Promise.reject(new Error("Window is not 
     if (window.ymaps)
       try {
         const _ = (await window.ymaps.geocode(B)).geoObjects.get(0).getAddressLine();
-        v.geometry.setCoordinates(B), p.panTo(B, { flying: !0 }), I(_), E(_), e(_, B[0], B[1]);
+        v.geometry.setCoordinates(B), p.panTo(B, { flying: !0 }), I(_), D(_), e(_, B[0], B[1]);
       } catch (j) {
         l && j instanceof Error && l(j);
       }
@@ -2760,13 +2760,13 @@ const pn = (e) => typeof window > "u" ? Promise.reject(new Error("Window is not 
         {
           type: "text",
           value: R,
-          onChange: (B) => E(B.target.value),
+          onChange: (B) => D(B.target.value),
           placeholder: y,
           onKeyPress: (B) => B.key === "Enter" && W(),
-          disabled: !D
+          disabled: !E
         }
       ),
-      /* @__PURE__ */ t.jsx(xn, { onClick: W, disabled: !D, children: g })
+      /* @__PURE__ */ t.jsx(xn, { onClick: W, disabled: !E, children: g })
     ] }),
     /* @__PURE__ */ t.jsxs(fn, { children: [
       "Выбранный адрес: ",
@@ -3029,12 +3029,12 @@ const Ti = ({ title: e, data: n, maxValue: s, step: i, height: r = 300, titleFon
   showTooltip: w = !0,
   titleFontSize: h = "30px"
 }) => {
-  const [u, l] = A(null), [L, k] = A({ x: 0, y: 0 }), R = Z(null), E = Z(null), z = Math.max(...n.map((v) => v.x), r), I = [];
+  const [u, l] = A(null), [L, k] = A({ x: 0, y: 0 }), R = Z(null), D = Z(null), z = Math.max(...n.map((v) => v.x), r), I = [];
   for (let v = 0; v <= z; v += b)
     I.push(v);
-  const D = [];
+  const E = [];
   for (let v = d; v <= c; v += y)
-    D.push(v);
+    E.push(v);
   const Y = x || I.map((v) => v.toString()), S = f ? Array.from(new Set(n.filter((v) => v.label).map((v) => v.label))).map((v) => {
     const p = n.find((j) => j.label === v);
     return { name: v, color: p.color };
@@ -3048,8 +3048,8 @@ const Ti = ({ title: e, data: n, maxValue: s, step: i, height: r = 300, titleFon
     return 100 - (v - d) / p * 100;
   };
   return U(() => {
-    if (u && E.current) {
-      const v = E.current.getBoundingClientRect(), p = W(u.x) / 100 * v.width, j = B(u.y) / 100 * v.height;
+    if (u && D.current) {
+      const v = D.current.getBoundingClientRect(), p = W(u.x) / 100 * v.width, j = B(u.y) / 100 * v.height;
       k({
         x: p + v.left,
         y: j + v.top
@@ -3065,11 +3065,11 @@ const Ti = ({ title: e, data: n, maxValue: s, step: i, height: r = 300, titleFon
     ] }),
     /* @__PURE__ */ t.jsxs(Hn, { height: g, children: [
       /* @__PURE__ */ t.jsxs(Vn, { children: [
-        D.map((v, p) => /* @__PURE__ */ t.jsx(Zn, { children: v.toLocaleString() }, p)),
+        E.map((v, p) => /* @__PURE__ */ t.jsx(Zn, { children: v.toLocaleString() }, p)),
         /* @__PURE__ */ t.jsx(Ce, { children: i })
       ] }),
-      /* @__PURE__ */ t.jsxs(Un, { ref: E, children: [
-        D.map((v, p) => /* @__PURE__ */ t.jsx(Xn, { position: B(v) }, `hline-${p}`)),
+      /* @__PURE__ */ t.jsxs(Un, { ref: D, children: [
+        E.map((v, p) => /* @__PURE__ */ t.jsx(Xn, { position: B(v) }, `hline-${p}`)),
         Object.values(F).map((v, p) => v.map((j, M) => {
           if (M === 0) return null;
           const _ = v[M - 1], P = W(_.x), V = B(_.y), m = W(j.x), C = B(j.y);
@@ -3525,17 +3525,17 @@ const Ti = ({ title: e, data: n, maxValue: s, step: i, height: r = 300, titleFon
 }) => {
   const h = Be(vr), [u, l] = A(
     r ?? h.collapsed ?? !1
-  ), [L, k] = A(null), [R, E] = A(
+  ), [L, k] = A(null), [R, D] = A(
     d ?? h.selectedSideMenuItem ?? null
   ), [z, I] = A({
     visible: !1,
     x: 0,
     y: 0,
     items: []
-  }), D = Z(null), Y = r ?? h.collapsed ?? u, S = (P) => {
+  }), E = Z(null), Y = r ?? h.collapsed ?? u, S = (P) => {
     l(P), h.toggleCollapsed(), c?.(P);
   }, F = d ?? h.selectedSideMenuItem ?? R, W = (P) => {
-    E(P), h.setSelectedSideMenuItem(P);
+    D(P), h.setSelectedSideMenuItem(P);
   };
   U(() => {
     r !== void 0 && (l(r), r && k(null));
@@ -3600,7 +3600,7 @@ const Ti = ({ title: e, data: n, maxValue: s, step: i, height: r = 300, titleFon
   return /* @__PURE__ */ t.jsxs(
     yr,
     {
-      ref: D,
+      ref: E,
       $collapsed: Y,
       $width: g,
       $collapsedWidth: f,
@@ -3878,7 +3878,7 @@ const Or = (e, n) => ze("/auth/call/initiate", {
   style: f,
   pollingIntervalMs: x = 3e3
 }) => {
-  const [w, h] = A(!1), [u, l] = A(""), [L, k] = A(!1), [R, E] = A(""), [z, I] = A(""), [D, Y] = A(!1), S = Z(void 0);
+  const [w, h] = A(!1), [u, l] = A(""), [L, k] = A(!1), [R, D] = A(""), [z, I] = A(""), [E, Y] = A(!1), S = Z(void 0);
   U(() => () => {
     S.current && clearInterval(S.current);
   }, []);
@@ -3896,7 +3896,7 @@ const Or = (e, n) => ze("/auth/call/initiate", {
     const M = F(u);
     try {
       const _ = await Or(M, n);
-      E(_.call_phone), k(!0), v(M, _.check_id);
+      D(_.call_phone), k(!0), v(M, _.check_id);
     } catch (_) {
       console.error("Auth error:", _), I("Не удалось инициировать авторизацию. Проверьте номер.");
     } finally {
@@ -3907,7 +3907,7 @@ const Or = (e, n) => ze("/auth/call/initiate", {
       p(j, M);
     }, x);
   }, p = async (j, M) => {
-    if (!D) {
+    if (!E) {
       Y(!0);
       try {
         const _ = await Yr(j, M, n);
@@ -3939,7 +3939,7 @@ const Or = (e, n) => ze("/auth/call/initiate", {
         /* @__PURE__ */ t.jsx(Qr, { href: d, target: "_blank", rel: "noreferrer", children: b })
       ] })
     ] }),
-    /* @__PURE__ */ t.jsx(ur, { isOpen: L, onClose: W, callPhone: R, isVerifying: D, error: z })
+    /* @__PURE__ */ t.jsx(ur, { isOpen: L, onClose: W, callPhone: R, error: z })
   ] });
 }, Wr = o.div`
   display: flex;
