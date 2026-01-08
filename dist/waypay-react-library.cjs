@@ -770,7 +770,7 @@ React keys must be passed directly to JSX without using spread:
   font-size: 12px;
   margin-top: 4px;
   display: block;
-`,bo=({total:e,current:n=1,onChange:s,itemsPerPage:i=10})=>{const r=Math.ceil(e/i),[c,p]=y.useState(n),g=x=>{x<1||x>r||x===c||(p(x),s?.(x))},k=()=>{const x=[];let f=1,m=r;if(r>5){const h=Math.floor(2.5);f=Math.max(c-h,1),m=Math.min(c+h,r),c<=h+1?m=5:c>=r-h&&(f=r-5+1)}for(let h=f;h<=m;h++)x.push(t.jsx(K,{$active:h===c,onClick:()=>g(h),children:h},h));return f>1&&(f>2&&x.unshift(t.jsx(K,{children:"..."},"start-ellipsis")),x.unshift(t.jsx(K,{$active:c===1,onClick:()=>g(1),children:"1"},1))),m<r&&(m<r-1&&x.push(t.jsx(K,{children:"..."},"end-ellipsis")),x.push(t.jsx(K,{$active:r===c,onClick:()=>g(r),children:r},r))),x};return t.jsxs(mo,{children:[t.jsx(Ce,{disabled:c===1,onClick:()=>g(c-1),children:t.jsx("svg",{width:"7",height:"11",viewBox:"0 0 7 11",fill:"none",children:t.jsx("path",{d:"M6 0.5L1 5.5L6 10.5",stroke:c===1?"#ccc":"black",strokeLinecap:"round",strokeLinejoin:"round"})})}),k(),t.jsx(Ce,{disabled:c===r,onClick:()=>g(c+1),style:{transform:"rotate(180deg)"},children:t.jsx("svg",{width:"7",height:"11",viewBox:"0 0 7 11",fill:"none",children:t.jsx("path",{d:"M6 0.5L1 5.5L6 10.5",stroke:c===r?"#ccc":"black",strokeLinecap:"round",strokeLinejoin:"round"})})})]})},mo=o.div`
+`,bo=({total:e,current:n=1,onChange:s,itemsPerPage:i=10})=>{const r=Math.ceil(e/i),[c,p]=y.useState(n),g=x=>{x<1||x>r||x===c||(p(x),s?.(x))},k=()=>{const x=[];let f=1,m=r;if(r>5){const h=Math.floor(2.5);f=Math.max(c-h,1),m=Math.min(c+h,r),c<=h+1?m=5:c>=r-h&&(f=r-5+1)}for(let h=f;h<=m;h++)x.push(t.jsx(K,{active:h===c,onClick:()=>g(h),children:h},h));return f>1&&(f>2&&x.unshift(t.jsx(K,{children:"..."},"start-ellipsis")),x.unshift(t.jsx(K,{active:c===1,onClick:()=>g(1),children:"1"},1))),m<r&&(m<r-1&&x.push(t.jsx(K,{children:"..."},"end-ellipsis")),x.push(t.jsx(K,{active:r===c,onClick:()=>g(r),children:r},r))),x};return t.jsxs(mo,{children:[t.jsx(Ce,{disabled:c===1,onClick:()=>g(c-1),children:t.jsx("svg",{width:"7",height:"11",viewBox:"0 0 7 11",fill:"none",children:t.jsx("path",{d:"M6 0.5L1 5.5L6 10.5",stroke:c===1?"#ccc":"black",strokeLinecap:"round",strokeLinejoin:"round"})})}),k(),t.jsx(Ce,{disabled:c===r,onClick:()=>g(c+1),style:{transform:"rotate(180deg)"},children:t.jsx("svg",{width:"7",height:"11",viewBox:"0 0 7 11",fill:"none",children:t.jsx("path",{d:"M6 0.5L1 5.5L6 10.5",stroke:c===r?"#ccc":"black",strokeLinecap:"round",strokeLinejoin:"round"})})})]})},mo=o.div`
   display: flex;
   justify-content: right;
   align-items: center;
@@ -786,11 +786,11 @@ React keys must be passed directly to JSX without using spread:
   border-radius: 10px;
   cursor: pointer;
   font-size: 14px;
-  color: ${({$active:e})=>e?"white":"black"};
-  background-color: ${({$active:e})=>e?"rgba(0, 125, 136, 1)":"transparent"};
+  color: ${({active:e})=>e?"white":"black"};
+  background-color: ${({active:e})=>e?"rgba(0, 125, 136, 1)":"transparent"};
 
   &:hover {
-    color: ${({$active:e})=>e?"white":"rgba(0, 125, 136, 1)"};
+    color: ${({active:e})=>e?"white":"rgba(0, 125, 136, 1)"};
   }
 `,Ce=o.button`
   display: flex;
@@ -1926,7 +1926,7 @@ React keys must be passed directly to JSX without using spread:
   gap: ${({$collapsed:e})=>e?"0":"12px"};
   padding: ${({$collapsed:e})=>e?"15px 0":"15px 17px"};
   border-radius: 8px;
-  cursor: ${({$disabled:e})=>e?"not-чed":"pointer"};
+  cursor: ${({$disabled:e})=>e?"not-allowed":"pointer"};
   color: ${({$selected:e})=>e?"#000":"#50555c"};
   background-color: ${({$selected:e})=>e?"rgba(209, 213, 219, 1)":"transparent"};
   transition: background-color 0.2s ease, color 0.2s ease;

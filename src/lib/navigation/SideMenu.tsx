@@ -306,7 +306,7 @@ const MenuItem = styled.div<{
   gap: ${({ $collapsed }) => ($collapsed ? "0" : "12px")};
   padding: ${({ $collapsed }) => ($collapsed ? "15px 0" : "15px 17px")};
   border-radius: 8px;
-  cursor: ${({ $disabled }) => ($disabled ? "not-чed" : "pointer")};
+  cursor: ${({ $disabled }) => ($disabled ? "not-allowed" : "pointer")};
   color: ${({ $selected }) => ($selected ? "#000" : "#50555c")};
   background-color: ${({ $selected }) =>
     $selected ? "rgba(209, 213, 219, 1)" : "transparent"};
