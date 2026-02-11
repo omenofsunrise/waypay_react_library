@@ -15,13 +15,18 @@ interface ModalProps {
   onCancel: () => void;
   onSave?: (e: React.FormEvent) => void;
   children: ReactNode;
+
   isSaveDisabled?: boolean;
   isSubmitting?: boolean;
   mode?: ModalMode;
+
   hideSaveButton?: boolean;
   hideCanselButton?: boolean;
-  width?: string;
+
+  width?: string; // например "440px"
   saveButtonText?: string;
+
+  /** если хочешь вставить кастомный блок над form/body */
   customLayout?: React.ReactNode;
 }
 
@@ -36,161 +41,228 @@ const BaseModal: React.FC<ModalProps> = ({
   mode = "create",
   hideSaveButton = false,
   hideCanselButton = false,
-  width = "562px",
+  width = "560px",
   saveButtonText = "Сохранить",
   customLayout,
 }) => {
   const isViewMode = mode === "view";
-  const modalRef = useRef<HTMLDivElement>(null);
+  const dialogRef = useRef<HTMLDivElement>(null);
 
-  const handleCancel = (event: React.MouseEvent) => {
-    event.preventDefault();
-    onCancel();
-  };
-
+  // ESC + блокировка скролла
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        onClose();
-      }
+      if (event.key === "Escape") onClose();
     };
 
     document.addEventListener("keydown", handleKeyDown);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    // фокус в диалог
+    setTimeout(() => dialogRef.current?.focus(), 0);
+
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = prevOverflow;
     };
   }, [onClose]);
 
-  return (
-    <ModalBackdrop>
-      <ModalContainer width={width} ref={modalRef}>
-        <CloseButton onClick={onClose}>&times;</CloseButton>
-        <ModalHeader>
-          <ModalTitle>{title}</ModalTitle>
-        </ModalHeader>
-        <div className="modal-body">{customLayout}</div>
-        <ModalForm onSubmit={onSave}>
-          <ModalContent>{children}</ModalContent>
+  const handleBackdropMouseDown = (e: React.MouseEvent) => {
+    // закрываем только если кликнули именно в фон, а не в модалку
+    if (e.target === e.currentTarget) onClose();
+  };
 
-          <ModalFooter>
-            {!hideCanselButton && (
-              <CancelButton onClick={handleCancel}>Отменить</CancelButton>
+  const handleCancel = (e: React.MouseEvent) => {
+    e.preventDefault();
+    onCancel();
+  };
+
+  return (
+    <Backdrop onMouseDown={handleBackdropMouseDown} role="presentation">
+      <Dialog
+        ref={dialogRef}
+        $width={width}
+        role="dialog"
+        aria-modal="true"
+        aria-label={title || "Диалог"}
+        tabIndex={-1}
+      >
+        <Header>
+          <Title title={title}>{title}</Title>
+          <IconButton type="button" onClick={onClose} aria-label="Закрыть">
+            <span aria-hidden>×</span>
+          </IconButton>
+        </Header>
+
+        {customLayout ? <TopSlot>{customLayout}</TopSlot> : null}
+
+        <Form onSubmit={onSave}>
+          <Body>{children}</Body>
+
+          <Footer>
+            {!hideCanselButton ? (
+              <SecondaryButton type="button" onClick={handleCancel}>
+                Отменить
+              </SecondaryButton>
+            ) : (
+              <Spacer />
             )}
-            {!isViewMode && !hideSaveButton && (
+
+            {!isViewMode && !hideSaveButton ? (
               <DefaultButton
+                type="submit"
+                disabled={isSaveDisabled || isSubmitting}
                 style={{
-                  minWidth: "136px",
-                  padding: "10p 20px",
+                  minWidth: "140px",
+                  padding: "10px 16px",
                   borderRadius: "10px",
                   fontSize: "16px",
                 }}
-                type="submit"
-                disabled={isSaveDisabled || isSubmitting}
               >
-                {isSubmitting ? "Сохранение..." : saveButtonText || "Сохранить"}
+                {isSubmitting ? "Сохранение..." : saveButtonText}
               </DefaultButton>
+            ) : (
+              <Spacer />
             )}
-          </ModalFooter>
-        </ModalForm>
-      </ModalContainer>
-    </ModalBackdrop>
+          </Footer>
+        </Form>
+      </Dialog>
+    </Backdrop>
   );
 };
 
 export default BaseModal;
 
-const ModalBackdrop = styled.div`
+/* ===================== styles ===================== */
+
+const Backdrop = styled.div`
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  display: grid;
+  place-items: center;
+  padding: 16px;
   z-index: 1000;
 `;
 
-const ModalContainer = styled.div<{ width: string }>`
-  width: ${(props) => props.width};
-  height: auto;
-  background-color: rgba(249, 250, 250, 1);
-  border: 1px solid rgba(173, 179, 188, 1);
-  border-radius: 5px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25), 0 0 25px rgba(0, 0, 0, 0.25);
+const Dialog = styled.div<{ $width: string }>`
+  width: min(100%, ${({ $width }) => $width});
+  max-height: min(85vh, 720px);
+
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 16px;
+
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+  overflow: hidden;
+
   display: flex;
   flex-direction: column;
-  padding: 24px;
-  position: relative;
-  margin: 0;
-  overflow: visible;
+  outline: none;
 `;
 
-const ModalForm = styled.form`
+const Header = styled.div`
   display: flex;
-  flex-direction: column;
-  flex: 1;
-  overflow: visible;
-`;
-
-export const ModalHeader = styled.div`
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-top: 0;
+  justify-content: space-between;
+  gap: 12px;
+
+  padding: 18px 18px 12px 18px;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
 `;
 
-export const ModalTitle = styled.h2`
-  font-size: 30px;
-  font-weight: 600;
-  color: #000;
+const Title = styled.h2`
   margin: 0;
-  line-height: 1.2;
+  padding: 0;
+
+  font-size: 32px;
+  line-height: 1.15;
+  font-weight: 800;
+  color: #0f172a;
+
+  /* чтобы длинные заголовки не ломали верстку */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 `;
 
-const CloseButton = styled.button`
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
-  font-size: 24px;
+const IconButton = styled.button`
+  width: 40px;
+  height: 40px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 10px;
+
+  background: #ffffff;
+  color: rgba(15, 23, 42, 0.75);
   cursor: pointer;
-  color: #666;
-  padding: 5px;
-  z-index: 1;
+
+  font-size: 26px;
+  line-height: 1;
 
   &:hover {
-    color: #000;
+    background: rgba(15, 23, 42, 0.04);
+    color: rgba(15, 23, 42, 0.9);
+  }
+
+  &:active {
+    transform: translateY(1px);
   }
 `;
 
-const ModalContent = styled.div`
-  flex: 1;
-  margin-bottom: 20px;
-  min-height: 0;
-  overflow: visible;
+const TopSlot = styled.div`
+  padding: 14px 18px 0 18px;
 `;
 
-const ModalFooter = styled.div`
+const Form = styled.form`
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 10px 30px 20px 30px;
+  flex-direction: column;
+  min-height: 0; /* важно для корректного скролла тела */
 `;
 
-const CancelButton = styled.button`
-  padding: 10px 20px;
-  background-color: rgba(209, 213, 219, 1);
-  border: none;
+const Body = styled.div`
+  padding: 14px 18px 18px 18px;
+  min-height: 0;
+  overflow: auto;
+
+  color: #111827;
+`;
+
+const Footer = styled.div`
+  padding: 12px 18px 18px 18px;
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+`;
+
+const SecondaryButton = styled.button`
+  min-width: 140px;
+  padding: 10px 16px;
+
+  border: 1px solid rgba(15, 23, 42, 0.14);
   border-radius: 10px;
+
+  background: #f3f4f6;
+  color: #0f172a;
+
   cursor: pointer;
   font-size: 16px;
-  width: 136px;
-  color: black;
 
   &:hover {
-    background-color: rgba(209, 213, 219, 0.8);
+    background: #e5e7eb;
   }
+
+  &:active {
+    transform: translateY(1px);
+  }
+`;
+
+const Spacer = styled.div`
+  width: 140px;
 `;
