@@ -145,7 +145,8 @@ export const ModalTitle = styled.h2`
   font-size: 30px;
   font-weight: 600;
   color: #000;
-  margin-bottom: 0;
+  margin: 0;
+  line-height: 1.2;
 `;
 
 const CloseButton = styled.button`
