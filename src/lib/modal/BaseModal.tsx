@@ -145,7 +145,6 @@ export const ModalTitle = styled.h2`
   font-size: 30px;
   font-weight: 600;
   color: #000;
-  margin-left: 0;
   margin-bottom: 0;
 `;
 
