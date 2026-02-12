@@ -225,8 +225,16 @@ const Body = styled.div`
   flex: 1;
   min-height: 0;
   overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 
   color: #111827;
+
+  & > * {
+    width: 100%;
+    box-sizing: border-box;
+  }
 `;
 
 const Footer = styled.div`

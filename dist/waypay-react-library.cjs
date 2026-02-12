@@ -946,8 +946,16 @@ React keys must be passed directly to JSX without using spread:
   flex: 1;
   min-height: 0;
   overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 
   color: #111827;
+
+  & > * {
+    width: 100%;
+    box-sizing: border-box;
+  }
 `,Do=o.div`
   padding: 12px 18px 18px 18px;
   border-top: 1px solid rgba(15, 23, 42, 0.08);
