@@ -922,6 +922,9 @@ React keys must be passed directly to JSX without using spread:
   background: transparent;
   color: rgba(15, 23, 42, 0.75);
   cursor: pointer;
+  outline: none;
+  box-shadow: none;
+  -webkit-tap-highlight-color: transparent;
 
   font-size: 26px;
   line-height: 1;
@@ -933,6 +936,12 @@ React keys must be passed directly to JSX without using spread:
 
   &:active {
     transform: none;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    box-shadow: none;
   }
 `,So=o.div`
   padding: 12px 18px 0 18px;

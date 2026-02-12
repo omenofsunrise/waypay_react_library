@@ -195,6 +195,9 @@ const IconButton = styled.button`
   background: transparent;
   color: rgba(15, 23, 42, 0.75);
   cursor: pointer;
+  outline: none;
+  box-shadow: none;
+  -webkit-tap-highlight-color: transparent;
 
   font-size: 26px;
   line-height: 1;
@@ -206,6 +209,12 @@ const IconButton = styled.button`
 
   &:active {
     transform: none;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    box-shadow: none;
   }
 `;
 
