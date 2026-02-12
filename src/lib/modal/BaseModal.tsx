@@ -155,7 +155,7 @@ const Dialog = styled.div<{ $width: string }>`
 
 const Header = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 12px;
 
@@ -185,14 +185,14 @@ const Title = styled.h2`
 const IconButton = styled.button`
   width: 40px;
   height: 40px;
+  margin-top: 2px;
 
   display: grid;
   place-items: center;
 
-  border: 1px solid rgba(15, 23, 42, 0.12);
+  border: none;
   border-radius: 10px;
-
-  background: #ffffff;
+  background: transparent;
   color: rgba(15, 23, 42, 0.75);
   cursor: pointer;
 
