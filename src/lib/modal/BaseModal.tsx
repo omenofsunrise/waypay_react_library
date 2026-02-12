@@ -155,7 +155,7 @@ const Dialog = styled.div<{ $width: string }>`
 
 const Header = styled.div`
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 12px;
 
@@ -191,7 +191,7 @@ const IconButton = styled.button`
   place-items: center;
 
   border: none;
-  border-radius: 10px;
+  border-radius: 0;
   background: transparent;
   color: rgba(15, 23, 42, 0.75);
   cursor: pointer;
@@ -200,12 +200,12 @@ const IconButton = styled.button`
   line-height: 1;
 
   &:hover {
-    background: rgba(15, 23, 42, 0.04);
+    background: transparent;
     color: rgba(15, 23, 42, 0.9);
   }
 
   &:active {
-    transform: translateY(1px);
+    transform: none;
   }
 `;
 

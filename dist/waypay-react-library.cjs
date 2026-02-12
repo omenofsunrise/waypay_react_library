@@ -886,7 +886,7 @@ React keys must be passed directly to JSX without using spread:
   outline: none;
 `,Re=o.div`
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 12px;
 
@@ -918,7 +918,7 @@ React keys must be passed directly to JSX without using spread:
   place-items: center;
 
   border: none;
-  border-radius: 10px;
+  border-radius: 0;
   background: transparent;
   color: rgba(15, 23, 42, 0.75);
   cursor: pointer;
@@ -927,12 +927,12 @@ React keys must be passed directly to JSX without using spread:
   line-height: 1;
 
   &:hover {
-    background: rgba(15, 23, 42, 0.04);
+    background: transparent;
     color: rgba(15, 23, 42, 0.9);
   }
 
   &:active {
-    transform: translateY(1px);
+    transform: none;
   }
 `,So=o.div`
   padding: 12px 18px 0 18px;
