@@ -88,7 +88,7 @@ const BaseModal: React.FC<ModalProps> = ({
         tabIndex={-1}
       >
         <Header>
-          <Title title={title}>{title}</Title>
+          <Title>{title}</Title>
           <IconButton type="button" onClick={onClose} aria-label="Закрыть">
             <span aria-hidden>×</span>
           </IconButton>
@@ -104,26 +104,16 @@ const BaseModal: React.FC<ModalProps> = ({
               <SecondaryButton type="button" onClick={handleCancel}>
                 Отменить
               </SecondaryButton>
-            ) : (
-              <Spacer />
-            )}
+            ) : null}
 
             {!isViewMode && !hideSaveButton ? (
-              <DefaultButton
+              <PrimaryButton
                 type="submit"
                 disabled={isSaveDisabled || isSubmitting}
-                style={{
-                  minWidth: "140px",
-                  padding: "10px 16px",
-                  borderRadius: "10px",
-                  fontSize: "16px",
-                }}
               >
                 {isSubmitting ? "Сохранение..." : saveButtonText}
-              </DefaultButton>
-            ) : (
-              <Spacer />
-            )}
+              </PrimaryButton>
+            ) : null}
           </Footer>
         </Form>
       </Dialog>
@@ -148,6 +138,7 @@ const Backdrop = styled.div`
 const Dialog = styled.div<{ $width: string }>`
   width: min(100%, ${({ $width }) => $width});
   max-height: min(85vh, 720px);
+  height: fit-content;
 
   background: #ffffff;
   border: 1px solid rgba(15, 23, 42, 0.12);
@@ -167,7 +158,7 @@ const Header = styled.div`
   justify-content: space-between;
   gap: 12px;
 
-  padding: 18px 18px 12px 18px;
+  padding: 14px 18px 10px 18px;
   border-bottom: 1px solid rgba(15, 23, 42, 0.08);
 `;
 
@@ -175,9 +166,13 @@ const Title = styled.h2`
   margin: 0;
   padding: 0;
 
-  font-size: 32px;
-  line-height: 1.15;
-  font-weight: 800;
+  flex: 1;
+  min-width: 0;
+  display: block;
+
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 700;
   color: #0f172a;
 
   /* чтобы длинные заголовки не ломали верстку */
@@ -214,17 +209,19 @@ const IconButton = styled.button`
 `;
 
 const TopSlot = styled.div`
-  padding: 14px 18px 0 18px;
+  padding: 12px 18px 0 18px;
 `;
 
 const Form = styled.form`
   display: flex;
   flex-direction: column;
+  flex: 1;
   min-height: 0; /* важно для корректного скролла тела */
 `;
 
 const Body = styled.div`
-  padding: 14px 18px 18px 18px;
+  padding: 12px 18px 16px 18px;
+  flex: 1;
   min-height: 0;
   overflow: auto;
 
@@ -237,8 +234,9 @@ const Footer = styled.div`
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
 `;
 
 const SecondaryButton = styled.button`
@@ -263,6 +261,9 @@ const SecondaryButton = styled.button`
   }
 `;
 
-const Spacer = styled.div`
-  width: 140px;
+const PrimaryButton = styled(DefaultButton)`
+  min-width: 140px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 16px;
 `;
