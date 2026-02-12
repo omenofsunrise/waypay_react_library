@@ -122,6 +122,7 @@ const BaseModal: React.FC<ModalProps> = ({
 };
 
 export default BaseModal;
+export { Header as ModalHeader, Title as ModalTitle };
 
 /* ===================== styles ===================== */
 

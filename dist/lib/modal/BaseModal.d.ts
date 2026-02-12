@@ -13,9 +13,11 @@ interface ModalProps {
     hideCanselButton?: boolean;
     width?: string;
     saveButtonText?: string;
+    /** если хочешь вставить кастомный блок над form/body */
     customLayout?: React.ReactNode;
 }
 declare const BaseModal: React.FC<ModalProps>;
 export default BaseModal;
-export declare const ModalHeader: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components").FastOmit<React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, never>> & string;
-export declare const ModalTitle: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components").FastOmit<React.DetailedHTMLProps<React.HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement>, never>> & string;
+export { Header as ModalHeader, Title as ModalTitle };
+declare const Header: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components").FastOmit<React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, never>> & string;
+declare const Title: import("styled-components/dist/types").IStyledComponentBase<"web", import("styled-components").FastOmit<React.DetailedHTMLProps<React.HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement>, never>> & string;
