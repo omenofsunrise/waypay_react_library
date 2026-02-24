@@ -1,3 +1,4 @@
+// api/authCall.ts
 import { apiRequest } from './client';
 
 export type UserType = string;
@@ -5,6 +6,7 @@ export type UserType = string;
 export type InitiateCallAuthResponse = {
   call_phone: string;
   check_id: string;
+  name_required?: boolean;
 };
 
 export type ConfirmCallAuthResponse = {
@@ -13,22 +15,29 @@ export type ConfirmCallAuthResponse = {
   status: string;
 };
 
-export const initiateCallAuth = (phone: string, userType: UserType) =>
-  apiRequest<InitiateCallAuthResponse>('/auth/call/initiate', {
+export const initiateCallAuth = (
+  phone: string, 
+  userType: UserType,
+) => {
+  const body: any = {
+    phone,
+    user_type: userType,
+  };
+  
+  return apiRequest<InitiateCallAuthResponse>('/auth/call/initiate', {
     method: 'POST',
-    body: {
-      phone,
-      user_type: userType,
-    },
+    body,
   });
+};
 
-export const confirmCallAuth = (phone: string, checkId: string, userType: UserType) =>
+export const confirmCallAuth = (phone: string, checkId: string, userType: UserType, name?: string) =>
   apiRequest<ConfirmCallAuthResponse>('/auth/call/confirm', {
     method: 'POST',
     body: {
       phone,
       check_id: checkId,
       user_type: userType,
+      name: name
     },
   });
 

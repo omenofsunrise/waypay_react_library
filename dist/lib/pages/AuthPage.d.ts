@@ -13,6 +13,7 @@ type AuthPageProps = {
     className?: string;
     style?: React.CSSProperties;
     pollingIntervalMs?: number;
+    enableRegistration?: boolean;
 };
 declare const AuthPage: React.FC<AuthPageProps>;
 export default AuthPage;

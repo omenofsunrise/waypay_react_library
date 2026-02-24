@@ -1,16 +1,52 @@
-const ACCESS_TOKEN_KEY = 'access_token';
-const REFRESH_TOKEN_KEY = 'refresh_token';
+import { apiRequest } from "../api/client";
+
+export type SessionInfo = {
+  has_pin: boolean;
+  client: {
+    id: string;
+  };
+};
 
 export const authStorage = {
-  setTokens(access: string) {
-    localStorage.setItem(ACCESS_TOKEN_KEY, access);
-    // localStorage.setItem(REFRESH_TOKEN_KEY, refresh);
+  async isAuthenticated(): Promise<boolean> {
+    try {
+      const sessionInfo = await this.getSessionInfo();
+      return !!sessionInfo?.client?.id;
+    } catch {
+      return false;
+    }
   },
-  getAccessToken() {
-    return localStorage.getItem(ACCESS_TOKEN_KEY);
+
+  async getSessionInfo(): Promise<SessionInfo | null> {
+    try {
+      return await apiRequest<SessionInfo>('/auth/session/info', { 
+        method: 'GET' 
+      });
+    } catch (error) {
+      return null;
+    }
   },
-  clear() {
-    localStorage.removeItem(ACCESS_TOKEN_KEY);
-    localStorage.removeItem(REFRESH_TOKEN_KEY);
+
+  async logout(): Promise<void> {
+    try {
+      await apiRequest('/auth/session/revoke', {
+        method: 'POST',
+      });
+    } catch (error) {
+      console.error('Logout error:', error);
+      throw error;
+    }
+  },
+
+  async getClientId(): Promise<string | null> {
+    const sessionInfo = await this.getSessionInfo();
+    return sessionInfo?.client?.id || null;
+  },
+
+  async hasPin(): Promise<boolean> {
+    const sessionInfo = await this.getSessionInfo();
+    return sessionInfo?.has_pin || false;
   },
 };
+
+export const getSessionInfo = () => authStorage.getSessionInfo();

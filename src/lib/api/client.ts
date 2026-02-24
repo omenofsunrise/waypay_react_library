@@ -1,6 +1,5 @@
 // Centralized API base so all requests target the same backend
 import { API_BASE_URL } from './config';
-import { authStorage } from '../utils/authStorage';
 
 type RequestOptions = {
   method?: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
@@ -86,16 +85,13 @@ async function refreshAccessToken(): Promise<string | null> {
   });
 
   if (!response.ok) {
-    authStorage.clear();
     return null;
   }
 
   const data: RefreshResponse = await response.json();
   if (data.access_token) {
-    authStorage.setTokens(data.access_token);
     return data.access_token;
   }
 
-  authStorage.clear();
   return null;
 }

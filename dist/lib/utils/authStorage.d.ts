@@ -1,5 +1,14 @@
-export declare const authStorage: {
-    setTokens(access: string): void;
-    getAccessToken(): string | null;
-    clear(): void;
+export type SessionInfo = {
+    has_pin: boolean;
+    client: {
+        id: string;
+    };
 };
+export declare const authStorage: {
+    isAuthenticated(): Promise<boolean>;
+    getSessionInfo(): Promise<SessionInfo | null>;
+    logout(): Promise<void>;
+    getClientId(): Promise<string | null>;
+    hasPin(): Promise<boolean>;
+};
+export declare const getSessionInfo: () => Promise<SessionInfo | null>;

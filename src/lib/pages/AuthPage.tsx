@@ -7,7 +7,6 @@ import {
   initiateCallAuth,
   type UserType,
 } from "../api/authCall";
-import { authStorage } from "../utils/authStorage";
 
 type AuthPageProps = {
   onLoginSuccess: (token: string) => void;
@@ -22,6 +21,7 @@ type AuthPageProps = {
   className?: string;
   style?: React.CSSProperties;
   pollingIntervalMs?: number;
+  enableRegistration?: boolean;
 };
 
 const AuthPage: React.FC<AuthPageProps> = ({
@@ -36,6 +36,7 @@ const AuthPage: React.FC<AuthPageProps> = ({
   className,
   style,
   pollingIntervalMs = 3000,
+  enableRegistration = false,
 }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [rawPhone, setRawPhone] = useState("");
@@ -43,6 +44,16 @@ const AuthPage: React.FC<AuthPageProps> = ({
   const [callPhone, setCallPhone] = useState("");
   const [verificationError, setVerificationError] = useState("");
   const [isVerifying, setIsVerifying] = useState(false);
+  
+  const [showNameInput, setShowNameInput] = useState(false);
+  const [fullName, setFullName] = useState("");
+  const [nameError, setNameError] = useState("");
+  const [pendingAuthData, setPendingAuthData] = useState<{
+    phone: string;
+    checkId: string;
+    callPhone: string;
+  } | null>(null);
+
   const verificationInterval = useRef<number | undefined>(undefined);
 
   useEffect(() => {
@@ -63,6 +74,10 @@ const AuthPage: React.FC<AuthPageProps> = ({
 
   const closeModal = () => {
     setShowCallModal(false);
+    setShowNameInput(false);
+    setFullName("");
+    setNameError("");
+    setPendingAuthData(null);
     if (verificationInterval.current) {
       window.clearInterval(verificationInterval.current);
     }
@@ -81,14 +96,63 @@ const AuthPage: React.FC<AuthPageProps> = ({
 
     try {
       const response = await initiateCallAuth(normalizedPhone, userType);
-      setCallPhone(response.call_phone);
-      setShowCallModal(true);
-      startVerificationPolling(normalizedPhone, response.check_id);
+      
+      setPendingAuthData({
+        phone: normalizedPhone,
+        checkId: response.check_id,
+        callPhone: response.call_phone,
+      });
+      
+      const nameRequired = enableRegistration && 'name_required' in response && response.name_required;
+      
+      if (nameRequired) {
+        setShowNameInput(true);
+      } else if (!enableRegistration && 'name_required' in response && response.name_required) {
+        setVerificationError(
+          "Этот номер не зарегистрирован в системе. Обратитесь в поддержку для регистрации."
+        );
+        setPendingAuthData(null);
+      } else {
+        setCallPhone(response.call_phone);
+        setShowCallModal(true);
+        startVerificationPolling(normalizedPhone, response.check_id);
+      }
     } catch (error: unknown) {
       console.error("Auth error:", error);
       setVerificationError(
         "Не удалось инициировать авторизацию. Проверьте номер."
       );
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleNameSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!fullName.trim()) {
+      setNameError("Введите ФИО");
+      return;
+    }
+
+    if (!pendingAuthData) return;
+
+    setIsLoading(true);
+    setNameError("");
+
+    try {
+      const response = await initiateCallAuth(
+        pendingAuthData.phone, 
+        userType,
+      );
+      
+      setCallPhone(response.call_phone);
+      setShowNameInput(false);
+      setShowCallModal(true);
+      startVerificationPolling(pendingAuthData.phone, response.check_id);
+    } catch (error: unknown) {
+      console.error("Registration error:", error);
+      setNameError("Не удалось завершить регистрацию");
     } finally {
       setIsLoading(false);
     }
@@ -109,14 +173,16 @@ const AuthPage: React.FC<AuthPageProps> = ({
 
     setIsVerifying(true);
     try {
-      const response = await confirmCallAuth(phone, id, userType);
+      const response = await confirmCallAuth(phone, id, userType, fullName.trim());
       if (response.access_token && response.refresh_token) {
-        authStorage.setTokens(response.access_token);
 
         if (verificationInterval.current) {
           window.clearInterval(verificationInterval.current);
         }
         setShowCallModal(false);
+        setShowNameInput(false);
+        setFullName("");
+        setPendingAuthData(null);
         onLoginSuccess(response.access_token);
       }
     } catch (error) {
@@ -130,29 +196,61 @@ const AuthPage: React.FC<AuthPageProps> = ({
   return (
     <AuthContainer className={className} style={style}>
       <AuthCard>
-        <AuthForm onSubmit={handleSubmit}>
-          <Title>{title}</Title>
+        <AuthForm onSubmit={showNameInput ? handleNameSubmit : handleSubmit}>
+          <Title>{showNameInput ? "Регистрация" : title}</Title>
 
-          <FormGroup>
-            <InputContainer>
-              <CustomPhoneInput
-                value={rawPhone}
-                onChange={(value: string) => setRawPhone(value)}
-                placeholder={placeholder}
-              />
-            </InputContainer>
-          </FormGroup>
+          {!showNameInput ? (
+            <FormGroup>
+              <InputContainer>
+                <CustomPhoneInput
+                  value={rawPhone}
+                  onChange={(value: string) => setRawPhone(value)}
+                  placeholder={placeholder}
+                />
+              </InputContainer>
+            </FormGroup>
+          ) : (
+            <FormGroup>
+              <InputContainer>
+                <NameInput
+                  type="text"
+                  value={fullName}
+                  onChange={(e) => setFullName(e.target.value)}
+                  placeholder="Введите ФИО"
+                  disabled={isLoading}
+                  autoFocus
+                />
+              </InputContainer>
+              {nameError && <FieldError>{nameError}</FieldError>}
+            </FormGroup>
+          )}
 
-          {verificationError && (
+          {(verificationError || nameError) && (
             <ErrorBanner>
-              <span>{verificationError}</span>
+              <span>{verificationError || nameError}</span>
             </ErrorBanner>
           )}
 
           <SubmitButton type="submit" disabled={isLoading}>
-            {submitLabel}
+            {isLoading ? "Загрузка..." : showNameInput ? "Продолжить" : submitLabel}
           </SubmitButton>
+
+          {showNameInput && (
+            <BackButton 
+              type="button" 
+              onClick={() => {
+                setShowNameInput(false);
+                setFullName("");
+                setNameError("");
+                setPendingAuthData(null);
+              }}
+              disabled={isLoading}
+            >
+              ← Назад
+            </BackButton>
+          )}
         </AuthForm>
+        
         <InfoText>
           Хотите получить доступ к нашим продуктам?
           <br />
@@ -176,6 +274,7 @@ const AuthPage: React.FC<AuthPageProps> = ({
   );
 };
 
+// Стили
 const AuthContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -237,6 +336,26 @@ const InputContainer = styled.div`
   width: auto;
 `;
 
+const NameInput = styled.input`
+  width: 100%;
+  padding: 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s;
+  outline: none;
+
+  &:focus {
+    border-color: rgba(0, 125, 136, 1);
+    box-shadow: 0 0 0 3px rgba(0, 125, 136, 0.1);
+  }
+
+  &:disabled {
+    background: #f5f5f5;
+    cursor: not-allowed;
+  }
+`;
+
 const SubmitButton = styled.button`
   background: linear-gradient(
     90deg,
@@ -272,6 +391,26 @@ const SubmitButton = styled.button`
     cursor: not-allowed;
     transform: none;
     box-shadow: none;
+  }
+`;
+
+const BackButton = styled.button`
+  background: none;
+  border: none;
+  color: rgba(0, 125, 136, 1);
+  font-size: 14px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 `;
 
@@ -317,6 +456,13 @@ const ErrorBanner = styled.div`
   margin-bottom: 16px;
   font-size: 14px;
   box-shadow: 0 6px 14px rgba(180, 35, 24, 0.08);
+`;
+
+const FieldError = styled.div`
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 5px;
+  text-align: left;
 `;
 
 export default AuthPage;
