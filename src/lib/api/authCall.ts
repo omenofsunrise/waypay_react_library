@@ -31,3 +31,6 @@ export const confirmCallAuth = (phone: string, checkId: string, userType: UserTy
       user_type: userType,
     },
   });
+
+export const getSessionInfo = () =>
+  apiRequest(`/auth/session/info`, { method: 'GET'});

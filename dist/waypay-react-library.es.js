@@ -1,11 +1,11 @@
 import G, { useRef as Z, useState as A, useEffect as U, createContext as Fe, useContext as Ae, useMemo as _e } from "react";
 import o, { keyframes as Oe } from "styled-components";
-import { motion as K, AnimatePresence as ae } from "framer-motion";
+import { motion as K, AnimatePresence as le } from "framer-motion";
 var te = { exports: {} }, J = {};
-var le;
+var ce;
 function Ye() {
-  if (le) return J;
-  le = 1;
+  if (ce) return J;
+  ce = 1;
   var e = /* @__PURE__ */ Symbol.for("react.transitional.element"), n = /* @__PURE__ */ Symbol.for("react.fragment");
   function s(i, r, d) {
     var p = null;
@@ -25,9 +25,9 @@ function Ye() {
   return J.Fragment = n, J.jsx = s, J.jsxs = s, J;
 }
 var Q = {};
-var ce;
+var de;
 function We() {
-  return ce || (ce = 1, process.env.NODE_ENV !== "production" && (function() {
+  return de || (de = 1, process.env.NODE_ENV !== "production" && (function() {
     function e(a) {
       if (a == null) return null;
       if (typeof a == "function")
@@ -256,12 +256,12 @@ React keys must be passed directly to JSX without using spread:
     };
   })()), Q;
 }
-var de;
+var pe;
 function Ne() {
-  return de || (de = 1, process.env.NODE_ENV === "production" ? te.exports = Ye() : te.exports = We()), te.exports;
+  return pe || (pe = 1, process.env.NODE_ENV === "production" ? te.exports = Ye() : te.exports = We()), te.exports;
 }
 var t = Ne();
-const Se = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
+const De = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
   const d = Z(null), [p, m] = A(null);
   U(() => {
     const h = (u) => {
@@ -325,7 +325,7 @@ const Se = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
             animate: { opacity: 1, x: 0 },
             exit: { opacity: 0, x: 10 },
             transition: { duration: 0.15 },
-            children: /* @__PURE__ */ t.jsx(Se, { x: 0, y: -u * 40, items: h.submenu, onClose: () => m(null) })
+            children: /* @__PURE__ */ t.jsx(De, { x: 0, y: -u * 40, items: h.submenu, onClose: () => m(null) })
           }
         )
       ] }, u))
@@ -464,7 +464,7 @@ const Se = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
         },
         onClick: (C) => C.stopPropagation(),
         children: /* @__PURE__ */ t.jsx(
-          Se,
+          De,
           {
             items: w.map((C) => {
               const a = {
@@ -486,7 +486,7 @@ const Se = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
   };
   return /* @__PURE__ */ t.jsx(Je, { ref: y, children: b ? /* @__PURE__ */ t.jsx(qe, { children: /* @__PURE__ */ t.jsx(Ke, {}) }) : /* @__PURE__ */ t.jsxs(t.Fragment, { children: [
     /* @__PURE__ */ t.jsxs(Qe, { children: [
-      /* @__PURE__ */ t.jsx(tt, { children: /* @__PURE__ */ t.jsx(pe, { children: e.map(
+      /* @__PURE__ */ t.jsx(tt, { children: /* @__PURE__ */ t.jsx(ue, { children: e.map(
         (w, C) => !w.isHidden && /* @__PURE__ */ t.jsx(
           nt,
           {
@@ -521,10 +521,10 @@ const Se = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
           C
         )
       ) }) }),
-      /* @__PURE__ */ t.jsx(ot, { $fixedHeight: k, children: /* @__PURE__ */ t.jsx(ae, { children: n.map((w, C) => {
+      /* @__PURE__ */ t.jsx(ot, { $fixedHeight: k, children: /* @__PURE__ */ t.jsx(le, { children: n.map((w, C) => {
         const a = !!(g && C === n.length - 1), $ = !!(!a && z(w)), D = W(C, a, $), O = P(C, a, $);
         return /* @__PURE__ */ t.jsx(
-          pe,
+          ue,
           {
             initial: { opacity: 0, y: -10 },
             animate: {
@@ -573,7 +573,7 @@ const Se = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
         );
       }) }) })
     ] }),
-    /* @__PURE__ */ t.jsx(ae, { children: V() })
+    /* @__PURE__ */ t.jsx(le, { children: V() })
   ] }) });
 }, qe = o.div`
   position: absolute;
@@ -643,7 +643,7 @@ const Se = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
     overflow-y: auto;
   `}
   position: relative;
-`, pe = o(K.tr)`
+`, ue = o(K.tr)`
   position: relative;
   cursor: ${({ $isTotalsRow: e }) => e ? "default" : "pointer"};
   font-weight: ${({ $isTotalsRow: e }) => e ? "bold" : "normal"};
@@ -774,7 +774,7 @@ const Se = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
     }
   ) }),
   e
-] }), De = ({
+] }), Le = ({
   children: e = "Подтвердить",
   icon: n,
   disabled: s = !1,
@@ -1269,7 +1269,7 @@ const Se = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
   width: 8px;
   height: 8px;
   opacity: ${(e) => e.disabled ? 0.6 : 1};
-`, Ft = "data:image/svg+xml,%3csvg%20width='18'%20height='18'%20viewBox='0%200%2018%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M14.625%202.8125H3.375C2.44302%202.8125%201.6875%203.56802%201.6875%204.5V14.625C1.6875%2015.557%202.44302%2016.3125%203.375%2016.3125H14.625C15.557%2016.3125%2016.3125%2015.557%2016.3125%2014.625V4.5C16.3125%203.56802%2015.557%202.8125%2014.625%202.8125Z'%20stroke='%2350555C'%20stroke-linejoin='round'/%3e%3cpath%20d='M10.4062%209C10.8722%209%2011.25%208.62224%2011.25%208.15625C11.25%207.69026%2010.8722%207.3125%2010.4062%207.3125C9.94026%207.3125%209.5625%207.69026%209.5625%208.15625C9.5625%208.62224%209.94026%209%2010.4062%209Z'%20fill='%2350555C'/%3e%3cpath%20d='M13.2188%209C13.6847%209%2014.0625%208.62224%2014.0625%208.15625C14.0625%207.69026%2013.6847%207.3125%2013.2188%207.3125C12.7528%207.3125%2012.375%207.69026%2012.375%208.15625C12.375%208.62224%2012.7528%209%2013.2188%209Z'%20fill='%2350555C'/%3e%3cpath%20d='M10.4062%2011.8125C10.8722%2011.8125%2011.25%2011.4347%2011.25%2010.9688C11.25%2010.5028%2010.8722%2010.125%2010.4062%2010.125C9.94026%2010.125%209.5625%2010.5028%209.5625%2010.9688C9.5625%2011.4347%209.94026%2011.8125%2010.4062%2011.8125Z'%20fill='%2350555C'/%3e%3cpath%20d='M13.2188%2011.8125C13.6847%2011.8125%2014.0625%2011.4347%2014.0625%2010.9688C14.0625%2010.5028%2013.6847%2010.125%2013.2188%2010.125C12.7528%2010.125%2012.375%2010.5028%2012.375%2010.9688C12.375%2011.4347%2012.7528%2011.8125%2013.2188%2011.8125Z'%20fill='%2350555C'/%3e%3cpath%20d='M4.78125%2011.8125C5.24724%2011.8125%205.625%2011.4347%205.625%2010.9688C5.625%2010.5028%205.24724%2010.125%204.78125%2010.125C4.31526%2010.125%203.9375%2010.5028%203.9375%2010.9688C3.9375%2011.4347%204.31526%2011.8125%204.78125%2011.8125Z'%20fill='%2350555C'/%3e%3cpath%20d='M7.59375%2011.8125C8.05974%2011.8125%208.4375%2011.4347%208.4375%2010.9688C8.4375%2010.5028%208.05974%2010.125%207.59375%2010.125C7.12776%2010.125%206.75%2010.5028%206.75%2010.9688C6.75%2011.4347%207.12776%2011.8125%207.59375%2011.8125Z'%20fill='%2350555C'/%3e%3cpath%20d='M4.78125%2014.625C5.24724%2014.625%205.625%2014.2472%205.625%2013.7812C5.625%2013.3153%205.24724%2012.9375%204.78125%2012.9375C4.31526%2012.9375%203.9375%2013.3153%203.9375%2013.7812C3.9375%2014.2472%204.31526%2014.625%204.78125%2014.625Z'%20fill='%2350555C'/%3e%3cpath%20d='M7.59375%2014.625C8.05974%2014.625%208.4375%2014.2472%208.4375%2013.7812C8.4375%2013.3153%208.05974%2012.9375%207.59375%2012.9375C7.12776%2012.9375%206.75%2013.3153%206.75%2013.7812C6.75%2014.2472%207.12776%2014.625%207.59375%2014.625Z'%20fill='%2350555C'/%3e%3cpath%20d='M10.4062%2014.625C10.8722%2014.625%2011.25%2014.2472%2011.25%2013.7812C11.25%2013.3153%2010.8722%2012.9375%2010.4062%2012.9375C9.94026%2012.9375%209.5625%2013.3153%209.5625%2013.7812C9.5625%2014.2472%209.94026%2014.625%2010.4062%2014.625Z'%20fill='%2350555C'/%3e%3cpath%20d='M4.5%201.6875V2.8125M13.5%201.6875V2.8125'%20stroke='%2350555C'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M16.3125%205.625H1.6875'%20stroke='%2350555C'%20stroke-linejoin='round'/%3e%3c/svg%3e", ue = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"], At = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"], he = ({ prefix: e = "Дата:", value: n = "", placeholder: s = "Выберите дату", onChange: i, onReset: r }) => {
+`, Ft = "data:image/svg+xml,%3csvg%20width='18'%20height='18'%20viewBox='0%200%2018%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M14.625%202.8125H3.375C2.44302%202.8125%201.6875%203.56802%201.6875%204.5V14.625C1.6875%2015.557%202.44302%2016.3125%203.375%2016.3125H14.625C15.557%2016.3125%2016.3125%2015.557%2016.3125%2014.625V4.5C16.3125%203.56802%2015.557%202.8125%2014.625%202.8125Z'%20stroke='%2350555C'%20stroke-linejoin='round'/%3e%3cpath%20d='M10.4062%209C10.8722%209%2011.25%208.62224%2011.25%208.15625C11.25%207.69026%2010.8722%207.3125%2010.4062%207.3125C9.94026%207.3125%209.5625%207.69026%209.5625%208.15625C9.5625%208.62224%209.94026%209%2010.4062%209Z'%20fill='%2350555C'/%3e%3cpath%20d='M13.2188%209C13.6847%209%2014.0625%208.62224%2014.0625%208.15625C14.0625%207.69026%2013.6847%207.3125%2013.2188%207.3125C12.7528%207.3125%2012.375%207.69026%2012.375%208.15625C12.375%208.62224%2012.7528%209%2013.2188%209Z'%20fill='%2350555C'/%3e%3cpath%20d='M10.4062%2011.8125C10.8722%2011.8125%2011.25%2011.4347%2011.25%2010.9688C11.25%2010.5028%2010.8722%2010.125%2010.4062%2010.125C9.94026%2010.125%209.5625%2010.5028%209.5625%2010.9688C9.5625%2011.4347%209.94026%2011.8125%2010.4062%2011.8125Z'%20fill='%2350555C'/%3e%3cpath%20d='M13.2188%2011.8125C13.6847%2011.8125%2014.0625%2011.4347%2014.0625%2010.9688C14.0625%2010.5028%2013.6847%2010.125%2013.2188%2010.125C12.7528%2010.125%2012.375%2010.5028%2012.375%2010.9688C12.375%2011.4347%2012.7528%2011.8125%2013.2188%2011.8125Z'%20fill='%2350555C'/%3e%3cpath%20d='M4.78125%2011.8125C5.24724%2011.8125%205.625%2011.4347%205.625%2010.9688C5.625%2010.5028%205.24724%2010.125%204.78125%2010.125C4.31526%2010.125%203.9375%2010.5028%203.9375%2010.9688C3.9375%2011.4347%204.31526%2011.8125%204.78125%2011.8125Z'%20fill='%2350555C'/%3e%3cpath%20d='M7.59375%2011.8125C8.05974%2011.8125%208.4375%2011.4347%208.4375%2010.9688C8.4375%2010.5028%208.05974%2010.125%207.59375%2010.125C7.12776%2010.125%206.75%2010.5028%206.75%2010.9688C6.75%2011.4347%207.12776%2011.8125%207.59375%2011.8125Z'%20fill='%2350555C'/%3e%3cpath%20d='M4.78125%2014.625C5.24724%2014.625%205.625%2014.2472%205.625%2013.7812C5.625%2013.3153%205.24724%2012.9375%204.78125%2012.9375C4.31526%2012.9375%203.9375%2013.3153%203.9375%2013.7812C3.9375%2014.2472%204.31526%2014.625%204.78125%2014.625Z'%20fill='%2350555C'/%3e%3cpath%20d='M7.59375%2014.625C8.05974%2014.625%208.4375%2014.2472%208.4375%2013.7812C8.4375%2013.3153%208.05974%2012.9375%207.59375%2012.9375C7.12776%2012.9375%206.75%2013.3153%206.75%2013.7812C6.75%2014.2472%207.12776%2014.625%207.59375%2014.625Z'%20fill='%2350555C'/%3e%3cpath%20d='M10.4062%2014.625C10.8722%2014.625%2011.25%2014.2472%2011.25%2013.7812C11.25%2013.3153%2010.8722%2012.9375%2010.4062%2012.9375C9.94026%2012.9375%209.5625%2013.3153%209.5625%2013.7812C9.5625%2014.2472%209.94026%2014.625%2010.4062%2014.625Z'%20fill='%2350555C'/%3e%3cpath%20d='M4.5%201.6875V2.8125M13.5%201.6875V2.8125'%20stroke='%2350555C'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M16.3125%205.625H1.6875'%20stroke='%2350555C'%20stroke-linejoin='round'/%3e%3c/svg%3e", he = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"], At = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"], xe = ({ prefix: e = "Дата:", value: n = "", placeholder: s = "Выберите дату", onChange: i, onReset: r }) => {
   const [d, p] = A(!1), [m, k] = A(/* @__PURE__ */ new Date()), [g, f] = A(n ? new Date(n) : null), [x, b] = A(!1), [h, u] = A(!1), l = Z(null), L = Z(null), y = Z(null);
   U(() => {
     const c = (j) => {
@@ -1347,23 +1347,23 @@ const Se = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
     d && /* @__PURE__ */ t.jsxs(Ht, { className: "calendar-container", children: [
       /* @__PURE__ */ t.jsxs(Vt, { children: [
         /* @__PURE__ */ t.jsx(
-          be,
+          me,
           {
             onClick: (c) => {
               c.preventDefault(), c.stopPropagation(), v("prev");
             },
             onMouseDown: (c) => c.preventDefault(),
-            children: /* @__PURE__ */ t.jsx(me, { direction: "right" })
+            children: /* @__PURE__ */ t.jsx(we, { direction: "right" })
           }
         ),
         /* @__PURE__ */ t.jsxs(Zt, { children: [
           /* @__PURE__ */ t.jsxs(Gt, { ref: L, children: [
             /* @__PURE__ */ t.jsxs(Ut, { onClick: (c) => Y(c), onMouseDown: (c) => c.preventDefault(), children: [
-              ue[m.getMonth()],
-              /* @__PURE__ */ t.jsx(xe, { $open: x })
+              he[m.getMonth()],
+              /* @__PURE__ */ t.jsx(ge, { $open: x })
             ] }),
-            x && /* @__PURE__ */ t.jsx(ge, { $width: 120, onClick: (c) => c.stopPropagation(), children: ue.map((c, j) => /* @__PURE__ */ t.jsx(
-              fe,
+            x && /* @__PURE__ */ t.jsx(fe, { $width: 120, onClick: (c) => c.stopPropagation(), children: he.map((c, j) => /* @__PURE__ */ t.jsx(
+              be,
               {
                 $selected: j === m.getMonth(),
                 onClick: (M) => {
@@ -1377,10 +1377,10 @@ const Se = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
           /* @__PURE__ */ t.jsxs(qt, { ref: y, children: [
             /* @__PURE__ */ t.jsxs(Xt, { onClick: (c) => _(c), onMouseDown: (c) => c.preventDefault(), children: [
               m.getFullYear(),
-              /* @__PURE__ */ t.jsx(xe, { $open: h })
+              /* @__PURE__ */ t.jsx(ge, { $open: h })
             ] }),
-            h && /* @__PURE__ */ t.jsx(ge, { $width: 80, onClick: (c) => c.stopPropagation(), children: F().map((c) => /* @__PURE__ */ t.jsx(
-              fe,
+            h && /* @__PURE__ */ t.jsx(fe, { $width: 80, onClick: (c) => c.stopPropagation(), children: F().map((c) => /* @__PURE__ */ t.jsx(
+              be,
               {
                 $selected: c === m.getFullYear(),
                 onClick: (j) => {
@@ -1393,21 +1393,21 @@ const Se = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
           ] })
         ] }),
         /* @__PURE__ */ t.jsx(
-          be,
+          me,
           {
             onClick: (c) => {
               c.preventDefault(), c.stopPropagation(), v("next");
             },
             onMouseDown: (c) => c.preventDefault(),
-            children: /* @__PURE__ */ t.jsx(me, { direction: "left" })
+            children: /* @__PURE__ */ t.jsx(we, { direction: "left" })
           }
         )
       ] }),
       /* @__PURE__ */ t.jsx(Kt, { children: At.map((c) => /* @__PURE__ */ t.jsx(Jt, { children: c }, c)) }),
       /* @__PURE__ */ t.jsx(Qt, { children: z() }),
       /* @__PURE__ */ t.jsxs(eo, { children: [
-        /* @__PURE__ */ t.jsx(we, { onClick: I, children: "Удалить" }),
-        /* @__PURE__ */ t.jsx(we, { onClick: S, children: "Сегодня" })
+        /* @__PURE__ */ t.jsx(ve, { onClick: I, children: "Удалить" }),
+        /* @__PURE__ */ t.jsx(ve, { onClick: S, children: "Сегодня" })
       ] })
     ] })
   ] });
@@ -1474,7 +1474,7 @@ const Se = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
   display: flex;
   gap: 8px;
   color: black;
-`, Le = o.button`
+`, Te = o.button`
   border: 1px solid rgba(209, 213, 219, 1);
   border-radius: 5px;
   padding: 6px 8px;
@@ -1491,13 +1491,13 @@ const Se = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
   &:hover {
     background-color: rgba(232, 216, 216, 0.2);
   }
-`, Ut = o(Le)`
+`, Ut = o(Te)`
   min-width: 120px;
 
   &: hover {
     border-color: rgba(209, 213, 219, 1);
   }
-`, Xt = o(Le)`
+`, Xt = o(Te)`
   min-width: 80px;
 
   &: hover {
@@ -1507,7 +1507,7 @@ const Se = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
   position: relative;
 `, qt = o.div`
   position: relative;
-`, xe = o.div`
+`, ge = o.div`
   width: 0;
   height: 0;
   border-left: 5px solid transparent;
@@ -1516,7 +1516,7 @@ const Se = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
   margin-left: 8px;
   transform: ${({ $open: e }) => e ? "rotate(180deg)" : "none"};
   transition: transform 0.2s ease;
-`, ge = o.div`
+`, fe = o.div`
   position: absolute;
   top: 100%;
   left: 0;
@@ -1543,7 +1543,7 @@ const Se = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
     background: rgba(80, 85, 92, 1);
     border-radius: 3px;
   }
-`, fe = o.div`
+`, be = o.div`
   padding: 8px 12px;
   font-size: 14px;
   cursor: pointer;
@@ -1553,7 +1553,7 @@ const Se = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
   &:hover {
     background-color: rgba(232, 216, 216, ${({ $selected: e }) => e ? "1" : "0.5"});
   }
-`, be = o.button`
+`, me = o.button`
   background: none;
   border: none;
   cursor: pointer;
@@ -1564,7 +1564,7 @@ const Se = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
   &:focus {
     outline: none;
   }
-`, me = o.div`
+`, we = o.div`
   width: 0;
   height: 0;
   border-top: 5px solid transparent;
@@ -1601,7 +1601,7 @@ const Se = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
   display: flex;
   justify-content: space-between;
   margin-top: 16px;
-`, we = o.button`
+`, ve = o.button`
   background: none;
   border: none;
   color: rgba(0, 125, 136, 1);
@@ -1790,9 +1790,9 @@ const Se = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
     )), g;
   };
   return /* @__PURE__ */ t.jsxs(so, { children: [
-    /* @__PURE__ */ t.jsx(ve, { disabled: d === 1, onClick: () => m(d - 1), children: /* @__PURE__ */ t.jsx("svg", { width: "7", height: "11", viewBox: "0 0 7 11", fill: "none", children: /* @__PURE__ */ t.jsx("path", { d: "M6 0.5L1 5.5L6 10.5", stroke: d === 1 ? "#ccc" : "black", strokeLinecap: "round", strokeLinejoin: "round" }) }) }),
+    /* @__PURE__ */ t.jsx(ye, { disabled: d === 1, onClick: () => m(d - 1), children: /* @__PURE__ */ t.jsx("svg", { width: "7", height: "11", viewBox: "0 0 7 11", fill: "none", children: /* @__PURE__ */ t.jsx("path", { d: "M6 0.5L1 5.5L6 10.5", stroke: d === 1 ? "#ccc" : "black", strokeLinecap: "round", strokeLinejoin: "round" }) }) }),
     k(),
-    /* @__PURE__ */ t.jsx(ve, { disabled: d === r, onClick: () => m(d + 1), style: { transform: "rotate(180deg)" }, children: /* @__PURE__ */ t.jsx("svg", { width: "7", height: "11", viewBox: "0 0 7 11", fill: "none", children: /* @__PURE__ */ t.jsx("path", { d: "M6 0.5L1 5.5L6 10.5", stroke: d === r ? "#ccc" : "black", strokeLinecap: "round", strokeLinejoin: "round" }) }) })
+    /* @__PURE__ */ t.jsx(ye, { disabled: d === r, onClick: () => m(d + 1), style: { transform: "rotate(180deg)" }, children: /* @__PURE__ */ t.jsx("svg", { width: "7", height: "11", viewBox: "0 0 7 11", fill: "none", children: /* @__PURE__ */ t.jsx("path", { d: "M6 0.5L1 5.5L6 10.5", stroke: d === r ? "#ccc" : "black", strokeLinecap: "round", strokeLinejoin: "round" }) }) })
   ] });
 }, so = o.div`
   display: flex;
@@ -1816,7 +1816,7 @@ const Se = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
   &:hover {
     color: ${({ active: e }) => e ? "white" : "rgba(0, 125, 136, 1)"};
   }
-`, ve = o.button`
+`, ye = o.button`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1956,8 +1956,8 @@ const Se = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
       "aria-label": e || "Диалог",
       tabIndex: -1,
       children: [
-        /* @__PURE__ */ t.jsxs(Te, { children: [
-          /* @__PURE__ */ t.jsx(Ee, { children: e }),
+        /* @__PURE__ */ t.jsxs(Ee, { children: [
+          /* @__PURE__ */ t.jsx(Pe, { children: e }),
           /* @__PURE__ */ t.jsx(go, { type: "button", onClick: n, "aria-label": "Закрыть", children: /* @__PURE__ */ t.jsx("span", { "aria-hidden": !0, children: "×" }) })
         ] }),
         b ? /* @__PURE__ */ t.jsx(fo, { children: b }) : null,
@@ -2001,14 +2001,14 @@ const Se = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
   display: flex;
   flex-direction: column;
   outline: none;
-`, Te = o.div`
+`, Ee = o.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
 
   padding: 14px 18px 10px 18px;
-`, Ee = o.h2`
+`, Pe = o.h2`
   margin: 0;
   padding: 0;
 
@@ -2097,12 +2097,12 @@ const Se = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
   display: flex;
   align-items: center;
   gap: 10px;
-`, ko = o(De)`
+`, ko = o(Le)`
   min-width: 140px;
   padding: 10px 16px;
   border-radius: 10px;
   font-size: 16px;
-`, jo = o(De)`
+`, jo = o(Le)`
   min-width: 140px;
   padding: 10px 16px;
   border-radius: 10px;
@@ -2154,7 +2154,7 @@ const Se = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
     const F = new Date(R), Y = String(F.getDate()).padStart(2, "0"), _ = String(F.getMonth() + 1).padStart(2, "0"), v = F.getFullYear();
     return `${Y}.${_}.${v}`;
   }, z = () => /* @__PURE__ */ t.jsxs(zo, { children: [
-    /* @__PURE__ */ t.jsx(Te, { style: { margin: 0 }, children: /* @__PURE__ */ t.jsx(Ee, { style: { margin: 0 }, children: "Выбор периода" }) }),
+    /* @__PURE__ */ t.jsx(Ee, { style: { margin: 0 }, children: /* @__PURE__ */ t.jsx(Pe, { style: { margin: 0 }, children: "Выбор периода" }) }),
     /* @__PURE__ */ t.jsx(Fo, { onClick: I, children: "Очистить период" })
   ] });
   return /* @__PURE__ */ t.jsxs(t.Fragment, { children: [
@@ -2183,8 +2183,8 @@ const Se = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
         saveButtonText: "Выбрать",
         customLayout: /* @__PURE__ */ t.jsx(z, {}),
         children: /* @__PURE__ */ t.jsxs(Bo, { children: [
-          /* @__PURE__ */ t.jsx(ye, { children: /* @__PURE__ */ t.jsx(he, { value: b, onChange: (R) => h(R) }) }),
-          /* @__PURE__ */ t.jsx(ye, { children: /* @__PURE__ */ t.jsx(he, { value: u, onChange: (R) => l(R) }) })
+          /* @__PURE__ */ t.jsx(ke, { children: /* @__PURE__ */ t.jsx(xe, { value: b, onChange: (R) => h(R) }) }),
+          /* @__PURE__ */ t.jsx(ke, { children: /* @__PURE__ */ t.jsx(xe, { value: u, onChange: (R) => l(R) }) })
         ] })
       }
     ) })
@@ -2306,7 +2306,7 @@ const Se = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
   display: flex;
   gap: 20px;
   margin: 20px 25px;
-`, ye = o.div`
+`, ke = o.div`
   flex: 1;
 `, zo = o.div`
   display: flex;
@@ -2572,7 +2572,7 @@ const Se = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
   color: red;
   font-size: 12px;
   margin-top: 4px;
-`, Pe = o.div`
+`, Re = o.div`
   display: flex;
   flex-direction: row;
   text-align: left;
@@ -2898,14 +2898,14 @@ const gn = (e) => typeof window > "u" ? Promise.reject(new Error("Window is not 
   font-size: 12px;
   color: #6b7280;
   text-align: center;
-`, Re = o.h1`
+`, Ie = o.h1`
   margin-right: auto;
   text-align: left;
   font-size: 30px;
   color: black;
   font-weight: 600;
 `;
-function ke(e, n = "₽") {
+function je(e, n = "₽") {
   if (!e || e.trim() === "")
     return `0${n}`;
   const s = e.replace(/[^\d-]/g, "");
@@ -2932,8 +2932,8 @@ const Ti = ({ title: e, data: n, maxValue: s, step: i, height: r = 300, titleFon
     k.push(f);
   const g = n.length > 0 ? n[0].bars.map((f) => ({ name: f.name, color: f.color })) : [];
   return /* @__PURE__ */ t.jsxs(kn, { children: [
-    /* @__PURE__ */ t.jsxs(Pe, { style: { marginTop: "0" }, children: [
-      /* @__PURE__ */ t.jsx(Re, { style: { fontSize: d }, children: e }),
+    /* @__PURE__ */ t.jsxs(Re, { style: { marginTop: "0" }, children: [
+      /* @__PURE__ */ t.jsx(Ie, { style: { fontSize: d }, children: e }),
       /* @__PURE__ */ t.jsx(jn, { children: g.map((f, x) => /* @__PURE__ */ t.jsxs(Cn, { children: [
         /* @__PURE__ */ t.jsx($n, { color: f.color }),
         /* @__PURE__ */ t.jsx(Mn, { children: f.name })
@@ -2965,12 +2965,12 @@ const Ti = ({ title: e, data: n, maxValue: s, step: i, height: r = 300, titleFon
               /* @__PURE__ */ t.jsxs(An, { children: [
                 /* @__PURE__ */ t.jsxs(_n, { children: [
                   "Всего: ",
-                  ke(f.total.toString())
+                  je(f.total.toString())
                 ] }),
                 f.bars.map((b, h) => /* @__PURE__ */ t.jsxs(On, { children: [
                   b.name,
                   ": ",
-                  ke(b.value.toString())
+                  je(b.value.toString())
                 ] }, h))
               ] }),
               /* @__PURE__ */ t.jsx(Yn, {})
@@ -3152,8 +3152,8 @@ const Ti = ({ title: e, data: n, maxValue: s, step: i, height: r = 300, titleFon
       });
     }
   }, [u, r, d, p]), /* @__PURE__ */ t.jsxs(Nn, { children: [
-    /* @__PURE__ */ t.jsxs(Pe, { style: { marginTop: "0" }, children: [
-      /* @__PURE__ */ t.jsx(Re, { style: { fontSize: h }, children: e }),
+    /* @__PURE__ */ t.jsxs(Re, { style: { marginTop: "0" }, children: [
+      /* @__PURE__ */ t.jsx(Ie, { style: { fontSize: h }, children: e }),
       f && R.length > 0 && /* @__PURE__ */ t.jsx(Hn, { children: R.map((v, c) => /* @__PURE__ */ t.jsxs(Vn, { children: [
         /* @__PURE__ */ t.jsx(Zn, { color: v.color }),
         /* @__PURE__ */ t.jsx(Un, { children: v.name })
@@ -3162,7 +3162,7 @@ const Ti = ({ title: e, data: n, maxValue: s, step: i, height: r = 300, titleFon
     /* @__PURE__ */ t.jsxs(Xn, { height: g, children: [
       /* @__PURE__ */ t.jsxs(Gn, { children: [
         E.map((v, c) => /* @__PURE__ */ t.jsx(qn, { children: v.toLocaleString() }, c)),
-        /* @__PURE__ */ t.jsx(je, { children: i })
+        /* @__PURE__ */ t.jsx(Ce, { children: i })
       ] }),
       /* @__PURE__ */ t.jsxs(Kn, { ref: S, children: [
         E.map((v, c) => /* @__PURE__ */ t.jsx(Jn, { position: _(v) }, `hline-${c}`)),
@@ -3204,7 +3204,7 @@ const Ti = ({ title: e, data: n, maxValue: s, step: i, height: r = 300, titleFon
         const M = B[c] / I * 100;
         return /* @__PURE__ */ t.jsx(tr, { style: { left: `${M}%`, transform: "translateX(-50%)" }, children: v }, c);
       }),
-      s && /* @__PURE__ */ t.jsx(je, { children: s })
+      s && /* @__PURE__ */ t.jsx(Ce, { children: s })
     ] })
   ] });
 }, Nn = o.div`
@@ -3245,7 +3245,7 @@ const Ti = ({ title: e, data: n, maxValue: s, step: i, height: r = 300, titleFon
 `, qn = o.span`
   font-size: 12px;
   color: #6b7280;
-`, je = o.div`
+`, Ce = o.div`
   font-size: 12px;
   color: #6b7280;
   text-align: center;
@@ -3354,9 +3354,9 @@ const Ti = ({ title: e, data: n, maxValue: s, step: i, height: r = 300, titleFon
       }
     ) }) }) }),
     /* @__PURE__ */ t.jsxs(ur, { children: [
-      /* @__PURE__ */ t.jsx(Ce, { $position: "left", onClick: m, children: /* @__PURE__ */ t.jsx("svg", { width: "24", height: "24", viewBox: "0 0 24 24", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ t.jsx("path", { d: "M15 18L9 12L15 6", stroke: "white", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round" }) }) }),
+      /* @__PURE__ */ t.jsx($e, { $position: "left", onClick: m, children: /* @__PURE__ */ t.jsx("svg", { width: "24", height: "24", viewBox: "0 0 24 24", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ t.jsx("path", { d: "M15 18L9 12L15 6", stroke: "white", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round" }) }) }),
       /* @__PURE__ */ t.jsx(hr, { src: e[i], alt: `Photo ${i + 1}`, $rotation: d }),
-      /* @__PURE__ */ t.jsx(Ce, { $position: "right", onClick: k, children: /* @__PURE__ */ t.jsx("svg", { width: "24", height: "24", viewBox: "0 0 24 24", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ t.jsx("path", { d: "M9 18L15 12L9 6", stroke: "white", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round" }) }) })
+      /* @__PURE__ */ t.jsx($e, { $position: "right", onClick: k, children: /* @__PURE__ */ t.jsx("svg", { width: "24", height: "24", viewBox: "0 0 24 24", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ t.jsx("path", { d: "M9 18L15 12L9 6", stroke: "white", strokeWidth: "2", strokeLinecap: "round", strokeLinejoin: "round" }) }) })
     ] }),
     /* @__PURE__ */ t.jsx(xr, { children: e.map((x, b) => /* @__PURE__ */ t.jsx(
       gr,
@@ -3453,7 +3453,7 @@ const Ti = ({ title: e, data: n, maxValue: s, step: i, height: r = 300, titleFon
   border-radius: 4px;
   transform: rotate(${({ $rotation: e }) => e}deg);
   transition: transform 0.3s ease;
-`, Ce = o.button`
+`, $e = o.button`
   position: absolute;
   ${({ $position: e }) => e}: 20px;
   background: rgba(0, 0, 0, 0.7);
@@ -3513,7 +3513,7 @@ const Ti = ({ title: e, data: n, maxValue: s, step: i, height: r = 300, titleFon
   };
   return /* @__PURE__ */ t.jsx(br, { onClick: i, children: /* @__PURE__ */ t.jsxs(mr, { onClick: (k) => k.stopPropagation(), children: [
     /* @__PURE__ */ t.jsx(wr, { children: "Подтверждение авторизации" }),
-    /* @__PURE__ */ t.jsx($e, { children: "Для завершения авторизации позвоните на номер:" }),
+    /* @__PURE__ */ t.jsx(Me, { children: "Для завершения авторизации позвоните на номер:" }),
     /* @__PURE__ */ t.jsxs(
       vr,
       {
@@ -3526,7 +3526,7 @@ const Ti = ({ title: e, data: n, maxValue: s, step: i, height: r = 300, titleFon
         ]
       }
     ),
-    /* @__PURE__ */ t.jsx($e, { children: "После звонка система автоматически подтвердит вашу авторизацию." }),
+    /* @__PURE__ */ t.jsx(Me, { children: "После звонка система автоматически подтвердит вашу авторизацию." }),
     s && /* @__PURE__ */ t.jsx(kr, { children: s })
   ] }) });
 }, br = o.div`
@@ -3552,7 +3552,7 @@ const Ti = ({ title: e, data: n, maxValue: s, step: i, height: r = 300, titleFon
   font-size: 20px;
   margin-bottom: 20px;
   color: #333;
-`, $e = o.p`
+`, Me = o.p`
   margin-bottom: 15px;
   color: #555;
 `, vr = o.div`
@@ -3699,10 +3699,10 @@ const Ti = ({ title: e, data: n, maxValue: s, step: i, height: r = 300, titleFon
           !z && s && /* @__PURE__ */ t.jsx(Dr, { children: s })
         ] }),
         /* @__PURE__ */ t.jsxs(Lr, { children: [
-          /* @__PURE__ */ t.jsx(Me, { children: M(e) }),
+          /* @__PURE__ */ t.jsx(Se, { children: M(e) }),
           n.length > 0 && /* @__PURE__ */ t.jsxs(t.Fragment, { children: [
             /* @__PURE__ */ t.jsx(Br, {}),
-            /* @__PURE__ */ t.jsx(Me, { children: M(n) })
+            /* @__PURE__ */ t.jsx(Se, { children: M(n) })
           ] })
         ] }),
         W,
@@ -3748,7 +3748,7 @@ const Ti = ({ title: e, data: n, maxValue: s, step: i, height: r = 300, titleFon
   gap: 4px;
   height: 100%;
   width: 100%;
-`, Me = o.div`
+`, Se = o.div`
   overflow-y: auto;
   overflow-x: hidden;
   padding-right: 4px;
@@ -3861,15 +3861,15 @@ const Ti = ({ title: e, data: n, maxValue: s, step: i, height: r = 300, titleFon
     box-shadow: 0 0 0 0.2rem rgba(37, 203, 161, 0.25);
     background-color: rgba(255, 255, 255, 1);
   }
-`, Ie = "http://95.163.226.24:8080/api";
-async function Be(e, n = {}) {
+`, Be = "http://95.163.226.24:8080/api";
+async function ae(e, n = {}) {
   const { method: s = "GET", body: i, headers: r = {}, token: d } = n, p = async (k) => {
     const g = {
       "Content-Type": "application/json",
       ...r
     };
     k && (g.Authorization = `Bearer ${k}`);
-    const f = e.startsWith("http") ? e : `${Ie}${e}`;
+    const f = e.startsWith("http") ? e : `${Be}${e}`;
     return await fetch(f, {
       method: s,
       headers: g,
@@ -3906,7 +3906,7 @@ async function Be(e, n = {}) {
   return m(d);
 }
 async function Wr() {
-  const e = await fetch(`${Ie}/auth/refresh`, {
+  const e = await fetch(`${Be}/auth/refresh`, {
     method: "POST",
     headers: { "Content-Type": "application/json" }
   });
@@ -3915,20 +3915,20 @@ async function Wr() {
   const n = await e.json();
   return n.access_token ? (oe.setTokens(n.access_token), n.access_token) : (oe.clear(), null);
 }
-const Nr = (e, n) => Be("/auth/call/initiate", {
+const Nr = (e, n) => ae("/auth/call/initiate", {
   method: "POST",
   body: {
     phone: e,
     user_type: n
   }
-}), Hr = (e, n, s) => Be("/auth/call/confirm", {
+}), Hr = (e, n, s) => ae("/auth/call/confirm", {
   method: "POST",
   body: {
     phone: e,
     check_id: n,
     user_type: s
   }
-}), Ii = ({
+}), Ii = () => ae("/auth/session/info", { method: "GET" }), Bi = ({
   onLoginSuccess: e,
   userType: n = "delivery_operator",
   title: s = "Авторизация",
@@ -4147,7 +4147,7 @@ const Nr = (e, n) => Be("/auth/call/initiate", {
   for (let i = 0; i < e.length; i++)
     n = e.charCodeAt(i) + ((n << 5) - n);
   return `hsl(${Math.abs(n % 360)}, 60%, 60%)`;
-}, Bi = (e) => !e || !e.trim() ? "?" : e.split(" ").filter((i) => i.length > 0).map((i) => i[0].toUpperCase()).join("").slice(0, 2) || "?", zi = (e, n = 100) => {
+}, zi = (e) => !e || !e.trim() ? "?" : e.split(" ").filter((i) => i.length > 0).map((i) => i[0].toUpperCase()).join("").slice(0, 2) || "?", Fi = (e, n = 100) => {
   const s = document.createElement("canvas");
   s.width = n, s.height = n;
   const i = s.getContext("2d");
@@ -4158,14 +4158,14 @@ const Nr = (e, n) => Be("/auth/call/initiate", {
   i.font = `bold ${d}px "Manrope", Arial, sans-serif`, i.textAlign = "center", i.textBaseline = "middle";
   const p = d * 0.1;
   return i.fillText(e, n / 2, n / 2 + p), s.toDataURL("image/png");
-}, Fi = (e) => {
+}, Ai = (e) => {
   if (!e) return "";
   const n = typeof e == "string" ? new Date(e) : e;
   if (isNaN(n.getTime())) return "";
   const s = n.getDate().toString().padStart(2, "0"), i = (n.getMonth() + 1).toString().padStart(2, "0"), r = n.getFullYear();
   return `${s}-${i}-${r}`;
 };
-function Ai(e) {
+function _i(e) {
   return new Date(e);
 }
 const ni = (e) => {
@@ -4207,7 +4207,7 @@ const ni = (e) => {
   } catch {
     return "неверная дата";
   }
-}, _i = (e, n = {}) => {
+}, Oi = (e, n = {}) => {
   const { useExactAfterMonths: s = 6, includeTime: i = !0 } = n, r = new Date(e);
   return isNaN(r.getTime()), Math.floor(((/* @__PURE__ */ new Date()).getTime() - r.getTime()) / (1e3 * 60 * 60 * 24 * 30)) >= s ? i ? ri(r) : r.toLocaleDateString("ru-RU", {
     day: "2-digit",
@@ -4216,24 +4216,24 @@ const ni = (e) => {
   }) : ni(r);
 };
 export {
-  Ie as API_BASE_URL,
+  Be as API_BASE_URL,
   ci as AddButton,
   fr as AuthCallModal,
-  Ii as AuthPage,
+  Bi as AuthPage,
   di as BackButton,
   uo as BaseModal,
   gi as Checkbox,
   Ti as ColumnChart,
-  Se as ContextMenu,
+  De as ContextMenu,
   ki as CountInfoTitle,
-  he as CustomCalendar,
+  xe as CustomCalendar,
   to as CustomInput,
   Or as CustomPhoneInput,
   xi as CustomSelect,
   li as CustomTable,
   bi as CustomTextArea,
-  Re as CustomTitle,
-  De as DefaultButton,
+  Ie as CustomTitle,
+  Le as DefaultButton,
   pi as DeleteButton,
   ui as EditButton,
   yi as EntitySelectContainer,
@@ -4250,21 +4250,22 @@ export {
   Ri as SideMenu,
   jr as SideMenuContext,
   vi as Tabs,
-  Pe as TitleField,
+  Re as TitleField,
   $i as ToggleSwitch,
   Di as YandexMapSelector,
-  Be as apiRequest,
+  ae as apiRequest,
   oe as authStorage,
   Hr as confirmCallAuth,
-  Fi as formatDate,
+  Ai as formatDate,
   ri as formatExactDate,
-  ke as formatMoney,
+  je as formatMoney,
   ni as formatRelativeTime,
-  _i as formatRelativeTimeExtended,
-  zi as generateAvatar,
-  Bi as getInitials,
+  Oi as formatRelativeTimeExtended,
+  Fi as generateAvatar,
+  zi as getInitials,
+  Ii as getSessionInfo,
   Nr as initiateCallAuth,
-  Ai as parseDateInput,
+  _i as parseDateInput,
   Li as parseMoney,
   oi as stringToColor
 };

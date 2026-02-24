@@ -56,6 +56,7 @@ export { default as CustomPhoneInput } from "./lib/inputs/CustomPhoneInput";
 export {
   initiateCallAuth,
   confirmCallAuth,
+  getSessionInfo,
   type UserType,
   type InitiateCallAuthResponse,
   type ConfirmCallAuthResponse,
