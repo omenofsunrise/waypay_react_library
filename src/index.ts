@@ -8,14 +8,13 @@ export type {
   TableAction,
 } from "./lib/table/CustomTable";
 export { default as AddButton } from "./lib/buttons/AddButton";
-export { authStorage, getSessionInfo } from "./lib/utils/authStorage";
+export { authStorage } from "./lib/utils/authStorage";
 export { default as BackButton } from "./lib/buttons/BackButton";
 export { default as DefaultButton } from "./lib/buttons/DefaultButton";
 export { default as DeleteButton } from "./lib/buttons/DeleteButton";
 export { default as EditButton } from "./lib/buttons/EditButton";
 export { default as ExportButton } from "./lib/buttons/ExportButton";
 export { default as CustomSelect } from "./lib/inputs/CustomSelect";
-export { type SessionInfo } from "./lib/utils/authStorage";
 export { default as Checkbox } from "./lib/inputs/Checkbox";
 export { default as CustomCalendar } from "./lib/inputs/CustomCalendar";
 export { default as CustomInput } from "./lib/inputs/CustomInput";
@@ -57,6 +56,7 @@ export { default as CustomPhoneInput } from "./lib/inputs/CustomPhoneInput";
 export {
   initiateCallAuth,
   confirmCallAuth,
+  getSessionInfo,
   type UserType,
   type InitiateCallAuthResponse,
   type ConfirmCallAuthResponse,
