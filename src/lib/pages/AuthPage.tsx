@@ -7,6 +7,7 @@ import {
   initiateCallAuth,
   type UserType,
 } from "../api/authCall";
+import AuthNameModal from "../modal/AuthNameModal";
 
 type AuthPageProps = {
   onLoginSuccess: (token: string) => void;
@@ -45,7 +46,8 @@ const AuthPage: React.FC<AuthPageProps> = ({
   const [verificationError, setVerificationError] = useState("");
   const [isVerifying, setIsVerifying] = useState(false);
   
-  const [showNameInput, setShowNameInput] = useState(false);
+  // Состояния для модалки с ФИО
+  const [showNameModal, setShowNameModal] = useState(false);
   const [fullName, setFullName] = useState("");
   const [nameError, setNameError] = useState("");
   const [pendingAuthData, setPendingAuthData] = useState<{
@@ -72,9 +74,9 @@ const AuthPage: React.FC<AuthPageProps> = ({
     return `+${digits}`;
   };
 
-  const closeModal = () => {
+  const closeAllModals = () => {
     setShowCallModal(false);
-    setShowNameInput(false);
+    setShowNameModal(false);
     setFullName("");
     setNameError("");
     setPendingAuthData(null);
@@ -106,13 +108,16 @@ const AuthPage: React.FC<AuthPageProps> = ({
       const nameRequired = enableRegistration && 'name_required' in response && response.name_required;
       
       if (nameRequired) {
-        setShowNameInput(true);
+        // Если нужно ФИО - открываем модалку для его ввода
+        setShowNameModal(true);
+        setCallPhone(response.call_phone);
       } else if (!enableRegistration && 'name_required' in response && response.name_required) {
         setVerificationError(
           "Этот номер не зарегистрирован в системе. Обратитесь в поддержку для регистрации."
         );
         setPendingAuthData(null);
       } else {
+        // Если ФИО не нужно - сразу показываем номер для звонка
         setCallPhone(response.call_phone);
         setShowCallModal(true);
         startVerificationPolling(normalizedPhone, response.check_id);
@@ -127,10 +132,8 @@ const AuthPage: React.FC<AuthPageProps> = ({
     }
   };
 
-  const handleNameSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!fullName.trim()) {
+  const handleNameSubmit = async (name: string) => {
+    if (!name.trim()) {
       setNameError("Введите ФИО");
       return;
     }
@@ -141,15 +144,13 @@ const AuthPage: React.FC<AuthPageProps> = ({
     setNameError("");
 
     try {
-      const response = await initiateCallAuth(
-        pendingAuthData.phone, 
-        userType,
-      );
-      
-      setCallPhone(response.call_phone);
-      setShowNameInput(false);
+      // После ввода ФИО закрываем модалку с именем и открываем модалку с номером
+      setFullName(name);
+      setShowNameModal(false);
       setShowCallModal(true);
-      startVerificationPolling(pendingAuthData.phone, response.check_id);
+      
+      // Запускаем проверку авторизации
+      startVerificationPolling(pendingAuthData.phone, pendingAuthData.checkId);
     } catch (error: unknown) {
       console.error("Registration error:", error);
       setNameError("Не удалось завершить регистрацию");
@@ -180,7 +181,7 @@ const AuthPage: React.FC<AuthPageProps> = ({
           window.clearInterval(verificationInterval.current);
         }
         setShowCallModal(false);
-        setShowNameInput(false);
+        setShowNameModal(false);
         setFullName("");
         setPendingAuthData(null);
         onLoginSuccess(response.access_token);
@@ -196,59 +197,28 @@ const AuthPage: React.FC<AuthPageProps> = ({
   return (
     <AuthContainer className={className} style={style}>
       <AuthCard>
-        <AuthForm onSubmit={showNameInput ? handleNameSubmit : handleSubmit}>
-          <Title>{showNameInput ? "Регистрация" : title}</Title>
+        <AuthForm onSubmit={handleSubmit}>
+          <Title>{title}</Title>
 
-          {!showNameInput ? (
-            <FormGroup>
-              <InputContainer>
-                <CustomPhoneInput
-                  value={rawPhone}
-                  onChange={(value: string) => setRawPhone(value)}
-                  placeholder={placeholder}
-                />
-              </InputContainer>
-            </FormGroup>
-          ) : (
-            <FormGroup>
-              <InputContainer>
-                <NameInput
-                  type="text"
-                  value={fullName}
-                  onChange={(e) => setFullName(e.target.value)}
-                  placeholder="Введите ФИО"
-                  disabled={isLoading}
-                  autoFocus
-                />
-              </InputContainer>
-              {nameError && <FieldError>{nameError}</FieldError>}
-            </FormGroup>
-          )}
+          <FormGroup>
+            <InputContainer>
+              <CustomPhoneInput
+                value={rawPhone}
+                onChange={(value: string) => setRawPhone(value)}
+                placeholder={placeholder}
+              />
+            </InputContainer>
+          </FormGroup>
 
-          {(verificationError || nameError) && (
+          {verificationError && (
             <ErrorBanner>
-              <span>{verificationError || nameError}</span>
+              <span>{verificationError}</span>
             </ErrorBanner>
           )}
 
           <SubmitButton type="submit" disabled={isLoading}>
-            {isLoading ? "Загрузка..." : showNameInput ? "Продолжить" : submitLabel}
+            {isLoading ? "Загрузка..." : submitLabel}
           </SubmitButton>
-
-          {showNameInput && (
-            <BackButton 
-              type="button" 
-              onClick={() => {
-                setShowNameInput(false);
-                setFullName("");
-                setNameError("");
-                setPendingAuthData(null);
-              }}
-              disabled={isLoading}
-            >
-              ← Назад
-            </BackButton>
-          )}
         </AuthForm>
         
         <InfoText>
@@ -264,9 +234,20 @@ const AuthPage: React.FC<AuthPageProps> = ({
         </InfoText>
       </AuthCard>
 
+      {/* Модалка для ввода ФИО */}
+      <AuthNameModal
+        isOpen={showNameModal}
+        onClose={closeAllModals}
+        onSubmit={handleNameSubmit}
+        error={nameError}
+        isLoading={isLoading}
+        callPhone={callPhone}
+      />
+
+      {/* Модалка с номером для звонка */}
       <AuthCallModal
         isOpen={showCallModal}
-        onClose={closeModal}
+        onClose={closeAllModals}
         callPhone={callPhone}
         error={verificationError}
       />
@@ -336,26 +317,6 @@ const InputContainer = styled.div`
   width: auto;
 `;
 
-const NameInput = styled.input`
-  width: 100%;
-  padding: 16px;
-  border: 2px solid #e0e0e0;
-  border-radius: 8px;
-  font-size: 16px;
-  transition: all 0.3s;
-  outline: none;
-
-  &:focus {
-    border-color: rgba(0, 125, 136, 1);
-    box-shadow: 0 0 0 3px rgba(0, 125, 136, 0.1);
-  }
-
-  &:disabled {
-    background: #f5f5f5;
-    cursor: not-allowed;
-  }
-`;
-
 const SubmitButton = styled.button`
   background: linear-gradient(
     90deg,
@@ -391,26 +352,6 @@ const SubmitButton = styled.button`
     cursor: not-allowed;
     transform: none;
     box-shadow: none;
-  }
-`;
-
-const BackButton = styled.button`
-  background: none;
-  border: none;
-  color: rgba(0, 125, 136, 1);
-  font-size: 14px;
-  margin-top: 15px;
-  cursor: pointer;
-  transition: opacity 0.3s;
-
-  &:hover {
-    opacity: 0.8;
-    text-decoration: underline;
-  }
-
-  &:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
   }
 `;
 
@@ -456,13 +397,6 @@ const ErrorBanner = styled.div`
   margin-bottom: 16px;
   font-size: 14px;
   box-shadow: 0 6px 14px rgba(180, 35, 24, 0.08);
-`;
-
-const FieldError = styled.div`
-  color: #e74c3c;
-  font-size: 12px;
-  margin-top: 5px;
-  text-align: left;
 `;
 
 export default AuthPage;
