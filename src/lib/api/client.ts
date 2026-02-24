@@ -6,10 +6,17 @@ type RequestOptions = {
   body?: unknown;
   headers?: Record<string, string>;
   token?: string;
+  withCredentials?: boolean;
 };
 
 export async function apiRequest<T = unknown>(endpoint: string, options: RequestOptions = {}) {
-  const { method = 'GET', body, headers = {}, token } = options;
+  const { 
+    method = 'GET', 
+    body, 
+    headers = {}, 
+    token,
+    withCredentials = true
+  } = options;
 
   const performRequest = async (jwt?: string) => {
     const finalHeaders: Record<string, string> = {
@@ -27,6 +34,7 @@ export async function apiRequest<T = unknown>(endpoint: string, options: Request
       method,
       headers: finalHeaders,
       body: body ? JSON.stringify(body) : undefined,
+      credentials: withCredentials ? 'include' : 'same-origin',
     });
 
     return response;
@@ -82,6 +90,7 @@ async function refreshAccessToken(): Promise<string | null> {
   const response = await fetch(`${API_BASE_URL}/auth/refresh`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
+    credentials: 'include',
   });
 
   if (!response.ok) {
