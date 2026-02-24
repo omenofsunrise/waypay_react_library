@@ -23,10 +23,9 @@ interface ModalProps {
   hideSaveButton?: boolean;
   hideCanselButton?: boolean;
 
-  width?: string; // например "440px"
+  width?: string;
   saveButtonText?: string;
 
-  /** если хочешь вставить кастомный блок над form/body */
   customLayout?: React.ReactNode;
 }
 
@@ -48,7 +47,6 @@ const BaseModal: React.FC<ModalProps> = ({
   const isViewMode = mode === "view";
   const dialogRef = useRef<HTMLDivElement>(null);
 
-  // ESC + блокировка скролла
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") onClose();
@@ -58,7 +56,6 @@ const BaseModal: React.FC<ModalProps> = ({
     const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
 
-    // фокус в диалог
     setTimeout(() => dialogRef.current?.focus(), 0);
 
     return () => {
@@ -68,7 +65,6 @@ const BaseModal: React.FC<ModalProps> = ({
   }, [onClose]);
 
   const handleBackdropMouseDown = (e: React.MouseEvent) => {
-    // закрываем только если кликнули именно в фон, а не в модалку
     if (e.target === e.currentTarget) onClose();
   };
 
@@ -100,20 +96,24 @@ const BaseModal: React.FC<ModalProps> = ({
           <Body>{children}</Body>
 
           <Footer>
-            {!hideCanselButton ? (
-              <SecondaryButton type="button" onClick={handleCancel}>
-                Отменить
-              </SecondaryButton>
-            ) : null}
+            <LeftActions>
+              {!hideCanselButton ? (
+                <CancelButton isPrimary={false} onClick={handleCancel}>
+                  Отменить
+                </CancelButton>
+              ) : null}
+            </LeftActions>
 
-            {!isViewMode && !hideSaveButton ? (
-              <PrimaryButton
-                type="submit"
-                disabled={isSaveDisabled || isSubmitting}
-              >
-                {isSubmitting ? "Сохранение..." : saveButtonText}
-              </PrimaryButton>
-            ) : null}
+            <RightActions>
+              {!isViewMode && !hideSaveButton ? (
+                <SaveButton
+                  type="submit"
+                  disabled={isSaveDisabled || isSubmitting}
+                >
+                  {isSubmitting ? "Сохранение..." : saveButtonText}
+                </SaveButton>
+              ) : null}
+            </RightActions>
           </Footer>
         </Form>
       </Dialog>
@@ -160,7 +160,6 @@ const Header = styled.div`
   gap: 12px;
 
   padding: 14px 18px 10px 18px;
-  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
 `;
 
 const Title = styled.h2`
@@ -176,10 +175,10 @@ const Title = styled.h2`
   font-weight: 700;
   color: #0f172a;
 
-  /* чтобы длинные заголовки не ломали верстку */
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  text-align: left;
 `;
 
 const IconButton = styled.button`
@@ -248,38 +247,34 @@ const Body = styled.div`
 
 const Footer = styled.div`
   padding: 12px 18px 18px 18px;
-  border-top: 1px solid rgba(15, 23, 42, 0.08);
 
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   gap: 10px;
   flex-wrap: wrap;
 `;
 
-const SecondaryButton = styled.button`
-  min-width: 140px;
-  padding: 10px 16px;
-
-  border: 1px solid rgba(15, 23, 42, 0.14);
-  border-radius: 10px;
-
-  background: #f3f4f6;
-  color: #0f172a;
-
-  cursor: pointer;
-  font-size: 16px;
-
-  &:hover {
-    background: #e5e7eb;
-  }
-
-  &:active {
-    transform: translateY(1px);
-  }
+const LeftActions = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
 `;
 
-const PrimaryButton = styled(DefaultButton)`
+const RightActions = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+`;
+
+const CancelButton = styled(DefaultButton)`
+  min-width: 140px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 16px;
+`;
+
+const SaveButton = styled(DefaultButton)`
   min-width: 140px;
   padding: 10px 16px;
   border-radius: 10px;

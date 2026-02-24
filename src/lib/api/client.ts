@@ -80,17 +80,9 @@ export { API_BASE_URL };
 type RefreshResponse = { access_token: string; refresh_token?: string };
 
 async function refreshAccessToken(): Promise<string | null> {
-  const refreshToken = authStorage.getRefreshToken();
-  const accessToken = authStorage.getAccessToken();
-  if (!refreshToken || !accessToken) return null;
-
   const response = await fetch(`${API_BASE_URL}/auth/refresh`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      access_token: accessToken,
-      refresh_token: refreshToken,
-    }),
   });
 
   if (!response.ok) {
@@ -100,8 +92,7 @@ async function refreshAccessToken(): Promise<string | null> {
 
   const data: RefreshResponse = await response.json();
   if (data.access_token) {
-    const newRefresh = data.refresh_token || refreshToken;
-    authStorage.setTokens(data.access_token, newRefresh);
+    authStorage.setTokens(data.access_token);
     return data.access_token;
   }
 

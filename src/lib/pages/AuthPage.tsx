@@ -31,8 +31,8 @@ const AuthPage: React.FC<AuthPageProps> = ({
   submitLabel = "Войти",
   placeholder = "8 (xxx) xxx-xx-xx",
   supportPhone = "8 989 924 24 24",
-  supportLinkUrl = "https://info.waypay.one",
-  supportLinkText = "info.waypay.one",
+  supportLinkUrl = "https://waypay.one",
+  supportLinkText = "waypay.one",
   className,
   style,
   pollingIntervalMs = 3000,
@@ -111,7 +111,7 @@ const AuthPage: React.FC<AuthPageProps> = ({
     try {
       const response = await confirmCallAuth(phone, id, userType);
       if (response.access_token && response.refresh_token) {
-        authStorage.setTokens(response.access_token, response.refresh_token);
+        authStorage.setTokens(response.access_token);
 
         if (verificationInterval.current) {
           window.clearInterval(verificationInterval.current);

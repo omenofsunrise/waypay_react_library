@@ -10,29 +10,63 @@ type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
   textColor?: string;
   fullWidth?: boolean;
   minWidth?: string;
+  width?: number | string;
+  isPrimary?: boolean;
 };
 
-const DefaultButton = ({
+const Button = ({
   children = "Подтвердить",
   icon,
   disabled = false,
-  bg = "rgba(0, 125, 136, 1)",
-  hoverBg = "rgba(0, 150, 163, 1)",
-  disabledBg = "rgba(102, 177, 184, 1)",
-  textColor = "white",
+  bg,
+  hoverBg,
+  disabledBg,
+  textColor,
   fullWidth = false,
   minWidth,
+  width,
+  isPrimary = true,
   ...props
 }: Props) => {
+  const getColors = () => {
+    if (bg) {
+      return {
+        bg,
+        hoverBg: hoverBg || bg,
+        disabledBg: disabledBg || bg,
+        textColor: textColor || (isPrimary ? "white" : "black"),
+      };
+    }
+
+    if (isPrimary) {
+      return {
+        bg: "rgba(0, 125, 136, 1)",
+        hoverBg: "rgba(0, 150, 163, 1)",
+        disabledBg: "rgba(102, 177, 184, 1)",
+        textColor: "white",
+      };
+    }
+
+    return {
+      bg: "rgba(209, 213, 219, 1)",
+      hoverBg: "rgba(209, 233, 239, 1)",
+      disabledBg: "rgba(209, 213, 219, 0.7)",
+      textColor: "black",
+    };
+  };
+
+  const colors = getColors();
+
   return (
     <ButtonContainer
       disabled={disabled}
-      $bg={bg}
-      $hoverBg={hoverBg}
-      $disabledBg={disabledBg}
-      $textColor={textColor}
+      $bg={colors.bg}
+      $hoverBg={colors.hoverBg}
+      $disabledBg={colors.disabledBg}
+      $textColor={colors.textColor}
       $fullWidth={fullWidth}
       $minWidth={minWidth}
+      $width={width}
       {...props}
     >
       {icon && <IconWrapper>{icon}</IconWrapper>}
@@ -49,6 +83,7 @@ const ButtonContainer = styled.button<{
   $textColor: string;
   $fullWidth: boolean;
   $minWidth?: string;
+  $width?: number | string;
 }>`
   display: inline-flex;
   align-items: center;
@@ -68,7 +103,13 @@ const ButtonContainer = styled.button<{
   transition: background-color 0.2s ease;
   margin: 0;
   opacity: ${({ disabled }) => (disabled ? 0.7 : 1)};
-  width: ${({ $fullWidth }) => ($fullWidth ? "100%" : "auto")};
+  width: ${({ $fullWidth, $width }) => {
+    if ($fullWidth) return "100%";
+    if ($width) {
+      return typeof $width === "number" ? `${$width}px` : $width;
+    }
+    return "auto";
+  }};
   min-width: ${({ $minWidth }) => $minWidth || "auto"};
 
   &:hover {
@@ -78,7 +119,10 @@ const ButtonContainer = styled.button<{
 
   &:focus {
     outline: none;
-    box-shadow: 0 0 0 2px rgba(156, 163, 175, 0.5);
+    box-shadow: 0 0 0 2px 
+      ${({ $bg }) => $bg === "rgba(209, 213, 219, 1)" 
+        ? "rgba(209, 233, 239, 1)" 
+        : "rgba(156, 163, 175, 0.5)"};
   }
 `;
 
@@ -87,4 +131,4 @@ const IconWrapper = styled.span`
   align-items: center;
 `;
 
-export default DefaultButton;
+export default Button;
