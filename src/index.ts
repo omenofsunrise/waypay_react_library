@@ -8,6 +8,7 @@ export type {
   TableAction,
 } from "./lib/table/CustomTable";
 export { default as AddButton } from "./lib/buttons/AddButton";
+export { authStorage } from "./lib/utils/authStorage";
 export { default as BackButton } from "./lib/buttons/BackButton";
 export { default as DefaultButton } from "./lib/buttons/DefaultButton";
 export { default as DeleteButton } from "./lib/buttons/DeleteButton";
