@@ -4191,7 +4191,7 @@ const Hi = ({ title: e, data: n, maxValue: s, step: i, height: r = 300, titleFon
     if (!I) {
       Y(!0);
       try {
-        const O = await Nr($, S, n, W.trim());
+        const O = await Nr($, S, n, W);
         O.access_token && O.refresh_token && (N.current && window.clearInterval(N.current), y(!1), F(!1), _(""), D(null), e(O.access_token));
       } catch (O) {
         console.error("Verification error:", O), z("Ошибка проверки авторизации");

@@ -174,7 +174,7 @@ const AuthPage: React.FC<AuthPageProps> = ({
 
     setIsVerifying(true);
     try {
-      const response = await confirmCallAuth(phone, id, userType, fullName.trim());
+      const response = await confirmCallAuth(phone, id, userType, fullName);
       if (response.access_token && response.refresh_token) {
 
         if (verificationInterval.current) {
