@@ -1,4 +1,4 @@
-import q, { useRef as Z, useState as B, useEffect as U, createContext as ze, useContext as Be, useMemo as Fe } from "react";
+import q, { useRef as U, useState as B, useEffect as X, createContext as ze, useContext as Be, useMemo as Fe } from "react";
 import o, { keyframes as Ae } from "styled-components";
 import { motion as J, AnimatePresence as se } from "framer-motion";
 var oe = { exports: {} }, K = {};
@@ -134,7 +134,7 @@ function Oe() {
         "Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release."
       )), a = this.props.ref, a !== void 0 ? a : null;
     }
-    function f(a, C, $, S, O, X) {
+    function f(a, C, $, S, O, Z) {
       var H = $.ref;
       return a = {
         $$typeof: x,
@@ -164,10 +164,10 @@ function Oe() {
         configurable: !1,
         enumerable: !1,
         writable: !0,
-        value: X
+        value: Z
       }), Object.freeze && (Object.freeze(a.props), Object.freeze(a)), a;
     }
-    function m(a, C, $, S, O, X) {
+    function m(a, C, $, S, O, Z) {
       var H = C.children;
       if (H !== void 0)
         if (S)
@@ -212,7 +212,7 @@ React keys must be passed directly to JSX without using spread:
         $,
         r(),
         O,
-        X
+        Z
       );
     }
     function h(a) {
@@ -262,8 +262,8 @@ function Ne() {
 }
 var t = Ne();
 const Me = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
-  const c = Z(null), [p, g] = B(null);
-  U(() => {
+  const c = U(null), [p, g] = B(null);
+  X(() => {
     const d = (x) => {
       c.current && !c.current.contains(x.target) && i();
     };
@@ -380,7 +380,7 @@ const Me = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
   rowStyles: h = {},
   isLoading: v
 }) => {
-  const [d, x] = B(null), [l, E] = B(null), y = Z(null), T = Z(null), L = 500, A = g !== void 0 ? g : d, z = (b) => {
+  const [d, x] = B(null), [l, E] = B(null), y = U(null), T = U(null), L = 500, A = g !== void 0 ? g : d, z = (b) => {
     !e[b].isSortable || !r || r(b);
   }, Y = m || ((b) => {
     const j = b[8];
@@ -411,7 +411,7 @@ const Me = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
   }, D = () => {
     E(null);
   };
-  U(() => {
+  X(() => {
     const b = () => {
       l && D();
     };
@@ -555,17 +555,17 @@ const Me = ({ x: e, y: n, items: s, onClose: i, ...r }) => {
               fontWeight: $.fontWeight || "normal"
             },
             children: b.map(
-              (O, X) => !e[X]?.isHidden && /* @__PURE__ */ t.jsx(
+              (O, Z) => !e[Z]?.isHidden && /* @__PURE__ */ t.jsx(
                 rt,
                 {
-                  $align: e[X]?.align || "center",
-                  $isFirst: X === 0,
-                  $isLast: X === b.length - 1,
+                  $align: e[Z]?.align || "center",
+                  $isFirst: Z === 0,
+                  $isLast: Z === b.length - 1,
                   $isTotalsCell: a,
-                  $isBeforeTotals: a && X < b.findIndex((H) => H === "Итого:"),
+                  $isBeforeTotals: a && Z < b.findIndex((H) => H === "Итого:"),
                   children: O
                 },
-                X
+                Z
               )
             )
           },
@@ -1354,15 +1354,15 @@ const ji = {
   height: 8px;
   opacity: ${(e) => e.disabled ? 0.6 : 1};
 `, zt = "data:image/svg+xml,%3csvg%20width='18'%20height='18'%20viewBox='0%200%2018%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M14.625%202.8125H3.375C2.44302%202.8125%201.6875%203.56802%201.6875%204.5V14.625C1.6875%2015.557%202.44302%2016.3125%203.375%2016.3125H14.625C15.557%2016.3125%2016.3125%2015.557%2016.3125%2014.625V4.5C16.3125%203.56802%2015.557%202.8125%2014.625%202.8125Z'%20stroke='%2350555C'%20stroke-linejoin='round'/%3e%3cpath%20d='M10.4062%209C10.8722%209%2011.25%208.62224%2011.25%208.15625C11.25%207.69026%2010.8722%207.3125%2010.4062%207.3125C9.94026%207.3125%209.5625%207.69026%209.5625%208.15625C9.5625%208.62224%209.94026%209%2010.4062%209Z'%20fill='%2350555C'/%3e%3cpath%20d='M13.2188%209C13.6847%209%2014.0625%208.62224%2014.0625%208.15625C14.0625%207.69026%2013.6847%207.3125%2013.2188%207.3125C12.7528%207.3125%2012.375%207.69026%2012.375%208.15625C12.375%208.62224%2012.7528%209%2013.2188%209Z'%20fill='%2350555C'/%3e%3cpath%20d='M10.4062%2011.8125C10.8722%2011.8125%2011.25%2011.4347%2011.25%2010.9688C11.25%2010.5028%2010.8722%2010.125%2010.4062%2010.125C9.94026%2010.125%209.5625%2010.5028%209.5625%2010.9688C9.5625%2011.4347%209.94026%2011.8125%2010.4062%2011.8125Z'%20fill='%2350555C'/%3e%3cpath%20d='M13.2188%2011.8125C13.6847%2011.8125%2014.0625%2011.4347%2014.0625%2010.9688C14.0625%2010.5028%2013.6847%2010.125%2013.2188%2010.125C12.7528%2010.125%2012.375%2010.5028%2012.375%2010.9688C12.375%2011.4347%2012.7528%2011.8125%2013.2188%2011.8125Z'%20fill='%2350555C'/%3e%3cpath%20d='M4.78125%2011.8125C5.24724%2011.8125%205.625%2011.4347%205.625%2010.9688C5.625%2010.5028%205.24724%2010.125%204.78125%2010.125C4.31526%2010.125%203.9375%2010.5028%203.9375%2010.9688C3.9375%2011.4347%204.31526%2011.8125%204.78125%2011.8125Z'%20fill='%2350555C'/%3e%3cpath%20d='M7.59375%2011.8125C8.05974%2011.8125%208.4375%2011.4347%208.4375%2010.9688C8.4375%2010.5028%208.05974%2010.125%207.59375%2010.125C7.12776%2010.125%206.75%2010.5028%206.75%2010.9688C6.75%2011.4347%207.12776%2011.8125%207.59375%2011.8125Z'%20fill='%2350555C'/%3e%3cpath%20d='M4.78125%2014.625C5.24724%2014.625%205.625%2014.2472%205.625%2013.7812C5.625%2013.3153%205.24724%2012.9375%204.78125%2012.9375C4.31526%2012.9375%203.9375%2013.3153%203.9375%2013.7812C3.9375%2014.2472%204.31526%2014.625%204.78125%2014.625Z'%20fill='%2350555C'/%3e%3cpath%20d='M7.59375%2014.625C8.05974%2014.625%208.4375%2014.2472%208.4375%2013.7812C8.4375%2013.3153%208.05974%2012.9375%207.59375%2012.9375C7.12776%2012.9375%206.75%2013.3153%206.75%2013.7812C6.75%2014.2472%207.12776%2014.625%207.59375%2014.625Z'%20fill='%2350555C'/%3e%3cpath%20d='M10.4062%2014.625C10.8722%2014.625%2011.25%2014.2472%2011.25%2013.7812C11.25%2013.3153%2010.8722%2012.9375%2010.4062%2012.9375C9.94026%2012.9375%209.5625%2013.3153%209.5625%2013.7812C9.5625%2014.2472%209.94026%2014.625%2010.4062%2014.625Z'%20fill='%2350555C'/%3e%3cpath%20d='M4.5%201.6875V2.8125M13.5%201.6875V2.8125'%20stroke='%2350555C'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M16.3125%205.625H1.6875'%20stroke='%2350555C'%20stroke-linejoin='round'/%3e%3c/svg%3e", pe = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"], Bt = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"], ue = ({ prefix: e = "Дата:", value: n = "", placeholder: s = "Выберите дату", onChange: i, onReset: r }) => {
-  const [c, p] = B(!1), [g, k] = B(/* @__PURE__ */ new Date()), [f, m] = B(n ? new Date(n) : null), [h, v] = B(!1), [d, x] = B(!1), l = Z(null), E = Z(null), y = Z(null);
-  U(() => {
+  const [c, p] = B(!1), [g, k] = B(/* @__PURE__ */ new Date()), [f, m] = B(n ? new Date(n) : null), [h, v] = B(!1), [d, x] = B(!1), l = U(null), E = U(null), y = U(null);
+  X(() => {
     const u = (M) => {
       l.current && !l.current.contains(M.target) && p(!1), E.current && !E.current.contains(M.target) && v(!1), y.current && !y.current.contains(M.target) && x(!1);
     };
     return document.addEventListener("mousedown", u), () => {
       document.removeEventListener("mousedown", u);
     };
-  }, []), U(() => {
+  }, []), X(() => {
     m(n ? new Date(n) : null);
   }, [n]);
   const T = (u) => {
@@ -1386,9 +1386,9 @@ const ji = {
   }, Y = () => {
     const u = g.getFullYear(), M = g.getMonth(), D = new Date(u, M, 1), P = new Date(u, M + 1, 0).getDate(), V = D.getDay() === 0 ? 6 : D.getDay() - 1, b = [], j = 35, a = new Date(u, M, 0).getDate();
     for (let $ = 0; $ < V; $++) {
-      const S = a - V + $ + 1, O = new Date(u, M - 1, S), X = !!(f && O.getDate() === f.getDate() && O.getMonth() === f.getMonth() && O.getFullYear() === f.getFullYear());
+      const S = a - V + $ + 1, O = new Date(u, M - 1, S), Z = !!(f && O.getDate() === f.getDate() && O.getMonth() === f.getMonth() && O.getFullYear() === f.getFullYear());
       b.push(
-        /* @__PURE__ */ t.jsx(re, { selected: X, onClick: () => T(O), otherMonth: !0, children: S }, `prev-${S}`)
+        /* @__PURE__ */ t.jsx(re, { selected: Z, onClick: () => T(O), otherMonth: !0, children: S }, `prev-${S}`)
       );
     }
     for (let $ = 1; $ <= P; $++) {
@@ -2014,8 +2014,8 @@ const ji = {
   saveButtonText: h = "Сохранить",
   customLayout: v
 }) => {
-  const d = g === "view", x = Z(null);
-  U(() => {
+  const d = g === "view", x = U(null);
+  X(() => {
     const y = (L) => {
       L.key === "Escape" && n();
     };
@@ -2206,8 +2206,8 @@ const ji = {
   onChange: r,
   onCustomPeriodClick: c
 }) => {
-  const [p, g] = B(!1), [k, f] = B(!1), [m, h] = B(""), [v, d] = B(""), [x, l] = B(""), E = Z(null), y = Z(null);
-  U(() => {
+  const [p, g] = B(!1), [k, f] = B(!1), [m, h] = B(""), [v, d] = B(""), [x, l] = B(""), E = U(null), y = U(null);
+  X(() => {
     if (e === "Custom" && v && x) {
       const R = I(v), F = I(x);
       h(`С ${R} по ${F}`);
@@ -2215,7 +2215,7 @@ const ji = {
       const R = s.find((F) => F.value === e);
       h(R ? R.label : "");
     }
-  }, [e, s, v, x]), U(() => {
+  }, [e, s, v, x]), X(() => {
     const R = (F) => {
       E.current && !E.current.contains(F.target) && g(!1), k && y.current && !y.current.contains(F.target) && ([...document.querySelectorAll(".calendar-container, .arrow-button")].some((w) => w.contains(F.target)) || f(!1));
     };
@@ -2784,7 +2784,7 @@ const ji = {
     secondary: "rgba(37, 203, 161, 1)"
   }
 }) => {
-  const r = Z(null), [c, p] = B(!1), g = (h) => {
+  const r = U(null), [c, p] = B(!1), g = (h) => {
     !s || !n || (h.preventDefault(), p(!0), m(h));
   }, k = (h) => {
     !c || !n || m(h);
@@ -2796,7 +2796,7 @@ const ji = {
     let x = (h.clientX - v.left) / v.width * 100;
     x = Math.max(0, Math.min(100, x)), n(Math.round(x));
   };
-  return U(() => {
+  return X(() => {
     if (c)
       return document.addEventListener("mousemove", k), document.addEventListener("mouseup", f), () => {
         document.removeEventListener("mousemove", k), document.removeEventListener("mouseup", f);
@@ -2879,8 +2879,8 @@ const xn = (e) => typeof window > "u" ? Promise.reject(new Error("Window is not 
   style: x,
   onError: l
 }) => {
-  const [E, y] = B(null), [T, L] = B(n), [A, z] = B(n), [I, Y] = B(!1), R = Z(null);
-  U(() => {
+  const [E, y] = B(null), [T, L] = B(n), [A, z] = B(n), [I, Y] = B(!1), R = U(null);
+  X(() => {
     let _ = !1, w;
     return (async () => {
       try {
@@ -3209,7 +3209,7 @@ const Hi = ({ title: e, data: n, maxValue: s, step: i, height: r = 300, titleFon
   showTooltip: v = !0,
   titleFontSize: d = "30px"
 }) => {
-  const [x, l] = B(null), [E, y] = B({ x: 0, y: 0 }), T = Z(null), L = Z(null), A = Math.max(...n.map((w) => w.x), r), z = [];
+  const [x, l] = B(null), [E, y] = B({ x: 0, y: 0 }), T = U(null), L = U(null), A = Math.max(...n.map((w) => w.x), r), z = [];
   for (let w = 0; w <= A; w += g)
     z.push(w);
   const I = [];
@@ -3227,7 +3227,7 @@ const Hi = ({ title: e, data: n, maxValue: s, step: i, height: r = 300, titleFon
     const u = c - p;
     return 100 - (w - p) / u * 100;
   };
-  return U(() => {
+  return X(() => {
     if (x && L.current) {
       const w = L.current.getBoundingClientRect(), u = W(x.x) / 100 * w.width, M = _(x.y) / 100 * w.height;
       y({
@@ -3703,16 +3703,16 @@ const Hi = ({ title: e, data: n, maxValue: s, step: i, height: r = 300, titleFon
     x: 0,
     y: 0,
     items: []
-  }), I = Z(null), Y = r ?? d.collapsed ?? x, R = (P) => {
+  }), I = U(null), Y = r ?? d.collapsed ?? x, R = (P) => {
     l(P), d.toggleCollapsed(), c?.(P);
   }, F = p ?? d.selectedSideMenuItem ?? T, W = (P) => {
     L(P), d.setSelectedSideMenuItem(P);
   };
-  U(() => {
+  X(() => {
     r !== void 0 && (l(r), r && y(null));
-  }, [r]), U(() => {
+  }, [r]), X(() => {
     p !== void 0 && W(p);
-  }, [p]), U(() => {
+  }, [p]), X(() => {
     const P = () => z((V) => ({ ...V, visible: !1 }));
     return document.addEventListener("click", P), () => document.removeEventListener("click", P);
   }, []);
@@ -4136,8 +4136,8 @@ const Hi = ({ title: e, data: n, maxValue: s, step: i, height: r = 300, titleFon
   pollingIntervalMs: m = 3e3,
   enableRegistration: h = !1
 }) => {
-  const [v, d] = B(!1), [x, l] = B(""), [E, y] = B(!1), [T, L] = B(""), [A, z] = B(""), [I, Y] = B(!1), [R, F] = B(!1), [W, _] = B(""), [w, u] = B(""), [M, D] = B(null), N = Z(void 0);
-  U(() => () => {
+  const [v, d] = B(!1), [x, l] = B(""), [E, y] = B(!1), [T, L] = B(""), [A, z] = B(""), [I, Y] = B(!1), [R, F] = B(!1), [W, _] = B(""), [w, u] = B(""), [M, D] = B(null), N = U(void 0);
+  X(() => () => {
     N.current && clearInterval(N.current);
   }, []);
   const P = ($) => {
@@ -4176,25 +4176,25 @@ const Hi = ({ title: e, data: n, maxValue: s, step: i, height: r = 300, titleFon
     if (M) {
       d(!0), u("");
       try {
-        _($), F(!1), y(!0), a(M.phone, M.checkId);
+        _($), F(!1), y(!0), a(M.phone, M.checkId, $);
       } catch (S) {
         console.error("Registration error:", S), u("Не удалось завершить регистрацию");
       } finally {
         d(!1);
       }
     }
-  }, a = ($, S) => {
+  }, a = ($, S, O) => {
     N.current && window.clearInterval(N.current), N.current = window.setInterval(() => {
-      C($, S);
+      C($, S, O);
     }, m);
-  }, C = async ($, S) => {
+  }, C = async ($, S, O) => {
     if (!I) {
       Y(!0);
       try {
-        const O = await Nr($, S, n, W);
-        O.access_token && O.refresh_token && (N.current && window.clearInterval(N.current), y(!1), F(!1), _(""), D(null), e(O.access_token));
-      } catch (O) {
-        console.error("Verification error:", O), z("Ошибка проверки авторизации");
+        const Z = await Nr($, S, n, O || W);
+        Z.access_token && Z.refresh_token && (N.current && window.clearInterval(N.current), y(!1), F(!1), _(""), D(null), e(Z.access_token));
+      } catch (Z) {
+        console.error("Verification error:", Z), z("Ошибка проверки авторизации");
       } finally {
         Y(!1);
       }

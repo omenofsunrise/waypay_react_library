@@ -46,7 +46,6 @@ const AuthPage: React.FC<AuthPageProps> = ({
   const [verificationError, setVerificationError] = useState("");
   const [isVerifying, setIsVerifying] = useState(false);
   
-  // Состояния для модалки с ФИО
   const [showNameModal, setShowNameModal] = useState(false);
   const [fullName, setFullName] = useState("");
   const [nameError, setNameError] = useState("");
@@ -108,7 +107,6 @@ const AuthPage: React.FC<AuthPageProps> = ({
       const nameRequired = enableRegistration && 'name_required' in response && response.name_required;
       
       if (nameRequired) {
-        // Если нужно ФИО - открываем модалку для его ввода
         setShowNameModal(true);
         setCallPhone(response.call_phone);
       } else if (!enableRegistration && 'name_required' in response && response.name_required) {
@@ -117,7 +115,6 @@ const AuthPage: React.FC<AuthPageProps> = ({
         );
         setPendingAuthData(null);
       } else {
-        // Если ФИО не нужно - сразу показываем номер для звонка
         setCallPhone(response.call_phone);
         setShowCallModal(true);
         startVerificationPolling(normalizedPhone, response.check_id);
@@ -144,13 +141,13 @@ const AuthPage: React.FC<AuthPageProps> = ({
     setNameError("");
 
     try {
-      // После ввода ФИО закрываем модалку с именем и открываем модалку с номером
       setFullName(name);
+      
       setShowNameModal(false);
+      
       setShowCallModal(true);
       
-      // Запускаем проверку авторизации
-      startVerificationPolling(pendingAuthData.phone, pendingAuthData.checkId);
+      startVerificationPolling(pendingAuthData.phone, pendingAuthData.checkId, name);
     } catch (error: unknown) {
       console.error("Registration error:", error);
       setNameError("Не удалось завершить регистрацию");
@@ -159,22 +156,22 @@ const AuthPage: React.FC<AuthPageProps> = ({
     }
   };
 
-  const startVerificationPolling = (phone: string, id: string) => {
+  const startVerificationPolling = (phone: string, id: string, name?: string) => {
     if (verificationInterval.current) {
       window.clearInterval(verificationInterval.current);
     }
 
     verificationInterval.current = window.setInterval(() => {
-      verifyAuth(phone, id);
+      verifyAuth(phone, id, name);
     }, pollingIntervalMs);
   };
 
-  const verifyAuth = async (phone: string, id: string) => {
+  const verifyAuth = async (phone: string, id: string, name?: string) => {
     if (isVerifying) return;
 
     setIsVerifying(true);
     try {
-      const response = await confirmCallAuth(phone, id, userType, fullName);
+      const response = await confirmCallAuth(phone, id, userType, name || fullName);
       if (response.access_token && response.refresh_token) {
 
         if (verificationInterval.current) {
