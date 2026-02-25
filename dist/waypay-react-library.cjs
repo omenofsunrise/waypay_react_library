@@ -2032,7 +2032,7 @@ React keys must be passed directly to JSX without using spread:
   align-items: center;
   justify-content: ${({$collapsed:e})=>e?"center":"flex-start"};
   gap: ${({$collapsed:e})=>e?"0":"12px"};
-  padding: ${({$collapsed:e})=>e?"0 0":"10px 17px"};
+  padding: ${({$collapsed:e})=>e?"0":"10px 17px"};
   margin: 4px 0;
   border-radius: 8px;
   cursor: ${({$disabled:e})=>e?"not-allowed":"pointer"};
@@ -2041,11 +2041,11 @@ React keys must be passed directly to JSX without using spread:
   transition: background-color 0.2s ease, color 0.2s ease;
   opacity: ${({$disabled:e})=>e?.5:1};
   
-  /* В свернутом состоянии делаем иконку квадратной */
+  /* В свернутом состоянии делаем иконку квадратной с отступами */
   ${({$collapsed:e})=>e&&`
     width: 40px;
     height: 40px;
-    margin: 0 0;
+    margin: 8px auto; /* Увеличиваем вертикальные отступы и центрируем */
     padding: 0;
   `}
 
@@ -2061,9 +2061,17 @@ React keys must be passed directly to JSX without using spread:
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 21px;
-  width: ${({$collapsed:e})=>e?"24px":"21px"};
-  height: ${({$collapsed:e})=>e?"24px":"auto"};
+  min-width: ${({$collapsed:e})=>e?"40px":"21px"};
+  width: ${({$collapsed:e})=>e?"40px":"21px"};
+  height: ${({$collapsed:e})=>e?"40px":"auto"};
+  
+  & > svg {
+    width: ${({$collapsed:e})=>e?"24px":"100%"};
+    height: ${({$collapsed:e})=>e?"24px":"auto"};
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
 `,di=o.div`
   margin-left: 45px;
   padding-left: 0;

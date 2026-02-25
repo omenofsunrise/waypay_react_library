@@ -479,7 +479,7 @@ const MenuItem = styled.div<{
   align-items: center;
   justify-content: ${({ $collapsed }) => ($collapsed ? "center" : "flex-start")};
   gap: ${({ $collapsed }) => ($collapsed ? "0" : "12px")};
-  padding: ${({ $collapsed }) => ($collapsed ? "0 0" : "10px 17px")};
+  padding: ${({ $collapsed }) => ($collapsed ? "0" : "10px 17px")};
   margin: 4px 0;
   border-radius: 8px;
   cursor: ${({ $disabled }) => ($disabled ? "not-allowed" : "pointer")};
@@ -489,11 +489,11 @@ const MenuItem = styled.div<{
   transition: background-color 0.2s ease, color 0.2s ease;
   opacity: ${({ $disabled }) => ($disabled ? 0.5 : 1)};
   
-  /* В свернутом состоянии делаем иконку квадратной */
+  /* В свернутом состоянии делаем иконку квадратной с отступами */
   ${({ $collapsed }) => $collapsed && `
     width: 40px;
     height: 40px;
-    margin: 0 0;
+    margin: 8px auto; /* Увеличиваем вертикальные отступы и центрируем */
     padding: 0;
   `}
 
@@ -514,9 +514,17 @@ const IconWrapper = styled.div<{ $collapsed: boolean }>`
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 21px;
-  width: ${({ $collapsed }) => ($collapsed ? "24px" : "21px")};
-  height: ${({ $collapsed }) => ($collapsed ? "24px" : "auto")};
+  min-width: ${({ $collapsed }) => ($collapsed ? "40px" : "21px")};
+  width: ${({ $collapsed }) => ($collapsed ? "40px" : "21px")};
+  height: ${({ $collapsed }) => ($collapsed ? "40px" : "auto")};
+  
+  & > svg {
+    width: ${({ $collapsed }) => ($collapsed ? "24px" : "100%")};
+    height: ${({ $collapsed }) => ($collapsed ? "24px" : "auto")};
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
 `;
 
 const SubMenu = styled.div`
