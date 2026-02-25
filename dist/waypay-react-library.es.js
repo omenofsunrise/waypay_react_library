@@ -3714,7 +3714,7 @@ const Hi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   onSelect: m,
   autoCollapseOnSelect: y = !1,
   width: b = "315px",
-  collapsedWidth: w = "100px",
+  collapsedWidth: w = "85px",
   className: g,
   style: v,
   mobileBreakpoint: d = 768,

@@ -66,7 +66,7 @@ const SideMenu: React.FC<SideMenuProps> = ({
   onSelect,
   autoCollapseOnSelect = false,
   width = "315px",
-  collapsedWidth = "100px",
+  collapsedWidth = "85px",
   className,
   style,
   mobileBreakpoint = 768,
