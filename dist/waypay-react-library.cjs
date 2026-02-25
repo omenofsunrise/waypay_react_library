@@ -1996,6 +1996,7 @@ React keys must be passed directly to JSX without using spread:
   align-items: center;
   justify-content: center;
   margin-bottom: 28px;
+  flex-direction: column;
 `,ri=o.button`
   background: none;
   border: none;

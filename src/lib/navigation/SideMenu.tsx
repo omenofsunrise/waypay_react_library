@@ -426,6 +426,7 @@ const TopSection = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: 28px;
+  flex-direction: column;
 `;
 
 const ArrowButton = styled.button`

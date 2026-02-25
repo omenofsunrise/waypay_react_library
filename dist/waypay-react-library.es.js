@@ -3934,6 +3934,7 @@ const Hi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   align-items: center;
   justify-content: center;
   margin-bottom: 28px;
+  flex-direction: column;
 `, Ir = n.button`
   background: none;
   border: none;
