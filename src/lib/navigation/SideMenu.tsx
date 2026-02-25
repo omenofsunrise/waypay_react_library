@@ -26,6 +26,10 @@ export interface SideMenuProps {
   collapsedWidth?: string;
   className?: string;
   style?: React.CSSProperties;
+  /** Мобильный брейкпоинт */
+  mobileBreakpoint?: number;
+  /** Показывать ли лейблы в Bottom Navigation */
+  showBottomLabels?: boolean;
 }
 
 const SideMenu: React.FC<SideMenuProps> = ({
@@ -42,8 +46,22 @@ const SideMenu: React.FC<SideMenuProps> = ({
   collapsedWidth = "70px",
   className,
   style,
+  mobileBreakpoint = 768,
+  showBottomLabels = true,
 }) => {
   const contextValue = useContext(SideMenuContext);
+
+  // Определяем, мобильное ли устройство
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= mobileBreakpoint);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= mobileBreakpoint);
+    };
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [mobileBreakpoint]);
 
   const [internalCollapsed, setInternalCollapsed] = useState(
     collapsedProp ?? contextValue.collapsed ?? false
@@ -193,6 +211,51 @@ const SideMenu: React.FC<SideMenuProps> = ({
     );
   }, [contextMenu, selectedKey]);
 
+  // Рендер Bottom Navigation для мобильных устройств
+  const renderBottomNavigation = () => {
+    const allItems = [...items, ...bottomItems].filter(i => !i.hidden);
+    
+    return (
+      <BottomNavContainer>
+        {allItems.map((item) => {
+          const isSelected = selectedKey === item.key;
+          return (
+            <BottomNavItem
+              key={item.key}
+              $selected={isSelected}
+              onClick={() => handleItemSelect(item)}
+              $disabled={item.disabled}
+            >
+              {item.icon && <BottomNavIcon $selected={isSelected}>{item.icon}</BottomNavIcon>}
+              {showBottomLabels && <BottomNavLabel $selected={isSelected}>{item.label}</BottomNavLabel>}
+            </BottomNavItem>
+          );
+        })}
+      </BottomNavContainer>
+    );
+  };
+
+  // Если мобильное устройство - показываем Bottom Navigation
+  if (isMobile) {
+    return (
+      <MobileContainer className={className} style={style}>
+        {/* Верхняя панель с логотипом */}
+        <MobileHeader>
+          {logo && <MobileLogo>{logo}</MobileLogo>}
+        </MobileHeader>
+        
+        {/* Основной контент (можно добавить children или оставить пустым) */}
+        <MobileContent>
+          {/* Здесь может быть контент страницы */}
+        </MobileContent>
+        
+        {/* Bottom Navigation */}
+        {renderBottomNavigation()}
+      </MobileContainer>
+    );
+  }
+
+  // Десктопная версия (как была)
   return (
     <SideMenuContainer
       ref={containerRef}
@@ -227,6 +290,86 @@ const SideMenu: React.FC<SideMenuProps> = ({
 
 export default SideMenu;
 
+// Стили для мобильной версии
+const MobileContainer = styled.div`
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(249, 250, 250, 1);
+  position: relative;
+`;
+
+const MobileHeader = styled.header`
+  padding: 16px;
+  border-bottom: 1px solid rgba(209, 213, 219, 1);
+  background-color: white;
+`;
+
+const MobileLogo = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const MobileContent = styled.main`
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+`;
+
+const BottomNavContainer = styled.nav`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  border-top: 1px solid rgba(209, 213, 219, 1);
+  padding: 8px 4px;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+  z-index: 100;
+`;
+
+const BottomNavItem = styled.div<{ $selected?: boolean; $disabled?: boolean }>`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: ${({ $disabled }) => ($disabled ? "not-allowed" : "pointer")};
+  opacity: ${({ $disabled }) => ($disabled ? 0.5 : 1)};
+  color: ${({ $selected }) => ($selected ? "#000" : "#50555c")};
+  background-color: ${({ $selected }) =>
+    $selected ? "rgba(209, 213, 219, 0.3)" : "transparent"};
+  transition: all 0.2s ease;
+  flex: 1;
+  max-width: 80px;
+
+  &:active {
+    background-color: rgba(209, 213, 219, 0.5);
+  }
+`;
+
+const BottomNavIcon = styled.div<{ $selected?: boolean }>`
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: ${({ $selected }) => ($selected ? "#000" : "#50555c")};
+`;
+
+const BottomNavLabel = styled.span<{ $selected?: boolean }>`
+  font-size: 12px;
+  font-weight: ${({ $selected }) => ($selected ? "600" : "400")};
+  color: ${({ $selected }) => ($selected ? "#000" : "#50555c")};
+  text-align: center;
+  white-space: nowrap;
+`;
+
+// Остальные стили остаются без изменений
 const SideMenuContainer = styled.div<{
   $collapsed: boolean;
   $width: string;

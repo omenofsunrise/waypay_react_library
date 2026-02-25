@@ -22,6 +22,10 @@ export interface SideMenuProps {
     collapsedWidth?: string;
     className?: string;
     style?: React.CSSProperties;
+    /** Мобильный брейкпоинт */
+    mobileBreakpoint?: number;
+    /** Показывать ли лейблы в Bottom Navigation */
+    showBottomLabels?: boolean;
 }
 declare const SideMenu: React.FC<SideMenuProps>;
 export default SideMenu;
