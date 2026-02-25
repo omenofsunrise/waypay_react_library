@@ -292,6 +292,7 @@ const Container = styled.div`
   width: 100%;
   text-align: left;
   color: black;
+  background: white;
 `;
 
 const Field = styled.div`
@@ -322,6 +323,7 @@ const Field = styled.div`
 const Prefix = styled.span`
   color: rgba(80, 85, 92, 1);
   margin-right: 8px;
+  background: white;
 `;
 
 const DateText = styled.span<{ isEmpty: boolean }>`

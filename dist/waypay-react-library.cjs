@@ -526,6 +526,7 @@ React keys must be passed directly to JSX without using spread:
   width: 100%;
   text-align: left;
   color: black;
+  background: white;
 `,qt=o.div`
   display: flex;
   align-items: center;
@@ -552,6 +553,7 @@ React keys must be passed directly to JSX without using spread:
 `,Gt=o.span`
   color: rgba(80, 85, 92, 1);
   margin-right: 8px;
+  background: white;
 `,Jt=o.span`
   flex-grow: 1;
   color: ${({isEmpty:e})=>e?"rgba(80, 85, 92, 1)":"#000"};

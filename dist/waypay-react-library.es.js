@@ -1502,6 +1502,7 @@ const ji = {
   width: 100%;
   text-align: left;
   color: black;
+  background: white;
 `, _t = n.div`
   display: flex;
   align-items: center;
@@ -1528,6 +1529,7 @@ const ji = {
 `, Ot = n.span`
   color: rgba(80, 85, 92, 1);
   margin-right: 8px;
+  background: white;
 `, Nt = n.span`
   flex-grow: 1;
   color: ${({ isEmpty: e }) => e ? "rgba(80, 85, 92, 1)" : "#000"};
