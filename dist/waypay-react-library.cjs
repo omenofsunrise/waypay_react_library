@@ -229,7 +229,7 @@ React keys must be passed directly to JSX without using spread:
   min-height: 25px;
   cursor: ${({disabled:e})=>e?"not-allowed":"pointer"};
   color: ${({$textColor:e})=>e};
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 400;
   height: auto;
   white-space: nowrap;
@@ -2072,9 +2072,21 @@ React keys must be passed directly to JSX without using spread:
   max-width: 400px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 `,xi=o.h2`
-  font-size: 20px;
   margin: 0;
-  color: #333;
+  padding: 0;
+
+  flex: 1;
+  min-width: 0;
+  display: block;
+
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: #0f172a;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   text-align: left;
 `,fi=o.form`
   display: flex;
@@ -2083,7 +2095,7 @@ React keys must be passed directly to JSX without using spread:
   margin-bottom: 20px;
 `,bi=o.h2`
   display: block;
-  font-size: 18px;
+  font-size: 21px;
   color: #555;
   margin-bottom: 8px;
 `,mi=o.div`
@@ -2093,7 +2105,8 @@ React keys must be passed directly to JSX without using spread:
   text-align: left;
 `,wi=o.div`
   display: flex;
-  gap: 12px;
+  justify-content: space-between;
+  width: 100%; // Убедитесь, что контейнер занимает всю доступную ширину
 `,vi=({onLoginSuccess:e,userType:n="delivery_operator",title:s="Авторизация",submitLabel:i="Войти",placeholder:r="8 (xxx) xxx-xx-xx",supportPhone:c="8 989 924 24 24",supportLinkUrl:u="https://waypay.one",supportLinkText:g="waypay.one",className:k,style:f,pollingIntervalMs:m=3e3,enableRegistration:x=!1})=>{const[y,d]=w.useState(!1),[h,l]=w.useState(""),[P,j]=w.useState(!1),[I,L]=w.useState(""),[F,A]=w.useState(""),[R,Y]=w.useState(!1),[B,z]=w.useState(!1),[W,_]=w.useState(""),[v,p]=w.useState(""),[M,T]=w.useState(null),N=w.useRef(void 0);w.useEffect(()=>()=>{N.current&&clearInterval(N.current)},[]);const E=S=>{const D=S.replace(/\D/g,"");return D?D.startsWith("8")?`+7${D.slice(1)}`:D.startsWith("7")?`+${D}`:`+${D}`:""},V=()=>{j(!1),z(!1),_(""),p(""),T(null),N.current&&window.clearInterval(N.current)},b=async S=>{if(S.preventDefault(),!h){A("Введите номер телефона");return}d(!0),A("");const D=E(h);try{const O=await Be(D,n);T({phone:D,checkId:O.check_id,callPhone:O.call_phone}),x&&"name_required"in O&&O.name_required?(z(!0),L(O.call_phone)):!x&&"name_required"in O&&O.name_required?(A("Этот номер не зарегистрирован в системе. Обратитесь в поддержку для регистрации."),T(null)):(L(O.call_phone),j(!0),a(D,O.check_id))}catch(O){console.error("Auth error:",O),A("Не удалось инициировать авторизацию. Проверьте номер.")}finally{d(!1)}},C=async S=>{if(!S.trim()){p("Введите ФИО");return}if(M){d(!0),p("");try{_(S),z(!1),j(!0),a(M.phone,M.checkId,S)}catch(D){console.error("Registration error:",D),p("Не удалось завершить регистрацию")}finally{d(!1)}}},a=(S,D,O)=>{N.current&&window.clearInterval(N.current),N.current=window.setInterval(()=>{$(S,D,O)},m)},$=async(S,D,O)=>{if(!R){Y(!0);try{const Z=await Ae(S,D,n,O||W);Z.access_token&&Z.refresh_token&&(N.current&&window.clearInterval(N.current),j(!1),z(!1),_(""),T(null),e(Z.access_token))}catch(Z){console.error("Verification error:",Z),A("Ошибка проверки авторизации")}finally{Y(!1)}}};return t.jsxs(yi,{className:k,style:f,children:[t.jsxs(ki,{children:[t.jsxs(ji,{onSubmit:b,children:[t.jsx(Ci,{children:s}),t.jsx($i,{children:t.jsx(Si,{children:t.jsx(Re,{value:h,onChange:S=>l(S),placeholder:r})})}),F&&t.jsx(Ei,{children:t.jsx("span",{children:F})}),t.jsx(Mi,{type:"submit",disabled:y,children:y?"Загрузка...":i})]}),t.jsxs(Di,{children:["Хотите получить доступ к нашим продуктам?",t.jsx("br",{}),"Обратитесь по номеру"," ",t.jsx(Ti,{href:`tel:${c}`,children:c}),t.jsx("br",{}),"или оставьте заявку на"," ",t.jsx(Li,{href:u,target:"_blank",rel:"noreferrer",children:g})]})]}),t.jsx(pi,{isOpen:B,onClose:V,onSubmit:C,error:v,isLoading:y}),t.jsx(Pe,{isOpen:P,onClose:V,callPhone:I,error:F})]})},yi=o.div`
   display: flex;
   flex-direction: column;

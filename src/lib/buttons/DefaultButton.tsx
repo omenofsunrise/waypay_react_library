@@ -97,7 +97,7 @@ const ButtonContainer = styled.button<{
   min-height: 25px;
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
   color: ${({ $textColor }) => $textColor};
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 400;
   height: auto;
   white-space: nowrap;

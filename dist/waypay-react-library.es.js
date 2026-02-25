@@ -918,7 +918,7 @@ const gi = {
   min-height: 25px;
   cursor: ${({ disabled: e }) => e ? "not-allowed" : "pointer"};
   color: ${({ $textColor: e }) => e};
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 400;
   height: auto;
   white-space: nowrap;
@@ -4016,9 +4016,21 @@ const Fi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   max-width: 400px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 `, Vr = n.h2`
-  font-size: 20px;
   margin: 0;
-  color: #333;
+  padding: 0;
+
+  flex: 1;
+  min-width: 0;
+  display: block;
+
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: #0f172a;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   text-align: left;
 `, Zr = n.form`
   display: flex;
@@ -4027,7 +4039,7 @@ const Fi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   margin-bottom: 20px;
 `, Xr = n.h2`
   display: block;
-  font-size: 18px;
+  font-size: 21px;
   color: #555;
   margin-bottom: 8px;
 `, qr = n.div`
@@ -4037,7 +4049,8 @@ const Fi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   text-align: left;
 `, Gr = n.div`
   display: flex;
-  gap: 12px;
+  justify-content: space-between;
+  width: 100%; // Убедитесь, что контейнер занимает всю доступную ширину
 `, Yi = ({
   onLoginSuccess: e,
   userType: o = "delivery_operator",

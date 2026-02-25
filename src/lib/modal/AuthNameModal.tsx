@@ -30,7 +30,7 @@ const AuthNameModal: React.FC<AuthNameModalProps> = ({
   return (
     <ModalOverlay onClick={onClose}>
       <ModalContent onClick={(e) => e.stopPropagation()}>
-        <ModalTitle>Регистрация</ModalTitle>
+        <Title>Регистрация</Title>
 
         <Form onSubmit={handleSubmit}>
           <FormGroup>
@@ -83,10 +83,22 @@ const ModalContent = styled.div`
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 `;
 
-const ModalTitle = styled.h2`
-  font-size: 20px;
+const Title = styled.h2`
   margin: 0;
-  color: #333;
+  padding: 0;
+
+  flex: 1;
+  min-width: 0;
+  display: block;
+
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: #0f172a;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   text-align: left;
 `;
 
@@ -101,7 +113,7 @@ const FormGroup = styled.div`
 
 const InputLabel = styled.h2`
   display: block;
-  font-size: 18px;
+  font-size: 21px;
   color: #555;
   margin-bottom: 8px;
 `;
@@ -115,7 +127,8 @@ const FieldError = styled.div`
 
 const ButtonGroup = styled.div`
   display: flex;
-  gap: 12px;
+  justify-content: space-between;
+  width: 100%; // Убедитесь, что контейнер занимает всю доступную ширину
 `;
 
 export default AuthNameModal;
