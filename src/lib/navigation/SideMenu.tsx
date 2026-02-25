@@ -293,8 +293,8 @@ const SideMenu: React.FC<SideMenuProps> = ({
         <ArrowButton onClick={handleToggle} aria-label="Переключить меню">
           {arrowIcon ?? <DefaultArrowIcon collapsed={collapsed} />}
         </ArrowButton>
-        {logo && (
-          <LogoWrapper $collapsed={collapsed}>
+        {!collapsed && logo && (
+          <LogoWrapper>
             {logo}
           </LogoWrapper>
         )}
@@ -440,11 +440,11 @@ const ArrowButton = styled.button`
   margin-bottom: 0px;
 `;
 
-const LogoWrapper = styled.div<{ $collapsed: boolean }>`
+const LogoWrapper = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: ${({ $collapsed }) => ($collapsed ? "center" : "center")};
+  justify-content: center;
   padding: 0 4px;
 `;
 
@@ -477,8 +477,10 @@ const MenuItem = styled.div<{
 }>`
   display: flex;
   align-items: center;
+  justify-content: ${({ $collapsed }) => ($collapsed ? "center" : "flex-start")};
   gap: ${({ $collapsed }) => ($collapsed ? "0" : "12px")};
-  padding: ${({ $collapsed }) => ($collapsed ? "15px 0" : "15px 17px")};
+  padding: ${({ $collapsed }) => ($collapsed ? "8px 0" : "10px 17px")};
+  margin: 4px 0;
   border-radius: 8px;
   cursor: ${({ $disabled }) => ($disabled ? "not-allowed" : "pointer")};
   color: ${({ $selected }) => ($selected ? "#000" : "#50555c")};
@@ -486,6 +488,14 @@ const MenuItem = styled.div<{
     $selected ? "rgba(209, 213, 219, 1)" : "transparent"};
   transition: background-color 0.2s ease, color 0.2s ease;
   opacity: ${({ $disabled }) => ($disabled ? 0.5 : 1)};
+  
+  /* В свернутом состоянии делаем иконку квадратной */
+  ${({ $collapsed }) => $collapsed && `
+    width: 40px;
+    height: 40px;
+    margin: 4px auto;
+    padding: 0;
+  `}
 
   &:hover {
     background-color: ${({ $selected }) =>
@@ -506,6 +516,7 @@ const IconWrapper = styled.div<{ $collapsed: boolean }>`
   justify-content: center;
   min-width: 21px;
   width: ${({ $collapsed }) => ($collapsed ? "24px" : "21px")};
+  height: ${({ $collapsed }) => ($collapsed ? "24px" : "auto")};
 `;
 
 const SubMenu = styled.div`

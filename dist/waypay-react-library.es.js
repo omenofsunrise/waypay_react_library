@@ -3836,7 +3836,7 @@ const Hi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
       children: [
         /* @__PURE__ */ t.jsxs(Pr, { children: [
           /* @__PURE__ */ t.jsx(Ir, { onClick: O, "aria-label": "Переключить меню", children: i ?? /* @__PURE__ */ t.jsx(kr, { collapsed: f }) }),
-          s && /* @__PURE__ */ t.jsx(Rr, { $collapsed: f, children: s })
+          !f && s && /* @__PURE__ */ t.jsx(Rr, { children: s })
         ] }),
         /* @__PURE__ */ t.jsxs(zr, { children: [
           /* @__PURE__ */ t.jsx(Me, { children: S(e) }),
@@ -3945,7 +3945,7 @@ const Hi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: ${({ $collapsed: e }) => "center"};
+  justify-content: center;
   padding: 0 4px;
 `, zr = n.div`
   display: flex;
@@ -3968,14 +3968,24 @@ const Hi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
 `, Br = n.div`
   display: flex;
   align-items: center;
+  justify-content: ${({ $collapsed: e }) => e ? "center" : "flex-start"};
   gap: ${({ $collapsed: e }) => e ? "0" : "12px"};
-  padding: ${({ $collapsed: e }) => e ? "15px 0" : "15px 17px"};
+  padding: ${({ $collapsed: e }) => e ? "8px 0" : "10px 17px"};
+  margin: 4px 0;
   border-radius: 8px;
   cursor: ${({ $disabled: e }) => e ? "not-allowed" : "pointer"};
   color: ${({ $selected: e }) => e ? "#000" : "#50555c"};
   background-color: ${({ $selected: e }) => e ? "rgba(209, 213, 219, 1)" : "transparent"};
   transition: background-color 0.2s ease, color 0.2s ease;
   opacity: ${({ $disabled: e }) => e ? 0.5 : 1};
+  
+  /* В свернутом состоянии делаем иконку квадратной */
+  ${({ $collapsed: e }) => e && `
+    width: 40px;
+    height: 40px;
+    margin: 4px auto;
+    padding: 0;
+  `}
 
   &:hover {
     background-color: ${({ $selected: e }) => e ? "rgba(209, 213, 219, 1)" : "rgba(209, 213, 219, 0.5)"};
@@ -3991,6 +4001,7 @@ const Hi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   justify-content: center;
   min-width: 21px;
   width: ${({ $collapsed: e }) => e ? "24px" : "21px"};
+  height: ${({ $collapsed: e }) => e ? "24px" : "auto"};
 `, _r = n.div`
   margin-left: 45px;
   padding-left: 0;
