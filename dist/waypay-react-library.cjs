@@ -1,9 +1,9 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const w=require("react"),o=require("styled-components"),U=require("framer-motion");var ee={exports:{}},G={};var pe;function Ne(){if(pe)return G;pe=1;var e=Symbol.for("react.transitional.element"),n=Symbol.for("react.fragment");function s(i,r,c){var u=null;if(c!==void 0&&(u=""+c),r.key!==void 0&&(u=""+r.key),"key"in r){c={};for(var g in r)g!=="key"&&(c[g]=r[g])}else c=r;return r=c.ref,{$$typeof:e,type:i,key:u,ref:r!==void 0?r:null,props:c}}return G.Fragment=n,G.jsx=s,G.jsxs=s,G}var J={};var ue;function Ye(){return ue||(ue=1,process.env.NODE_ENV!=="production"&&(function(){function e(a){if(a==null)return null;if(typeof a=="function")return a.$$typeof===_?null:a.displayName||a.name||null;if(typeof a=="string")return a;switch(a){case P:return"Fragment";case I:return"Profiler";case j:return"StrictMode";case R:return"Suspense";case Y:return"SuspenseList";case W:return"Activity"}if(typeof a=="object")switch(typeof a.tag=="number"&&console.error("Received an unexpected object in getComponentNameFromType(). This is likely a bug in React. Please file an issue."),a.$$typeof){case l:return"Portal";case F:return a.displayName||"Context";case L:return(a._context.displayName||"Context")+".Consumer";case A:var $=a.render;return a=a.displayName,a||(a=$.displayName||$.name||"",a=a!==""?"ForwardRef("+a+")":"ForwardRef"),a;case B:return $=a.displayName||null,$!==null?$:e(a.type)||"Memo";case z:$=a._payload,a=a._init;try{return e(a($))}catch{}}return null}function n(a){return""+a}function s(a){try{n(a);var $=!1}catch{$=!0}if($){$=console;var S=$.error,D=typeof Symbol=="function"&&Symbol.toStringTag&&a[Symbol.toStringTag]||a.constructor.name||"Object";return S.call($,"The provided key is an unsupported type %s. This value must be coerced to a string before using it here.",D),n(a)}}function i(a){if(a===P)return"<>";if(typeof a=="object"&&a!==null&&a.$$typeof===z)return"<...>";try{var $=e(a);return $?"<"+$+">":"<...>"}catch{return"<...>"}}function r(){var a=v.A;return a===null?null:a.getOwner()}function c(){return Error("react-stack-top-frame")}function u(a){if(p.call(a,"key")){var $=Object.getOwnPropertyDescriptor(a,"key").get;if($&&$.isReactWarning)return!1}return a.key!==void 0}function g(a,$){function S(){N||(N=!0,console.error("%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://react.dev/link/special-props)",$))}S.isReactWarning=!0,Object.defineProperty(a,"key",{get:S,configurable:!0})}function k(){var a=e(this.type);return E[a]||(E[a]=!0,console.error("Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release.")),a=this.props.ref,a!==void 0?a:null}function f(a,$,S,D,O,Z){var H=S.ref;return a={$$typeof:h,type:a,key:$,props:S,_owner:D},(H!==void 0?H:null)!==null?Object.defineProperty(a,"ref",{enumerable:!1,get:k}):Object.defineProperty(a,"ref",{enumerable:!1,value:null}),a._store={},Object.defineProperty(a._store,"validated",{configurable:!1,enumerable:!1,writable:!0,value:0}),Object.defineProperty(a,"_debugInfo",{configurable:!1,enumerable:!1,writable:!0,value:null}),Object.defineProperty(a,"_debugStack",{configurable:!1,enumerable:!1,writable:!0,value:O}),Object.defineProperty(a,"_debugTask",{configurable:!1,enumerable:!1,writable:!0,value:Z}),Object.freeze&&(Object.freeze(a.props),Object.freeze(a)),a}function m(a,$,S,D,O,Z){var H=$.children;if(H!==void 0)if(D)if(M(H)){for(D=0;D<H.length;D++)x(H[D]);Object.freeze&&Object.freeze(H)}else console.error("React.jsx: Static children should always be an array. You are likely explicitly calling React.jsxs or React.jsxDEV. Use the Babel transform instead.");else x(H);if(p.call($,"key")){H=e(a);var X=Object.keys($).filter(function(Oe){return Oe!=="key"});D=0<X.length?"{key: someKey, "+X.join(": ..., ")+": ...}":"{key: someKey}",C[H+D]||(X=0<X.length?"{"+X.join(": ..., ")+": ...}":"{}",console.error(`A props object containing a "key" prop is being spread into JSX:
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const w=require("react"),o=require("styled-components"),U=require("framer-motion");var Q={exports:{}},G={};var pe;function Ne(){if(pe)return G;pe=1;var e=Symbol.for("react.transitional.element"),n=Symbol.for("react.fragment");function s(i,r,c){var u=null;if(c!==void 0&&(u=""+c),r.key!==void 0&&(u=""+r.key),"key"in r){c={};for(var g in r)g!=="key"&&(c[g]=r[g])}else c=r;return r=c.ref,{$$typeof:e,type:i,key:u,ref:r!==void 0?r:null,props:c}}return G.Fragment=n,G.jsx=s,G.jsxs=s,G}var J={};var ue;function Ye(){return ue||(ue=1,process.env.NODE_ENV!=="production"&&(function(){function e(a){if(a==null)return null;if(typeof a=="function")return a.$$typeof===_?null:a.displayName||a.name||null;if(typeof a=="string")return a;switch(a){case P:return"Fragment";case I:return"Profiler";case j:return"StrictMode";case R:return"Suspense";case Y:return"SuspenseList";case W:return"Activity"}if(typeof a=="object")switch(typeof a.tag=="number"&&console.error("Received an unexpected object in getComponentNameFromType(). This is likely a bug in React. Please file an issue."),a.$$typeof){case l:return"Portal";case F:return a.displayName||"Context";case L:return(a._context.displayName||"Context")+".Consumer";case A:var $=a.render;return a=a.displayName,a||(a=$.displayName||$.name||"",a=a!==""?"ForwardRef("+a+")":"ForwardRef"),a;case B:return $=a.displayName||null,$!==null?$:e(a.type)||"Memo";case z:$=a._payload,a=a._init;try{return e(a($))}catch{}}return null}function n(a){return""+a}function s(a){try{n(a);var $=!1}catch{$=!0}if($){$=console;var S=$.error,D=typeof Symbol=="function"&&Symbol.toStringTag&&a[Symbol.toStringTag]||a.constructor.name||"Object";return S.call($,"The provided key is an unsupported type %s. This value must be coerced to a string before using it here.",D),n(a)}}function i(a){if(a===P)return"<>";if(typeof a=="object"&&a!==null&&a.$$typeof===z)return"<...>";try{var $=e(a);return $?"<"+$+">":"<...>"}catch{return"<...>"}}function r(){var a=v.A;return a===null?null:a.getOwner()}function c(){return Error("react-stack-top-frame")}function u(a){if(p.call(a,"key")){var $=Object.getOwnPropertyDescriptor(a,"key").get;if($&&$.isReactWarning)return!1}return a.key!==void 0}function g(a,$){function S(){N||(N=!0,console.error("%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://react.dev/link/special-props)",$))}S.isReactWarning=!0,Object.defineProperty(a,"key",{get:S,configurable:!0})}function k(){var a=e(this.type);return E[a]||(E[a]=!0,console.error("Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release.")),a=this.props.ref,a!==void 0?a:null}function f(a,$,S,D,O,Z){var H=S.ref;return a={$$typeof:h,type:a,key:$,props:S,_owner:D},(H!==void 0?H:null)!==null?Object.defineProperty(a,"ref",{enumerable:!1,get:k}):Object.defineProperty(a,"ref",{enumerable:!1,value:null}),a._store={},Object.defineProperty(a._store,"validated",{configurable:!1,enumerable:!1,writable:!0,value:0}),Object.defineProperty(a,"_debugInfo",{configurable:!1,enumerable:!1,writable:!0,value:null}),Object.defineProperty(a,"_debugStack",{configurable:!1,enumerable:!1,writable:!0,value:O}),Object.defineProperty(a,"_debugTask",{configurable:!1,enumerable:!1,writable:!0,value:Z}),Object.freeze&&(Object.freeze(a.props),Object.freeze(a)),a}function m(a,$,S,D,O,Z){var H=$.children;if(H!==void 0)if(D)if(M(H)){for(D=0;D<H.length;D++)x(H[D]);Object.freeze&&Object.freeze(H)}else console.error("React.jsx: Static children should always be an array. You are likely explicitly calling React.jsxs or React.jsxDEV. Use the Babel transform instead.");else x(H);if(p.call($,"key")){H=e(a);var X=Object.keys($).filter(function(Oe){return Oe!=="key"});D=0<X.length?"{key: someKey, "+X.join(": ..., ")+": ...}":"{key: someKey}",C[H+D]||(X=0<X.length?"{"+X.join(": ..., ")+": ...}":"{}",console.error(`A props object containing a "key" prop is being spread into JSX:
   let props = %s;
   <%s {...props} />
 React keys must be passed directly to JSX without using spread:
   let props = %s;
-  <%s key={someKey} {...props} />`,D,H,X,H),C[H+D]=!0)}if(H=null,S!==void 0&&(s(S),H=""+S),u($)&&(s($.key),H=""+$.key),"key"in $){S={};for(var te in $)te!=="key"&&(S[te]=$[te])}else S=$;return H&&g(S,typeof a=="function"?a.displayName||a.name||"Unknown":a),f(a,H,S,r(),O,Z)}function x(a){y(a)?a._store&&(a._store.validated=1):typeof a=="object"&&a!==null&&a.$$typeof===z&&(a._payload.status==="fulfilled"?y(a._payload.value)&&a._payload.value._store&&(a._payload.value._store.validated=1):a._store&&(a._store.validated=1))}function y(a){return typeof a=="object"&&a!==null&&a.$$typeof===h}var d=w,h=Symbol.for("react.transitional.element"),l=Symbol.for("react.portal"),P=Symbol.for("react.fragment"),j=Symbol.for("react.strict_mode"),I=Symbol.for("react.profiler"),L=Symbol.for("react.consumer"),F=Symbol.for("react.context"),A=Symbol.for("react.forward_ref"),R=Symbol.for("react.suspense"),Y=Symbol.for("react.suspense_list"),B=Symbol.for("react.memo"),z=Symbol.for("react.lazy"),W=Symbol.for("react.activity"),_=Symbol.for("react.client.reference"),v=d.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE,p=Object.prototype.hasOwnProperty,M=Array.isArray,T=console.createTask?console.createTask:function(){return null};d={react_stack_bottom_frame:function(a){return a()}};var N,E={},V=d.react_stack_bottom_frame.bind(d,c)(),b=T(i(c)),C={};J.Fragment=P,J.jsx=function(a,$,S){var D=1e4>v.recentlyCreatedOwnerStacks++;return m(a,$,S,!1,D?Error("react-stack-top-frame"):V,D?T(i(a)):b)},J.jsxs=function(a,$,S){var D=1e4>v.recentlyCreatedOwnerStacks++;return m(a,$,S,!0,D?Error("react-stack-top-frame"):V,D?T(i(a)):b)}})()),J}var he;function We(){return he||(he=1,process.env.NODE_ENV==="production"?ee.exports=Ne():ee.exports=Ye()),ee.exports}var t=We();const se=({x:e,y:n,items:s,onClose:i,...r})=>{const c=w.useRef(null),[u,g]=w.useState(null);w.useEffect(()=>{const d=h=>{c.current&&!c.current.contains(h.target)&&i()};return document.addEventListener("mousedown",d),()=>{document.removeEventListener("mousedown",d)}},[i]);const f=(()=>{if(!c.current)return{x:e,y:n};const d=c.current.offsetWidth,h=c.current.offsetHeight,l=window.innerWidth,P=window.innerHeight;let j=e,I=n;return j+d>l&&(j=e-d),I+h>P&&(I=n-h),{x:j,y:I}})(),m=(d,h)=>{d.submenu?g(u===h?null:h):d.action&&(d.action(),i())},x=d=>{s[d].submenu&&g(d)},y=d=>{const h=d.relatedTarget;c.current?.contains(h)||g(null)};return t.jsx(He,{ref:c,initial:{opacity:0,scale:.8},animate:{opacity:1,scale:1},exit:{opacity:0,scale:.8},transition:{duration:.15},style:{position:"absolute",top:f.y,left:f.x},onClick:d=>d.stopPropagation(),onMouseLeave:y,...r,children:s.map((d,h)=>t.jsxs(Ve,{$hasSubmenu:!!d.submenu,$disabled:d.disabled,children:[t.jsx(Ze,{onClick:l=>{l.stopPropagation(),d.disabled||m(d,h)},onMouseEnter:()=>!d.disabled&&x(h),whileHover:d.disabled?{}:{backgroundColor:"#f3f4f6"},initial:{backgroundColor:"#ffffff"},$color:d.color,$disabled:d.disabled,children:t.jsxs(Ue,{children:[d.label,d.submenu&&t.jsx(Xe,{children:t.jsx("svg",{width:"8",height:"12",viewBox:"0 0 8 12",fill:"none",children:t.jsx("path",{d:"M1.5 1.5L6 6L1.5 10.5",stroke:"currentColor",strokeWidth:"2"})})})]})}),d.submenu&&u===h&&t.jsx(qe,{initial:{opacity:0,x:10},animate:{opacity:1,x:0},exit:{opacity:0,x:10},transition:{duration:.15},children:t.jsx(se,{x:0,y:-h*40,items:d.submenu,onClose:()=>g(null)})})]},h))})},He=o(U.motion.div)`
+  <%s key={someKey} {...props} />`,D,H,X,H),C[H+D]=!0)}if(H=null,S!==void 0&&(s(S),H=""+S),u($)&&(s($.key),H=""+$.key),"key"in $){S={};for(var te in $)te!=="key"&&(S[te]=$[te])}else S=$;return H&&g(S,typeof a=="function"?a.displayName||a.name||"Unknown":a),f(a,H,S,r(),O,Z)}function x(a){y(a)?a._store&&(a._store.validated=1):typeof a=="object"&&a!==null&&a.$$typeof===z&&(a._payload.status==="fulfilled"?y(a._payload.value)&&a._payload.value._store&&(a._payload.value._store.validated=1):a._store&&(a._store.validated=1))}function y(a){return typeof a=="object"&&a!==null&&a.$$typeof===h}var d=w,h=Symbol.for("react.transitional.element"),l=Symbol.for("react.portal"),P=Symbol.for("react.fragment"),j=Symbol.for("react.strict_mode"),I=Symbol.for("react.profiler"),L=Symbol.for("react.consumer"),F=Symbol.for("react.context"),A=Symbol.for("react.forward_ref"),R=Symbol.for("react.suspense"),Y=Symbol.for("react.suspense_list"),B=Symbol.for("react.memo"),z=Symbol.for("react.lazy"),W=Symbol.for("react.activity"),_=Symbol.for("react.client.reference"),v=d.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE,p=Object.prototype.hasOwnProperty,M=Array.isArray,T=console.createTask?console.createTask:function(){return null};d={react_stack_bottom_frame:function(a){return a()}};var N,E={},V=d.react_stack_bottom_frame.bind(d,c)(),b=T(i(c)),C={};J.Fragment=P,J.jsx=function(a,$,S){var D=1e4>v.recentlyCreatedOwnerStacks++;return m(a,$,S,!1,D?Error("react-stack-top-frame"):V,D?T(i(a)):b)},J.jsxs=function(a,$,S){var D=1e4>v.recentlyCreatedOwnerStacks++;return m(a,$,S,!0,D?Error("react-stack-top-frame"):V,D?T(i(a)):b)}})()),J}var he;function We(){return he||(he=1,process.env.NODE_ENV==="production"?Q.exports=Ne():Q.exports=Ye()),Q.exports}var t=We();const se=({x:e,y:n,items:s,onClose:i,...r})=>{const c=w.useRef(null),[u,g]=w.useState(null);w.useEffect(()=>{const d=h=>{c.current&&!c.current.contains(h.target)&&i()};return document.addEventListener("mousedown",d),()=>{document.removeEventListener("mousedown",d)}},[i]);const f=(()=>{if(!c.current)return{x:e,y:n};const d=c.current.offsetWidth,h=c.current.offsetHeight,l=window.innerWidth,P=window.innerHeight;let j=e,I=n;return j+d>l&&(j=e-d),I+h>P&&(I=n-h),{x:j,y:I}})(),m=(d,h)=>{d.submenu?g(u===h?null:h):d.action&&(d.action(),i())},x=d=>{s[d].submenu&&g(d)},y=d=>{const h=d.relatedTarget;c.current?.contains(h)||g(null)};return t.jsx(He,{ref:c,initial:{opacity:0,scale:.8},animate:{opacity:1,scale:1},exit:{opacity:0,scale:.8},transition:{duration:.15},style:{position:"absolute",top:f.y,left:f.x},onClick:d=>d.stopPropagation(),onMouseLeave:y,...r,children:s.map((d,h)=>t.jsxs(Ve,{$hasSubmenu:!!d.submenu,$disabled:d.disabled,children:[t.jsx(Ze,{onClick:l=>{l.stopPropagation(),d.disabled||m(d,h)},onMouseEnter:()=>!d.disabled&&x(h),whileHover:d.disabled?{}:{backgroundColor:"#f3f4f6"},initial:{backgroundColor:"#ffffff"},$color:d.color,$disabled:d.disabled,children:t.jsxs(Ue,{children:[d.label,d.submenu&&t.jsx(Xe,{children:t.jsx("svg",{width:"8",height:"12",viewBox:"0 0 8 12",fill:"none",children:t.jsx("path",{d:"M1.5 1.5L6 6L1.5 10.5",stroke:"currentColor",strokeWidth:"2"})})})]})}),d.submenu&&u===h&&t.jsx(qe,{initial:{opacity:0,x:10},animate:{opacity:1,x:0},exit:{opacity:0,x:10},transition:{duration:.15},children:t.jsx(se,{x:0,y:-h*40,items:d.submenu,onClose:()=>g(null)})})]},h))})},He=o(U.motion.div)`
   position: absolute;
   background: white;
   border-radius: 8px;
@@ -217,7 +217,7 @@ React keys must be passed directly to JSX without using spread:
   &:hover {
     opacity: 0.8;
   }
-`,xt=({children:e,onClick:n})=>t.jsxs(ht,{onClick:n,children:[t.jsx("svg",{width:"21",height:"13",viewBox:"0 0 21 13",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:t.jsx("path",{d:"M6.17798 0.978109L0.65625 6.4998L6.17798 12.0215L7.10604 11.0934L3.16862 7.156L20.3124 7.156V5.84351L3.16874 5.84351L7.10604 1.90621L6.17798 0.978109Z",fill:"#50555C"})}),e]}),Q=({children:e="Подтвердить",icon:n,disabled:s=!1,bg:i,hoverBg:r,disabledBg:c,textColor:u,fullWidth:g=!1,minWidth:k,width:f,isPrimary:m=!0,...x})=>{const d=i?{bg:i,hoverBg:r||i,disabledBg:c||i,textColor:u||(m?"white":"black")}:m?{bg:"rgba(0, 125, 136, 1)",hoverBg:"rgba(0, 150, 163, 1)",disabledBg:"rgba(102, 177, 184, 1)",textColor:"white"}:{bg:"rgba(209, 213, 219, 1)",hoverBg:"rgba(209, 233, 239, 1)",disabledBg:"rgba(209, 213, 219, 0.7)",textColor:"black"};return t.jsxs(ft,{disabled:s,$bg:d.bg,$hoverBg:d.hoverBg,$disabledBg:d.disabledBg,$textColor:d.textColor,$fullWidth:g,$minWidth:k,$width:f,...x,children:[n&&t.jsx(gt,{children:n}),t.jsx("span",{children:e})]})},ft=o.button`
+`,xt=({children:e,onClick:n})=>t.jsxs(ht,{onClick:n,children:[t.jsx("svg",{width:"21",height:"13",viewBox:"0 0 21 13",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:t.jsx("path",{d:"M6.17798 0.978109L0.65625 6.4998L6.17798 12.0215L7.10604 11.0934L3.16862 7.156L20.3124 7.156V5.84351L3.16874 5.84351L7.10604 1.90621L6.17798 0.978109Z",fill:"#50555C"})}),e]}),ee=({children:e="Подтвердить",icon:n,disabled:s=!1,bg:i,hoverBg:r,disabledBg:c,textColor:u,fullWidth:g=!1,minWidth:k,width:f,isPrimary:m=!0,...x})=>{const d=i?{bg:i,hoverBg:r||i,disabledBg:c||i,textColor:u||(m?"white":"black")}:m?{bg:"rgba(0, 125, 136, 1)",hoverBg:"rgba(0, 150, 163, 1)",disabledBg:"rgba(102, 177, 184, 1)",textColor:"white"}:{bg:"rgba(209, 213, 219, 1)",hoverBg:"rgba(209, 233, 239, 1)",disabledBg:"rgba(209, 213, 219, 0.7)",textColor:"black"};return t.jsxs(ft,{disabled:s,$bg:d.bg,$hoverBg:d.hoverBg,$disabledBg:d.disabledBg,$textColor:d.textColor,$fullWidth:g,$minWidth:k,$width:f,...x,children:[n&&t.jsx(gt,{children:n}),t.jsx("span",{children:e})]})},ft=o.button`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -982,12 +982,12 @@ React keys must be passed directly to JSX without using spread:
   display: flex;
   align-items: center;
   gap: 10px;
-`,Eo=o(Q)`
+`,Eo=o(ee)`
   min-width: 140px;
   padding: 10px 16px;
   border-radius: 10px;
   font-size: 16px;
-`,Po=o(Q)`
+`,Po=o(ee)`
   min-width: 140px;
   padding: 10px 16px;
   border-radius: 10px;
@@ -2053,7 +2053,7 @@ React keys must be passed directly to JSX without using spread:
     box-shadow: 0 0 0 0.2rem rgba(37, 203, 161, 0.25);
     background-color: rgba(255, 255, 255, 1);
   }
-`,Be=(e,n)=>q("/auth/call/initiate",{method:"POST",body:{phone:e,user_type:n}}),Ae=(e,n,s,i)=>q("/auth/call/confirm",{method:"POST",body:{phone:e,check_id:n,user_type:s,name:i}}),di=()=>q("/auth/session/info",{method:"GET"}),pi=({isOpen:e,onClose:n,onSubmit:s,error:i,isLoading:r=!1})=>{const[c,u]=w.useState("");if(!e)return null;const g=k=>{k.preventDefault(),s(c)};return t.jsx(ui,{onClick:n,children:t.jsxs(hi,{onClick:k=>k.stopPropagation(),children:[t.jsx(xi,{children:"Регистрация"}),t.jsxs(fi,{onSubmit:g,children:[t.jsxs(gi,{children:[t.jsx(bi,{children:"Как вас зовут?"}),t.jsx(le,{type:"text",value:c,onChange:k=>u(k.target.value),placeholder:"Иванов Иван Иванович",disabled:r,autoFocus:!0}),i&&t.jsx(mi,{children:i})]}),t.jsxs(wi,{children:[t.jsx(Q,{isPrimary:!1,type:"button",onClick:n,disabled:r,children:"Отмена"}),t.jsx(Q,{type:"submit",disabled:r,children:r?"Загрузка...":"Продолжить"})]})]})]})})},ui=o.div`
+`,Be=(e,n)=>q("/auth/call/initiate",{method:"POST",body:{phone:e,user_type:n}}),Ae=(e,n,s,i)=>q("/auth/call/confirm",{method:"POST",body:{phone:e,check_id:n,user_type:s,name:i}}),di=()=>q("/auth/session/info",{method:"GET"}),pi=({isOpen:e,onClose:n,onSubmit:s,error:i,isLoading:r=!1})=>{const[c,u]=w.useState("");if(!e)return null;const g=k=>{k.preventDefault(),s(c)};return t.jsx(ui,{onClick:n,children:t.jsx(hi,{onClick:k=>k.stopPropagation(),children:t.jsxs(xi,{onSubmit:g,children:[t.jsx(fi,{children:"Как вас зовут?"}),t.jsxs(gi,{children:[t.jsx(le,{type:"text",value:c,onChange:k=>u(k.target.value),placeholder:"Иванов Иван Иванович",disabled:r,autoFocus:!0,style:{flex:1}}),t.jsx(bi,{type:"submit",disabled:r||!c.trim(),children:r?"...":"→"})]}),i&&t.jsx(mi,{children:i})]})})})},ui=o.div`
   position: fixed;
   top: 0;
   left: 0;
@@ -2069,45 +2069,39 @@ React keys must be passed directly to JSX without using spread:
   padding: 30px;
   border-radius: 12px;
   width: 90%;
-  max-width: 400px;
+  max-width: 450px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-`,xi=o.h2`
-  margin: 0;
-  padding: 0;
-
-  flex: 1;
-  min-width: 0;
-  display: block;
-
-  font-size: 27px;
-  line-height: 1.25;
-  font-weight: 700;
-  color: #0f172a;
-
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  text-align: left;
-`,fi=o.form`
+`,xi=o.form`
   display: flex;
   flex-direction: column;
-`,gi=o.div`
-  margin-bottom: 20px;
-`,bi=o.h2`
+`,fi=o.h2`
   display: block;
-  font-size: 21px;
-  color: #555;
-  margin-bottom: 8px;
+  font-size: 27px;
+  color: black;
+  margin-bottom: 16px;
+`,gi=o.div`
+  display: flex;
+  gap: 10px;
+  align-items: center;
+`,bi=o(ee)`
+  width: auto;
+  min-width: 50px;
+  height: 50px;
+  padding: 0 20px;
+  font-size: 20px;
+  border-radius: 8px;
+  white-space: nowrap;
+  
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
 `,mi=o.div`
   color: #e74c3c;
   font-size: 12px;
-  margin-top: 5px;
+  margin-top: 8px;
   text-align: left;
-`,wi=o.div`
-  display: flex;
-  justify-content: space-between;
-  width: 100%; // Убедитесь, что контейнер занимает всю доступную ширину
-`,vi=({onLoginSuccess:e,userType:n="delivery_operator",title:s="Авторизация",submitLabel:i="Войти",placeholder:r="8 (xxx) xxx-xx-xx",supportPhone:c="8 989 924 24 24",supportLinkUrl:u="https://waypay.one",supportLinkText:g="waypay.one",className:k,style:f,pollingIntervalMs:m=3e3,enableRegistration:x=!1})=>{const[y,d]=w.useState(!1),[h,l]=w.useState(""),[P,j]=w.useState(!1),[I,L]=w.useState(""),[F,A]=w.useState(""),[R,Y]=w.useState(!1),[B,z]=w.useState(!1),[W,_]=w.useState(""),[v,p]=w.useState(""),[M,T]=w.useState(null),N=w.useRef(void 0);w.useEffect(()=>()=>{N.current&&clearInterval(N.current)},[]);const E=S=>{const D=S.replace(/\D/g,"");return D?D.startsWith("8")?`+7${D.slice(1)}`:D.startsWith("7")?`+${D}`:`+${D}`:""},V=()=>{j(!1),z(!1),_(""),p(""),T(null),N.current&&window.clearInterval(N.current)},b=async S=>{if(S.preventDefault(),!h){A("Введите номер телефона");return}d(!0),A("");const D=E(h);try{const O=await Be(D,n);T({phone:D,checkId:O.check_id,callPhone:O.call_phone}),x&&"name_required"in O&&O.name_required?(z(!0),L(O.call_phone)):!x&&"name_required"in O&&O.name_required?(A("Этот номер не зарегистрирован в системе. Обратитесь в поддержку для регистрации."),T(null)):(L(O.call_phone),j(!0),a(D,O.check_id))}catch(O){console.error("Auth error:",O),A("Не удалось инициировать авторизацию. Проверьте номер.")}finally{d(!1)}},C=async S=>{if(!S.trim()){p("Введите ФИО");return}if(M){d(!0),p("");try{_(S),z(!1),j(!0),a(M.phone,M.checkId,S)}catch(D){console.error("Registration error:",D),p("Не удалось завершить регистрацию")}finally{d(!1)}}},a=(S,D,O)=>{N.current&&window.clearInterval(N.current),N.current=window.setInterval(()=>{$(S,D,O)},m)},$=async(S,D,O)=>{if(!R){Y(!0);try{const Z=await Ae(S,D,n,O||W);Z.access_token&&Z.refresh_token&&(N.current&&window.clearInterval(N.current),j(!1),z(!1),_(""),T(null),e(Z.access_token))}catch(Z){console.error("Verification error:",Z),A("Ошибка проверки авторизации")}finally{Y(!1)}}};return t.jsxs(yi,{className:k,style:f,children:[t.jsxs(ki,{children:[t.jsxs(ji,{onSubmit:b,children:[t.jsx(Ci,{children:s}),t.jsx($i,{children:t.jsx(Si,{children:t.jsx(Re,{value:h,onChange:S=>l(S),placeholder:r})})}),F&&t.jsx(Ei,{children:t.jsx("span",{children:F})}),t.jsx(Mi,{type:"submit",disabled:y,children:y?"Загрузка...":i})]}),t.jsxs(Di,{children:["Хотите получить доступ к нашим продуктам?",t.jsx("br",{}),"Обратитесь по номеру"," ",t.jsx(Ti,{href:`tel:${c}`,children:c}),t.jsx("br",{}),"или оставьте заявку на"," ",t.jsx(Li,{href:u,target:"_blank",rel:"noreferrer",children:g})]})]}),t.jsx(pi,{isOpen:B,onClose:V,onSubmit:C,error:v,isLoading:y}),t.jsx(Pe,{isOpen:P,onClose:V,callPhone:I,error:F})]})},yi=o.div`
+`,wi=({onLoginSuccess:e,userType:n="delivery_operator",title:s="Авторизация",submitLabel:i="Войти",placeholder:r="8 (xxx) xxx-xx-xx",supportPhone:c="8 989 924 24 24",supportLinkUrl:u="https://waypay.one",supportLinkText:g="waypay.one",className:k,style:f,pollingIntervalMs:m=3e3,enableRegistration:x=!1})=>{const[y,d]=w.useState(!1),[h,l]=w.useState(""),[P,j]=w.useState(!1),[I,L]=w.useState(""),[F,A]=w.useState(""),[R,Y]=w.useState(!1),[B,z]=w.useState(!1),[W,_]=w.useState(""),[v,p]=w.useState(""),[M,T]=w.useState(null),N=w.useRef(void 0);w.useEffect(()=>()=>{N.current&&clearInterval(N.current)},[]);const E=S=>{const D=S.replace(/\D/g,"");return D?D.startsWith("8")?`+7${D.slice(1)}`:D.startsWith("7")?`+${D}`:`+${D}`:""},V=()=>{j(!1),z(!1),_(""),p(""),T(null),N.current&&window.clearInterval(N.current)},b=async S=>{if(S.preventDefault(),!h){A("Введите номер телефона");return}d(!0),A("");const D=E(h);try{const O=await Be(D,n);T({phone:D,checkId:O.check_id,callPhone:O.call_phone}),x&&"name_required"in O&&O.name_required?(z(!0),L(O.call_phone)):!x&&"name_required"in O&&O.name_required?(A("Этот номер не зарегистрирован в системе. Обратитесь в поддержку для регистрации."),T(null)):(L(O.call_phone),j(!0),a(D,O.check_id))}catch(O){console.error("Auth error:",O),A("Не удалось инициировать авторизацию. Проверьте номер.")}finally{d(!1)}},C=async S=>{if(!S.trim()){p("Введите ФИО");return}if(M){d(!0),p("");try{_(S),z(!1),j(!0),a(M.phone,M.checkId,S)}catch(D){console.error("Registration error:",D),p("Не удалось завершить регистрацию")}finally{d(!1)}}},a=(S,D,O)=>{N.current&&window.clearInterval(N.current),N.current=window.setInterval(()=>{$(S,D,O)},m)},$=async(S,D,O)=>{if(!R){Y(!0);try{const Z=await Ae(S,D,n,O||W);Z.access_token&&Z.refresh_token&&(N.current&&window.clearInterval(N.current),j(!1),z(!1),_(""),T(null),e(Z.access_token))}catch(Z){console.error("Verification error:",Z),A("Ошибка проверки авторизации")}finally{Y(!1)}}};return t.jsxs(vi,{className:k,style:f,children:[t.jsxs(yi,{children:[t.jsxs(ki,{onSubmit:b,children:[t.jsx(ji,{children:s}),t.jsx(Ci,{children:t.jsx($i,{children:t.jsx(Re,{value:h,onChange:S=>l(S),placeholder:r})})}),F&&t.jsx(Li,{children:t.jsx("span",{children:F})}),t.jsx(Si,{type:"submit",disabled:y,children:y?"Загрузка...":i})]}),t.jsxs(Mi,{children:["Хотите получить доступ к нашим продуктам?",t.jsx("br",{}),"Обратитесь по номеру"," ",t.jsx(Di,{href:`tel:${c}`,children:c}),t.jsx("br",{}),"или оставьте заявку на"," ",t.jsx(Ti,{href:u,target:"_blank",rel:"noreferrer",children:g})]})]}),t.jsx(pi,{isOpen:B,onClose:V,onSubmit:C,error:v,isLoading:y}),t.jsx(Pe,{isOpen:P,onClose:V,callPhone:I,error:F})]})},vi=o.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2117,7 +2111,7 @@ React keys must be passed directly to JSX without using spread:
   padding: 20px;
   background: white; /* Меняем на белый фон */
   box-sizing: border-box; /* Учитываем padding в размерах */
-`,ki=o.div`
+`,yi=o.div`
   background: white;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 125, 136, 0.1);
@@ -2155,24 +2149,24 @@ React keys must be passed directly to JSX without using spread:
   /* Скрываем скроллбар для IE, Edge и Firefox */
   -ms-overflow-style: none;
   scrollbar-width: none;
-`,ji=o.form`
+`,ki=o.form`
   display: flex;
   flex-direction: column;
-`,Ci=o.h1`
+`,ji=o.h1`
   font-size: 24px;
   margin-bottom: 30px;
   text-align: center;
   color: #333;
   font-weight: 600;
-`,$i=o.div`
+`,Ci=o.div`
   margin-bottom: 25px;
-`,Si=o.div`
+`,$i=o.div`
   position: relative;
   width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-`,Mi=o.button`
+`,Si=o.button`
   background: linear-gradient(
     90deg,
     rgba(0, 125, 136, 1) 0%,
@@ -2208,7 +2202,7 @@ React keys must be passed directly to JSX without using spread:
     transform: none;
     box-shadow: none;
   }
-`,Di=o.div`
+`,Mi=o.div`
   margin-top: 30px;
   padding-top: 20px;
   border-top: 1px solid #f0f0f0;
@@ -2216,6 +2210,14 @@ React keys must be passed directly to JSX without using spread:
   font-size: 14px;
   color: #666;
   line-height: 1.5;
+`,Di=o.a`
+  color: rgba(0, 125, 136, 1);
+  text-decoration: none;
+  font-weight: 500;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `,Ti=o.a`
   color: rgba(0, 125, 136, 1);
   text-decoration: none;
@@ -2224,15 +2226,7 @@ React keys must be passed directly to JSX without using spread:
   &:hover {
     text-decoration: underline;
   }
-`,Li=o.a`
-  color: rgba(0, 125, 136, 1);
-  text-decoration: none;
-  font-weight: 500;
-
-  &:hover {
-    text-decoration: underline;
-  }
-`,Ei=o.div`
+`,Li=o.div`
   display: flex;
   align-items: center;
   gap: 8px;
@@ -2244,4 +2238,4 @@ React keys must be passed directly to JSX without using spread:
   margin-bottom: 16px;
   font-size: 14px;
   box-shadow: 0 6px 14px rgba(180, 35, 24, 0.08);
-`,ze=e=>{let n=0;for(let i=0;i<e.length;i++)n=e.charCodeAt(i)+((n<<5)-n);return`hsl(${Math.abs(n%360)}, 60%, 60%)`},Pi=e=>!e||!e.trim()?"?":e.split(" ").filter(i=>i.length>0).map(i=>i[0].toUpperCase()).join("").slice(0,2)||"?",Ii=(e,n=100)=>{const s=document.createElement("canvas");s.width=n,s.height=n;const i=s.getContext("2d");if(!i)return"";const r=ze(e);i.fillStyle=r,i.beginPath(),i.arc(n/2,n/2,n/2,0,Math.PI*2),i.fill(),i.fillStyle="#ffffff";const c=n/2;i.font=`bold ${c}px "Manrope", Arial, sans-serif`,i.textAlign="center",i.textBaseline="middle";const u=c*.1;return i.fillText(e,n/2,n/2+u),s.toDataURL("image/png")},Ri=e=>{if(!e)return"";const n=typeof e=="string"?new Date(e):e;if(isNaN(n.getTime()))return"";const s=n.getDate().toString().padStart(2,"0"),i=(n.getMonth()+1).toString().padStart(2,"0"),r=n.getFullYear();return`${s}-${i}-${r}`};function Bi(e){return new Date(e)}const Fe=e=>{let n;try{if(e instanceof Date)n=e;else if(typeof e=="string"||typeof e=="number")n=new Date(e);else throw new Error("Неподдерживаемый тип данных");if(isNaN(n.getTime()))return"неверная дата";const s=new Date;if(n>s){const m=Math.floor((n.getTime()-s.getTime())/1e3),x=Math.floor(m/60),y=Math.floor(x/60),d=Math.floor(y/24);return m<10?"скоро":m<60?`через ${m} секунд`:x===1?"через минуту":x<60?`через ${x} минут`:y===1?"через час":y<24?`через ${y} часов`:d===1?"завтра":d<7?`через ${d} дней`:"в будущем"}const i=Math.floor((s.getTime()-n.getTime())/1e3),r=Math.floor(i/60),c=Math.floor(r/60),u=Math.floor(c/24),g=Math.floor(u/7),k=Math.floor(u/30),f=Math.floor(u/365);if(i<10)return"только что";if(i<60){const m=Math.max(1,i);return m===1?"секунду назад":m<5?`${m} секунды назад`:`${m} секунд назад`}return r<60?r===1?"минуту назад":r<5?`${r} минуты назад`:`${r} минут назад`:c<24?c===1?"час назад":c<5?`${c} часа назад`:`${c} часов назад`:u<7?u===1?"вчера":u===2?"позавчера":`${u} дня назад`:g<4?g===1?"неделю назад":g<5?`${g} недели назад`:`${g} недель назад`:k<12?k===1?"месяц назад":k<5?`${k} месяца назад`:`${k} месяцев назад`:f===1?"год назад":f<5?`${f} года назад`:`${f} лет назад`}catch(s){return console.error("Ошибка форматирования относительного времени:",s),"ошибка даты"}},_e=e=>{try{return e.toLocaleDateString("ru-RU",{day:"2-digit",month:"2-digit",year:"2-digit",hour:"2-digit",minute:"2-digit"})}catch{return"неверная дата"}},Ai=(e,n={})=>{const{useExactAfterMonths:s=6,includeTime:i=!0}=n,r=new Date(e);return isNaN(r.getTime()),Math.floor((new Date().getTime()-r.getTime())/(1e3*60*60*24*30))>=s?i?_e(r):r.toLocaleDateString("ru-RU",{day:"2-digit",month:"2-digit",year:"2-digit"}):Fe(r)};exports.API_BASE_URL=ae;exports.AddButton=lt;exports.AuthCallModal=Pe;exports.AuthPage=vi;exports.BackButton=xt;exports.BaseModal=Te;exports.Checkbox=Nt;exports.ColumnChart=Wn;exports.ContextMenu=se;exports.CountInfoTitle=bn;exports.CustomCalendar=re;exports.CustomInput=le;exports.CustomPhoneInput=Re;exports.CustomSelect=St;exports.CustomTable=Ge;exports.CustomTextArea=bo;exports.CustomTitle=de;exports.DefaultButton=Q;exports.DeleteButton=bt;exports.EditButton=wt;exports.EntitySelectContainer=an;exports.ExportButton=kt;exports.InputTitle=wn;exports.ModalInfoTitle=vn;exports.Pagination=fo;exports.PeriodField=Ro;exports.PhoneModalInput=Xo;exports.PhotoViewerModal=Lr;exports.ProgressBar=Dn;exports.RadioButton=$n;exports.ScatterPlot=pr;exports.SideMenu=Zr;exports.SideMenuContext=Ie;exports.Tabs=Qo;exports.TitleField=ce;exports.ToggleSwitch=Cn;exports.YandexMapSelector=Bn;exports.apiRequest=q;exports.authStorage=ut;exports.confirmCallAuth=Ae;exports.formatDate=Ri;exports.formatExactDate=_e;exports.formatMoney=ie;exports.formatRelativeTime=Fe;exports.formatRelativeTimeExtended=Ai;exports.generateAvatar=Ii;exports.getInitials=Pi;exports.getSessionInfo=di;exports.initiateCallAuth=Be;exports.parseDateInput=Bi;exports.parseMoney=Yn;exports.stringToColor=ze;
+`,ze=e=>{let n=0;for(let i=0;i<e.length;i++)n=e.charCodeAt(i)+((n<<5)-n);return`hsl(${Math.abs(n%360)}, 60%, 60%)`},Ei=e=>!e||!e.trim()?"?":e.split(" ").filter(i=>i.length>0).map(i=>i[0].toUpperCase()).join("").slice(0,2)||"?",Pi=(e,n=100)=>{const s=document.createElement("canvas");s.width=n,s.height=n;const i=s.getContext("2d");if(!i)return"";const r=ze(e);i.fillStyle=r,i.beginPath(),i.arc(n/2,n/2,n/2,0,Math.PI*2),i.fill(),i.fillStyle="#ffffff";const c=n/2;i.font=`bold ${c}px "Manrope", Arial, sans-serif`,i.textAlign="center",i.textBaseline="middle";const u=c*.1;return i.fillText(e,n/2,n/2+u),s.toDataURL("image/png")},Ii=e=>{if(!e)return"";const n=typeof e=="string"?new Date(e):e;if(isNaN(n.getTime()))return"";const s=n.getDate().toString().padStart(2,"0"),i=(n.getMonth()+1).toString().padStart(2,"0"),r=n.getFullYear();return`${s}-${i}-${r}`};function Ri(e){return new Date(e)}const Fe=e=>{let n;try{if(e instanceof Date)n=e;else if(typeof e=="string"||typeof e=="number")n=new Date(e);else throw new Error("Неподдерживаемый тип данных");if(isNaN(n.getTime()))return"неверная дата";const s=new Date;if(n>s){const m=Math.floor((n.getTime()-s.getTime())/1e3),x=Math.floor(m/60),y=Math.floor(x/60),d=Math.floor(y/24);return m<10?"скоро":m<60?`через ${m} секунд`:x===1?"через минуту":x<60?`через ${x} минут`:y===1?"через час":y<24?`через ${y} часов`:d===1?"завтра":d<7?`через ${d} дней`:"в будущем"}const i=Math.floor((s.getTime()-n.getTime())/1e3),r=Math.floor(i/60),c=Math.floor(r/60),u=Math.floor(c/24),g=Math.floor(u/7),k=Math.floor(u/30),f=Math.floor(u/365);if(i<10)return"только что";if(i<60){const m=Math.max(1,i);return m===1?"секунду назад":m<5?`${m} секунды назад`:`${m} секунд назад`}return r<60?r===1?"минуту назад":r<5?`${r} минуты назад`:`${r} минут назад`:c<24?c===1?"час назад":c<5?`${c} часа назад`:`${c} часов назад`:u<7?u===1?"вчера":u===2?"позавчера":`${u} дня назад`:g<4?g===1?"неделю назад":g<5?`${g} недели назад`:`${g} недель назад`:k<12?k===1?"месяц назад":k<5?`${k} месяца назад`:`${k} месяцев назад`:f===1?"год назад":f<5?`${f} года назад`:`${f} лет назад`}catch(s){return console.error("Ошибка форматирования относительного времени:",s),"ошибка даты"}},_e=e=>{try{return e.toLocaleDateString("ru-RU",{day:"2-digit",month:"2-digit",year:"2-digit",hour:"2-digit",minute:"2-digit"})}catch{return"неверная дата"}},Bi=(e,n={})=>{const{useExactAfterMonths:s=6,includeTime:i=!0}=n,r=new Date(e);return isNaN(r.getTime()),Math.floor((new Date().getTime()-r.getTime())/(1e3*60*60*24*30))>=s?i?_e(r):r.toLocaleDateString("ru-RU",{day:"2-digit",month:"2-digit",year:"2-digit"}):Fe(r)};exports.API_BASE_URL=ae;exports.AddButton=lt;exports.AuthCallModal=Pe;exports.AuthPage=wi;exports.BackButton=xt;exports.BaseModal=Te;exports.Checkbox=Nt;exports.ColumnChart=Wn;exports.ContextMenu=se;exports.CountInfoTitle=bn;exports.CustomCalendar=re;exports.CustomInput=le;exports.CustomPhoneInput=Re;exports.CustomSelect=St;exports.CustomTable=Ge;exports.CustomTextArea=bo;exports.CustomTitle=de;exports.DefaultButton=ee;exports.DeleteButton=bt;exports.EditButton=wt;exports.EntitySelectContainer=an;exports.ExportButton=kt;exports.InputTitle=wn;exports.ModalInfoTitle=vn;exports.Pagination=fo;exports.PeriodField=Ro;exports.PhoneModalInput=Xo;exports.PhotoViewerModal=Lr;exports.ProgressBar=Dn;exports.RadioButton=$n;exports.ScatterPlot=pr;exports.SideMenu=Zr;exports.SideMenuContext=Ie;exports.Tabs=Qo;exports.TitleField=ce;exports.ToggleSwitch=Cn;exports.YandexMapSelector=Bn;exports.apiRequest=q;exports.authStorage=ut;exports.confirmCallAuth=Ae;exports.formatDate=Ii;exports.formatExactDate=_e;exports.formatMoney=ie;exports.formatRelativeTime=Fe;exports.formatRelativeTimeExtended=Bi;exports.generateAvatar=Pi;exports.getInitials=Ei;exports.getSessionInfo=di;exports.initiateCallAuth=Be;exports.parseDateInput=Ri;exports.parseMoney=Yn;exports.stringToColor=ze;
