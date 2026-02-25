@@ -4017,7 +4017,7 @@ const Fi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 `, Vr = n.h2`
   font-size: 20px;
-  margin-bottom: 20px;
+  margin: 0;
   color: #333;
   text-align: left;
 `, Zr = n.form`

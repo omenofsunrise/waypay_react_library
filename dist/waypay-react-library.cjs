@@ -2073,7 +2073,7 @@ React keys must be passed directly to JSX without using spread:
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 `,xi=o.h2`
   font-size: 20px;
-  margin-bottom: 20px;
+  margin: 0;
   color: #333;
   text-align: left;
 `,fi=o.form`

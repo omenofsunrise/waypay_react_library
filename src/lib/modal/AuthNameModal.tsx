@@ -85,7 +85,7 @@ const ModalContent = styled.div`
 
 const ModalTitle = styled.h2`
   font-size: 20px;
-  margin-bottom: 20px;
+  margin: 0;
   color: #333;
   text-align: left;
 `;
