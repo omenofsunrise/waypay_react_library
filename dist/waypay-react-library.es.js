@@ -3685,9 +3685,9 @@ const Hi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
 }), kr = ({ collapsed: e }) => /* @__PURE__ */ t.jsx(
   "svg",
   {
-    width: "32",
-    height: "28",
-    viewBox: "0 0 32 28",
+    width: "64",
+    height: "56",
+    viewBox: "0 0 64 56",
     fill: "none",
     xmlns: "http://www.w3.org/2000/svg",
     style: {
@@ -3943,6 +3943,7 @@ const Hi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   flex: 1;
   display: flex;
   align-items: center;
+  justify-content: center;
 `, zr = n.div`
   display: flex;
   flex-direction: column;
