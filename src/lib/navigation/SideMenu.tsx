@@ -37,9 +37,9 @@ export interface SideMenuProps {
 // Дефолтная SVG иконка
 const DefaultArrowIcon = ({ collapsed }: { collapsed: boolean }) => (
   <svg
-    width="16"
-    height="14"
-    viewBox="0 0 16 14"
+    width="32"
+    height="28"
+    viewBox="0 0 32 28"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     style={{
@@ -424,7 +424,7 @@ const SideMenuContainer = styled.div<{
 const TopSection = styled.div`
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: center;
   margin-bottom: 28px;
 `;
 
