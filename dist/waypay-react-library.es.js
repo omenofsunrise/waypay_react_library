@@ -3981,10 +3981,13 @@ const Hi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   
   /* В свернутом состоянии делаем иконку квадратной с отступами */
   ${({ $collapsed: e }) => e && `
-    width: 40px;
-    height: 40px;
-    margin: 8px auto; /* Увеличиваем вертикальные отступы и центрируем */
+    width: 48px;
+    height: 48px;
+    margin: 4px auto;
     padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   `}
 
   &:hover {
@@ -3999,13 +4002,24 @@ const Hi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: ${({ $collapsed: e }) => e ? "40px" : "21px"};
-  width: ${({ $collapsed: e }) => e ? "40px" : "21px"};
-  height: ${({ $collapsed: e }) => e ? "40px" : "auto"};
+  
+  ${({ $collapsed: e }) => e ? `
+    width: 48px;
+    height: 48px;
+  ` : `
+    min-width: 21px;
+    width: 21px;
+    height: auto;
+  `}
   
   & > svg {
-    width: ${({ $collapsed: e }) => e ? "24px" : "100%"};
-    height: ${({ $collapsed: e }) => e ? "24px" : "auto"};
+    ${({ $collapsed: e }) => e ? `
+      width: 24px;
+      height: 24px;
+    ` : `
+      width: 100%;
+      height: auto;
+    `}
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;

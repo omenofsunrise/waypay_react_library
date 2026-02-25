@@ -491,10 +491,13 @@ const MenuItem = styled.div<{
   
   /* В свернутом состоянии делаем иконку квадратной с отступами */
   ${({ $collapsed }) => $collapsed && `
-    width: 40px;
-    height: 40px;
-    margin: 8px auto; /* Увеличиваем вертикальные отступы и центрируем */
+    width: 48px;
+    height: 48px;
+    margin: 4px auto;
     padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   `}
 
   &:hover {
@@ -514,13 +517,24 @@ const IconWrapper = styled.div<{ $collapsed: boolean }>`
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: ${({ $collapsed }) => ($collapsed ? "40px" : "21px")};
-  width: ${({ $collapsed }) => ($collapsed ? "40px" : "21px")};
-  height: ${({ $collapsed }) => ($collapsed ? "40px" : "auto")};
+  
+  ${({ $collapsed }) => $collapsed ? `
+    width: 48px;
+    height: 48px;
+  ` : `
+    min-width: 21px;
+    width: 21px;
+    height: auto;
+  `}
   
   & > svg {
-    width: ${({ $collapsed }) => ($collapsed ? "24px" : "100%")};
-    height: ${({ $collapsed }) => ($collapsed ? "24px" : "auto")};
+    ${({ $collapsed }) => $collapsed ? `
+      width: 24px;
+      height: 24px;
+    ` : `
+      width: 100%;
+      height: auto;
+    `}
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
