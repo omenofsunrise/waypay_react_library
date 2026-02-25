@@ -479,7 +479,7 @@ const MenuItem = styled.div<{
   align-items: center;
   justify-content: ${({ $collapsed }) => ($collapsed ? "center" : "flex-start")};
   gap: ${({ $collapsed }) => ($collapsed ? "0" : "12px")};
-  padding: ${({ $collapsed }) => ($collapsed ? "8px 0" : "10px 17px")};
+  padding: ${({ $collapsed }) => ($collapsed ? "2px 0" : "10px 17px")};
   margin: 4px 0;
   border-radius: 8px;
   cursor: ${({ $disabled }) => ($disabled ? "not-allowed" : "pointer")};

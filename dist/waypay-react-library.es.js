@@ -3970,7 +3970,7 @@ const Hi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   align-items: center;
   justify-content: ${({ $collapsed: e }) => e ? "center" : "flex-start"};
   gap: ${({ $collapsed: e }) => e ? "0" : "12px"};
-  padding: ${({ $collapsed: e }) => e ? "8px 0" : "10px 17px"};
+  padding: ${({ $collapsed: e }) => e ? "2px 0" : "10px 17px"};
   margin: 4px 0;
   border-radius: 8px;
   cursor: ${({ $disabled: e }) => e ? "not-allowed" : "pointer"};
