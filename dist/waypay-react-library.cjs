@@ -2043,9 +2043,9 @@ React keys must be passed directly to JSX without using spread:
   
   /* В свернутом состоянии делаем иконку квадратной */
   ${({$collapsed:e})=>e&&`
-    width: 50px;
-    height: 50px;
-    margin: 4px auto;
+    width: 40px;
+    height: 40px;
+    margin: 0 0;
     padding: 0;
   `}
 
