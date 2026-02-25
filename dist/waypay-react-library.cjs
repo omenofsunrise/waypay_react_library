@@ -1932,7 +1932,6 @@ React keys must be passed directly to JSX without using spread:
   align-items: center;
 `,Jr=n.main`
   flex: 1;
-  padding: 16px;
   overflow-y: auto;
   min-height: 0; /* Важно для flex-контейнера */
 `,Kr=n.nav`

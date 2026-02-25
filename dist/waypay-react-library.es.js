@@ -3870,7 +3870,6 @@ const Hi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   align-items: center;
 `, Mr = n.main`
   flex: 1;
-  padding: 16px;
   overflow-y: auto;
   min-height: 0; /* Важно для flex-контейнера */
 `, Sr = n.nav`

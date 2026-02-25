@@ -347,7 +347,6 @@ const MobileLogo = styled.div`
 
 const MobileContent = styled.main`
   flex: 1;
-  padding: 16px;
   overflow-y: auto;
   min-height: 0; /* Важно для flex-контейнера */
 `;
