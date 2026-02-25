@@ -2002,7 +2002,7 @@ React keys must be passed directly to JSX without using spread:
   border: none;
   cursor: pointer;
   padding: 6px;
-  margin-bottom: 16px;
+  margin-bottom: 0px;
 `,ii=o.div`
   width: 100%;
   display: flex;

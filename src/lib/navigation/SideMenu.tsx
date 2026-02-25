@@ -437,7 +437,7 @@ const ArrowButton = styled.button`
   border: none;
   cursor: pointer;
   padding: 6px;
-  margin-bottom: 16px;
+  margin-bottom: 0px;
 `;
 
 const LogoWrapper = styled.div<{ $collapsed: boolean }>`

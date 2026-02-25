@@ -3940,7 +3940,7 @@ const Hi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   border: none;
   cursor: pointer;
   padding: 6px;
-  margin-bottom: 16px;
+  margin-bottom: 0px;
 `, Rr = n.div`
   width: 100%;
   display: flex;
