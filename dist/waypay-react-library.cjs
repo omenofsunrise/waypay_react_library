@@ -2032,7 +2032,7 @@ React keys must be passed directly to JSX without using spread:
   align-items: center;
   justify-content: ${({$collapsed:e})=>e?"center":"flex-start"};
   gap: ${({$collapsed:e})=>e?"0":"12px"};
-  padding: ${({$collapsed:e})=>e?"2px 0":"10px 17px"};
+  padding: ${({$collapsed:e})=>e?"0 0":"10px 17px"};
   margin: 4px 0;
   border-radius: 8px;
   cursor: ${({$disabled:e})=>e?"not-allowed":"pointer"};
@@ -2043,8 +2043,8 @@ React keys must be passed directly to JSX without using spread:
   
   /* В свернутом состоянии делаем иконку квадратной */
   ${({$collapsed:e})=>e&&`
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     margin: 4px auto;
     padding: 0;
   `}

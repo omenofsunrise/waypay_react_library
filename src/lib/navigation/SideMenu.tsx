@@ -479,7 +479,7 @@ const MenuItem = styled.div<{
   align-items: center;
   justify-content: ${({ $collapsed }) => ($collapsed ? "center" : "flex-start")};
   gap: ${({ $collapsed }) => ($collapsed ? "0" : "12px")};
-  padding: ${({ $collapsed }) => ($collapsed ? "2px 0" : "10px 17px")};
+  padding: ${({ $collapsed }) => ($collapsed ? "0 0" : "10px 17px")};
   margin: 4px 0;
   border-radius: 8px;
   cursor: ${({ $disabled }) => ($disabled ? "not-allowed" : "pointer")};
@@ -491,8 +491,8 @@ const MenuItem = styled.div<{
   
   /* В свернутом состоянии делаем иконку квадратной */
   ${({ $collapsed }) => $collapsed && `
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     margin: 4px auto;
     padding: 0;
   `}
