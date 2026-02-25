@@ -911,7 +911,7 @@ const gi = {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 8px 12px;
+  padding: 12px 12px;
   background-color: ${({ disabled: e, $bg: o, $disabledBg: s }) => e ? s : o};
   border: none;
   border-radius: 8px;
@@ -3992,8 +3992,8 @@ const Fi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
         i && /* @__PURE__ */ t.jsx(qr, { children: i })
       ] }),
       /* @__PURE__ */ t.jsxs(Gr, { children: [
-        /* @__PURE__ */ t.jsx(oe, { type: "submit", disabled: r, children: r ? "Загрузка..." : "Продолжить" }),
-        /* @__PURE__ */ t.jsx(oe, { isPrimary: !1, type: "button", onClick: o, disabled: r, children: "Отмена" })
+        /* @__PURE__ */ t.jsx(oe, { isPrimary: !1, type: "button", onClick: o, disabled: r, children: "Отмена" }),
+        /* @__PURE__ */ t.jsx(oe, { type: "submit", disabled: r, children: r ? "Загрузка..." : "Продолжить" })
       ] })
     ] })
   ] }) });
@@ -4019,13 +4019,13 @@ const Fi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   font-size: 20px;
   margin-bottom: 20px;
   color: #333;
-  text-align: center;
+  text-align: left;
 `, Zr = n.form`
   display: flex;
   flex-direction: column;
 `, Ur = n.div`
   margin-bottom: 20px;
-`, Xr = n.label`
+`, Xr = n.h2`
   display: block;
   font-size: 18px;
   color: #555;

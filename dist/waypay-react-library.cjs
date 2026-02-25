@@ -222,7 +222,7 @@ React keys must be passed directly to JSX without using spread:
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 8px 12px;
+  padding: 12px 12px;
   background-color: ${({disabled:e,$bg:n,$disabledBg:s})=>e?s:n};
   border: none;
   border-radius: 8px;
@@ -2053,7 +2053,7 @@ React keys must be passed directly to JSX without using spread:
     box-shadow: 0 0 0 0.2rem rgba(37, 203, 161, 0.25);
     background-color: rgba(255, 255, 255, 1);
   }
-`,Be=(e,n)=>q("/auth/call/initiate",{method:"POST",body:{phone:e,user_type:n}}),Ae=(e,n,s,i)=>q("/auth/call/confirm",{method:"POST",body:{phone:e,check_id:n,user_type:s,name:i}}),di=()=>q("/auth/session/info",{method:"GET"}),pi=({isOpen:e,onClose:n,onSubmit:s,error:i,isLoading:r=!1})=>{const[c,u]=w.useState("");if(!e)return null;const g=k=>{k.preventDefault(),s(c)};return t.jsx(ui,{onClick:n,children:t.jsxs(hi,{onClick:k=>k.stopPropagation(),children:[t.jsx(xi,{children:"Регистрация"}),t.jsxs(fi,{onSubmit:g,children:[t.jsxs(gi,{children:[t.jsx(bi,{children:"Как вас зовут?"}),t.jsx(le,{type:"text",value:c,onChange:k=>u(k.target.value),placeholder:"Иванов Иван Иванович",disabled:r,autoFocus:!0}),i&&t.jsx(mi,{children:i})]}),t.jsxs(wi,{children:[t.jsx(Q,{type:"submit",disabled:r,children:r?"Загрузка...":"Продолжить"}),t.jsx(Q,{isPrimary:!1,type:"button",onClick:n,disabled:r,children:"Отмена"})]})]})]})})},ui=o.div`
+`,Be=(e,n)=>q("/auth/call/initiate",{method:"POST",body:{phone:e,user_type:n}}),Ae=(e,n,s,i)=>q("/auth/call/confirm",{method:"POST",body:{phone:e,check_id:n,user_type:s,name:i}}),di=()=>q("/auth/session/info",{method:"GET"}),pi=({isOpen:e,onClose:n,onSubmit:s,error:i,isLoading:r=!1})=>{const[c,u]=w.useState("");if(!e)return null;const g=k=>{k.preventDefault(),s(c)};return t.jsx(ui,{onClick:n,children:t.jsxs(hi,{onClick:k=>k.stopPropagation(),children:[t.jsx(xi,{children:"Регистрация"}),t.jsxs(fi,{onSubmit:g,children:[t.jsxs(gi,{children:[t.jsx(bi,{children:"Как вас зовут?"}),t.jsx(le,{type:"text",value:c,onChange:k=>u(k.target.value),placeholder:"Иванов Иван Иванович",disabled:r,autoFocus:!0}),i&&t.jsx(mi,{children:i})]}),t.jsxs(wi,{children:[t.jsx(Q,{isPrimary:!1,type:"button",onClick:n,disabled:r,children:"Отмена"}),t.jsx(Q,{type:"submit",disabled:r,children:r?"Загрузка...":"Продолжить"})]})]})]})})},ui=o.div`
   position: fixed;
   top: 0;
   left: 0;
@@ -2075,13 +2075,13 @@ React keys must be passed directly to JSX without using spread:
   font-size: 20px;
   margin-bottom: 20px;
   color: #333;
-  text-align: center;
+  text-align: left;
 `,fi=o.form`
   display: flex;
   flex-direction: column;
 `,gi=o.div`
   margin-bottom: 20px;
-`,bi=o.label`
+`,bi=o.h2`
   display: block;
   font-size: 18px;
   color: #555;

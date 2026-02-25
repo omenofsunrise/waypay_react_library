@@ -89,7 +89,7 @@ const ButtonContainer = styled.button<{
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 8px 12px;
+  padding: 12px 12px;
   background-color: ${({ disabled, $bg, $disabledBg }) =>
     disabled ? $disabledBg : $bg};
   border: none;

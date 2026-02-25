@@ -47,11 +47,12 @@ const AuthNameModal: React.FC<AuthNameModalProps> = ({
           </FormGroup>
 
           <ButtonGroup>
-            <DefaultButton type="submit" disabled={isLoading}>
-              {isLoading ? "Загрузка..." : "Продолжить"}
-            </DefaultButton>
             <DefaultButton isPrimary={false} type="button" onClick={onClose} disabled={isLoading}>
               Отмена
+            </DefaultButton>
+
+            <DefaultButton type="submit" disabled={isLoading}>
+              {isLoading ? "Загрузка..." : "Продолжить"}
             </DefaultButton>
           </ButtonGroup>
         </Form>
@@ -86,7 +87,7 @@ const ModalTitle = styled.h2`
   font-size: 20px;
   margin-bottom: 20px;
   color: #333;
-  text-align: center;
+  text-align: left;
 `;
 
 const Form = styled.form`
@@ -98,7 +99,7 @@ const FormGroup = styled.div`
   margin-bottom: 20px;
 `;
 
-const InputLabel = styled.label`
+const InputLabel = styled.h2`
   display: block;
   font-size: 18px;
   color: #555;
