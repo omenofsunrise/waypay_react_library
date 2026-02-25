@@ -93,7 +93,8 @@ const ButtonContainer = styled.button<{
   background-color: ${({ disabled, $bg, $disabledBg }) =>
     disabled ? $disabledBg : $bg};
   border: none;
-  border-radius: 10px;
+  border-radius: 8px;
+  min-height: 25px;
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
   color: ${({ $textColor }) => $textColor};
   font-size: 15px;

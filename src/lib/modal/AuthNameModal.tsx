@@ -9,7 +9,6 @@ type AuthNameModalProps = {
   onSubmit: (name: string) => void;
   error?: string;
   isLoading?: boolean;
-  callPhone?: string;
 };
 
 const AuthNameModal: React.FC<AuthNameModalProps> = ({
@@ -17,8 +16,7 @@ const AuthNameModal: React.FC<AuthNameModalProps> = ({
   onClose,
   onSubmit,
   error,
-  isLoading = false,
-  callPhone = "",
+  isLoading = false
 }) => {
   const [fullName, setFullName] = useState("");
 
@@ -32,13 +30,7 @@ const AuthNameModal: React.FC<AuthNameModalProps> = ({
   return (
     <ModalOverlay onClick={onClose}>
       <ModalContent onClick={(e) => e.stopPropagation()}>
-        <ModalTitle>Завершение регистрации</ModalTitle>
-        
-        <CallPhoneInfo>
-          <InfoLabel>Номер для звонка:</InfoLabel>
-          <CallPhoneNumber>{callPhone}</CallPhoneNumber>
-          <InfoText>Позвоните на этот номер после ввода ФИО</InfoText>
-        </CallPhoneInfo>
+        <ModalTitle>Регистрация</ModalTitle>
 
         <Form onSubmit={handleSubmit}>
           <FormGroup>
@@ -97,32 +89,6 @@ const ModalTitle = styled.h2`
   text-align: center;
 `;
 
-const CallPhoneInfo = styled.div`
-  background: #f8f9fa;
-  padding: 16px;
-  border-radius: 8px;
-  margin-bottom: 24px;
-  text-align: center;
-`;
-
-const InfoLabel = styled.div`
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 8px;
-`;
-
-const CallPhoneNumber = styled.div`
-  font-size: 22px;
-  font-weight: bold;
-  color: rgba(0, 125, 136, 1);
-  margin-bottom: 8px;
-`;
-
-const InfoText = styled.div`
-  font-size: 13px;
-  color: #888;
-`;
-
 const Form = styled.form`
   display: flex;
   flex-direction: column;
@@ -134,7 +100,7 @@ const FormGroup = styled.div`
 
 const InputLabel = styled.label`
   display: block;
-  font-size: 14px;
+  font-size: 18px;
   color: #555;
   margin-bottom: 8px;
 `;

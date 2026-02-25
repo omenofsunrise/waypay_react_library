@@ -238,7 +238,6 @@ const AuthPage: React.FC<AuthPageProps> = ({
         onSubmit={handleNameSubmit}
         error={nameError}
         isLoading={isLoading}
-        callPhone={callPhone}
       />
 
       {/* Модалка с номером для звонка */}

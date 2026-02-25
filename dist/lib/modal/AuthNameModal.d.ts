@@ -5,7 +5,6 @@ type AuthNameModalProps = {
     onSubmit: (name: string) => void;
     error?: string;
     isLoading?: boolean;
-    callPhone?: string;
 };
 declare const AuthNameModal: React.FC<AuthNameModalProps>;
 export default AuthNameModal;
