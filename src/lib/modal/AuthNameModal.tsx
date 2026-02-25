@@ -91,7 +91,7 @@ const Title = styled.h2`
   min-width: 0;
   display: block;
 
-  font-size: 24px;
+  font-size: 27px;
   line-height: 1.25;
   font-weight: 700;
   color: #0f172a;

@@ -222,7 +222,7 @@ React keys must be passed directly to JSX without using spread:
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 12px 12px;
+  padding: 8px 12px;
   background-color: ${({disabled:e,$bg:n,$disabledBg:s})=>e?s:n};
   border: none;
   border-radius: 8px;
@@ -2079,7 +2079,7 @@ React keys must be passed directly to JSX without using spread:
   min-width: 0;
   display: block;
 
-  font-size: 24px;
+  font-size: 27px;
   line-height: 1.25;
   font-weight: 700;
   color: #0f172a;

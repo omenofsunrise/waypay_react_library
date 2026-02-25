@@ -911,7 +911,7 @@ const gi = {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 12px 12px;
+  padding: 8px 12px;
   background-color: ${({ disabled: e, $bg: o, $disabledBg: s }) => e ? s : o};
   border: none;
   border-radius: 8px;
@@ -4023,7 +4023,7 @@ const Fi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   min-width: 0;
   display: block;
 
-  font-size: 24px;
+  font-size: 27px;
   line-height: 1.25;
   font-weight: 700;
   color: #0f172a;
