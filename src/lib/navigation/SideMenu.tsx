@@ -30,6 +30,8 @@ export interface SideMenuProps {
   mobileBreakpoint?: number;
   /** Показывать ли лейблы в Bottom Navigation */
   showBottomLabels?: boolean;
+  /** Дочерние элементы (контент страницы) */
+  children?: React.ReactNode;
 }
 
 const SideMenu: React.FC<SideMenuProps> = ({
@@ -48,6 +50,7 @@ const SideMenu: React.FC<SideMenuProps> = ({
   style,
   mobileBreakpoint = 768,
   showBottomLabels = true,
+  children, // Добавляем children
 }) => {
   const contextValue = useContext(SideMenuContext);
 
@@ -235,7 +238,7 @@ const SideMenu: React.FC<SideMenuProps> = ({
     );
   };
 
-  // Если мобильное устройство - показываем Bottom Navigation
+  // Если мобильное устройство - показываем Bottom Navigation с контентом
   if (isMobile) {
     return (
       <MobileContainer className={className} style={style}>
@@ -244,9 +247,9 @@ const SideMenu: React.FC<SideMenuProps> = ({
           {logo && <MobileLogo>{logo}</MobileLogo>}
         </MobileHeader>
         
-        {/* Основной контент (можно добавить children или оставить пустым) */}
+        {/* Основной контент (children) */}
         <MobileContent>
-          {/* Здесь может быть контент страницы */}
+          {children}
         </MobileContent>
         
         {/* Bottom Navigation */}
@@ -284,13 +287,16 @@ const SideMenu: React.FC<SideMenuProps> = ({
 
       {contextMenuContent}
       <RightBorder $collapsed={collapsed} />
+      
+      {/* Добавляем children для десктопной версии (если нужно) */}
+      {children}
     </SideMenuContainer>
   );
 };
 
 export default SideMenu;
 
-// Стили для мобильной версии
+
 const MobileContainer = styled.div`
   width: 100%;
   min-height: 100vh;
@@ -304,6 +310,9 @@ const MobileHeader = styled.header`
   padding: 16px;
   border-bottom: 1px solid rgba(209, 213, 219, 1);
   background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 `;
 
 const MobileLogo = styled.div`
@@ -315,6 +324,7 @@ const MobileContent = styled.main`
   flex: 1;
   padding: 16px;
   overflow-y: auto;
+  min-height: 0; /* Важно для flex-контейнера */
 `;
 
 const BottomNavContainer = styled.nav`
@@ -328,7 +338,7 @@ const BottomNavContainer = styled.nav`
   bottom: 0;
   width: 100%;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
-  z-index: 100;
+  z-index: 10;
 `;
 
 const BottomNavItem = styled.div<{ $selected?: boolean; $disabled?: boolean }>`

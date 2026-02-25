@@ -26,6 +26,8 @@ export interface SideMenuProps {
     mobileBreakpoint?: number;
     /** Показывать ли лейблы в Bottom Navigation */
     showBottomLabels?: boolean;
+    /** Дочерние элементы (контент страницы) */
+    children?: React.ReactNode;
 }
 declare const SideMenu: React.FC<SideMenuProps>;
 export default SideMenu;
