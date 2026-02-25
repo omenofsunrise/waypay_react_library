@@ -30,11 +30,9 @@ const AuthNameModal: React.FC<AuthNameModalProps> = ({
   return (
     <ModalOverlay onClick={onClose}>
       <ModalContent onClick={(e) => e.stopPropagation()}>
-        <Title>Регистрация</Title>
-
         <Form onSubmit={handleSubmit}>
-          <FormGroup>
-            <InputLabel>Как вас зовут?</InputLabel>
+          <InputLabel>Как вас зовут?</InputLabel>
+          <InputRow>
             <CustomInput
               type="text"
               value={fullName}
@@ -42,19 +40,16 @@ const AuthNameModal: React.FC<AuthNameModalProps> = ({
               placeholder="Иванов Иван Иванович"
               disabled={isLoading}
               autoFocus
+              style={{ flex: 1 }}
             />
-            {error && <FieldError>{error}</FieldError>}
-          </FormGroup>
-
-          <ButtonGroup>
-            <DefaultButton isPrimary={false} type="button" onClick={onClose} disabled={isLoading}>
-              Отмена
-            </DefaultButton>
-
-            <DefaultButton type="submit" disabled={isLoading}>
-              {isLoading ? "Загрузка..." : "Продолжить"}
-            </DefaultButton>
-          </ButtonGroup>
+            <SubmitButton 
+              type="submit" 
+              disabled={isLoading || !fullName.trim()}
+            >
+              {isLoading ? "..." : "→"}
+            </SubmitButton>
+          </InputRow>
+          {error && <FieldError>{error}</FieldError>}
         </Form>
       </ModalContent>
     </ModalOverlay>
@@ -79,27 +74,8 @@ const ModalContent = styled.div`
   padding: 30px;
   border-radius: 12px;
   width: 90%;
-  max-width: 400px;
+  max-width: 450px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-`;
-
-const Title = styled.h2`
-  margin: 0;
-  padding: 0;
-
-  flex: 1;
-  min-width: 0;
-  display: block;
-
-  font-size: 27px;
-  line-height: 1.25;
-  font-weight: 700;
-  color: #0f172a;
-
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  text-align: left;
 `;
 
 const Form = styled.form`
@@ -107,28 +83,39 @@ const Form = styled.form`
   flex-direction: column;
 `;
 
-const FormGroup = styled.div`
-  margin-bottom: 20px;
-`;
-
 const InputLabel = styled.h2`
   display: block;
-  font-size: 21px;
-  color: #555;
-  margin-bottom: 8px;
+  font-size: 27px;
+  color: black;
+  margin-bottom: 16px;
+`;
+
+const InputRow = styled.div`
+  display: flex;
+  gap: 10px;
+  align-items: center;
+`;
+
+const SubmitButton = styled(DefaultButton)`
+  width: auto;
+  min-width: 50px;
+  height: 50px;
+  padding: 0 20px;
+  font-size: 20px;
+  border-radius: 8px;
+  white-space: nowrap;
+  
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
 `;
 
 const FieldError = styled.div`
   color: #e74c3c;
   font-size: 12px;
-  margin-top: 5px;
+  margin-top: 8px;
   text-align: left;
-`;
-
-const ButtonGroup = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 100%; // Убедитесь, что контейнер занимает всю доступную ширину
 `;
 
 export default AuthNameModal;
