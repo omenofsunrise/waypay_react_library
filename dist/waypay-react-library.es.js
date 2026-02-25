@@ -4120,7 +4120,7 @@ const Bi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
         const Z = await Nr($, S, o, O || W);
         Z.access_token && Z.refresh_token && (N.current && window.clearInterval(N.current), k(!1), F(!1), _(""), D(null), e(Z.access_token));
       } catch (Z) {
-        console.error("Verification error:", Z), z("Ошибка проверки авторизации");
+        console.error("Verification error:", Z);
       } finally {
         Y(!1);
       }

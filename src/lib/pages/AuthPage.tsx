@@ -185,7 +185,7 @@ const AuthPage: React.FC<AuthPageProps> = ({
       }
     } catch (error) {
       console.error("Verification error:", error);
-      setVerificationError("Ошибка проверки авторизации");
+      // setVerificationError("Ошибка проверки авторизации");
     } finally {
       setIsVerifying(false);
     }
