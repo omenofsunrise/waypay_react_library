@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import CustomInput from "../inputs/CustomInput";
+import { DefaultButton } from "../..";
 
 type AuthNameModalProps = {
   isOpen: boolean;
@@ -40,8 +42,8 @@ const AuthNameModal: React.FC<AuthNameModalProps> = ({
 
         <Form onSubmit={handleSubmit}>
           <FormGroup>
-            <InputLabel>Введите ФИО</InputLabel>
-            <NameInput
+            <InputLabel>Как вас зовут?</InputLabel>
+            <CustomInput
               type="text"
               value={fullName}
               onChange={(e) => setFullName(e.target.value)}
@@ -53,12 +55,12 @@ const AuthNameModal: React.FC<AuthNameModalProps> = ({
           </FormGroup>
 
           <ButtonGroup>
-            <SubmitButton type="submit" disabled={isLoading}>
+            <DefaultButton type="submit" disabled={isLoading}>
               {isLoading ? "Загрузка..." : "Продолжить"}
-            </SubmitButton>
-            <CancelButton type="button" onClick={onClose} disabled={isLoading}>
+            </DefaultButton>
+            <DefaultButton isPrimary={false} type="button" onClick={onClose} disabled={isLoading}>
               Отмена
-            </CancelButton>
+            </DefaultButton>
           </ButtonGroup>
         </Form>
       </ModalContent>
@@ -137,26 +139,6 @@ const InputLabel = styled.label`
   margin-bottom: 8px;
 `;
 
-const NameInput = styled.input`
-  width: 100%;
-  padding: 14px;
-  border: 2px solid #e0e0e0;
-  border-radius: 8px;
-  font-size: 16px;
-  transition: all 0.3s;
-  outline: none;
-
-  &:focus {
-    border-color: rgba(0, 125, 136, 1);
-    box-shadow: 0 0 0 3px rgba(0, 125, 136, 0.1);
-  }
-
-  &:disabled {
-    background: #f5f5f5;
-    cursor: not-allowed;
-  }
-`;
-
 const FieldError = styled.div`
   color: #e74c3c;
   font-size: 12px;
@@ -167,54 +149,6 @@ const FieldError = styled.div`
 const ButtonGroup = styled.div`
   display: flex;
   gap: 12px;
-`;
-
-const SubmitButton = styled.button`
-  flex: 2;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 125, 136, 1) 0%,
-    rgba(37, 203, 161, 1) 100%
-  );
-  color: white;
-  border: none;
-  padding: 14px;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s;
-
-  &:hover:not(:disabled) {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 125, 136, 0.3);
-  }
-
-  &:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
-`;
-
-const CancelButton = styled.button`
-  flex: 1;
-  background: #f5f5f5;
-  color: #666;
-  border: 1px solid #ddd;
-  padding: 14px;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.3s;
-
-  &:hover:not(:disabled) {
-    background: #eeeeee;
-  }
-
-  &:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
 `;
 
 export default AuthNameModal;
