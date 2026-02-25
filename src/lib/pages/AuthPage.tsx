@@ -252,15 +252,17 @@ const AuthPage: React.FC<AuthPageProps> = ({
   );
 };
 
-// Стили
+// Обновленные стили
 const AuthContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  overflow: hidden; /* Отключаем прокрутку */
   padding: 20px;
-  background: linear-gradient(135deg, #f7fafa 0%, #eef6f7 100%);
+  background: white; /* Меняем на белый фон */
+  box-sizing: border-box; /* Учитываем padding в размерах */
 `;
 
 const AuthCard = styled.div`
@@ -269,9 +271,10 @@ const AuthCard = styled.div`
   box-shadow: 0 10px 30px rgba(0, 125, 136, 0.1);
   width: 100%;
   max-width: 440px;
+  max-height: calc(100vh - 40px); /* Ограничиваем высоту с учетом padding контейнера */
+  overflow-y: auto; /* Добавляем прокрутку внутри карточки если контент не помещается */
   padding: 40px;
   position: relative;
-  overflow: hidden;
 
   &::before {
     content: "";
@@ -289,7 +292,17 @@ const AuthCard = styled.div`
 
   @media (max-width: 480px) {
     padding: 30px 20px;
+    max-height: calc(100vh - 40px);
   }
+
+  /* Скрываем скроллбар для Chrome, Safari и Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Скрываем скроллбар для IE, Edge и Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 `;
 
 const AuthForm = styled.form`
@@ -312,6 +325,9 @@ const FormGroup = styled.div`
 const InputContainer = styled.div`
   position: relative;
   width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const SubmitButton = styled.button`

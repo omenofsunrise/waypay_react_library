@@ -57,6 +57,7 @@ const StyledInput = styled.input`
   transition: all 0.3s ease;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   outline: none;
+  display: block;
 
   &:focus {
     border-color: rgba(37, 203, 161, 1);

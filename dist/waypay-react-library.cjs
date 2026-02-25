@@ -2045,6 +2045,7 @@ React keys must be passed directly to JSX without using spread:
   transition: all 0.3s ease;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   outline: none;
+  display: block;
 
   &:focus {
     border-color: rgba(37, 203, 161, 1);
@@ -2178,17 +2179,20 @@ React keys must be passed directly to JSX without using spread:
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  overflow: hidden; /* Отключаем прокрутку */
   padding: 20px;
-  background: linear-gradient(135deg, #f7fafa 0%, #eef6f7 100%);
+  background: white; /* Меняем на белый фон */
+  box-sizing: border-box; /* Учитываем padding в размерах */
 `,Di=o.div`
   background: white;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 125, 136, 0.1);
   width: 100%;
   max-width: 440px;
+  max-height: calc(100vh - 40px); /* Ограничиваем высоту с учетом padding контейнера */
+  overflow-y: auto; /* Добавляем прокрутку внутри карточки если контент не помещается */
   padding: 40px;
   position: relative;
-  overflow: hidden;
 
   &::before {
     content: "";
@@ -2206,7 +2210,17 @@ React keys must be passed directly to JSX without using spread:
 
   @media (max-width: 480px) {
     padding: 30px 20px;
+    max-height: calc(100vh - 40px);
   }
+
+  /* Скрываем скроллбар для Chrome, Safari и Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Скрываем скроллбар для IE, Edge и Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 `,Li=o.form`
   display: flex;
   flex-direction: column;
@@ -2221,6 +2235,9 @@ React keys must be passed directly to JSX without using spread:
 `,Ii=o.div`
   position: relative;
   width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `,Ri=o.button`
   background: linear-gradient(
     90deg,
