@@ -2079,6 +2079,7 @@ React keys must be passed directly to JSX without using spread:
   font-size: 27px;
   color: black;
   margin-bottom: 16px;
+  margin-top: 0;
 `,gi=o.div`
   display: flex;
   gap: 10px;
@@ -2086,8 +2087,8 @@ React keys must be passed directly to JSX without using spread:
 `,bi=o(ee)`
   width: auto;
   min-width: 50px;
-  height: 50px;
-  padding: 0 20px;
+  height: 40px;
+  padding: 0 10px;
   font-size: 20px;
   border-radius: 8px;
   white-space: nowrap;

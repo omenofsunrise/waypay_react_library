@@ -4025,6 +4025,7 @@ const Bi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   font-size: 27px;
   color: black;
   margin-bottom: 16px;
+  margin-top: 0;
 `, Ur = n.div`
   display: flex;
   gap: 10px;
@@ -4032,8 +4033,8 @@ const Bi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
 `, Xr = n(se)`
   width: auto;
   min-width: 50px;
-  height: 50px;
-  padding: 0 20px;
+  height: 40px;
+  padding: 0 10px;
   font-size: 20px;
   border-radius: 8px;
   white-space: nowrap;

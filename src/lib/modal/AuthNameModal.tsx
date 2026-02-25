@@ -88,6 +88,7 @@ const InputLabel = styled.h2`
   font-size: 27px;
   color: black;
   margin-bottom: 16px;
+  margin-top: 0;
 `;
 
 const InputRow = styled.div`
@@ -99,8 +100,8 @@ const InputRow = styled.div`
 const SubmitButton = styled(DefaultButton)`
   width: auto;
   min-width: 50px;
-  height: 50px;
-  padding: 0 20px;
+  height: 40px;
+  padding: 0 10px;
   font-size: 20px;
   border-radius: 8px;
   white-space: nowrap;
