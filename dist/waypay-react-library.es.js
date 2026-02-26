@@ -2085,7 +2085,7 @@ const ji = {
   background: rgba(15, 23, 42, 0.55);
   display: grid;
   place-items: center;
-  padding: 16px;
+  padding: 40px;
   z-index: 1000;
 `, un = n.div`
   width: min(100%, ${({ $width: e }) => e});

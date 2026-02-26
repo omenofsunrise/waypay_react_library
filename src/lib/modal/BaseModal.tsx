@@ -132,7 +132,7 @@ const Backdrop = styled.div`
   background: rgba(15, 23, 42, 0.55);
   display: grid;
   place-items: center;
-  padding: 16px;
+  padding: 40px;
   z-index: 1000;
 `;
 
