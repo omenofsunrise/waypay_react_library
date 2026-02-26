@@ -1821,7 +1821,6 @@ const ji = {
   height: auto;
   min-height: 38px;
   box-sizing: border-box;
-  max-width: 500px;
   background-color: white;
   color: black;
   padding: 5px;
