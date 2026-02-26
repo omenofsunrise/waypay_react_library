@@ -885,19 +885,20 @@ React keys must be passed directly to JSX without using spread:
   background: rgba(15, 23, 42, 0.55);
   display: grid;
   place-items: center;
-  padding: 40px;
+  padding: 16px;
   z-index: 1000;
 `,Sn=n.div`
   width: min(100%, ${({$width:e})=>e});
-  max-height: min(85vh, 720px);
+  max-height: min(85vh, 820px);
   height: fit-content;
 
   background: #ffffff;
   border: 1px solid rgba(15, 23, 42, 0.12);
-  border-radius: 16px;
+  border-radius: 8px;
 
   box-shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
   overflow: hidden;
+  padding: 40px;
 
   display: flex;
   flex-direction: column;
