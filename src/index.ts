@@ -17,6 +17,7 @@ export { default as ExportButton } from "./lib/buttons/ExportButton";
 export { default as CustomSelect } from "./lib/inputs/CustomSelect";
 export { default as Checkbox } from "./lib/inputs/Checkbox";
 export { default as CustomCalendar } from "./lib/inputs/CustomCalendar";
+export { InputRow, InputContainer, InputLabel } from "./lib/containers/InputComponents";
 export { default as CustomInput } from "./lib/inputs/CustomInput";
 export { default as Pagination } from "./lib/inputs/Pagination";
 export { default as CustomTextArea } from "./lib/inputs/CustomTextArea";

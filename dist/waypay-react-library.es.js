@@ -36,11 +36,11 @@ function Ne() {
       switch (a) {
         case D:
           return "Fragment";
-        case I:
+        case P:
           return "Profiler";
         case k:
           return "StrictMode";
-        case P:
+        case I:
           return "Suspense";
         case H:
           return "SuspenseList";
@@ -221,7 +221,7 @@ React keys must be passed directly to JSX without using spread:
     function v(a) {
       return typeof a == "object" && a !== null && a.$$typeof === h;
     }
-    var d = q, h = /* @__PURE__ */ Symbol.for("react.transitional.element"), l = /* @__PURE__ */ Symbol.for("react.portal"), D = /* @__PURE__ */ Symbol.for("react.fragment"), k = /* @__PURE__ */ Symbol.for("react.strict_mode"), I = /* @__PURE__ */ Symbol.for("react.profiler"), E = /* @__PURE__ */ Symbol.for("react.consumer"), _ = /* @__PURE__ */ Symbol.for("react.context"), F = /* @__PURE__ */ Symbol.for("react.forward_ref"), P = /* @__PURE__ */ Symbol.for("react.suspense"), H = /* @__PURE__ */ Symbol.for("react.suspense_list"), R = /* @__PURE__ */ Symbol.for("react.memo"), B = /* @__PURE__ */ Symbol.for("react.lazy"), N = /* @__PURE__ */ Symbol.for("react.activity"), A = /* @__PURE__ */ Symbol.for("react.client.reference"), f = d.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, p = Object.prototype.hasOwnProperty, $ = Array.isArray, T = console.createTask ? console.createTask : function() {
+    var d = q, h = /* @__PURE__ */ Symbol.for("react.transitional.element"), l = /* @__PURE__ */ Symbol.for("react.portal"), D = /* @__PURE__ */ Symbol.for("react.fragment"), k = /* @__PURE__ */ Symbol.for("react.strict_mode"), P = /* @__PURE__ */ Symbol.for("react.profiler"), E = /* @__PURE__ */ Symbol.for("react.consumer"), _ = /* @__PURE__ */ Symbol.for("react.context"), F = /* @__PURE__ */ Symbol.for("react.forward_ref"), I = /* @__PURE__ */ Symbol.for("react.suspense"), H = /* @__PURE__ */ Symbol.for("react.suspense_list"), R = /* @__PURE__ */ Symbol.for("react.memo"), B = /* @__PURE__ */ Symbol.for("react.lazy"), N = /* @__PURE__ */ Symbol.for("react.activity"), A = /* @__PURE__ */ Symbol.for("react.client.reference"), f = d.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, p = Object.prototype.hasOwnProperty, $ = Array.isArray, T = console.createTask ? console.createTask : function() {
       return null;
     };
     d = {
@@ -274,8 +274,8 @@ const Se = ({ x: e, y: o, items: s, onClose: i, ...r }) => {
   const b = (() => {
     if (!c.current) return { x: e, y: o };
     const d = c.current.offsetWidth, h = c.current.offsetHeight, l = window.innerWidth, D = window.innerHeight;
-    let k = e, I = o;
-    return k + d > l && (k = e - d), I + h > D && (I = o - h), { x: k, y: I };
+    let k = e, P = o;
+    return k + d > l && (k = e - d), P + h > D && (P = o - h), { x: k, y: P };
   })(), w = (d, h) => {
     d.submenu ? m(u === h ? null : h) : d.action && (d.action(), i());
   }, g = (d) => {
@@ -380,7 +380,7 @@ const Se = ({ x: e, y: o, items: s, onClose: i, ...r }) => {
   rowStyles: g = {},
   isLoading: v
 }) => {
-  const [d, h] = z(null), [l, D] = z(null), k = U(null), I = U(null), E = 500, _ = m !== void 0 ? m : d, F = (C) => {
+  const [d, h] = z(null), [l, D] = z(null), k = U(null), P = U(null), E = 500, _ = m !== void 0 ? m : d, F = (C) => {
     !e[C].isSortable || !r || r(C);
   }, H = w || ((C) => {
     const S = C[8];
@@ -401,13 +401,13 @@ const Se = ({ x: e, y: o, items: s, onClose: i, ...r }) => {
   }, A = (C, S) => {
     C.preventDefault(), N(C, S);
   }, f = (C, S) => {
-    i.length !== 0 && (I.current && clearTimeout(I.current), I.current = window.setTimeout(() => {
+    i.length !== 0 && (P.current && clearTimeout(P.current), P.current = window.setTimeout(() => {
       N(C, S);
     }, E));
   }, p = () => {
-    I.current && (clearTimeout(I.current), I.current = null);
+    P.current && (clearTimeout(P.current), P.current = null);
   }, $ = () => {
-    I.current && window.clearTimeout(I.current);
+    P.current && window.clearTimeout(P.current);
   }, T = () => {
     D(null);
   };
@@ -416,7 +416,7 @@ const Se = ({ x: e, y: o, items: s, onClose: i, ...r }) => {
       l && T();
     };
     return document.addEventListener("click", C), () => {
-      document.removeEventListener("click", C), I.current && clearTimeout(I.current);
+      document.removeEventListener("click", C), P.current && clearTimeout(P.current);
     };
   }, [l]);
   const O = (C, S, a) => {
@@ -1131,19 +1131,19 @@ const ji = {
   required: b = !1,
   ...w
 }) => {
-  const [g, v] = q.useState(!1), [d, h] = q.useState(!1), l = q.useRef(null), D = !!(o && !s && !g), k = (P) => {
+  const [g, v] = q.useState(!1), [d, h] = q.useState(!1), l = q.useRef(null), D = !!(o && !s && !g), k = (I) => {
     i && !y && i({
-      target: { value: P, name: m }
+      target: { value: I, name: m }
     }), h(!1), v(!1);
-  }, I = (P) => {
-    l.current && !l.current.contains(P.target) && (h(!1), v(!1));
+  }, P = (I) => {
+    l.current && !l.current.contains(I.target) && (h(!1), v(!1));
   }, E = () => {
     y || (h(!d), v(!d));
   };
-  q.useEffect(() => (document.addEventListener("mousedown", I), () => {
-    document.removeEventListener("mousedown", I);
+  q.useEffect(() => (document.addEventListener("mousedown", P), () => {
+    document.removeEventListener("mousedown", P);
   }), []);
-  const _ = u.find((P) => P.value === s), F = _ ? _.label : "";
+  const _ = u.find((I) => I.value === s), F = _ ? _.label : "";
   return /* @__PURE__ */ t.jsxs(mt, { ref: l, ...w, children: [
     /* @__PURE__ */ t.jsxs(wt, { children: [
       /* @__PURE__ */ t.jsxs(
@@ -1162,15 +1162,15 @@ const ji = {
           ]
         }
       ),
-      d && /* @__PURE__ */ t.jsx(Ct, { children: u.map((P) => /* @__PURE__ */ t.jsxs($t, { $isSelected: P.value === s, onClick: () => k(P.value), children: [
-        /* @__PURE__ */ t.jsx(Mt, { $isSelected: P.value === s, children: P.value === s && /* @__PURE__ */ t.jsx(St, {}) }),
-        /* @__PURE__ */ t.jsx(Lt, { children: P.label })
-      ] }, P.value)) })
+      d && /* @__PURE__ */ t.jsx(Ct, { children: u.map((I) => /* @__PURE__ */ t.jsxs($t, { $isSelected: I.value === s, onClick: () => k(I.value), children: [
+        /* @__PURE__ */ t.jsx(Mt, { $isSelected: I.value === s, children: I.value === s && /* @__PURE__ */ t.jsx(St, {}) }),
+        /* @__PURE__ */ t.jsx(Lt, { children: I.label })
+      ] }, I.value)) })
     ] }),
     o && /* @__PURE__ */ t.jsx(Dt, { isVisible: D, children: o }),
     r && c && /* @__PURE__ */ t.jsx(Tt, { children: c }),
     /* @__PURE__ */ t.jsx(Et, { name: m, value: s || "", onChange: () => {
-    }, tabIndex: -1, required: b, children: u.map((P) => /* @__PURE__ */ t.jsx("option", { value: P.value, children: P.label }, P.value)) })
+    }, tabIndex: -1, required: b, children: u.map((I) => /* @__PURE__ */ t.jsx("option", { value: I.value, children: I.label }, I.value)) })
   ] });
 }, mt = n.div`
   position: relative;
@@ -1303,9 +1303,9 @@ const ji = {
   }, y = (b) => {
     r || (b.key === "Enter" || b.key === " ") && (b.preventDefault(), m());
   };
-  return /* @__PURE__ */ t.jsxs(Pt, { className: s, onClick: m, onKeyPress: y, tabIndex: r ? -1 : 0, disabled: r, children: [
+  return /* @__PURE__ */ t.jsxs(It, { className: s, onClick: m, onKeyPress: y, tabIndex: r ? -1 : 0, disabled: r, children: [
     /* @__PURE__ */ t.jsx(
-      It,
+      Pt,
       {
         checked: e,
         isFocused: c,
@@ -1319,7 +1319,7 @@ const ji = {
     ),
     i && /* @__PURE__ */ t.jsx(Rt, { disabled: r, children: i })
   ] });
-}, Pt = n.div`
+}, It = n.div`
   display: flex;
   align-items: center;
   cursor: ${(e) => e.disabled ? "not-allowed" : "pointer"};
@@ -1328,7 +1328,7 @@ const ji = {
   &:focus {
     outline: none;
   }
-`, It = n.div`
+`, Pt = n.div`
   width: 16px;
   height: 16px;
   border-radius: 5px;
@@ -1366,7 +1366,7 @@ const ji = {
   }, []), Z(() => {
     w(o ? new Date(o) : null);
   }, [o]);
-  const I = (p) => {
+  const P = (p) => {
     const $ = new Date(Date.UTC(p.getFullYear(), p.getMonth(), p.getDate()));
     w(p);
     const T = $.toISOString().split("T")[0];
@@ -1381,7 +1381,7 @@ const ji = {
   }, F = (p) => {
     const $ = new Date(m);
     $.setMonth(p), y($), v(!1);
-  }, P = (p) => {
+  }, I = (p) => {
     const $ = new Date(m);
     $.setFullYear(p), y($), h(!1);
   }, H = () => {
@@ -1389,20 +1389,20 @@ const ji = {
     for (let x = 0; x < X; x++) {
       const j = a - X + x + 1, L = new Date(p, $ - 1, j), W = !!(b && L.getDate() === b.getDate() && L.getMonth() === b.getMonth() && L.getFullYear() === b.getFullYear());
       C.push(
-        /* @__PURE__ */ t.jsx(re, { selected: W, onClick: () => I(L), otherMonth: !0, children: j }, `prev-${j}`)
+        /* @__PURE__ */ t.jsx(re, { selected: W, onClick: () => P(L), otherMonth: !0, children: j }, `prev-${j}`)
       );
     }
     for (let x = 1; x <= V; x++) {
       const j = new Date(p, $, x), L = !!(b && j.getDate() === b.getDate() && j.getMonth() === b.getMonth() && j.getFullYear() === b.getFullYear());
       C.push(
-        /* @__PURE__ */ t.jsx(re, { selected: L, onClick: () => I(j), children: x }, `current-${x}`)
+        /* @__PURE__ */ t.jsx(re, { selected: L, onClick: () => P(j), children: x }, `current-${x}`)
       );
     }
     const M = S - C.length;
     for (let x = 1; x <= M; x++) {
       const j = new Date(p, $ + 1, x), L = !!(b && j.getDate() === b.getDate() && j.getMonth() === b.getMonth() && j.getFullYear() === b.getFullYear());
       C.push(
-        /* @__PURE__ */ t.jsx(re, { selected: L, onClick: () => I(j), otherMonth: !0, children: x }, `next-${x}`)
+        /* @__PURE__ */ t.jsx(re, { selected: L, onClick: () => P(j), otherMonth: !0, children: x }, `next-${x}`)
       );
     }
     return C;
@@ -1469,7 +1469,7 @@ const ji = {
               {
                 $selected: p === m.getFullYear(),
                 onClick: ($) => {
-                  $.stopPropagation(), P(p);
+                  $.stopPropagation(), I(p);
                 },
                 children: p
               },
@@ -1699,6 +1699,21 @@ const ji = {
   &:hover {
     text-decoration: underline;
   }
+`, Ti = n.div`
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+`, Ei = n.span`
+  text-align: left;
+  font-size: 14px;
+  color: black;
+  max-width: 90px;
+`, Ii = n.div`
+  margin-left: auto;
+  flex: 1;
+  max-width: 425px;
+  margin-top: 10px;
 `, Te = ({
   placeholder: e = "",
   customPlaceholder: o,
@@ -1717,8 +1732,8 @@ const ji = {
         /^\d*$/.test(l) && r?.(h);
         break;
       case "rubles": {
-        const k = h.target.selectionStart, I = h.target.value;
-        let E = I.replace(/[^\d]/g, "");
+        const k = h.target.selectionStart, P = h.target.value;
+        let E = P.replace(/[^\d]/g, "");
         if (E === "") {
           h.target.value = "", r(h);
           break;
@@ -1727,7 +1742,7 @@ const ji = {
         if (!isNaN(_)) {
           let F = _.toLocaleString("ru-RU");
           F += " ₽";
-          const P = v(I, k || 0), H = d(F, P);
+          const I = v(P, k || 0), H = d(F, I);
           h.target.value = F, r(h), setTimeout(() => {
             h.target.setSelectionRange(H, H);
           }, 0);
@@ -1738,8 +1753,8 @@ const ji = {
         l = l.replace(/[^\d.]/g, "");
         const k = l.split(".");
         k.length > 2 && (l = k[0] + "." + k.slice(1).join("")), k.length === 2 && k[1].length > 2 && (l = k[0] + "." + k[1].slice(0, 2));
-        const I = parseFloat(l);
-        if (isNaN(I) || (I > 100 ? l = "100" : I < 0 && (l = "0")), l && l !== "") {
+        const P = parseFloat(l);
+        if (isNaN(P) || (P > 100 ? l = "100" : P < 0 && (l = "0")), l && l !== "") {
           l += " %";
           const E = h.target.selectionStart || 0, _ = l.replace(" %", "");
           h.target.value = l, r(h), setTimeout(() => {
@@ -1855,7 +1870,7 @@ const ji = {
   font-size: 12px;
   margin-top: 4px;
   display: block;
-`, Ti = ({ total: e, current: o = 1, onChange: s, itemsPerPage: i = 10 }) => {
+`, Pi = ({ total: e, current: o = 1, onChange: s, itemsPerPage: i = 10 }) => {
   const r = Math.ceil(e / i), [c, u] = z(o), m = (b) => {
     b < 1 || b > r || b === c || (u(b), s?.(b));
   }, y = () => {
@@ -1921,7 +1936,7 @@ const ji = {
   &:disabled {
     cursor: not-allowed;
   }
-`, Ei = ({
+`, Ri = ({
   placeholder: e = "",
   customPlaceholder: o,
   value: s,
@@ -2022,9 +2037,9 @@ const ji = {
       E.key === "Escape" && o();
     };
     document.addEventListener("keydown", k);
-    const I = document.body.style.overflow;
+    const P = document.body.style.overflow;
     return document.body.style.overflow = "hidden", setTimeout(() => h.current?.focus(), 0), () => {
-      document.removeEventListener("keydown", k), document.body.style.overflow = I;
+      document.removeEventListener("keydown", k), document.body.style.overflow = P;
     };
   }, [o]);
   const l = (k) => {
@@ -2043,7 +2058,7 @@ const ji = {
       tabIndex: -1,
       children: [
         /* @__PURE__ */ t.jsxs(Ee, { children: [
-          /* @__PURE__ */ t.jsx(Pe, { children: e }),
+          /* @__PURE__ */ t.jsx(Ie, { children: e }),
           /* @__PURE__ */ t.jsx(hn, { type: "button", onClick: o, "aria-label": "Закрыть", children: /* @__PURE__ */ t.jsx("span", { "aria-hidden": !0, children: "×" }) })
         ] }),
         v ? /* @__PURE__ */ t.jsx(xn, { children: v }) : null,
@@ -2094,7 +2109,7 @@ const ji = {
   gap: 12px;
 
   padding: 14px 18px 10px 18px;
-`, Pe = n.h2`
+`, Ie = n.h2`
   margin: 0;
   padding: 0;
 
@@ -2200,7 +2215,7 @@ const ji = {
   { id: "PreviousMonth", label: "За прошлый месяц", value: "PreviousMonth" },
   { id: "ThisYear", label: "За этот год", value: "ThisYear" },
   { id: "PreviousYear", label: "За прошлый год", value: "PreviousYear" }
-], Pi = ({
+], zi = ({
   value: e = "",
   placeholder: o = "Выберите период",
   options: s = kn,
@@ -2211,7 +2226,7 @@ const ji = {
   const [u, m] = z(!1), [y, b] = z(!1), [w, g] = z(""), [v, d] = z(""), [h, l] = z(""), D = U(null), k = U(null);
   Z(() => {
     if (e === "Custom" && v && h) {
-      const R = P(v), B = P(h);
+      const R = I(v), B = I(h);
       g(`С ${R} по ${B}`);
     } else {
       const R = s.find((B) => B.value === e);
@@ -2225,7 +2240,7 @@ const ji = {
       document.removeEventListener("mousedown", R);
     };
   }, [y]);
-  const I = (R) => {
+  const P = (R) => {
     r?.(R.value), m(!1);
   }, E = () => {
     m(!1), c ? c() : b(!0);
@@ -2233,14 +2248,14 @@ const ji = {
     r?.(""), g(""), d(""), l("");
   }, F = () => {
     if (v && h) {
-      const R = P(v), B = P(h), N = `С ${R} по ${B}`;
+      const R = I(v), B = I(h), N = `С ${R} по ${B}`;
       r?.("Custom", v, h), g(N), b(!1);
     }
-  }, P = (R) => {
+  }, I = (R) => {
     const B = new Date(R), N = String(B.getDate()).padStart(2, "0"), A = String(B.getMonth() + 1).padStart(2, "0"), f = B.getFullYear();
     return `${N}.${A}.${f}`;
   }, H = () => /* @__PURE__ */ t.jsxs(Rn, { children: [
-    /* @__PURE__ */ t.jsx(Ee, { style: { margin: 0 }, children: /* @__PURE__ */ t.jsx(Pe, { style: { margin: 0 }, children: "Выбор периода" }) }),
+    /* @__PURE__ */ t.jsx(Ee, { style: { margin: 0 }, children: /* @__PURE__ */ t.jsx(Ie, { style: { margin: 0 }, children: "Выбор периода" }) }),
     /* @__PURE__ */ t.jsx(zn, { onClick: _, children: "Очистить период" })
   ] });
   return /* @__PURE__ */ t.jsxs(t.Fragment, { children: [
@@ -2250,11 +2265,11 @@ const ji = {
         /* @__PURE__ */ t.jsx(Mn, { $isOpen: u, children: "▼" })
       ] }),
       u && /* @__PURE__ */ t.jsxs(Sn, { children: [
-        s.map((R) => /* @__PURE__ */ t.jsxs(Ln, { onClick: () => I(R), $isSelected: e === R.value, children: [
+        s.map((R) => /* @__PURE__ */ t.jsxs(Ln, { onClick: () => P(R), $isSelected: e === R.value, children: [
           /* @__PURE__ */ t.jsx(Dn, { $isSelected: e === R.value, children: e === R.value && /* @__PURE__ */ t.jsx(Tn, {}) }),
           /* @__PURE__ */ t.jsx(En, { children: R.label })
         ] }, R.id)),
-        i && /* @__PURE__ */ t.jsx(Pn, { onClick: E, children: "Другой период" })
+        i && /* @__PURE__ */ t.jsx(In, { onClick: E, children: "Другой период" })
       ] })
     ] }),
     y && /* @__PURE__ */ t.jsx("div", { ref: k, children: /* @__PURE__ */ t.jsx(
@@ -2268,7 +2283,7 @@ const ji = {
         },
         saveButtonText: "Выбрать",
         customLayout: /* @__PURE__ */ t.jsx(H, {}),
-        children: /* @__PURE__ */ t.jsxs(In, { children: [
+        children: /* @__PURE__ */ t.jsxs(Pn, { children: [
           /* @__PURE__ */ t.jsx(ye, { children: /* @__PURE__ */ t.jsx(he, { value: v, onChange: (R) => d(R) }) }),
           /* @__PURE__ */ t.jsx(ye, { children: /* @__PURE__ */ t.jsx(he, { value: h, onChange: (R) => l(R) }) })
         ] })
@@ -2371,7 +2386,7 @@ const ji = {
   font-size: 14px;
   line-height: 19px;
   color: #000000;
-`, Pn = n.div`
+`, In = n.div`
   display: flex;
   flex-direction: column;
   padding: 10px 12px 0 0;
@@ -2388,7 +2403,7 @@ const ji = {
   &:hover {
     background: #f5f5f5;
   }
-`, In = n.div`
+`, Pn = n.div`
   display: flex;
   gap: 20px;
   margin: 20px 25px;
@@ -2412,7 +2427,7 @@ const ji = {
   &:hover {
     text-decoration: underline;
   }
-`, Ii = ({
+`, Bi = ({
   name: e,
   value: o,
   onChange: s,
@@ -2427,8 +2442,8 @@ const ji = {
 }) => {
   const [g, v] = q.useState(!1), d = q.useRef(null), h = !!(u && !o && !g), l = (E) => {
     const F = E.replace(/\D/g, "").slice(0, 11);
-    let P = "";
-    return F.length > 0 && (P += "8"), F.length > 1 && (P += ` (${F.slice(1, 4)}`), F.length > 4 && (P += `) ${F.slice(4, 7)}`), F.length > 7 && (P += `-${F.slice(7, 9)}`), F.length > 9 && (P += `-${F.slice(9, 11)}`), P;
+    let I = "";
+    return F.length > 0 && (I += "8"), F.length > 1 && (I += ` (${F.slice(1, 4)}`), F.length > 4 && (I += `) ${F.slice(4, 7)}`), F.length > 7 && (I += `-${F.slice(7, 9)}`), F.length > 9 && (I += `-${F.slice(9, 11)}`), I;
   }, D = (E) => {
     const _ = l(E.target.value), F = {
       ...E,
@@ -2441,7 +2456,7 @@ const ji = {
     s(F);
   }, k = (E) => {
     v(!1), i?.(E);
-  }, I = (E) => {
+  }, P = (E) => {
     r?.(E);
   };
   return /* @__PURE__ */ t.jsxs(Bn, { children: [
@@ -2453,7 +2468,7 @@ const ji = {
         type: "tel",
         value: o,
         onChange: D,
-        onKeyPress: I,
+        onKeyPress: P,
         placeholder: h ? "" : c,
         maxLength: 18,
         tabIndex: m,
@@ -2522,7 +2537,7 @@ const ji = {
   font-size: 12px;
   margin-top: 4px;
   display: block;
-`, Ri = ({ tabs: e, activeTab: o, onChange: s, addButton: i, fontSize: r = 14 }) => {
+`, Fi = ({ tabs: e, activeTab: o, onChange: s, addButton: i, fontSize: r = 14 }) => {
   const c = e.find((u) => u.id === o)?.content;
   return /* @__PURE__ */ t.jsxs(t.Fragment, { children: [
     /* @__PURE__ */ t.jsx(On, { children: /* @__PURE__ */ t.jsxs(Nn, { children: [
@@ -2570,7 +2585,7 @@ const ji = {
   padding: 4px 0;
 `, Vn = n.div`
   margin-top: 20px;
-`, zi = ({
+`, Ai = ({
   mode: e,
   primaryValue: o,
   secondaryValue: s,
@@ -2658,7 +2673,7 @@ const ji = {
   color: red;
   font-size: 12px;
   margin-top: 4px;
-`, Ie = n.div`
+`, Pe = n.div`
   display: flex;
   flex-direction: row;
   text-align: left;
@@ -2667,7 +2682,7 @@ const ji = {
   font-weight: 600;
   margin-top: 0px;
   align-items: center;
-`, Bi = ({ total: e }) => /* @__PURE__ */ t.jsx("div", { children: /* @__PURE__ */ t.jsxs(to, { children: [
+`, _i = ({ total: e }) => /* @__PURE__ */ t.jsx("div", { children: /* @__PURE__ */ t.jsxs(to, { children: [
   "Всего: ",
   e
 ] }) }), to = n.p`
@@ -2678,7 +2693,7 @@ const ji = {
   align-items: center;
   font-size: 20px;
   white-space: nowrap;
-`, Fi = n.h3`
+`, Oi = n.h3`
   color: black;
   text-align: left;
   margin: 0;
@@ -2686,7 +2701,7 @@ const ji = {
   margin-top: 15px;
   font-size: 14px;
   font-weight: 400;
-`, Ai = n.h1`
+`, Ni = n.h1`
   display: flex;
   text-align: left;
   font-size: 16px;
@@ -2733,7 +2748,7 @@ const ji = {
   width: 0;
   color: black;
   height: 0;
-`, _i = ({ checked: e, onChange: o, disabled: s }) => {
+`, Wi = ({ checked: e, onChange: o, disabled: s }) => {
   const i = () => {
     s || o(!e);
   };
@@ -2741,7 +2756,7 @@ const ji = {
     /* @__PURE__ */ t.jsx(ro, { checked: e, onChange: i, disabled: s }),
     /* @__PURE__ */ t.jsx(oo, { checked: e, disabled: s })
   ] });
-}, Oi = ({ id: e, name: o, checked: s, onChange: i, children: r }) => /* @__PURE__ */ t.jsxs(io, { htmlFor: e, children: [
+}, Yi = ({ id: e, name: o, checked: s, onChange: i, children: r }) => /* @__PURE__ */ t.jsxs(io, { htmlFor: e, children: [
   /* @__PURE__ */ t.jsx(so, { type: "radio", id: e, name: o, checked: s, onChange: i }),
   r
 ] }), io = n.label`
@@ -2777,7 +2792,7 @@ const ji = {
       transform: translate(-50%, -50%);
     }
   }
-`, Ni = ({
+`, Hi = ({
   percentage: e,
   onChange: o,
   draggable: s = !1,
@@ -2863,7 +2878,7 @@ const ho = (e) => typeof window > "u" ? Promise.reject(new Error("Window is not 
   i.src = `https://api-maps.yandex.ru/2.1/?lang=ru_RU${r}`, i.async = !0, i.onload = () => {
     window.ymaps ? window.ymaps.ready(() => o(window.ymaps)) : s(new Error("Yandex Maps failed to load"));
   }, i.onerror = () => s(new Error("Failed to load Yandex Maps script")), document.head.appendChild(i);
-})), ie), Wi = ({
+})), ie), Vi = ({
   onLocationSelect: e,
   initialAddress: o = "",
   initialLat: s = 55.751244,
@@ -2881,7 +2896,7 @@ const ho = (e) => typeof window > "u" ? Promise.reject(new Error("Window is not 
   style: h,
   onError: l
 }) => {
-  const [D, k] = z(null), [I, E] = z(o), [_, F] = z(o), [P, H] = z(!1), R = U(null);
+  const [D, k] = z(null), [P, E] = z(o), [_, F] = z(o), [I, H] = z(!1), R = U(null);
   Z(() => {
     let A = !1, f;
     return (async () => {
@@ -2917,9 +2932,9 @@ const ho = (e) => typeof window > "u" ? Promise.reject(new Error("Window is not 
         l && $ instanceof Error && l($);
       }
   }, N = async () => {
-    if (!(!I.trim() || !window.ymaps || !D))
+    if (!(!P.trim() || !window.ymaps || !D))
       try {
-        const f = (await window.ymaps.geocode(I)).geoObjects.get(0);
+        const f = (await window.ymaps.geocode(P)).geoObjects.get(0);
         if (f) {
           const p = f.geometry.getCoordinates(), $ = f.properties.get("boundedBy");
           D.setBounds($, { checkZoomRange: !0 });
@@ -2941,14 +2956,14 @@ const ho = (e) => typeof window > "u" ? Promise.reject(new Error("Window is not 
         Te,
         {
           type: "text",
-          value: I,
+          value: P,
           onChange: (A) => E(A.target.value),
           placeholder: y,
           onKeyPress: (A) => A.key === "Enter" && N(),
-          disabled: !P
+          disabled: !I
         }
       ),
-      /* @__PURE__ */ t.jsx(fo, { onClick: N, disabled: !P, children: b })
+      /* @__PURE__ */ t.jsx(fo, { onClick: N, disabled: !I, children: b })
     ] }),
     /* @__PURE__ */ t.jsxs(mo, { children: [
       "Выбранный адрес: ",
@@ -3007,18 +3022,18 @@ function ke(e, o = "₽") {
   }).format(i);
   return !0 ? `${r}${o}` : r;
 }
-function Yi(e) {
+function Zi(e) {
   if (!e) return 0;
   const o = e.replace(/\D/g, "");
   return parseInt(o, 10);
 }
-const Hi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFontSize: c }) => {
+const Ui = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFontSize: c }) => {
   const [u, m] = z(null), y = [];
   for (let w = 0; w <= s; w += i)
     y.push(w);
   const b = o.length > 0 ? o[0].bars.map((w) => ({ name: w.name, color: w.color })) : [];
   return /* @__PURE__ */ t.jsxs(vo, { children: [
-    /* @__PURE__ */ t.jsxs(Ie, { style: { marginTop: "0" }, children: [
+    /* @__PURE__ */ t.jsxs(Pe, { style: { marginTop: "0" }, children: [
       /* @__PURE__ */ t.jsx(Re, { style: { fontSize: c }, children: e }),
       /* @__PURE__ */ t.jsx(yo, { children: b.map((w, g) => /* @__PURE__ */ t.jsxs(ko, { children: [
         /* @__PURE__ */ t.jsx(jo, { color: w.color }),
@@ -3037,7 +3052,7 @@ const Hi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
             w.bars.map((v, d) => {
               const h = w.bars.slice(d + 1).reduce((l, D) => l + D.value, 0);
               return /* @__PURE__ */ t.jsx(
-                Po,
+                Io,
                 {
                   height: v.value / s * 100,
                   offset: h / s * 100,
@@ -3063,7 +3078,7 @@ const Hi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
             ] })
           ] }, g))
         ] }),
-        /* @__PURE__ */ t.jsx(Io, { children: o.map((w, g) => /* @__PURE__ */ t.jsx(Ro, { style: { flex: 1, textAlign: "center" }, children: w.label }, g)) })
+        /* @__PURE__ */ t.jsx(Po, { children: o.map((w, g) => /* @__PURE__ */ t.jsx(Ro, { style: { flex: 1, textAlign: "center" }, children: w.label }, g)) })
       ] })
     ] })
   ] });
@@ -3144,7 +3159,7 @@ const Hi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   height: 100%;
   margin-bottom: 2px;
   z-index: 1;
-`, Po = n.div`
+`, Io = n.div`
   position: relative;
   width: 100%;
   height: ${(e) => Math.max(0, e.height)}%;
@@ -3153,7 +3168,7 @@ const Hi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   border-radius: 4px;
   transition: background-color 0.2s ease;
   max-width: 50px;
-`, Io = n.div`
+`, Po = n.div`
   display: flex;
   justify-content: space-between;
   padding: 0 20px;
@@ -3195,7 +3210,7 @@ const Hi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
 `, Oo = _e`
   from { opacity: 0; transform: translate(-50%, -110%); }
   to { opacity: 1; transform: translate(-50%, -100%); }
-`, Vi = ({
+`, Xi = ({
   title: e,
   data: o,
   xAxisLabel: s,
@@ -3211,12 +3226,12 @@ const Hi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   showTooltip: v = !0,
   titleFontSize: d = "30px"
 }) => {
-  const [h, l] = z(null), [D, k] = z({ x: 0, y: 0 }), I = U(null), E = U(null), _ = Math.max(...o.map((f) => f.x), r), F = [];
+  const [h, l] = z(null), [D, k] = z({ x: 0, y: 0 }), P = U(null), E = U(null), _ = Math.max(...o.map((f) => f.x), r), F = [];
   for (let f = 0; f <= _; f += m)
     F.push(f);
-  const P = [];
+  const I = [];
   for (let f = u; f <= c; f += y)
-    P.push(f);
+    I.push(f);
   const H = g || F.map((f) => f.toString()), R = w ? Array.from(new Set(o.filter((f) => f.label).map((f) => f.label))).map((f) => {
     const p = o.find(($) => $.label === f);
     return { name: f, color: p.color };
@@ -3238,7 +3253,7 @@ const Hi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
       });
     }
   }, [h, r, c, u]), /* @__PURE__ */ t.jsxs(No, { children: [
-    /* @__PURE__ */ t.jsxs(Ie, { style: { marginTop: "0" }, children: [
+    /* @__PURE__ */ t.jsxs(Pe, { style: { marginTop: "0" }, children: [
       /* @__PURE__ */ t.jsx(Re, { style: { fontSize: d }, children: e }),
       w && R.length > 0 && /* @__PURE__ */ t.jsx(Wo, { children: R.map((f, p) => /* @__PURE__ */ t.jsxs(Yo, { children: [
         /* @__PURE__ */ t.jsx(Ho, { color: f.color }),
@@ -3247,11 +3262,11 @@ const Hi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
     ] }),
     /* @__PURE__ */ t.jsxs(Zo, { height: b, children: [
       /* @__PURE__ */ t.jsxs(Uo, { children: [
-        P.map((f, p) => /* @__PURE__ */ t.jsx(Xo, { children: f.toLocaleString() }, p)),
+        I.map((f, p) => /* @__PURE__ */ t.jsx(Xo, { children: f.toLocaleString() }, p)),
         /* @__PURE__ */ t.jsx(je, { children: i })
       ] }),
       /* @__PURE__ */ t.jsxs(qo, { ref: E, children: [
-        P.map((f, p) => /* @__PURE__ */ t.jsx(Go, { position: A(f) }, `hline-${p}`)),
+        I.map((f, p) => /* @__PURE__ */ t.jsx(Go, { position: A(f) }, `hline-${p}`)),
         Object.values(B).map((f, p) => f.map(($, T) => {
           if (T === 0) return null;
           const O = f[T - 1], V = N(O.x), X = A(O.y), C = N($.x), S = A($.y);
@@ -3278,7 +3293,7 @@ const Hi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
         ))
       ] })
     ] }),
-    v && h && /* @__PURE__ */ t.jsxs(er, { ref: I, style: { left: D.x, top: D.y }, children: [
+    v && h && /* @__PURE__ */ t.jsxs(er, { ref: P, style: { left: D.x, top: D.y }, children: [
       /* @__PURE__ */ t.jsxs(tr, { children: [
         h.name && /* @__PURE__ */ t.jsx(nr, { children: h.name }),
         /* @__PURE__ */ t.jsx(or, { children: h.y.toLocaleString() })
@@ -3414,7 +3429,7 @@ const Hi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
   border-top: 6px solid rgba(0, 0, 0, 0.9);
-`, Zi = ({ images: e, initialIndex: o, onClose: s }) => {
+`, qi = ({ images: e, initialIndex: o, onClose: s }) => {
   const [i, r] = z(o), [c, u] = z(0), m = () => {
     r((g) => g > 0 ? g - 1 : e.length - 1), u(0);
   }, y = () => {
@@ -3702,7 +3717,7 @@ const Hi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
       }
     )
   }
-), Ui = ({
+), Gi = ({
   items: e,
   bottomItems: o = [],
   logo: s,
@@ -3720,16 +3735,16 @@ const Hi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   showBottomLabels: h = !0,
   children: l
 }) => {
-  const D = Fe(yr), [k, I] = z(window.innerWidth <= d);
+  const D = Fe(yr), [k, P] = z(window.innerWidth <= d);
   Z(() => {
     const x = () => {
-      I(window.innerWidth <= d);
+      P(window.innerWidth <= d);
     };
     return window.addEventListener("resize", x), () => window.removeEventListener("resize", x);
   }, [d]);
   const [E, _] = z(
     r ?? D.collapsed ?? !1
-  ), [F, P] = z(null), [H, R] = z(
+  ), [F, I] = z(null), [H, R] = z(
     u ?? D.selectedSideMenuItem ?? null
   ), [B, N] = z({
     visible: !1,
@@ -3742,7 +3757,7 @@ const Hi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
     R(x), D.setSelectedSideMenuItem(x);
   };
   Z(() => {
-    r !== void 0 && (_(r), r && P(null));
+    r !== void 0 && (_(r), r && I(null));
   }, [r]), Z(() => {
     u !== void 0 && T(u);
   }, [u]), Z(() => {
@@ -3751,11 +3766,11 @@ const Hi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   }, []);
   const O = () => {
     const x = !f;
-    p(x), x && P(null);
+    p(x), x && I(null);
   }, V = (x) => {
-    x.disabled || x.hidden || (T(x.key), m?.(x), x.onClick?.(x), y && (p(!0), P(null)));
+    x.disabled || x.hidden || (T(x.key), m?.(x), x.onClick?.(x), y && (p(!0), I(null)));
   }, X = (x) => {
-    P((j) => j === x ? null : x);
+    I((j) => j === x ? null : x);
   }, C = (x, j) => {
     const L = (x.children?.length || 0) > 0;
     if (f && L) {
@@ -3833,8 +3848,8 @@ const Hi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
       className: g,
       style: v,
       children: [
-        /* @__PURE__ */ t.jsxs(Pr, { children: [
-          /* @__PURE__ */ t.jsx(Ir, { onClick: O, "aria-label": "Переключить меню", children: i ?? /* @__PURE__ */ t.jsx(kr, { collapsed: f }) }),
+        /* @__PURE__ */ t.jsxs(Ir, { children: [
+          /* @__PURE__ */ t.jsx(Pr, { onClick: O, "aria-label": "Переключить меню", children: i ?? /* @__PURE__ */ t.jsx(kr, { collapsed: f }) }),
           !f && s && /* @__PURE__ */ t.jsx(Rr, { children: s })
         ] }),
         /* @__PURE__ */ t.jsxs(zr, { children: [
@@ -3927,13 +3942,13 @@ const Hi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   transition: width 0.3s ease;
   box-shadow: 1px 0 7px rgba(0, 0, 0, 0.05);
   overflow: hidden;
-`, Pr = n.div`
+`, Ir = n.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 28px;
   width: 100%;
-`, Ir = n.button`
+`, Pr = n.button`
   background: none;
   border: none;
   cursor: pointer;
@@ -4112,7 +4127,7 @@ const Hi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
     user_type: s,
     name: i
   }
-}), Xi = () => ne("/auth/session/info", { method: "GET" }), Gr = ({
+}), Ji = () => ne("/auth/session/info", { method: "GET" }), Gr = ({
   isOpen: e,
   onClose: o,
   onSubmit: s,
@@ -4199,7 +4214,7 @@ const Hi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   font-size: 12px;
   margin-top: 8px;
   text-align: left;
-`, qi = ({
+`, Ki = ({
   onLoginSuccess: e,
   userType: o = "delivery_operator",
   title: s = "Авторизация",
@@ -4213,7 +4228,7 @@ const Hi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   pollingIntervalMs: w = 3e3,
   enableRegistration: g = !1
 }) => {
-  const [v, d] = z(!1), [h, l] = z(""), [D, k] = z(!1), [I, E] = z(""), [_, F] = z(""), [P, H] = z(!1), [R, B] = z(!1), [N, A] = z(""), [f, p] = z(""), [$, T] = z(null), O = U(void 0);
+  const [v, d] = z(!1), [h, l] = z(""), [D, k] = z(!1), [P, E] = z(""), [_, F] = z(""), [I, H] = z(!1), [R, B] = z(!1), [N, A] = z(""), [f, p] = z(""), [$, T] = z(null), O = U(void 0);
   Z(() => () => {
     O.current && clearInterval(O.current);
   }, []);
@@ -4265,7 +4280,7 @@ const Hi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
       M(x, j, L);
     }, w);
   }, M = async (x, j, L) => {
-    if (!P) {
+    if (!I) {
       H(!0);
       try {
         const W = await qr(x, j, o, L || N);
@@ -4319,7 +4334,7 @@ const Hi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
       {
         isOpen: D,
         onClose: X,
-        callPhone: I,
+        callPhone: P,
         error: _
       }
     )
@@ -4466,7 +4481,7 @@ const Hi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   for (let i = 0; i < e.length; i++)
     o = e.charCodeAt(i) + ((o << 5) - o);
   return `hsl(${Math.abs(o % 360)}, 60%, 60%)`;
-}, Gi = (e) => !e || !e.trim() ? "?" : e.split(" ").filter((i) => i.length > 0).map((i) => i[0].toUpperCase()).join("").slice(0, 2) || "?", Ji = (e, o = 100) => {
+}, Qi = (e) => !e || !e.trim() ? "?" : e.split(" ").filter((i) => i.length > 0).map((i) => i[0].toUpperCase()).join("").slice(0, 2) || "?", es = (e, o = 100) => {
   const s = document.createElement("canvas");
   s.width = o, s.height = o;
   const i = s.getContext("2d");
@@ -4477,14 +4492,14 @@ const Hi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   i.font = `bold ${c}px "Manrope", Arial, sans-serif`, i.textAlign = "center", i.textBaseline = "middle";
   const u = c * 0.1;
   return i.fillText(e, o / 2, o / 2 + u), s.toDataURL("image/png");
-}, Ki = (e) => {
+}, ts = (e) => {
   if (!e) return "";
   const o = typeof e == "string" ? new Date(e) : e;
   if (isNaN(o.getTime())) return "";
   const s = o.getDate().toString().padStart(2, "0"), i = (o.getMonth() + 1).toString().padStart(2, "0"), r = o.getFullYear();
   return `${s}-${i}-${r}`;
 };
-function Qi(e) {
+function ns(e) {
   return new Date(e);
 }
 const fi = (e) => {
@@ -4526,7 +4541,7 @@ const fi = (e) => {
   } catch {
     return "неверная дата";
   }
-}, es = (e, o = {}) => {
+}, os = (e, o = {}) => {
   const { useExactAfterMonths: s = 6, includeTime: i = !0 } = o, r = new Date(e);
   return isNaN(r.getTime()), Math.floor(((/* @__PURE__ */ new Date()).getTime() - r.getTime()) / (1e3 * 60 * 60 * 24 * 30)) >= s ? i ? bi(r) : r.toLocaleDateString("ru-RU", {
     day: "2-digit",
@@ -4538,53 +4553,56 @@ export {
   Le as API_BASE_URL,
   ki as AddButton,
   xr as AuthCallModal,
-  qi as AuthPage,
+  Ki as AuthPage,
   Ci as BackButton,
   dn as BaseModal,
   Di as Checkbox,
-  Hi as ColumnChart,
+  Ui as ColumnChart,
   Se as ContextMenu,
-  Bi as CountInfoTitle,
+  _i as CountInfoTitle,
   he as CustomCalendar,
   Te as CustomInput,
   Zr as CustomPhoneInput,
   Li as CustomSelect,
   yi as CustomTable,
-  Ei as CustomTextArea,
+  Ri as CustomTextArea,
   Re as CustomTitle,
   se as DefaultButton,
   $i as DeleteButton,
   Mi as EditButton,
-  zi as EntitySelectContainer,
+  Ai as EntitySelectContainer,
   Si as ExportButton,
-  Fi as InputTitle,
-  Ai as ModalInfoTitle,
-  Ti as Pagination,
-  Pi as PeriodField,
-  Ii as PhoneModalInput,
-  Zi as PhotoViewerModal,
-  Ni as ProgressBar,
-  Oi as RadioButton,
-  Vi as ScatterPlot,
-  Ui as SideMenu,
+  Ii as InputContainer,
+  Ei as InputLabel,
+  Ti as InputRow,
+  Oi as InputTitle,
+  Ni as ModalInfoTitle,
+  Pi as Pagination,
+  zi as PeriodField,
+  Bi as PhoneModalInput,
+  qi as PhotoViewerModal,
+  Hi as ProgressBar,
+  Yi as RadioButton,
+  Xi as ScatterPlot,
+  Gi as SideMenu,
   yr as SideMenuContext,
-  Ri as Tabs,
-  Ie as TitleField,
-  _i as ToggleSwitch,
-  Wi as YandexMapSelector,
+  Fi as Tabs,
+  Pe as TitleField,
+  Wi as ToggleSwitch,
+  Vi as YandexMapSelector,
   ne as apiRequest,
   ji as authStorage,
   qr as confirmCallAuth,
-  Ki as formatDate,
+  ts as formatDate,
   bi as formatExactDate,
   ke as formatMoney,
   fi as formatRelativeTime,
-  es as formatRelativeTimeExtended,
-  Ji as generateAvatar,
-  Gi as getInitials,
-  Xi as getSessionInfo,
+  os as formatRelativeTimeExtended,
+  es as generateAvatar,
+  Qi as getInitials,
+  Ji as getSessionInfo,
   Xr as initiateCallAuth,
-  Qi as parseDateInput,
-  Yi as parseMoney,
+  ns as parseDateInput,
+  Zi as parseMoney,
   gi as stringToColor
 };
