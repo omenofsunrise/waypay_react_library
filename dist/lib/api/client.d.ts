@@ -3,7 +3,6 @@ type RequestOptions = {
     method?: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
     body?: unknown;
     headers?: Record<string, string>;
-    token?: string;
     withCredentials?: boolean;
 };
 export declare function apiRequest<T = unknown>(endpoint: string, options?: RequestOptions): Promise<T>;

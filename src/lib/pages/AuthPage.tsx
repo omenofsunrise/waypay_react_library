@@ -8,9 +8,10 @@ import {
   type UserType,
 } from "../api/authCall";
 import AuthNameModal from "../modal/AuthNameModal";
+import { authStorage } from "../utils/authStorage";
 
 type AuthPageProps = {
-  onLoginSuccess: (token: string) => void;
+  onLoginSuccess?: () => void;
   userType?: UserType;
   title?: string;
   submitLabel?: string;
@@ -171,8 +172,9 @@ const AuthPage: React.FC<AuthPageProps> = ({
 
     setIsVerifying(true);
     try {
-      const response = await confirmCallAuth(phone, id, userType, name || fullName);
-      if (response.access_token && response.refresh_token) {
+      await confirmCallAuth(phone, id, userType, name || fullName);
+      const sessionInfo = await authStorage.getSessionInfo();
+      if (sessionInfo?.client?.id) {
 
         if (verificationInterval.current) {
           window.clearInterval(verificationInterval.current);
@@ -181,7 +183,7 @@ const AuthPage: React.FC<AuthPageProps> = ({
         setShowNameModal(false);
         setFullName("");
         setPendingAuthData(null);
-        onLoginSuccess(response.access_token);
+        onLoginSuccess?.();
       }
     } catch (error) {
       console.error("Verification error:", error);
