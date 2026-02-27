@@ -10,6 +10,8 @@ export type InitiateCallAuthResponse = {
 };
 
 export type ConfirmCallAuthResponse = {
+  access_token: string;
+  refresh_token: string;
   status: string;
 };
 

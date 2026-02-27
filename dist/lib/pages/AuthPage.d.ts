@@ -1,7 +1,7 @@
 import React from "react";
 import { type UserType } from "../api/authCall";
 type AuthPageProps = {
-    onLoginSuccess?: () => void;
+    onLoginSuccess: (token: string) => void;
     userType?: UserType;
     title?: string;
     submitLabel?: string;

@@ -5,6 +5,8 @@ export type InitiateCallAuthResponse = {
     name_required?: boolean;
 };
 export type ConfirmCallAuthResponse = {
+    access_token: string;
+    refresh_token: string;
     status: string;
 };
 export declare const initiateCallAuth: (phone: string, userType: UserType) => Promise<InitiateCallAuthResponse>;
