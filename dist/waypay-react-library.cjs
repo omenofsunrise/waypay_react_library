@@ -1928,28 +1928,18 @@ React keys must be passed directly to JSX without using spread:
 `,Xr=n.div`
   color: #e74c3c;
   margin: 10px 0;
-`,Pe=w.createContext({collapsed:!1,toggleCollapsed:()=>{},selectedSideMenuItem:null,setSelectedSideMenuItem:()=>{},selectedTopMenuItem:null,setSelectedTopMenuItem:()=>{}}),qr=({collapsed:e})=>t.jsx("svg",{width:"16",height:"14",viewBox:"0 0 16 14",fill:"none",xmlns:"http://www.w3.org/2000/svg",style:{transform:`rotate(${e?"180deg":"0deg"})`,transition:"transform 0.3s ease"},children:t.jsx("path",{d:"M0.915527 7.00049L0.922363 6.96826L0.939941 6.94092H0.940918L6.77393 1.10693C6.78967 1.09132 6.81132 1.08252 6.8335 1.08252C6.8557 1.08259 6.87736 1.09123 6.89307 1.10693C6.90877 1.12264 6.91742 1.1443 6.91748 1.1665L6.91064 1.19873L6.89307 1.22607L2.0542 6.06299L1.20068 6.9165L14.9995 6.9165C15.0106 6.9165 15.0217 6.91918 15.0317 6.92334L15.0591 6.94092C15.0747 6.95654 15.0835 6.97839 15.0835 7.00049C15.0834 7.01136 15.0807 7.02188 15.0767 7.03174L15.0591 7.05908C15.0435 7.07471 15.0216 7.0835 14.9995 7.0835L1.20068 7.0835L2.0542 7.93701L6.89307 12.7739C6.90872 12.7897 6.91748 12.8113 6.91748 12.8335L6.91064 12.8657L6.89307 12.8931C6.87736 12.9088 6.8557 12.9174 6.8335 12.9175L6.80127 12.9106L6.77393 12.8931L0.940918 7.05908H0.939941L0.922363 7.03174C0.918234 7.02176 0.915581 7.01129 0.915527 7.00049Z",fill:"#50555C",stroke:"#50555C"})}),Gr=({items:e,bottomItems:o=[],logo:s,arrowIcon:i,collapsed:r,onToggle:c,selectedKey:u,onSelect:m,autoCollapseOnSelect:k=!1,width:b="315px",collapsedWidth:v="85px",className:f,style:y,mobileBreakpoint:d=768,showBottomLabels:h=!0,children:l})=>{const T=w.useContext(Pe),[j,R]=w.useState(window.innerWidth<=d);w.useEffect(()=>{const x=()=>{R(window.innerWidth<=d)};return window.addEventListener("resize",x),()=>window.removeEventListener("resize",x)},[d]);const[I,_]=w.useState(r??T.collapsed??!1),[A,P]=w.useState(null),[H,B]=w.useState(u??T.selectedSideMenuItem??null),[z,N]=w.useState({visible:!1,x:0,y:0,items:[]}),F=w.useRef(null),g=r??T.collapsed??I,p=x=>{_(x),T.toggleCollapsed(),c?.(x)},S=u??T.selectedSideMenuItem??H,E=x=>{B(x),T.setSelectedSideMenuItem(x)};w.useEffect(()=>{r!==void 0&&(_(r),r&&P(null))},[r]),w.useEffect(()=>{u!==void 0&&E(u)},[u]),w.useEffect(()=>{const x=()=>N(C=>({...C,visible:!1}));return document.addEventListener("click",x),()=>document.removeEventListener("click",x)},[]);const O=()=>{const x=!g;p(x),x&&P(null)},V=x=>{x.disabled||x.hidden||(E(x.key),m?.(x),x.onClick?.(x),k&&(p(!0),P(null)))},Z=x=>{P(C=>C===x?null:x)},$=(x,C)=>{const D=(x.children?.length||0)>0;if(g&&D){C.stopPropagation();const Y=C.currentTarget.getBoundingClientRect();N({visible:!0,x:Y.right+6,y:Y.top,items:x.children||[]});return}D?Z(x.key):V(x)},L=(x,C=!1)=>x.filter(D=>!D.hidden).map(D=>{const Y=(D.children?.length||0)>0,W=A===D.key,U=S===D.key||!!D.children&&D.children.some(q=>q.key===S);return t.jsxs(w.Fragment,{children:[t.jsxs(di,{$collapsed:g,$selected:U,onClick:q=>$(D,q),$disabled:D.disabled,title:D.label,children:[D.icon&&t.jsx(ui,{$collapsed:g,children:D.icon}),!g&&t.jsx(pi,{children:D.label}),!g&&Y&&t.jsx(xi,{$expanded:W,children:"▾"})]}),!g&&Y&&W&&t.jsx(hi,{children:L(D.children||[],!0)})]},D.key)}),a=w.useMemo(()=>z.visible?t.jsx(gi,{style:{left:z.x,top:z.y},children:z.items.map(x=>t.jsx(bi,{onClick:()=>{V(x),N({visible:!1,x:0,y:0,items:[]})},$selected:S===x.key,children:x.label},x.key))}):null,[z,S]),M=()=>{const x=[...e,...o].filter(C=>!C.hidden);return t.jsx(ti,{children:x.map(C=>{const D=S===C.key;return t.jsxs(ni,{$selected:D,onClick:()=>V(C),$disabled:C.disabled,children:[C.icon&&t.jsx(oi,{$selected:D,children:C.icon}),h&&t.jsx(ri,{$selected:D,children:C.label})]},C.key)})})};return j?t.jsxs(Jr,{className:f,style:y,children:[t.jsx(Kr,{children:s&&t.jsx(Qr,{children:s})}),t.jsx(ei,{children:l}),M()]}):t.jsxs(ii,{ref:F,$collapsed:g,$width:b,$collapsedWidth:v,className:f,style:y,children:[t.jsxs(si,{children:[t.jsx(ai,{onClick:O,"aria-label":"Переключить меню",children:i??t.jsx(qr,{collapsed:g})}),!g&&s&&t.jsx(li,{children:s})]}),t.jsxs(ci,{children:[t.jsx(Me,{children:L(e)}),o.length>0&&t.jsxs(t.Fragment,{children:[t.jsx(fi,{}),t.jsx(Me,{children:L(o)})]})]}),a,t.jsx(mi,{$collapsed:g}),l]})},Jr=n.div`
+`,Pe=w.createContext({collapsed:!1,toggleCollapsed:()=>{},selectedSideMenuItem:null,setSelectedSideMenuItem:()=>{},selectedTopMenuItem:null,setSelectedTopMenuItem:()=>{}}),qr=({collapsed:e})=>t.jsx("svg",{width:"16",height:"14",viewBox:"0 0 16 14",fill:"none",xmlns:"http://www.w3.org/2000/svg",style:{transform:`rotate(${e?"180deg":"0deg"})`,transition:"transform 0.3s ease"},children:t.jsx("path",{d:"M0.915527 7.00049L0.922363 6.96826L0.939941 6.94092H0.940918L6.77393 1.10693C6.78967 1.09132 6.81132 1.08252 6.8335 1.08252C6.8557 1.08259 6.87736 1.09123 6.89307 1.10693C6.90877 1.12264 6.91742 1.1443 6.91748 1.1665L6.91064 1.19873L6.89307 1.22607L2.0542 6.06299L1.20068 6.9165L14.9995 6.9165C15.0106 6.9165 15.0217 6.91918 15.0317 6.92334L15.0591 6.94092C15.0747 6.95654 15.0835 6.97839 15.0835 7.00049C15.0834 7.01136 15.0807 7.02188 15.0767 7.03174L15.0591 7.05908C15.0435 7.07471 15.0216 7.0835 14.9995 7.0835L1.20068 7.0835L2.0542 7.93701L6.89307 12.7739C6.90872 12.7897 6.91748 12.8113 6.91748 12.8335L6.91064 12.8657L6.89307 12.8931C6.87736 12.9088 6.8557 12.9174 6.8335 12.9175L6.80127 12.9106L6.77393 12.8931L0.940918 7.05908H0.939941L0.922363 7.03174C0.918234 7.02176 0.915581 7.01129 0.915527 7.00049Z",fill:"#50555C",stroke:"#50555C"})}),Gr=({items:e,bottomItems:o=[],logo:s,arrowIcon:i,collapsed:r,onToggle:c,selectedKey:u,onSelect:m,autoCollapseOnSelect:k=!1,width:b="315px",collapsedWidth:v="85px",className:f,style:y,mobileBreakpoint:d=768,showBottomLabels:h=!0,children:l})=>{const T=w.useContext(Pe),[j,R]=w.useState(window.innerWidth<=d);w.useEffect(()=>{const x=()=>{R(window.innerWidth<=d)};return window.addEventListener("resize",x),()=>window.removeEventListener("resize",x)},[d]);const[I,_]=w.useState(r??T.collapsed??!1),[A,P]=w.useState(null),[H,B]=w.useState(u??T.selectedSideMenuItem??null),[z,N]=w.useState({visible:!1,x:0,y:0,items:[]}),F=w.useRef(null),g=r??T.collapsed??I,p=x=>{_(x),T.toggleCollapsed(),c?.(x)},S=u??T.selectedSideMenuItem??H,E=x=>{B(x),T.setSelectedSideMenuItem(x)};w.useEffect(()=>{r!==void 0&&(_(r),r&&P(null))},[r]),w.useEffect(()=>{u!==void 0&&E(u)},[u]),w.useEffect(()=>{const x=()=>N(C=>({...C,visible:!1}));return document.addEventListener("click",x),()=>document.removeEventListener("click",x)},[]);const O=()=>{const x=!g;p(x),x&&P(null)},V=x=>{x.disabled||x.hidden||(E(x.key),m?.(x),x.onClick?.(x),k&&(p(!0),P(null)))},Z=x=>{P(C=>C===x?null:x)},$=(x,C)=>{const D=(x.children?.length||0)>0;if(g&&D){C.stopPropagation();const Y=C.currentTarget.getBoundingClientRect();N({visible:!0,x:Y.right+6,y:Y.top,items:x.children||[]});return}D?Z(x.key):V(x)},L=(x,C=!1)=>x.filter(D=>!D.hidden).map(D=>{const Y=(D.children?.length||0)>0,W=A===D.key,U=S===D.key||!!D.children&&D.children.some(q=>q.key===S);return t.jsxs(w.Fragment,{children:[t.jsxs(li,{$collapsed:g,$selected:U,onClick:q=>$(D,q),$disabled:D.disabled,title:D.label,children:[D.icon&&t.jsx(di,{$collapsed:g,children:D.icon}),!g&&t.jsx(ci,{children:D.label}),!g&&Y&&t.jsx(ui,{$expanded:W,children:"▾"})]}),!g&&Y&&W&&t.jsx(pi,{children:L(D.children||[],!0)})]},D.key)}),a=w.useMemo(()=>z.visible?t.jsx(xi,{style:{left:z.x,top:z.y},children:z.items.map(x=>t.jsx(fi,{onClick:()=>{V(x),N({visible:!1,x:0,y:0,items:[]})},$selected:S===x.key,children:x.label},x.key))}):null,[z,S]),M=()=>{const x=[...e,...o].filter(C=>!C.hidden);return t.jsx(Qr,{children:x.map(C=>{const D=S===C.key;return t.jsxs(ei,{$selected:D,onClick:()=>V(C),$disabled:C.disabled,children:[C.icon&&t.jsx(ti,{$selected:D,children:C.icon}),h&&t.jsx(ni,{$selected:D,children:C.label})]},C.key)})})};return j?t.jsxs(Jr,{className:f,style:y,children:[t.jsx(Kr,{children:l}),M()]}):t.jsxs(oi,{ref:F,$collapsed:g,$width:b,$collapsedWidth:v,className:f,style:y,children:[t.jsxs(ri,{children:[t.jsx(ii,{onClick:O,"aria-label":"Переключить меню",children:i??t.jsx(qr,{collapsed:g})}),!g&&s&&t.jsx(si,{children:s})]}),t.jsxs(ai,{children:[t.jsx(Me,{children:L(e)}),o.length>0&&t.jsxs(t.Fragment,{children:[t.jsx(hi,{}),t.jsx(Me,{children:L(o)})]})]}),a,t.jsx(gi,{$collapsed:g}),l]})},Jr=n.div`
   width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   background-color: rgba(249, 250, 250, 1);
   position: relative;
-`,Kr=n.header`
-  padding: 16px;
-  border-bottom: 1px solid rgba(209, 213, 219, 1);
-  background-color: white;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-`,Qr=n.div`
-  display: flex;
-  align-items: center;
-`,ei=n.main`
+`,Kr=n.main`
   flex: 1;
   overflow-y: auto;
   min-height: 0; /* Важно для flex-контейнера */
-`,ti=n.nav`
+`,Qr=n.nav`
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -1961,7 +1951,7 @@ React keys must be passed directly to JSX without using spread:
   width: 100%;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
   z-index: 10;
-`,ni=n.div`
+`,ei=n.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1980,19 +1970,19 @@ React keys must be passed directly to JSX without using spread:
   &:active {
     background-color: rgba(209, 213, 219, 0.5);
   }
-`,oi=n.div`
+`,ti=n.div`
   font-size: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: ${({$selected:e})=>e?"#000":"#50555c"};
-`,ri=n.span`
+`,ni=n.span`
   font-size: 12px;
   font-weight: ${({$selected:e})=>e?"600":"400"};
   color: ${({$selected:e})=>e?"#000":"#50555c"};
   text-align: center;
   white-space: nowrap;
-`,ii=n.div`
+`,oi=n.div`
   width: ${({$collapsed:e,$width:o,$collapsedWidth:s})=>e?s:o};
   height: 100vh;
   background-color: rgba(249, 250, 250, 1);
@@ -2005,25 +1995,25 @@ React keys must be passed directly to JSX without using spread:
   transition: width 0.3s ease;
   box-shadow: 1px 0 7px rgba(0, 0, 0, 0.05);
   overflow: hidden;
-`,si=n.div`
+`,ri=n.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 28px;
   width: 100%;
-`,ai=n.button`
+`,ii=n.button`
   background: none;
   border: none;
   cursor: pointer;
   padding: 6px;
   margin-bottom: 0px;
-`,li=n.div`
+`,si=n.div`
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 4px;
-`,ci=n.div`
+`,ai=n.div`
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -2041,7 +2031,7 @@ React keys must be passed directly to JSX without using spread:
     background: rgba(0, 0, 0, 0.1);
     border-radius: 4px;
   }
-`,di=n.div`
+`,li=n.div`
   display: flex;
   align-items: center;
   justify-content: ${({$collapsed:e})=>e?"center":"flex-start"};
@@ -2070,11 +2060,11 @@ React keys must be passed directly to JSX without using spread:
     background-color: ${({$selected:e})=>e?"rgba(209, 213, 219, 1)":"rgba(209, 213, 219, 0.5)"};
     color: #000;
   }
-`,pi=n.span`
+`,ci=n.span`
   font-size: 15px;
   font-weight: 500;
   white-space: nowrap;
-`,ui=n.div`
+`,di=n.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2100,23 +2090,23 @@ React keys must be passed directly to JSX without using spread:
     max-height: 100%;
     object-fit: contain;
   }
-`,hi=n.div`
+`,pi=n.div`
   margin-left: 45px;
   padding-left: 0;
   border-left: 1px solid rgba(209, 213, 219, 0.8);
   display: flex;
   flex-direction: column;
   gap: 4px;
-`,xi=n.span`
+`,ui=n.span`
   margin-left: auto;
   transform: rotate(${({$expanded:e})=>e?"180deg":"0deg"});
   transition: transform 0.2s ease;
-`,fi=n.div`
+`,hi=n.div`
   height: 1px;
   width: 100%;
   background-color: rgba(209, 213, 219, 1);
   margin: 14px 0;
-`,gi=n.div`
+`,xi=n.div`
   position: fixed;
   background: white;
   border: 1px solid #e5e7eb;
@@ -2126,7 +2116,7 @@ React keys must be passed directly to JSX without using spread:
   padding: 8px;
   z-index: 1000;
   min-width: 180px;
-`,bi=n.div`
+`,fi=n.div`
   padding: 8px 12px;
   border-radius: 6px;
   cursor: pointer;
@@ -2138,7 +2128,7 @@ React keys must be passed directly to JSX without using spread:
     background-color: ${({$selected:e})=>e?"rgba(209, 213, 219, 1)":"rgba(209, 213, 219, 0.5)"};
     color: #000;
   }
-`,mi=n.div`
+`,gi=n.div`
   position: absolute;
   right: 0;
   top: 0;
@@ -2147,7 +2137,7 @@ React keys must be passed directly to JSX without using spread:
   background-color: rgba(209, 213, 219, 1);
   transition: all 0.3s ease;
   opacity: ${({$collapsed:e})=>e?0:1};
-`,wi=e=>{const o=e.replace(/\D/g,""),i=(o.startsWith("8")||o.length===0?o:`8${o}`).slice(0,11);let r="";return i.length>0&&(r+="8"),i.length>1&&(r+=` (${i.slice(1,4)}`),i.length>4&&(r+=`) ${i.slice(4,7)}`),i.length>7&&(r+=`-${i.slice(7,9)}`),i.length>9&&(r+=`-${i.slice(9,11)}`),r},Re=({value:e,onChange:o,placeholder:s="8 (xxx) xxx-xx-xx",tabIndex:i})=>{const r=c=>{const u=wi(c.target.value);o(u)};return t.jsx(vi,{type:"text",value:e,onChange:r,placeholder:s,maxLength:18,tabIndex:i})},vi=n.input`
+`,bi=e=>{const o=e.replace(/\D/g,""),i=(o.startsWith("8")||o.length===0?o:`8${o}`).slice(0,11);let r="";return i.length>0&&(r+="8"),i.length>1&&(r+=` (${i.slice(1,4)}`),i.length>4&&(r+=`) ${i.slice(4,7)}`),i.length>7&&(r+=`-${i.slice(7,9)}`),i.length>9&&(r+=`-${i.slice(9,11)}`),r},Re=({value:e,onChange:o,placeholder:s="8 (xxx) xxx-xx-xx",tabIndex:i})=>{const r=c=>{const u=bi(c.target.value);o(u)};return t.jsx(mi,{type:"text",value:e,onChange:r,placeholder:s,maxLength:18,tabIndex:i})},mi=n.input`
   width: 100%;
   height: 54px;
   font-size: 16px;
@@ -2166,7 +2156,7 @@ React keys must be passed directly to JSX without using spread:
     box-shadow: 0 0 0 0.2rem rgba(37, 203, 161, 0.25);
     background-color: rgba(255, 255, 255, 1);
   }
-`,Be=(e,o)=>G("/auth/call/initiate",{method:"POST",body:{phone:e,user_type:o}}),ze=(e,o,s,i)=>G("/auth/call/confirm",{method:"POST",body:{phone:e,check_id:o,user_type:s,name:i}}),yi=()=>G("/auth/session/info",{method:"GET"}),ki=({isOpen:e,onClose:o,onSubmit:s,error:i,isLoading:r=!1})=>{const[c,u]=w.useState("");if(!e)return null;const m=k=>{k.preventDefault(),s(c)};return t.jsx(ji,{onClick:o,children:t.jsx(Ci,{onClick:k=>k.stopPropagation(),children:t.jsxs($i,{onSubmit:m,children:[t.jsx(Si,{children:"Как вас зовут?"}),t.jsxs(Mi,{children:[t.jsx(le,{type:"text",value:c,onChange:k=>u(k.target.value),placeholder:"Иванов Иван Иванович",disabled:r,autoFocus:!0,style:{flex:1}}),t.jsx(Li,{type:"submit",disabled:r||!c.trim(),children:r?"...":"→"})]}),i&&t.jsx(Di,{children:i})]})})})},ji=n.div`
+`,Be=(e,o)=>G("/auth/call/initiate",{method:"POST",body:{phone:e,user_type:o}}),ze=(e,o,s,i)=>G("/auth/call/confirm",{method:"POST",body:{phone:e,check_id:o,user_type:s,name:i}}),wi=()=>G("/auth/session/info",{method:"GET"}),vi=({isOpen:e,onClose:o,onSubmit:s,error:i,isLoading:r=!1})=>{const[c,u]=w.useState("");if(!e)return null;const m=k=>{k.preventDefault(),s(c)};return t.jsx(yi,{onClick:o,children:t.jsx(ki,{onClick:k=>k.stopPropagation(),children:t.jsxs(ji,{onSubmit:m,children:[t.jsx(Ci,{children:"Как вас зовут?"}),t.jsxs($i,{children:[t.jsx(le,{type:"text",value:c,onChange:k=>u(k.target.value),placeholder:"Иванов Иван Иванович",disabled:r,autoFocus:!0,style:{flex:1}}),t.jsx(Si,{type:"submit",disabled:r||!c.trim(),children:r?"...":"→"})]}),i&&t.jsx(Mi,{children:i})]})})})},yi=n.div`
   position: fixed;
   top: 0;
   left: 0;
@@ -2177,27 +2167,27 @@ React keys must be passed directly to JSX without using spread:
   justify-content: center;
   align-items: center;
   z-index: 1000;
-`,Ci=n.div`
+`,ki=n.div`
   background: white;
   padding: 30px;
   border-radius: 12px;
   width: 90%;
   max-width: 450px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-`,$i=n.form`
+`,ji=n.form`
   display: flex;
   flex-direction: column;
-`,Si=n.h2`
+`,Ci=n.h2`
   display: block;
   font-size: 27px;
   color: black;
   margin-bottom: 16px;
   margin-top: 0;
-`,Mi=n.div`
+`,$i=n.div`
   display: flex;
   gap: 10px;
   align-items: center;
-`,Li=n(te)`
+`,Si=n(te)`
   width: auto;
   min-width: 50px;
   height: 40px;
@@ -2210,12 +2200,12 @@ React keys must be passed directly to JSX without using spread:
     opacity: 0.5;
     cursor: not-allowed;
   }
-`,Di=n.div`
+`,Mi=n.div`
   color: #e74c3c;
   font-size: 12px;
   margin-top: 8px;
   text-align: left;
-`,Ti=({onLoginSuccess:e,userType:o="delivery_operator",title:s="Авторизация",submitLabel:i="Войти",placeholder:r="8 (xxx) xxx-xx-xx",supportPhone:c="8 989 924 24 24",supportLinkUrl:u="https://waypay.one",supportLinkText:m="waypay.one",className:k,style:b,pollingIntervalMs:v=3e3,enableRegistration:f=!1})=>{const[y,d]=w.useState(!1),[h,l]=w.useState(""),[T,j]=w.useState(!1),[R,I]=w.useState(""),[_,A]=w.useState(""),[P,H]=w.useState(!1),[B,z]=w.useState(!1),[N,F]=w.useState(""),[g,p]=w.useState(""),[S,E]=w.useState(null),O=w.useRef(void 0);w.useEffect(()=>()=>{O.current&&clearInterval(O.current)},[]);const V=x=>{const C=x.replace(/\D/g,"");return C?C.startsWith("8")?`+7${C.slice(1)}`:C.startsWith("7")?`+${C}`:`+${C}`:""},Z=()=>{j(!1),z(!1),F(""),p(""),E(null),O.current&&window.clearInterval(O.current)},$=async x=>{if(x.preventDefault(),!h){A("Введите номер телефона");return}d(!0),A("");const C=V(h);try{const D=await Be(C,o);E({phone:C,checkId:D.check_id,callPhone:D.call_phone}),f&&"name_required"in D&&D.name_required?(z(!0),I(D.call_phone)):!f&&"name_required"in D&&D.name_required?(A("Этот номер не зарегистрирован в системе. Обратитесь в поддержку для регистрации."),E(null)):(I(D.call_phone),j(!0),a(C,D.check_id))}catch(D){console.error("Auth error:",D),A("Не удалось инициировать авторизацию. Проверьте номер.")}finally{d(!1)}},L=async x=>{if(!x.trim()){p("Введите ФИО");return}if(S){d(!0),p("");try{F(x),z(!1),j(!0),a(S.phone,S.checkId,x)}catch(C){console.error("Registration error:",C),p("Не удалось завершить регистрацию")}finally{d(!1)}}},a=(x,C,D)=>{O.current&&window.clearInterval(O.current),O.current=window.setInterval(()=>{M(x,C,D)},v)},M=async(x,C,D)=>{if(!P){H(!0);try{const Y=await ze(x,C,o,D||N);Y.access_token&&Y.refresh_token&&(O.current&&window.clearInterval(O.current),j(!1),z(!1),F(""),E(null),e(Y.access_token))}catch(Y){console.error("Verification error:",Y)}finally{H(!1)}}};return t.jsxs(Ei,{className:k,style:b,children:[t.jsxs(Ii,{children:[t.jsxs(Pi,{onSubmit:$,children:[t.jsx(Ri,{children:s}),t.jsx(Bi,{children:t.jsx(zi,{children:t.jsx(Re,{value:h,onChange:x=>l(x),placeholder:r})})}),_&&t.jsx(Ni,{children:t.jsx("span",{children:_})}),t.jsx(Ai,{type:"submit",disabled:y,children:y?"Загрузка...":i})]}),t.jsxs(Fi,{children:["Хотите получить доступ к нашим продуктам?",t.jsx("br",{}),"Обратитесь по номеру"," ",t.jsx(_i,{href:`tel:${c}`,children:c}),t.jsx("br",{}),"или оставьте заявку на"," ",t.jsx(Oi,{href:u,target:"_blank",rel:"noreferrer",children:m})]})]}),t.jsx(ki,{isOpen:B,onClose:Z,onSubmit:L,error:g,isLoading:y}),t.jsx(Ie,{isOpen:T,onClose:Z,callPhone:R,error:_})]})},Ei=n.div`
+`,Li=({onLoginSuccess:e,userType:o="delivery_operator",title:s="Авторизация",submitLabel:i="Войти",placeholder:r="8 (xxx) xxx-xx-xx",supportPhone:c="8 989 924 24 24",supportLinkUrl:u="https://waypay.one",supportLinkText:m="waypay.one",className:k,style:b,pollingIntervalMs:v=3e3,enableRegistration:f=!1})=>{const[y,d]=w.useState(!1),[h,l]=w.useState(""),[T,j]=w.useState(!1),[R,I]=w.useState(""),[_,A]=w.useState(""),[P,H]=w.useState(!1),[B,z]=w.useState(!1),[N,F]=w.useState(""),[g,p]=w.useState(""),[S,E]=w.useState(null),O=w.useRef(void 0);w.useEffect(()=>()=>{O.current&&clearInterval(O.current)},[]);const V=x=>{const C=x.replace(/\D/g,"");return C?C.startsWith("8")?`+7${C.slice(1)}`:C.startsWith("7")?`+${C}`:`+${C}`:""},Z=()=>{j(!1),z(!1),F(""),p(""),E(null),O.current&&window.clearInterval(O.current)},$=async x=>{if(x.preventDefault(),!h){A("Введите номер телефона");return}d(!0),A("");const C=V(h);try{const D=await Be(C,o);E({phone:C,checkId:D.check_id,callPhone:D.call_phone}),f&&"name_required"in D&&D.name_required?(z(!0),I(D.call_phone)):!f&&"name_required"in D&&D.name_required?(A("Этот номер не зарегистрирован в системе. Обратитесь в поддержку для регистрации."),E(null)):(I(D.call_phone),j(!0),a(C,D.check_id))}catch(D){console.error("Auth error:",D),A("Не удалось инициировать авторизацию. Проверьте номер.")}finally{d(!1)}},L=async x=>{if(!x.trim()){p("Введите ФИО");return}if(S){d(!0),p("");try{F(x),z(!1),j(!0),a(S.phone,S.checkId,x)}catch(C){console.error("Registration error:",C),p("Не удалось завершить регистрацию")}finally{d(!1)}}},a=(x,C,D)=>{O.current&&window.clearInterval(O.current),O.current=window.setInterval(()=>{M(x,C,D)},v)},M=async(x,C,D)=>{if(!P){H(!0);try{const Y=await ze(x,C,o,D||N);Y.access_token&&Y.refresh_token&&(O.current&&window.clearInterval(O.current),j(!1),z(!1),F(""),E(null),e(Y.access_token))}catch(Y){console.error("Verification error:",Y)}finally{H(!1)}}};return t.jsxs(Di,{className:k,style:b,children:[t.jsxs(Ti,{children:[t.jsxs(Ei,{onSubmit:$,children:[t.jsx(Ii,{children:s}),t.jsx(Pi,{children:t.jsx(Ri,{children:t.jsx(Re,{value:h,onChange:x=>l(x),placeholder:r})})}),_&&t.jsx(_i,{children:t.jsx("span",{children:_})}),t.jsx(Bi,{type:"submit",disabled:y,children:y?"Загрузка...":i})]}),t.jsxs(zi,{children:["Хотите получить доступ к нашим продуктам?",t.jsx("br",{}),"Обратитесь по номеру"," ",t.jsx(Ai,{href:`tel:${c}`,children:c}),t.jsx("br",{}),"или оставьте заявку на"," ",t.jsx(Fi,{href:u,target:"_blank",rel:"noreferrer",children:m})]})]}),t.jsx(vi,{isOpen:B,onClose:Z,onSubmit:L,error:g,isLoading:y}),t.jsx(Ie,{isOpen:T,onClose:Z,callPhone:R,error:_})]})},Di=n.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2225,7 +2215,7 @@ React keys must be passed directly to JSX without using spread:
   padding: 20px;
   background: white; /* Меняем на белый фон */
   box-sizing: border-box; /* Учитываем padding в размерах */
-`,Ii=n.div`
+`,Ti=n.div`
   background: white;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 125, 136, 0.1);
@@ -2263,24 +2253,24 @@ React keys must be passed directly to JSX without using spread:
   /* Скрываем скроллбар для IE, Edge и Firefox */
   -ms-overflow-style: none;
   scrollbar-width: none;
-`,Pi=n.form`
+`,Ei=n.form`
   display: flex;
   flex-direction: column;
-`,Ri=n.h1`
+`,Ii=n.h1`
   font-size: 24px;
   margin-bottom: 30px;
   text-align: center;
   color: #333;
   font-weight: 600;
-`,Bi=n.div`
+`,Pi=n.div`
   margin-bottom: 25px;
-`,zi=n.div`
+`,Ri=n.div`
   position: relative;
   width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-`,Ai=n.button`
+`,Bi=n.button`
   background: linear-gradient(
     90deg,
     rgba(0, 125, 136, 1) 0%,
@@ -2316,7 +2306,7 @@ React keys must be passed directly to JSX without using spread:
     transform: none;
     box-shadow: none;
   }
-`,Fi=n.div`
+`,zi=n.div`
   margin-top: 30px;
   padding-top: 20px;
   border-top: 1px solid #f0f0f0;
@@ -2324,7 +2314,7 @@ React keys must be passed directly to JSX without using spread:
   font-size: 14px;
   color: #666;
   line-height: 1.5;
-`,_i=n.a`
+`,Ai=n.a`
   color: rgba(0, 125, 136, 1);
   text-decoration: none;
   font-weight: 500;
@@ -2332,7 +2322,7 @@ React keys must be passed directly to JSX without using spread:
   &:hover {
     text-decoration: underline;
   }
-`,Oi=n.a`
+`,Fi=n.a`
   color: rgba(0, 125, 136, 1);
   text-decoration: none;
   font-weight: 500;
@@ -2340,7 +2330,7 @@ React keys must be passed directly to JSX without using spread:
   &:hover {
     text-decoration: underline;
   }
-`,Ni=n.div`
+`,_i=n.div`
   display: flex;
   align-items: center;
   gap: 8px;
@@ -2352,4 +2342,4 @@ React keys must be passed directly to JSX without using spread:
   margin-bottom: 16px;
   font-size: 14px;
   box-shadow: 0 6px 14px rgba(180, 35, 24, 0.08);
-`,Ae=e=>{let o=0;for(let i=0;i<e.length;i++)o=e.charCodeAt(i)+((o<<5)-o);return`hsl(${Math.abs(o%360)}, 60%, 60%)`},Yi=e=>!e||!e.trim()?"?":e.split(" ").filter(i=>i.length>0).map(i=>i[0].toUpperCase()).join("").slice(0,2)||"?",Wi=(e,o=100)=>{const s=document.createElement("canvas");s.width=o,s.height=o;const i=s.getContext("2d");if(!i)return"";const r=Ae(e);i.fillStyle=r,i.beginPath(),i.arc(o/2,o/2,o/2,0,Math.PI*2),i.fill(),i.fillStyle="#ffffff";const c=o/2;i.font=`bold ${c}px "Manrope", Arial, sans-serif`,i.textAlign="center",i.textBaseline="middle";const u=c*.1;return i.fillText(e,o/2,o/2+u),s.toDataURL("image/png")},Hi=e=>{if(!e)return"";const o=typeof e=="string"?new Date(e):e;if(isNaN(o.getTime()))return"";const s=o.getDate().toString().padStart(2,"0"),i=(o.getMonth()+1).toString().padStart(2,"0"),r=o.getFullYear();return`${s}-${i}-${r}`};function Vi(e){return new Date(e)}const Fe=e=>{let o;try{if(e instanceof Date)o=e;else if(typeof e=="string"||typeof e=="number")o=new Date(e);else throw new Error("Неподдерживаемый тип данных");if(isNaN(o.getTime()))return"неверная дата";const s=new Date;if(o>s){const v=Math.floor((o.getTime()-s.getTime())/1e3),f=Math.floor(v/60),y=Math.floor(f/60),d=Math.floor(y/24);return v<10?"скоро":v<60?`через ${v} секунд`:f===1?"через минуту":f<60?`через ${f} минут`:y===1?"через час":y<24?`через ${y} часов`:d===1?"завтра":d<7?`через ${d} дней`:"в будущем"}const i=Math.floor((s.getTime()-o.getTime())/1e3),r=Math.floor(i/60),c=Math.floor(r/60),u=Math.floor(c/24),m=Math.floor(u/7),k=Math.floor(u/30),b=Math.floor(u/365);if(i<10)return"только что";if(i<60){const v=Math.max(1,i);return v===1?"секунду назад":v<5?`${v} секунды назад`:`${v} секунд назад`}return r<60?r===1?"минуту назад":r<5?`${r} минуты назад`:`${r} минут назад`:c<24?c===1?"час назад":c<5?`${c} часа назад`:`${c} часов назад`:u<7?u===1?"вчера":u===2?"позавчера":`${u} дня назад`:m<4?m===1?"неделю назад":m<5?`${m} недели назад`:`${m} недель назад`:k<12?k===1?"месяц назад":k<5?`${k} месяца назад`:`${k} месяцев назад`:b===1?"год назад":b<5?`${b} года назад`:`${b} лет назад`}catch(s){return console.error("Ошибка форматирования относительного времени:",s),"ошибка даты"}},_e=e=>{try{return e.toLocaleDateString("ru-RU",{day:"2-digit",month:"2-digit",year:"2-digit",hour:"2-digit",minute:"2-digit"})}catch{return"неверная дата"}},Zi=(e,o={})=>{const{useExactAfterMonths:s=6,includeTime:i=!0}=o,r=new Date(e);return isNaN(r.getTime()),Math.floor((new Date().getTime()-r.getTime())/(1e3*60*60*24*30))>=s?i?_e(r):r.toLocaleDateString("ru-RU",{day:"2-digit",month:"2-digit",year:"2-digit"}):Fe(r)};exports.API_BASE_URL=ae;exports.AddButton=lt;exports.AuthCallModal=Ie;exports.AuthPage=Ti;exports.BackButton=xt;exports.BaseModal=De;exports.Checkbox=Nt;exports.ColumnChart=Zo;exports.ContextMenu=se;exports.CountInfoTitle=vo;exports.CustomCalendar=re;exports.CustomInput=le;exports.CustomPhoneInput=Re;exports.CustomSelect=St;exports.CustomTable=Ge;exports.CustomTextArea=vn;exports.CustomTitle=de;exports.DefaultButton=te;exports.DeleteButton=bt;exports.EditButton=wt;exports.EntitySelectContainer=co;exports.ExportButton=kt;exports.InputContainer=hn;exports.InputLabel=un;exports.InputRow=pn;exports.InputTitle=ko;exports.ModalInfoTitle=jo;exports.Pagination=mn;exports.PeriodField=An;exports.PhoneModalInput=Jn;exports.PhotoViewerModal=Pr;exports.ProgressBar=Eo;exports.RadioButton=Lo;exports.ScatterPlot=xr;exports.SideMenu=Gr;exports.SideMenuContext=Pe;exports.Tabs=no;exports.TitleField=ce;exports.ToggleSwitch=Mo;exports.YandexMapSelector=Fo;exports.apiRequest=G;exports.authStorage=ut;exports.confirmCallAuth=ze;exports.formatDate=Hi;exports.formatExactDate=_e;exports.formatMoney=ie;exports.formatRelativeTime=Fe;exports.formatRelativeTimeExtended=Zi;exports.generateAvatar=Wi;exports.getInitials=Yi;exports.getSessionInfo=yi;exports.initiateCallAuth=Be;exports.parseDateInput=Vi;exports.parseMoney=Vo;exports.stringToColor=Ae;
+`,Ae=e=>{let o=0;for(let i=0;i<e.length;i++)o=e.charCodeAt(i)+((o<<5)-o);return`hsl(${Math.abs(o%360)}, 60%, 60%)`},Oi=e=>!e||!e.trim()?"?":e.split(" ").filter(i=>i.length>0).map(i=>i[0].toUpperCase()).join("").slice(0,2)||"?",Ni=(e,o=100)=>{const s=document.createElement("canvas");s.width=o,s.height=o;const i=s.getContext("2d");if(!i)return"";const r=Ae(e);i.fillStyle=r,i.beginPath(),i.arc(o/2,o/2,o/2,0,Math.PI*2),i.fill(),i.fillStyle="#ffffff";const c=o/2;i.font=`bold ${c}px "Manrope", Arial, sans-serif`,i.textAlign="center",i.textBaseline="middle";const u=c*.1;return i.fillText(e,o/2,o/2+u),s.toDataURL("image/png")},Yi=e=>{if(!e)return"";const o=typeof e=="string"?new Date(e):e;if(isNaN(o.getTime()))return"";const s=o.getDate().toString().padStart(2,"0"),i=(o.getMonth()+1).toString().padStart(2,"0"),r=o.getFullYear();return`${s}-${i}-${r}`};function Wi(e){return new Date(e)}const Fe=e=>{let o;try{if(e instanceof Date)o=e;else if(typeof e=="string"||typeof e=="number")o=new Date(e);else throw new Error("Неподдерживаемый тип данных");if(isNaN(o.getTime()))return"неверная дата";const s=new Date;if(o>s){const v=Math.floor((o.getTime()-s.getTime())/1e3),f=Math.floor(v/60),y=Math.floor(f/60),d=Math.floor(y/24);return v<10?"скоро":v<60?`через ${v} секунд`:f===1?"через минуту":f<60?`через ${f} минут`:y===1?"через час":y<24?`через ${y} часов`:d===1?"завтра":d<7?`через ${d} дней`:"в будущем"}const i=Math.floor((s.getTime()-o.getTime())/1e3),r=Math.floor(i/60),c=Math.floor(r/60),u=Math.floor(c/24),m=Math.floor(u/7),k=Math.floor(u/30),b=Math.floor(u/365);if(i<10)return"только что";if(i<60){const v=Math.max(1,i);return v===1?"секунду назад":v<5?`${v} секунды назад`:`${v} секунд назад`}return r<60?r===1?"минуту назад":r<5?`${r} минуты назад`:`${r} минут назад`:c<24?c===1?"час назад":c<5?`${c} часа назад`:`${c} часов назад`:u<7?u===1?"вчера":u===2?"позавчера":`${u} дня назад`:m<4?m===1?"неделю назад":m<5?`${m} недели назад`:`${m} недель назад`:k<12?k===1?"месяц назад":k<5?`${k} месяца назад`:`${k} месяцев назад`:b===1?"год назад":b<5?`${b} года назад`:`${b} лет назад`}catch(s){return console.error("Ошибка форматирования относительного времени:",s),"ошибка даты"}},_e=e=>{try{return e.toLocaleDateString("ru-RU",{day:"2-digit",month:"2-digit",year:"2-digit",hour:"2-digit",minute:"2-digit"})}catch{return"неверная дата"}},Hi=(e,o={})=>{const{useExactAfterMonths:s=6,includeTime:i=!0}=o,r=new Date(e);return isNaN(r.getTime()),Math.floor((new Date().getTime()-r.getTime())/(1e3*60*60*24*30))>=s?i?_e(r):r.toLocaleDateString("ru-RU",{day:"2-digit",month:"2-digit",year:"2-digit"}):Fe(r)};exports.API_BASE_URL=ae;exports.AddButton=lt;exports.AuthCallModal=Ie;exports.AuthPage=Li;exports.BackButton=xt;exports.BaseModal=De;exports.Checkbox=Nt;exports.ColumnChart=Zo;exports.ContextMenu=se;exports.CountInfoTitle=vo;exports.CustomCalendar=re;exports.CustomInput=le;exports.CustomPhoneInput=Re;exports.CustomSelect=St;exports.CustomTable=Ge;exports.CustomTextArea=vn;exports.CustomTitle=de;exports.DefaultButton=te;exports.DeleteButton=bt;exports.EditButton=wt;exports.EntitySelectContainer=co;exports.ExportButton=kt;exports.InputContainer=hn;exports.InputLabel=un;exports.InputRow=pn;exports.InputTitle=ko;exports.ModalInfoTitle=jo;exports.Pagination=mn;exports.PeriodField=An;exports.PhoneModalInput=Jn;exports.PhotoViewerModal=Pr;exports.ProgressBar=Eo;exports.RadioButton=Lo;exports.ScatterPlot=xr;exports.SideMenu=Gr;exports.SideMenuContext=Pe;exports.Tabs=no;exports.TitleField=ce;exports.ToggleSwitch=Mo;exports.YandexMapSelector=Fo;exports.apiRequest=G;exports.authStorage=ut;exports.confirmCallAuth=ze;exports.formatDate=Yi;exports.formatExactDate=_e;exports.formatMoney=ie;exports.formatRelativeTime=Fe;exports.formatRelativeTimeExtended=Hi;exports.generateAvatar=Ni;exports.getInitials=Oi;exports.getSessionInfo=wi;exports.initiateCallAuth=Be;exports.parseDateInput=Wi;exports.parseMoney=Vo;exports.stringToColor=Ae;

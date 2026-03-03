@@ -365,7 +365,7 @@ const Se = ({ x: e, y: o, items: s, onClose: i, ...r }) => {
   left: 100%;
   z-index: 1001;
   margin-left: 2px;
-`, yi = ({
+`, wi = ({
   columns: e,
   data: o,
   onRowDoubleClick: s,
@@ -689,7 +689,7 @@ const Se = ({ x: e, y: o, items: s, onClose: i, ...r }) => {
   text-align: ${({ $align: e }) => e};
   vertical-align: middle;
   border-right: ${({ $isBeforeTotals: e, $isTotalsCell: o }) => e || o ? "none" : "0.5px solid #d1d5db"};
-`, ki = ({ onClick: e, tooltip: o, size: s = 32, margin: i }) => /* @__PURE__ */ t.jsx(st, { onClick: e, size: s, margin: i, title: o, children: /* @__PURE__ */ t.jsx(at, { size: s }) }), st = n.button`
+`, vi = ({ onClick: e, tooltip: o, size: s = 32, margin: i }) => /* @__PURE__ */ t.jsx(st, { onClick: e, size: s, margin: i, title: o, children: /* @__PURE__ */ t.jsx(at, { size: s }) }), st = n.button`
   width: ${(e) => e.size}px;
   height: ${(e) => e.size}px;
   border-radius: 50%;
@@ -801,7 +801,7 @@ async function lt() {
   const o = await e.json();
   return o.access_token ? o.access_token : null;
 }
-const ji = {
+const yi = {
   async isAuthenticated() {
     try {
       return !!(await this.getSessionInfo())?.client?.id;
@@ -849,7 +849,7 @@ const ji = {
   &:hover {
     opacity: 0.8;
   }
-`, Ci = ({ children: e, onClick: o }) => /* @__PURE__ */ t.jsxs(ct, { onClick: o, children: [
+`, ki = ({ children: e, onClick: o }) => /* @__PURE__ */ t.jsxs(ct, { onClick: o, children: [
   /* @__PURE__ */ t.jsx("svg", { width: "21", height: "13", viewBox: "0 0 21 13", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ t.jsx(
     "path",
     {
@@ -940,7 +940,7 @@ const ji = {
 `, pt = n.span`
   display: inline-flex;
   align-items: center;
-`, $i = ({ onClick: e, tooltip: o, size: s = 32 }) => /* @__PURE__ */ t.jsx(ut, { onClick: e, size: s, title: o, children: /* @__PURE__ */ t.jsx(
+`, ji = ({ onClick: e, tooltip: o, size: s = 32 }) => /* @__PURE__ */ t.jsx(ut, { onClick: e, size: s, title: o, children: /* @__PURE__ */ t.jsx(
   "svg",
   {
     width: s * 0.5,
@@ -983,7 +983,7 @@ const ji = {
   &:hover svg {
     transform: scale(1.1);
   }
-`, Mi = ({ onClick: e, tooltip: o, size: s = 32 }) => /* @__PURE__ */ t.jsx(ht, { onClick: e, size: s, title: o, children: /* @__PURE__ */ t.jsx(
+`, Ci = ({ onClick: e, tooltip: o, size: s = 32 }) => /* @__PURE__ */ t.jsx(ht, { onClick: e, size: s, title: o, children: /* @__PURE__ */ t.jsx(
   "svg",
   {
     width: s * 0.5,
@@ -1035,7 +1035,7 @@ const ji = {
     }
   ),
   /* @__PURE__ */ t.jsx("path", { d: "M0.625 14V15.125C0.625 15.7217 0.862053 16.294 1.28401 16.716C1.70597 17.1379 2.27826 17.375 2.875 17.375H14.125C14.7217 17.375 15.294 17.1379 15.716 16.716C16.1379 16.294 16.375 15.7217 16.375 15.125V14", stroke: "black" })
-] }), Si = ({
+] }), $i = ({
   children: e = "Экспорт",
   icon: o = /* @__PURE__ */ t.jsx(xt, {}),
   onExport: s,
@@ -1118,7 +1118,7 @@ const ji = {
     background-color: #000;
     transition: width 0.3s ease;
   }
-`, Li = ({
+`, Mi = ({
   placeholder: e = "",
   customPlaceholder: o,
   value: s,
@@ -1297,7 +1297,7 @@ const ji = {
   height: 0;
   width: 0;
   pointer-events: none;
-`, Di = ({ checked: e = !1, onChange: o, className: s, label: i, disabled: r = !1 }) => {
+`, Si = ({ checked: e = !1, onChange: o, className: s, label: i, disabled: r = !1 }) => {
   const [c, u] = z(!1), m = () => {
     r || !o || o(!e);
   }, y = (b) => {
@@ -1699,17 +1699,17 @@ const ji = {
   &:hover {
     text-decoration: underline;
   }
-`, Ti = n.div`
+`, Li = n.div`
   display: flex;
   align-items: center;
   gap: 12px;
   margin-bottom: 16px;
-`, Ei = n.span`
+`, Di = n.span`
   text-align: left;
   font-size: 14px;
   color: black;
   max-width: 90px;
-`, Ii = n.div`
+`, Ti = n.div`
   margin-left: auto;
   flex: 1;
   max-width: 425px;
@@ -1870,7 +1870,7 @@ const ji = {
   font-size: 12px;
   margin-top: 4px;
   display: block;
-`, Pi = ({ total: e, current: o = 1, onChange: s, itemsPerPage: i = 10 }) => {
+`, Ei = ({ total: e, current: o = 1, onChange: s, itemsPerPage: i = 10 }) => {
   const r = Math.ceil(e / i), [c, u] = z(o), m = (b) => {
     b < 1 || b > r || b === c || (u(b), s?.(b));
   }, y = () => {
@@ -1936,7 +1936,7 @@ const ji = {
   &:disabled {
     cursor: not-allowed;
   }
-`, Ri = ({
+`, Ii = ({
   placeholder: e = "",
   customPlaceholder: o,
   value: s,
@@ -2216,7 +2216,7 @@ const ji = {
   { id: "PreviousMonth", label: "За прошлый месяц", value: "PreviousMonth" },
   { id: "ThisYear", label: "За этот год", value: "ThisYear" },
   { id: "PreviousYear", label: "За прошлый год", value: "PreviousYear" }
-], zi = ({
+], Pi = ({
   value: e = "",
   placeholder: o = "Выберите период",
   options: s = kn,
@@ -2428,7 +2428,7 @@ const ji = {
   &:hover {
     text-decoration: underline;
   }
-`, Bi = ({
+`, Ri = ({
   name: e,
   value: o,
   onChange: s,
@@ -2538,7 +2538,7 @@ const ji = {
   font-size: 12px;
   margin-top: 4px;
   display: block;
-`, Fi = ({ tabs: e, activeTab: o, onChange: s, addButton: i, fontSize: r = 14 }) => {
+`, zi = ({ tabs: e, activeTab: o, onChange: s, addButton: i, fontSize: r = 14 }) => {
   const c = e.find((u) => u.id === o)?.content;
   return /* @__PURE__ */ t.jsxs(t.Fragment, { children: [
     /* @__PURE__ */ t.jsx(On, { children: /* @__PURE__ */ t.jsxs(Nn, { children: [
@@ -2586,7 +2586,7 @@ const ji = {
   padding: 4px 0;
 `, Vn = n.div`
   margin-top: 20px;
-`, Ai = ({
+`, Bi = ({
   mode: e,
   primaryValue: o,
   secondaryValue: s,
@@ -2683,7 +2683,7 @@ const ji = {
   font-weight: 600;
   margin-top: 0px;
   align-items: center;
-`, _i = ({ total: e }) => /* @__PURE__ */ t.jsx("div", { children: /* @__PURE__ */ t.jsxs(to, { children: [
+`, Fi = ({ total: e }) => /* @__PURE__ */ t.jsx("div", { children: /* @__PURE__ */ t.jsxs(to, { children: [
   "Всего: ",
   e
 ] }) }), to = n.p`
@@ -2694,7 +2694,7 @@ const ji = {
   align-items: center;
   font-size: 20px;
   white-space: nowrap;
-`, Oi = n.h3`
+`, Ai = n.h3`
   color: black;
   text-align: left;
   margin: 0;
@@ -2702,7 +2702,7 @@ const ji = {
   margin-top: 15px;
   font-size: 14px;
   font-weight: 400;
-`, Ni = n.h1`
+`, _i = n.h1`
   display: flex;
   text-align: left;
   font-size: 16px;
@@ -2749,7 +2749,7 @@ const ji = {
   width: 0;
   color: black;
   height: 0;
-`, Wi = ({ checked: e, onChange: o, disabled: s }) => {
+`, Oi = ({ checked: e, onChange: o, disabled: s }) => {
   const i = () => {
     s || o(!e);
   };
@@ -2757,7 +2757,7 @@ const ji = {
     /* @__PURE__ */ t.jsx(ro, { checked: e, onChange: i, disabled: s }),
     /* @__PURE__ */ t.jsx(oo, { checked: e, disabled: s })
   ] });
-}, Yi = ({ id: e, name: o, checked: s, onChange: i, children: r }) => /* @__PURE__ */ t.jsxs(io, { htmlFor: e, children: [
+}, Ni = ({ id: e, name: o, checked: s, onChange: i, children: r }) => /* @__PURE__ */ t.jsxs(io, { htmlFor: e, children: [
   /* @__PURE__ */ t.jsx(so, { type: "radio", id: e, name: o, checked: s, onChange: i }),
   r
 ] }), io = n.label`
@@ -2793,7 +2793,7 @@ const ji = {
       transform: translate(-50%, -50%);
     }
   }
-`, Hi = ({
+`, Wi = ({
   percentage: e,
   onChange: o,
   draggable: s = !1,
@@ -2879,7 +2879,7 @@ const ho = (e) => typeof window > "u" ? Promise.reject(new Error("Window is not 
   i.src = `https://api-maps.yandex.ru/2.1/?lang=ru_RU${r}`, i.async = !0, i.onload = () => {
     window.ymaps ? window.ymaps.ready(() => o(window.ymaps)) : s(new Error("Yandex Maps failed to load"));
   }, i.onerror = () => s(new Error("Failed to load Yandex Maps script")), document.head.appendChild(i);
-})), ie), Vi = ({
+})), ie), Yi = ({
   onLocationSelect: e,
   initialAddress: o = "",
   initialLat: s = 55.751244,
@@ -3023,12 +3023,12 @@ function ke(e, o = "₽") {
   }).format(i);
   return !0 ? `${r}${o}` : r;
 }
-function Zi(e) {
+function Hi(e) {
   if (!e) return 0;
   const o = e.replace(/\D/g, "");
   return parseInt(o, 10);
 }
-const Ui = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFontSize: c }) => {
+const Vi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFontSize: c }) => {
   const [u, m] = z(null), y = [];
   for (let w = 0; w <= s; w += i)
     y.push(w);
@@ -3211,7 +3211,7 @@ const Ui = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
 `, Oo = _e`
   from { opacity: 0; transform: translate(-50%, -110%); }
   to { opacity: 1; transform: translate(-50%, -100%); }
-`, Xi = ({
+`, Zi = ({
   title: e,
   data: o,
   xAxisLabel: s,
@@ -3430,7 +3430,7 @@ const Ui = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
   border-top: 6px solid rgba(0, 0, 0, 0.9);
-`, qi = ({ images: e, initialIndex: o, onClose: s }) => {
+`, Ui = ({ images: e, initialIndex: o, onClose: s }) => {
   const [i, r] = z(o), [c, u] = z(0), m = () => {
     r((g) => g > 0 ? g - 1 : e.length - 1), u(0);
   }, y = () => {
@@ -3718,7 +3718,7 @@ const Ui = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
       }
     )
   }
-), Gi = ({
+), Xi = ({
   items: e,
   bottomItems: o = [],
   logo: s,
@@ -3790,7 +3790,7 @@ const Ui = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
     const W = (L.children?.length || 0) > 0, Y = F === L.key, G = $ === L.key || !!L.children && L.children.some((J) => J.key === $);
     return /* @__PURE__ */ t.jsxs(q.Fragment, { children: [
       /* @__PURE__ */ t.jsxs(
-        Br,
+        Rr,
         {
           $collapsed: f,
           $selected: G,
@@ -3798,16 +3798,16 @@ const Ui = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
           $disabled: L.disabled,
           title: L.label,
           children: [
-            L.icon && /* @__PURE__ */ t.jsx(Ar, { $collapsed: f, children: L.icon }),
-            !f && /* @__PURE__ */ t.jsx(Fr, { children: L.label }),
-            !f && W && /* @__PURE__ */ t.jsx(Or, { $expanded: Y, children: "▾" })
+            L.icon && /* @__PURE__ */ t.jsx(Br, { $collapsed: f, children: L.icon }),
+            !f && /* @__PURE__ */ t.jsx(zr, { children: L.label }),
+            !f && W && /* @__PURE__ */ t.jsx(Ar, { $expanded: Y, children: "▾" })
           ]
         }
       ),
-      !f && W && Y && /* @__PURE__ */ t.jsx(_r, { children: S(L.children || [], !0) })
+      !f && W && Y && /* @__PURE__ */ t.jsx(Fr, { children: S(L.children || [], !0) })
     ] }, L.key);
-  }), a = Ae(() => B.visible ? /* @__PURE__ */ t.jsx(Wr, { style: { left: B.x, top: B.y }, children: B.items.map((x) => /* @__PURE__ */ t.jsx(
-    Yr,
+  }), a = Ae(() => B.visible ? /* @__PURE__ */ t.jsx(Or, { style: { left: B.x, top: B.y }, children: B.items.map((x) => /* @__PURE__ */ t.jsx(
+    Nr,
     {
       onClick: () => {
         V(x), N({ visible: !1, x: 0, y: 0, items: [] });
@@ -3818,17 +3818,17 @@ const Ui = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
     x.key
   )) }) : null, [B, $]), M = () => {
     const x = [...e, ...o].filter((j) => !j.hidden);
-    return /* @__PURE__ */ t.jsx(Sr, { children: x.map((j) => {
+    return /* @__PURE__ */ t.jsx($r, { children: x.map((j) => {
       const L = $ === j.key;
       return /* @__PURE__ */ t.jsxs(
-        Lr,
+        Mr,
         {
           $selected: L,
           onClick: () => V(j),
           $disabled: j.disabled,
           children: [
-            j.icon && /* @__PURE__ */ t.jsx(Dr, { $selected: L, children: j.icon }),
-            h && /* @__PURE__ */ t.jsx(Tr, { $selected: L, children: j.label })
+            j.icon && /* @__PURE__ */ t.jsx(Sr, { $selected: L, children: j.icon }),
+            h && /* @__PURE__ */ t.jsx(Lr, { $selected: L, children: j.label })
           ]
         },
         j.key
@@ -3836,11 +3836,10 @@ const Ui = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
     }) });
   };
   return k ? /* @__PURE__ */ t.jsxs(jr, { className: g, style: v, children: [
-    /* @__PURE__ */ t.jsx(Cr, { children: s && /* @__PURE__ */ t.jsx($r, { children: s }) }),
-    /* @__PURE__ */ t.jsx(Mr, { children: l }),
+    /* @__PURE__ */ t.jsx(Cr, { children: l }),
     M()
   ] }) : /* @__PURE__ */ t.jsxs(
-    Er,
+    Dr,
     {
       ref: A,
       $collapsed: f,
@@ -3849,19 +3848,19 @@ const Ui = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
       className: g,
       style: v,
       children: [
-        /* @__PURE__ */ t.jsxs(Ir, { children: [
-          /* @__PURE__ */ t.jsx(Pr, { onClick: O, "aria-label": "Переключить меню", children: i ?? /* @__PURE__ */ t.jsx(kr, { collapsed: f }) }),
-          !f && s && /* @__PURE__ */ t.jsx(Rr, { children: s })
+        /* @__PURE__ */ t.jsxs(Tr, { children: [
+          /* @__PURE__ */ t.jsx(Er, { onClick: O, "aria-label": "Переключить меню", children: i ?? /* @__PURE__ */ t.jsx(kr, { collapsed: f }) }),
+          !f && s && /* @__PURE__ */ t.jsx(Ir, { children: s })
         ] }),
-        /* @__PURE__ */ t.jsxs(zr, { children: [
+        /* @__PURE__ */ t.jsxs(Pr, { children: [
           /* @__PURE__ */ t.jsx(Me, { children: S(e) }),
           o.length > 0 && /* @__PURE__ */ t.jsxs(t.Fragment, { children: [
-            /* @__PURE__ */ t.jsx(Nr, {}),
+            /* @__PURE__ */ t.jsx(_r, {}),
             /* @__PURE__ */ t.jsx(Me, { children: S(o) })
           ] })
         ] }),
         a,
-        /* @__PURE__ */ t.jsx(Hr, { $collapsed: f }),
+        /* @__PURE__ */ t.jsx(Wr, { $collapsed: f }),
         l
       ]
     }
@@ -3873,21 +3872,11 @@ const Ui = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   flex-direction: column;
   background-color: rgba(249, 250, 250, 1);
   position: relative;
-`, Cr = n.header`
-  padding: 16px;
-  border-bottom: 1px solid rgba(209, 213, 219, 1);
-  background-color: white;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-`, $r = n.div`
-  display: flex;
-  align-items: center;
-`, Mr = n.main`
+`, Cr = n.main`
   flex: 1;
   overflow-y: auto;
   min-height: 0; /* Важно для flex-контейнера */
-`, Sr = n.nav`
+`, $r = n.nav`
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -3899,7 +3888,7 @@ const Ui = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   width: 100%;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
   z-index: 10;
-`, Lr = n.div`
+`, Mr = n.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3918,19 +3907,19 @@ const Ui = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   &:active {
     background-color: rgba(209, 213, 219, 0.5);
   }
-`, Dr = n.div`
+`, Sr = n.div`
   font-size: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: ${({ $selected: e }) => e ? "#000" : "#50555c"};
-`, Tr = n.span`
+`, Lr = n.span`
   font-size: 12px;
   font-weight: ${({ $selected: e }) => e ? "600" : "400"};
   color: ${({ $selected: e }) => e ? "#000" : "#50555c"};
   text-align: center;
   white-space: nowrap;
-`, Er = n.div`
+`, Dr = n.div`
   width: ${({ $collapsed: e, $width: o, $collapsedWidth: s }) => e ? s : o};
   height: 100vh;
   background-color: rgba(249, 250, 250, 1);
@@ -3943,25 +3932,25 @@ const Ui = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   transition: width 0.3s ease;
   box-shadow: 1px 0 7px rgba(0, 0, 0, 0.05);
   overflow: hidden;
-`, Ir = n.div`
+`, Tr = n.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 28px;
   width: 100%;
-`, Pr = n.button`
+`, Er = n.button`
   background: none;
   border: none;
   cursor: pointer;
   padding: 6px;
   margin-bottom: 0px;
-`, Rr = n.div`
+`, Ir = n.div`
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 4px;
-`, zr = n.div`
+`, Pr = n.div`
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -3979,7 +3968,7 @@ const Ui = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
     background: rgba(0, 0, 0, 0.1);
     border-radius: 4px;
   }
-`, Br = n.div`
+`, Rr = n.div`
   display: flex;
   align-items: center;
   justify-content: ${({ $collapsed: e }) => e ? "center" : "flex-start"};
@@ -4008,11 +3997,11 @@ const Ui = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
     background-color: ${({ $selected: e }) => e ? "rgba(209, 213, 219, 1)" : "rgba(209, 213, 219, 0.5)"};
     color: #000;
   }
-`, Fr = n.span`
+`, zr = n.span`
   font-size: 15px;
   font-weight: 500;
   white-space: nowrap;
-`, Ar = n.div`
+`, Br = n.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4038,23 +4027,23 @@ const Ui = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
     max-height: 100%;
     object-fit: contain;
   }
-`, _r = n.div`
+`, Fr = n.div`
   margin-left: 45px;
   padding-left: 0;
   border-left: 1px solid rgba(209, 213, 219, 0.8);
   display: flex;
   flex-direction: column;
   gap: 4px;
-`, Or = n.span`
+`, Ar = n.span`
   margin-left: auto;
   transform: rotate(${({ $expanded: e }) => e ? "180deg" : "0deg"});
   transition: transform 0.2s ease;
-`, Nr = n.div`
+`, _r = n.div`
   height: 1px;
   width: 100%;
   background-color: rgba(209, 213, 219, 1);
   margin: 14px 0;
-`, Wr = n.div`
+`, Or = n.div`
   position: fixed;
   background: white;
   border: 1px solid #e5e7eb;
@@ -4064,7 +4053,7 @@ const Ui = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   padding: 8px;
   z-index: 1000;
   min-width: 180px;
-`, Yr = n.div`
+`, Nr = n.div`
   padding: 8px 12px;
   border-radius: 6px;
   cursor: pointer;
@@ -4076,7 +4065,7 @@ const Ui = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
     background-color: ${({ $selected: e }) => e ? "rgba(209, 213, 219, 1)" : "rgba(209, 213, 219, 0.5)"};
     color: #000;
   }
-`, Hr = n.div`
+`, Wr = n.div`
   position: absolute;
   right: 0;
   top: 0;
@@ -4085,17 +4074,17 @@ const Ui = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   background-color: rgba(209, 213, 219, 1);
   transition: all 0.3s ease;
   opacity: ${({ $collapsed: e }) => e ? 0 : 1};
-`, Vr = (e) => {
+`, Yr = (e) => {
   const o = e.replace(/\D/g, ""), i = (o.startsWith("8") || o.length === 0 ? o : `8${o}`).slice(0, 11);
   let r = "";
   return i.length > 0 && (r += "8"), i.length > 1 && (r += ` (${i.slice(1, 4)}`), i.length > 4 && (r += `) ${i.slice(4, 7)}`), i.length > 7 && (r += `-${i.slice(7, 9)}`), i.length > 9 && (r += `-${i.slice(9, 11)}`), r;
-}, Zr = ({ value: e, onChange: o, placeholder: s = "8 (xxx) xxx-xx-xx", tabIndex: i }) => {
+}, Hr = ({ value: e, onChange: o, placeholder: s = "8 (xxx) xxx-xx-xx", tabIndex: i }) => {
   const r = (c) => {
-    const u = Vr(c.target.value);
+    const u = Yr(c.target.value);
     o(u);
   };
-  return /* @__PURE__ */ t.jsx(Ur, { type: "text", value: e, onChange: r, placeholder: s, maxLength: 18, tabIndex: i });
-}, Ur = n.input`
+  return /* @__PURE__ */ t.jsx(Vr, { type: "text", value: e, onChange: r, placeholder: s, maxLength: 18, tabIndex: i });
+}, Vr = n.input`
   width: 100%;
   height: 54px;
   font-size: 16px;
@@ -4114,13 +4103,13 @@ const Ui = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
     box-shadow: 0 0 0 0.2rem rgba(37, 203, 161, 0.25);
     background-color: rgba(255, 255, 255, 1);
   }
-`, Xr = (e, o) => ne("/auth/call/initiate", {
+`, Zr = (e, o) => ne("/auth/call/initiate", {
   method: "POST",
   body: {
     phone: e,
     user_type: o
   }
-}), qr = (e, o, s, i) => ne("/auth/call/confirm", {
+}), Ur = (e, o, s, i) => ne("/auth/call/confirm", {
   method: "POST",
   body: {
     phone: e,
@@ -4128,7 +4117,7 @@ const Ui = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
     user_type: s,
     name: i
   }
-}), Ji = () => ne("/auth/session/info", { method: "GET" }), Gr = ({
+}), qi = () => ne("/auth/session/info", { method: "GET" }), Xr = ({
   isOpen: e,
   onClose: o,
   onSubmit: s,
@@ -4140,9 +4129,9 @@ const Ui = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   const m = (y) => {
     y.preventDefault(), s(c);
   };
-  return /* @__PURE__ */ t.jsx(Jr, { onClick: o, children: /* @__PURE__ */ t.jsx(Kr, { onClick: (y) => y.stopPropagation(), children: /* @__PURE__ */ t.jsxs(Qr, { onSubmit: m, children: [
-    /* @__PURE__ */ t.jsx(ei, { children: "Как вас зовут?" }),
-    /* @__PURE__ */ t.jsxs(ti, { children: [
+  return /* @__PURE__ */ t.jsx(qr, { onClick: o, children: /* @__PURE__ */ t.jsx(Gr, { onClick: (y) => y.stopPropagation(), children: /* @__PURE__ */ t.jsxs(Jr, { onSubmit: m, children: [
+    /* @__PURE__ */ t.jsx(Kr, { children: "Как вас зовут?" }),
+    /* @__PURE__ */ t.jsxs(Qr, { children: [
       /* @__PURE__ */ t.jsx(
         Te,
         {
@@ -4156,7 +4145,7 @@ const Ui = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
         }
       ),
       /* @__PURE__ */ t.jsx(
-        ni,
+        ei,
         {
           type: "submit",
           disabled: r || !c.trim(),
@@ -4164,9 +4153,9 @@ const Ui = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
         }
       )
     ] }),
-    i && /* @__PURE__ */ t.jsx(oi, { children: i })
+    i && /* @__PURE__ */ t.jsx(ti, { children: i })
   ] }) }) });
-}, Jr = n.div`
+}, qr = n.div`
   position: fixed;
   top: 0;
   left: 0;
@@ -4177,27 +4166,27 @@ const Ui = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   justify-content: center;
   align-items: center;
   z-index: 1000;
-`, Kr = n.div`
+`, Gr = n.div`
   background: white;
   padding: 30px;
   border-radius: 12px;
   width: 90%;
   max-width: 450px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-`, Qr = n.form`
+`, Jr = n.form`
   display: flex;
   flex-direction: column;
-`, ei = n.h2`
+`, Kr = n.h2`
   display: block;
   font-size: 27px;
   color: black;
   margin-bottom: 16px;
   margin-top: 0;
-`, ti = n.div`
+`, Qr = n.div`
   display: flex;
   gap: 10px;
   align-items: center;
-`, ni = n(se)`
+`, ei = n(se)`
   width: auto;
   min-width: 50px;
   height: 40px;
@@ -4210,12 +4199,12 @@ const Ui = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
     opacity: 0.5;
     cursor: not-allowed;
   }
-`, oi = n.div`
+`, ti = n.div`
   color: #e74c3c;
   font-size: 12px;
   margin-top: 8px;
   text-align: left;
-`, Ki = ({
+`, Gi = ({
   onLoginSuccess: e,
   userType: o = "delivery_operator",
   title: s = "Авторизация",
@@ -4246,7 +4235,7 @@ const Ui = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
     d(!0), F("");
     const j = V(h);
     try {
-      const L = await Xr(j, o);
+      const L = await Zr(j, o);
       T({
         phone: j,
         checkId: L.check_id,
@@ -4284,7 +4273,7 @@ const Ui = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
     if (!I) {
       H(!0);
       try {
-        const W = await qr(x, j, o, L || N);
+        const W = await Ur(x, j, o, L || N);
         W.access_token && W.refresh_token && (O.current && window.clearInterval(O.current), k(!1), B(!1), A(""), T(null), e(W.access_token));
       } catch (W) {
         console.error("Verification error:", W);
@@ -4293,35 +4282,35 @@ const Ui = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
       }
     }
   };
-  return /* @__PURE__ */ t.jsxs(ri, { className: y, style: b, children: [
-    /* @__PURE__ */ t.jsxs(ii, { children: [
-      /* @__PURE__ */ t.jsxs(si, { onSubmit: C, children: [
-        /* @__PURE__ */ t.jsx(ai, { children: s }),
-        /* @__PURE__ */ t.jsx(li, { children: /* @__PURE__ */ t.jsx(ci, { children: /* @__PURE__ */ t.jsx(
-          Zr,
+  return /* @__PURE__ */ t.jsxs(ni, { className: y, style: b, children: [
+    /* @__PURE__ */ t.jsxs(oi, { children: [
+      /* @__PURE__ */ t.jsxs(ri, { onSubmit: C, children: [
+        /* @__PURE__ */ t.jsx(ii, { children: s }),
+        /* @__PURE__ */ t.jsx(si, { children: /* @__PURE__ */ t.jsx(ai, { children: /* @__PURE__ */ t.jsx(
+          Hr,
           {
             value: h,
             onChange: (x) => l(x),
             placeholder: r
           }
         ) }) }),
-        _ && /* @__PURE__ */ t.jsx(xi, { children: /* @__PURE__ */ t.jsx("span", { children: _ }) }),
-        /* @__PURE__ */ t.jsx(di, { type: "submit", disabled: v, children: v ? "Загрузка..." : i })
+        _ && /* @__PURE__ */ t.jsx(ui, { children: /* @__PURE__ */ t.jsx("span", { children: _ }) }),
+        /* @__PURE__ */ t.jsx(li, { type: "submit", disabled: v, children: v ? "Загрузка..." : i })
       ] }),
-      /* @__PURE__ */ t.jsxs(pi, { children: [
+      /* @__PURE__ */ t.jsxs(ci, { children: [
         "Хотите получить доступ к нашим продуктам?",
         /* @__PURE__ */ t.jsx("br", {}),
         "Обратитесь по номеру",
         " ",
-        /* @__PURE__ */ t.jsx(ui, { href: `tel:${c}`, children: c }),
+        /* @__PURE__ */ t.jsx(di, { href: `tel:${c}`, children: c }),
         /* @__PURE__ */ t.jsx("br", {}),
         "или оставьте заявку на",
         " ",
-        /* @__PURE__ */ t.jsx(hi, { href: u, target: "_blank", rel: "noreferrer", children: m })
+        /* @__PURE__ */ t.jsx(pi, { href: u, target: "_blank", rel: "noreferrer", children: m })
       ] })
     ] }),
     /* @__PURE__ */ t.jsx(
-      Gr,
+      Xr,
       {
         isOpen: R,
         onClose: X,
@@ -4340,7 +4329,7 @@ const Ui = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
       }
     )
   ] });
-}, ri = n.div`
+}, ni = n.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -4350,7 +4339,7 @@ const Ui = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   padding: 20px;
   background: white; /* Меняем на белый фон */
   box-sizing: border-box; /* Учитываем padding в размерах */
-`, ii = n.div`
+`, oi = n.div`
   background: white;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 125, 136, 0.1);
@@ -4388,24 +4377,24 @@ const Ui = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   /* Скрываем скроллбар для IE, Edge и Firefox */
   -ms-overflow-style: none;
   scrollbar-width: none;
-`, si = n.form`
+`, ri = n.form`
   display: flex;
   flex-direction: column;
-`, ai = n.h1`
+`, ii = n.h1`
   font-size: 24px;
   margin-bottom: 30px;
   text-align: center;
   color: #333;
   font-weight: 600;
-`, li = n.div`
+`, si = n.div`
   margin-bottom: 25px;
-`, ci = n.div`
+`, ai = n.div`
   position: relative;
   width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-`, di = n.button`
+`, li = n.button`
   background: linear-gradient(
     90deg,
     rgba(0, 125, 136, 1) 0%,
@@ -4441,7 +4430,7 @@ const Ui = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
     transform: none;
     box-shadow: none;
   }
-`, pi = n.div`
+`, ci = n.div`
   margin-top: 30px;
   padding-top: 20px;
   border-top: 1px solid #f0f0f0;
@@ -4449,7 +4438,7 @@ const Ui = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   font-size: 14px;
   color: #666;
   line-height: 1.5;
-`, ui = n.a`
+`, di = n.a`
   color: rgba(0, 125, 136, 1);
   text-decoration: none;
   font-weight: 500;
@@ -4457,7 +4446,7 @@ const Ui = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   &:hover {
     text-decoration: underline;
   }
-`, hi = n.a`
+`, pi = n.a`
   color: rgba(0, 125, 136, 1);
   text-decoration: none;
   font-weight: 500;
@@ -4465,7 +4454,7 @@ const Ui = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   &:hover {
     text-decoration: underline;
   }
-`, xi = n.div`
+`, ui = n.div`
   display: flex;
   align-items: center;
   gap: 8px;
@@ -4477,33 +4466,33 @@ const Ui = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   margin-bottom: 16px;
   font-size: 14px;
   box-shadow: 0 6px 14px rgba(180, 35, 24, 0.08);
-`, gi = (e) => {
+`, hi = (e) => {
   let o = 0;
   for (let i = 0; i < e.length; i++)
     o = e.charCodeAt(i) + ((o << 5) - o);
   return `hsl(${Math.abs(o % 360)}, 60%, 60%)`;
-}, Qi = (e) => !e || !e.trim() ? "?" : e.split(" ").filter((i) => i.length > 0).map((i) => i[0].toUpperCase()).join("").slice(0, 2) || "?", es = (e, o = 100) => {
+}, Ji = (e) => !e || !e.trim() ? "?" : e.split(" ").filter((i) => i.length > 0).map((i) => i[0].toUpperCase()).join("").slice(0, 2) || "?", Ki = (e, o = 100) => {
   const s = document.createElement("canvas");
   s.width = o, s.height = o;
   const i = s.getContext("2d");
   if (!i) return "";
-  const r = gi(e);
+  const r = hi(e);
   i.fillStyle = r, i.beginPath(), i.arc(o / 2, o / 2, o / 2, 0, Math.PI * 2), i.fill(), i.fillStyle = "#ffffff";
   const c = o / 2;
   i.font = `bold ${c}px "Manrope", Arial, sans-serif`, i.textAlign = "center", i.textBaseline = "middle";
   const u = c * 0.1;
   return i.fillText(e, o / 2, o / 2 + u), s.toDataURL("image/png");
-}, ts = (e) => {
+}, Qi = (e) => {
   if (!e) return "";
   const o = typeof e == "string" ? new Date(e) : e;
   if (isNaN(o.getTime())) return "";
   const s = o.getDate().toString().padStart(2, "0"), i = (o.getMonth() + 1).toString().padStart(2, "0"), r = o.getFullYear();
   return `${s}-${i}-${r}`;
 };
-function ns(e) {
+function es(e) {
   return new Date(e);
 }
-const fi = (e) => {
+const xi = (e) => {
   let o;
   try {
     if (e instanceof Date)
@@ -4530,7 +4519,7 @@ const fi = (e) => {
   } catch (s) {
     return console.error("Ошибка форматирования относительного времени:", s), "ошибка даты";
   }
-}, bi = (e) => {
+}, gi = (e) => {
   try {
     return e.toLocaleDateString("ru-RU", {
       day: "2-digit",
@@ -4542,68 +4531,68 @@ const fi = (e) => {
   } catch {
     return "неверная дата";
   }
-}, os = (e, o = {}) => {
+}, ts = (e, o = {}) => {
   const { useExactAfterMonths: s = 6, includeTime: i = !0 } = o, r = new Date(e);
-  return isNaN(r.getTime()), Math.floor(((/* @__PURE__ */ new Date()).getTime() - r.getTime()) / (1e3 * 60 * 60 * 24 * 30)) >= s ? i ? bi(r) : r.toLocaleDateString("ru-RU", {
+  return isNaN(r.getTime()), Math.floor(((/* @__PURE__ */ new Date()).getTime() - r.getTime()) / (1e3 * 60 * 60 * 24 * 30)) >= s ? i ? gi(r) : r.toLocaleDateString("ru-RU", {
     day: "2-digit",
     month: "2-digit",
     year: "2-digit"
-  }) : fi(r);
+  }) : xi(r);
 };
 export {
   Le as API_BASE_URL,
-  ki as AddButton,
+  vi as AddButton,
   xr as AuthCallModal,
-  Ki as AuthPage,
-  Ci as BackButton,
+  Gi as AuthPage,
+  ki as BackButton,
   dn as BaseModal,
-  Di as Checkbox,
-  Ui as ColumnChart,
+  Si as Checkbox,
+  Vi as ColumnChart,
   Se as ContextMenu,
-  _i as CountInfoTitle,
+  Fi as CountInfoTitle,
   he as CustomCalendar,
   Te as CustomInput,
-  Zr as CustomPhoneInput,
-  Li as CustomSelect,
-  yi as CustomTable,
-  Ri as CustomTextArea,
+  Hr as CustomPhoneInput,
+  Mi as CustomSelect,
+  wi as CustomTable,
+  Ii as CustomTextArea,
   Re as CustomTitle,
   se as DefaultButton,
-  $i as DeleteButton,
-  Mi as EditButton,
-  Ai as EntitySelectContainer,
-  Si as ExportButton,
-  Ii as InputContainer,
-  Ei as InputLabel,
-  Ti as InputRow,
-  Oi as InputTitle,
-  Ni as ModalInfoTitle,
-  Pi as Pagination,
-  zi as PeriodField,
-  Bi as PhoneModalInput,
-  qi as PhotoViewerModal,
-  Hi as ProgressBar,
-  Yi as RadioButton,
-  Xi as ScatterPlot,
-  Gi as SideMenu,
+  ji as DeleteButton,
+  Ci as EditButton,
+  Bi as EntitySelectContainer,
+  $i as ExportButton,
+  Ti as InputContainer,
+  Di as InputLabel,
+  Li as InputRow,
+  Ai as InputTitle,
+  _i as ModalInfoTitle,
+  Ei as Pagination,
+  Pi as PeriodField,
+  Ri as PhoneModalInput,
+  Ui as PhotoViewerModal,
+  Wi as ProgressBar,
+  Ni as RadioButton,
+  Zi as ScatterPlot,
+  Xi as SideMenu,
   yr as SideMenuContext,
-  Fi as Tabs,
+  zi as Tabs,
   Pe as TitleField,
-  Wi as ToggleSwitch,
-  Vi as YandexMapSelector,
+  Oi as ToggleSwitch,
+  Yi as YandexMapSelector,
   ne as apiRequest,
-  ji as authStorage,
-  qr as confirmCallAuth,
-  ts as formatDate,
-  bi as formatExactDate,
+  yi as authStorage,
+  Ur as confirmCallAuth,
+  Qi as formatDate,
+  gi as formatExactDate,
   ke as formatMoney,
-  fi as formatRelativeTime,
-  os as formatRelativeTimeExtended,
-  es as generateAvatar,
-  Qi as getInitials,
-  Ji as getSessionInfo,
-  Xr as initiateCallAuth,
-  ns as parseDateInput,
-  Zi as parseMoney,
-  gi as stringToColor
+  xi as formatRelativeTime,
+  ts as formatRelativeTimeExtended,
+  Ki as generateAvatar,
+  Ji as getInitials,
+  qi as getSessionInfo,
+  Zr as initiateCallAuth,
+  es as parseDateInput,
+  Hi as parseMoney,
+  hi as stringToColor
 };

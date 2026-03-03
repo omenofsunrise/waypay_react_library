@@ -263,11 +263,6 @@ const SideMenu: React.FC<SideMenuProps> = ({
   if (isMobile) {
     return (
       <MobileContainer className={className} style={style}>
-        {/* Верхняя панель с логотипом */}
-        <MobileHeader>
-          {logo && <MobileLogo>{logo}</MobileLogo>}
-        </MobileHeader>
-        
         {/* Основной контент (children) */}
         <MobileContent>
           {children}
@@ -329,20 +324,6 @@ const MobileContainer = styled.div`
   flex-direction: column;
   background-color: rgba(249, 250, 250, 1);
   position: relative;
-`;
-
-const MobileHeader = styled.header`
-  padding: 16px;
-  border-bottom: 1px solid rgba(209, 213, 219, 1);
-  background-color: white;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-`;
-
-const MobileLogo = styled.div`
-  display: flex;
-  align-items: center;
 `;
 
 const MobileContent = styled.main`
