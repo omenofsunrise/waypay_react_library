@@ -3867,11 +3867,18 @@ const Vi = ({ title: e, data: o, maxValue: s, step: i, height: r = 300, titleFon
   );
 }, jr = n.div`
   width: 100%;
+  height: 100vh;
   min-height: 100vh;
+  height: 100svh;
+  min-height: 100svh;
+  height: 100dvh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   background-color: rgba(249, 250, 250, 1);
   position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
 `, Cr = n.main`
   flex: 1;
   overflow-y: auto;

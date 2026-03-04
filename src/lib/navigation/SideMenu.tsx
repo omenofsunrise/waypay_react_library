@@ -319,11 +319,18 @@ export default SideMenu;
 
 const MobileContainer = styled.div`
   width: 100%;
+  height: 100vh;
   min-height: 100vh;
+  height: 100svh;
+  min-height: 100svh;
+  height: 100dvh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   background-color: rgba(249, 250, 250, 1);
   position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
 `;
 
 const MobileContent = styled.main`
