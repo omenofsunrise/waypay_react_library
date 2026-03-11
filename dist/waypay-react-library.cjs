@@ -202,22 +202,27 @@ React keys must be passed directly to JSX without using spread:
     transform: translateX(-50%);
   }
 `,ae="/api";async function G(e,o={}){const{method:s="GET",body:i,headers:r={},token:c,withCredentials:u=!0}=o,m=async b=>{const v={"Content-Type":"application/json",...r};b&&(v.Authorization=`Bearer ${b}`);const f=e.startsWith("http")?e:`${ae}${e}`;return await fetch(f,{method:s,headers:v,body:i?JSON.stringify(i):void 0,credentials:u?"include":"same-origin"})},k=async(b,v=!0)=>{const f=await m(b);if(f.ok){if(f.status===204)return null;const d=await f.text();if(!d)return null;try{return JSON.parse(d)}catch{return d}}if(f.status===401&&v){const d=await pt();if(d)return k(d,!1)}let y=`Request failed with status ${f.status}`;try{const d=await f.json();d&&typeof d.error=="string"?y=d.error:typeof d=="string"&&(y=d)}catch{const d=await f.text();d&&(y=d)}throw new Error(y)};return k(c)}async function pt(){const e=await fetch(`${ae}/auth/refresh`,{method:"POST",headers:{"Content-Type":"application/json"},credentials:"include"});if(!e.ok)return null;const o=await e.json();return o.access_token?o.access_token:null}const ut={async isAuthenticated(){try{return!!(await this.getSessionInfo())?.client?.id}catch{return!1}},async getSessionInfo(){try{return await G("/auth/session/info",{method:"GET"})}catch{return null}},async logout(){try{await G("/auth/session/revoke",{method:"POST"})}catch(e){throw console.error("Logout error:",e),e}},async getClientId(){return(await this.getSessionInfo())?.client?.id||null},async hasPin(){return(await this.getSessionInfo())?.has_pin||!1}},ht=n.button`
-  color: black;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: none;
+  padding: 8px 12px;
+  background-color: rgba(0, 125, 136, 1);
   border: none;
-  cursor: pointer;
-  padding: 0;
+  border-radius: 8px;
+  min-height: 25px;
+  cursor: ${({disabled:e})=>e?"not-allowed":"pointer"};
+  color: white;
   font-family: inherit;
-  font-size: inherit;
-  margin: 25px;
+  font-size: 18px;
+  font-weight: 400;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+  opacity: ${({disabled:e})=>e?.7:1};
 
   &:hover {
-    opacity: 0.8;
+    background-color: ${({disabled:e})=>e?"rgba(0, 125, 136, 1)":"rgba(0, 150, 163, 1)"};
   }
-`,xt=({children:e,onClick:o})=>t.jsxs(ht,{onClick:o,children:[t.jsx("svg",{width:"21",height:"13",viewBox:"0 0 21 13",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:t.jsx("path",{d:"M6.17798 0.978109L0.65625 6.4998L6.17798 12.0215L7.10604 11.0934L3.16862 7.156L20.3124 7.156V5.84351L3.16874 5.84351L7.10604 1.90621L6.17798 0.978109Z",fill:"#50555C"})}),e]}),te=({children:e="Подтвердить",icon:o,disabled:s=!1,bg:i,hoverBg:r,disabledBg:c,textColor:u,fullWidth:m=!1,minWidth:k,width:b,isPrimary:v=!0,...f})=>{const d=i?{bg:i,hoverBg:r||i,disabledBg:c||i,textColor:u||(v?"white":"black")}:v?{bg:"rgba(0, 125, 136, 1)",hoverBg:"rgba(0, 150, 163, 1)",disabledBg:"rgba(102, 177, 184, 1)",textColor:"white"}:{bg:"rgba(209, 213, 219, 1)",hoverBg:"rgba(209, 233, 239, 1)",disabledBg:"rgba(209, 213, 219, 0.7)",textColor:"black"};return t.jsxs(ft,{disabled:s,$bg:d.bg,$hoverBg:d.hoverBg,$disabledBg:d.disabledBg,$textColor:d.textColor,$fullWidth:m,$minWidth:k,$width:b,...f,children:[o&&t.jsx(gt,{children:o}),t.jsx("span",{children:e})]})},ft=n.button`
+`,xt=({children:e,onClick:o,disabled:s,...i})=>t.jsxs(ht,{onClick:o,disabled:s,...i,children:[t.jsx("svg",{width:"21",height:"13",viewBox:"0 0 21 13",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:t.jsx("path",{d:"M6.17798 0.978109L0.65625 6.4998L6.17798 12.0215L7.10604 11.0934L3.16862 7.156L20.3124 7.156V5.84351L3.16874 5.84351L7.10604 1.90621L6.17798 0.978109Z",fill:"currentColor"})}),e]}),te=({children:e="Подтвердить",icon:o,disabled:s=!1,bg:i,hoverBg:r,disabledBg:c,textColor:u,fullWidth:m=!1,minWidth:k,width:b,isPrimary:v=!0,...f})=>{const d=i?{bg:i,hoverBg:r||i,disabledBg:c||i,textColor:u||(v?"white":"black")}:v?{bg:"rgba(0, 125, 136, 1)",hoverBg:"rgba(0, 150, 163, 1)",disabledBg:"rgba(102, 177, 184, 1)",textColor:"white"}:{bg:"rgba(209, 213, 219, 1)",hoverBg:"rgba(209, 233, 239, 1)",disabledBg:"rgba(209, 213, 219, 0.7)",textColor:"black"};return t.jsxs(ft,{disabled:s,$bg:d.bg,$hoverBg:d.hoverBg,$disabledBg:d.disabledBg,$textColor:d.textColor,$fullWidth:m,$minWidth:k,$width:b,...f,children:[o&&t.jsx(gt,{children:o}),t.jsx("span",{children:e})]})},ft=n.button`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1484,9 +1489,15 @@ React keys must be passed directly to JSX without using spread:
 `,de=n.h1`
   margin-right: auto;
   text-align: left;
-  font-size: 30px;
-  color: black;
+  font-size: clamp(20px, 4vw, 30px);
+  line-height: 1.2;
+  color: var(--wp-title-color, #111);
   font-weight: 600;
+  margin: 0;
+  @media (max-width: 768px) {
+    font-size: 20px;
+    line-height: 1.3;
+  }
 `;function ie(e,o="₽"){if(!e||e.trim()==="")return`0${o}`;const s=e.replace(/[^\d-]/g,"");if(!s||s==="-"||s==="")return`0${o}`;const i=parseInt(s,10);if(isNaN(i))return`0${o}`;const r=new Intl.NumberFormat("ru-RU",{style:"decimal",minimumFractionDigits:0,maximumFractionDigits:0}).format(i);return!0?`${r}${o}`:r}function Vo(e){if(!e)return 0;const o=e.replace(/\D/g,"");return parseInt(o,10)}const Zo=({title:e,data:o,maxValue:s,step:i,height:r=300,titleFontSize:c})=>{const[u,m]=w.useState(null),k=[];for(let v=0;v<=s;v+=i)k.push(v);const b=o.length>0?o[0].bars.map(v=>({name:v.name,color:v.color})):[];return t.jsxs(Uo,{children:[t.jsxs(ce,{style:{marginTop:"0"},children:[t.jsx(de,{style:{fontSize:c},children:e}),t.jsx(Xo,{children:b.map((v,f)=>t.jsxs(qo,{children:[t.jsx(Go,{color:v.color}),t.jsx(Jo,{children:v.name})]},f))})]}),t.jsxs(Ko,{height:r,children:[t.jsx(Qo,{children:k.map((v,f)=>t.jsx(er,{children:v.toLocaleString()},f))}),t.jsxs(tr,{children:[t.jsxs(nr,{children:[k.map((v,f)=>{const y=v/s*100;return t.jsx(or,{position:100-y},`line-${f}`)}),o.map((v,f)=>t.jsxs(rr,{onMouseEnter:()=>m(f),onMouseLeave:()=>m(null),children:[v.bars.map((y,d)=>{const h=v.bars.slice(d+1).reduce((l,T)=>l+T.value,0);return t.jsx(ir,{height:y.value/s*100,offset:h/s*100,color:y.color,isHovered:u!==null&&u!==f},d)}),u===f&&t.jsxs(lr,{children:[t.jsxs(cr,{children:[t.jsxs(dr,{children:["Всего: ",ie(v.total.toString())]}),v.bars.map((y,d)=>t.jsxs(pr,{children:[y.name,": ",ie(y.value.toString())]},d))]}),t.jsx(ur,{})]})]},f))]}),t.jsx(sr,{children:o.map((v,f)=>t.jsx(ar,{style:{flex:1,textAlign:"center"},children:v.label},f))})]})]})]})},Uo=n.div`
   background-color: white;
   border-radius: 10px;

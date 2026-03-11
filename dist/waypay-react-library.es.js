@@ -834,27 +834,32 @@ const yi = {
     return (await this.getSessionInfo())?.has_pin || !1;
   }
 }, ct = n.button`
-  color: black;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: none;
+  padding: 8px 12px;
+  background-color: rgba(0, 125, 136, 1);
   border: none;
-  cursor: pointer;
-  padding: 0;
+  border-radius: 8px;
+  min-height: 25px;
+  cursor: ${({ disabled: e }) => e ? "not-allowed" : "pointer"};
+  color: white;
   font-family: inherit;
-  font-size: inherit;
-  margin: 25px;
+  font-size: 18px;
+  font-weight: 400;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+  opacity: ${({ disabled: e }) => e ? 0.7 : 1};
 
   &:hover {
-    opacity: 0.8;
+    background-color: ${({ disabled: e }) => e ? "rgba(0, 125, 136, 1)" : "rgba(0, 150, 163, 1)"};
   }
-`, ki = ({ children: e, onClick: o }) => /* @__PURE__ */ t.jsxs(ct, { onClick: o, children: [
+`, ki = ({ children: e, onClick: o, disabled: s, ...i }) => /* @__PURE__ */ t.jsxs(ct, { onClick: o, disabled: s, ...i, children: [
   /* @__PURE__ */ t.jsx("svg", { width: "21", height: "13", viewBox: "0 0 21 13", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ t.jsx(
     "path",
     {
       d: "M6.17798 0.978109L0.65625 6.4998L6.17798 12.0215L7.10604 11.0934L3.16862 7.156L20.3124 7.156V5.84351L3.16874 5.84351L7.10604 1.90621L6.17798 0.978109Z",
-      fill: "#50555C"
+      fill: "currentColor"
     }
   ) }),
   e
@@ -3003,9 +3008,15 @@ const ho = (e) => typeof window > "u" ? Promise.reject(new Error("Window is not 
 `, Re = n.h1`
   margin-right: auto;
   text-align: left;
-  font-size: 30px;
-  color: black;
+  font-size: clamp(20px, 4vw, 30px);
+  line-height: 1.2;
+  color: var(--wp-title-color, #111);
   font-weight: 600;
+  margin: 0;
+  @media (max-width: 768px) {
+    font-size: 20px;
+    line-height: 1.3;
+  }
 `;
 function ke(e, o = "₽") {
   if (!e || e.trim() === "")
