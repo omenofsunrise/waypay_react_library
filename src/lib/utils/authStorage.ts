@@ -4,6 +4,7 @@ export type SessionInfo = {
   has_pin: boolean;
   client: {
     id: string;
+    is_moderated: boolean;
   };
 };
 
