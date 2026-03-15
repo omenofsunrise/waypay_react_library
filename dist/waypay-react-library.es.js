@@ -825,7 +825,7 @@ const ki = {
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify(e ? { token_id: e } : {})
+        body: e ? { token_id: e } : {}
       });
     } catch (o) {
       throw console.error("Logout error:", o), o;
