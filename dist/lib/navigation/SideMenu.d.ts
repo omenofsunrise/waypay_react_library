@@ -11,6 +11,7 @@ export interface SideMenuItem {
 export interface SideMenuProps {
     items: SideMenuItem[];
     bottomItems?: SideMenuItem[];
+    bottomContent?: React.ReactNode;
     logo?: React.ReactNode;
     arrowIcon?: React.ReactNode;
     collapsed?: boolean;
@@ -22,11 +23,8 @@ export interface SideMenuProps {
     collapsedWidth?: string;
     className?: string;
     style?: React.CSSProperties;
-    /** Мобильный брейкпоинт */
     mobileBreakpoint?: number;
-    /** Показывать ли лейблы в Bottom Navigation */
     showBottomLabels?: boolean;
-    /** Дочерние элементы (контент страницы) */
     children?: React.ReactNode;
 }
 declare const SideMenu: React.FC<SideMenuProps>;

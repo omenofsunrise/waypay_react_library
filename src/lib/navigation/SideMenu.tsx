@@ -15,6 +15,7 @@ export interface SideMenuItem {
 export interface SideMenuProps {
   items: SideMenuItem[];
   bottomItems?: SideMenuItem[];
+  bottomContent?: React.ReactNode;
   logo?: React.ReactNode;
   arrowIcon?: React.ReactNode;
   collapsed?: boolean;
@@ -26,15 +27,11 @@ export interface SideMenuProps {
   collapsedWidth?: string;
   className?: string;
   style?: React.CSSProperties;
-  /** Мобильный брейкпоинт */
   mobileBreakpoint?: number;
-  /** Показывать ли лейблы в Bottom Navigation */
   showBottomLabels?: boolean;
-  /** Дочерние элементы (контент страницы) */
   children?: React.ReactNode;
 }
 
-// Дефолтная SVG иконка
 const DefaultArrowIcon = ({ collapsed }: { collapsed: boolean }) => (
   <svg
     width="16"
@@ -58,6 +55,7 @@ const DefaultArrowIcon = ({ collapsed }: { collapsed: boolean }) => (
 const SideMenu: React.FC<SideMenuProps> = ({
   items,
   bottomItems = [],
+  bottomContent,
   logo,
   arrowIcon,
   collapsed: collapsedProp,
@@ -75,7 +73,6 @@ const SideMenu: React.FC<SideMenuProps> = ({
 }) => {
   const contextValue = useContext(SideMenuContext);
 
-  // Определяем, мобильное ли устройство
   const [isMobile, setIsMobile] = useState(window.innerWidth <= mobileBreakpoint);
 
   useEffect(() => {
@@ -235,7 +232,6 @@ const SideMenu: React.FC<SideMenuProps> = ({
     );
   }, [contextMenu, selectedKey]);
 
-  // Рендер Bottom Navigation для мобильных устройств
   const renderBottomNavigation = () => {
     const allItems = [...items, ...bottomItems].filter(i => !i.hidden);
     
@@ -259,22 +255,18 @@ const SideMenu: React.FC<SideMenuProps> = ({
     );
   };
 
-  // Если мобильное устройство - показываем Bottom Navigation с контентом
   if (isMobile) {
     return (
       <MobileContainer className={className} style={style}>
-        {/* Основной контент (children) */}
         <MobileContent>
           {children}
         </MobileContent>
         
-        {/* Bottom Navigation */}
         {renderBottomNavigation()}
       </MobileContainer>
     );
   }
 
-  // Десктопная версия
   return (
     <SideMenuContainer
       ref={containerRef}
@@ -303,12 +295,21 @@ const SideMenu: React.FC<SideMenuProps> = ({
             <ScrollableArea>{renderItems(bottomItems)}</ScrollableArea>
           </>
         )}
+        
+        {/* Добавляем произвольный контент внизу */}
+        {bottomContent && (
+          <>
+            {(bottomItems.length > 0 || items.length > 0) && <Divider />}
+            <BottomContentWrapper $collapsed={collapsed}>
+              {bottomContent}
+            </BottomContentWrapper>
+          </>
+        )}
       </MenuList>
 
       {contextMenuContent}
       <RightBorder $collapsed={collapsed} />
       
-      {/* Добавляем children для десктопной версии (если нужно) */}
       {children}
     </SideMenuContainer>
   );
@@ -587,4 +588,21 @@ const RightBorder = styled.div<{ $collapsed: boolean }>`
   background-color: rgba(209, 213, 219, 1);
   transition: all 0.3s ease;
   opacity: ${({ $collapsed }) => ($collapsed ? 0 : 1)};
+`;
+
+const BottomContentWrapper = styled.div<{ $collapsed: boolean }>`
+  width: 100%;
+  margin-top: auto;
+  padding: ${({ $collapsed }) => ($collapsed ? "8px 0" : "12px 0")};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  /* Адаптация для свернутого состояния */
+  ${({ $collapsed }) => $collapsed && `
+    & > * {
+      transform: scale(0.9);
+    }
+  `}
 `;

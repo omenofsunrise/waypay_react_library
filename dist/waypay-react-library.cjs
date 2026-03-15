@@ -1,9 +1,9 @@
-"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const w=require("react"),n=require("styled-components"),X=require("framer-motion");var ee={exports:{}},J={};var pe;function Ne(){if(pe)return J;pe=1;var e=Symbol.for("react.transitional.element"),o=Symbol.for("react.fragment");function s(i,r,c){var u=null;if(c!==void 0&&(u=""+c),r.key!==void 0&&(u=""+r.key),"key"in r){c={};for(var m in r)m!=="key"&&(c[m]=r[m])}else c=r;return r=c.ref,{$$typeof:e,type:i,key:u,ref:r!==void 0?r:null,props:c}}return J.Fragment=o,J.jsx=s,J.jsxs=s,J}var K={};var ue;function Ye(){return ue||(ue=1,process.env.NODE_ENV!=="production"&&(function(){function e(a){if(a==null)return null;if(typeof a=="function")return a.$$typeof===F?null:a.displayName||a.name||null;if(typeof a=="string")return a;switch(a){case T:return"Fragment";case R:return"Profiler";case j:return"StrictMode";case P:return"Suspense";case H:return"SuspenseList";case N:return"Activity"}if(typeof a=="object")switch(typeof a.tag=="number"&&console.error("Received an unexpected object in getComponentNameFromType(). This is likely a bug in React. Please file an issue."),a.$$typeof){case l:return"Portal";case _:return a.displayName||"Context";case I:return(a._context.displayName||"Context")+".Consumer";case A:var M=a.render;return a=a.displayName,a||(a=M.displayName||M.name||"",a=a!==""?"ForwardRef("+a+")":"ForwardRef"),a;case B:return M=a.displayName||null,M!==null?M:e(a.type)||"Memo";case z:M=a._payload,a=a._init;try{return e(a(M))}catch{}}return null}function o(a){return""+a}function s(a){try{o(a);var M=!1}catch{M=!0}if(M){M=console;var x=M.error,C=typeof Symbol=="function"&&Symbol.toStringTag&&a[Symbol.toStringTag]||a.constructor.name||"Object";return x.call(M,"The provided key is an unsupported type %s. This value must be coerced to a string before using it here.",C),o(a)}}function i(a){if(a===T)return"<>";if(typeof a=="object"&&a!==null&&a.$$typeof===z)return"<...>";try{var M=e(a);return M?"<"+M+">":"<...>"}catch{return"<...>"}}function r(){var a=g.A;return a===null?null:a.getOwner()}function c(){return Error("react-stack-top-frame")}function u(a){if(p.call(a,"key")){var M=Object.getOwnPropertyDescriptor(a,"key").get;if(M&&M.isReactWarning)return!1}return a.key!==void 0}function m(a,M){function x(){O||(O=!0,console.error("%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://react.dev/link/special-props)",M))}x.isReactWarning=!0,Object.defineProperty(a,"key",{get:x,configurable:!0})}function k(){var a=e(this.type);return V[a]||(V[a]=!0,console.error("Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release.")),a=this.props.ref,a!==void 0?a:null}function b(a,M,x,C,D,Y){var W=x.ref;return a={$$typeof:h,type:a,key:M,props:x,_owner:C},(W!==void 0?W:null)!==null?Object.defineProperty(a,"ref",{enumerable:!1,get:k}):Object.defineProperty(a,"ref",{enumerable:!1,value:null}),a._store={},Object.defineProperty(a._store,"validated",{configurable:!1,enumerable:!1,writable:!0,value:0}),Object.defineProperty(a,"_debugInfo",{configurable:!1,enumerable:!1,writable:!0,value:null}),Object.defineProperty(a,"_debugStack",{configurable:!1,enumerable:!1,writable:!0,value:D}),Object.defineProperty(a,"_debugTask",{configurable:!1,enumerable:!1,writable:!0,value:Y}),Object.freeze&&(Object.freeze(a.props),Object.freeze(a)),a}function v(a,M,x,C,D,Y){var W=M.children;if(W!==void 0)if(C)if(S(W)){for(C=0;C<W.length;C++)f(W[C]);Object.freeze&&Object.freeze(W)}else console.error("React.jsx: Static children should always be an array. You are likely explicitly calling React.jsxs or React.jsxDEV. Use the Babel transform instead.");else f(W);if(p.call(M,"key")){W=e(a);var U=Object.keys(M).filter(function(Oe){return Oe!=="key"});C=0<U.length?"{key: someKey, "+U.join(": ..., ")+": ...}":"{key: someKey}",L[W+C]||(U=0<U.length?"{"+U.join(": ..., ")+": ...}":"{}",console.error(`A props object containing a "key" prop is being spread into JSX:
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const m=require("react"),n=require("styled-components"),X=require("framer-motion");var te={exports:{}},K={};var ue;function We(){if(ue)return K;ue=1;var e=Symbol.for("react.transitional.element"),o=Symbol.for("react.fragment");function i(r,s,l){var u=null;if(l!==void 0&&(u=""+l),s.key!==void 0&&(u=""+s.key),"key"in s){l={};for(var g in s)g!=="key"&&(l[g]=s[g])}else l=s;return s=l.ref,{$$typeof:e,type:r,key:u,ref:s!==void 0?s:null,props:l}}return K.Fragment=o,K.jsx=i,K.jsxs=i,K}var Q={};var he;function Ye(){return he||(he=1,process.env.NODE_ENV!=="production"&&(function(){function e(a){if(a==null)return null;if(typeof a=="function")return a.$$typeof===F?null:a.displayName||a.name||null;if(typeof a=="string")return a;switch(a){case I:return"Fragment";case P:return"Profiler";case k:return"StrictMode";case R:return"Suspense";case H:return"SuspenseList";case W:return"Activity"}if(typeof a=="object")switch(typeof a.tag=="number"&&console.error("Received an unexpected object in getComponentNameFromType(). This is likely a bug in React. Please file an issue."),a.$$typeof){case d:return"Portal";case O:return a.displayName||"Context";case E:return(a._context.displayName||"Context")+".Consumer";case A:var $=a.render;return a=a.displayName,a||(a=$.displayName||$.name||"",a=a!==""?"ForwardRef("+a+")":"ForwardRef"),a;case B:return $=a.displayName||null,$!==null?$:e(a.type)||"Memo";case _:$=a._payload,a=a._init;try{return e(a($))}catch{}}return null}function o(a){return""+a}function i(a){try{o(a);var $=!1}catch{$=!0}if($){$=console;var S=$.error,f=typeof Symbol=="function"&&Symbol.toStringTag&&a[Symbol.toStringTag]||a.constructor.name||"Object";return S.call($,"The provided key is an unsupported type %s. This value must be coerced to a string before using it here.",f),o(a)}}function r(a){if(a===I)return"<>";if(typeof a=="object"&&a!==null&&a.$$typeof===_)return"<...>";try{var $=e(a);return $?"<"+$+">":"<...>"}catch{return"<...>"}}function s(){var a=v.A;return a===null?null:a.getOwner()}function l(){return Error("react-stack-top-frame")}function u(a){if(c.call(a,"key")){var $=Object.getOwnPropertyDescriptor(a,"key").get;if($&&$.isReactWarning)return!1}return a.key!==void 0}function g(a,$){function S(){N||(N=!0,console.error("%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://react.dev/link/special-props)",$))}S.isReactWarning=!0,Object.defineProperty(a,"key",{get:S,configurable:!0})}function j(){var a=e(this.type);return V[a]||(V[a]=!0,console.error("Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release.")),a=this.props.ref,a!==void 0?a:null}function b(a,$,S,f,T,z){var Y=S.ref;return a={$$typeof:h,type:a,key:$,props:S,_owner:f},(Y!==void 0?Y:null)!==null?Object.defineProperty(a,"ref",{enumerable:!1,get:j}):Object.defineProperty(a,"ref",{enumerable:!1,value:null}),a._store={},Object.defineProperty(a._store,"validated",{configurable:!1,enumerable:!1,writable:!0,value:0}),Object.defineProperty(a,"_debugInfo",{configurable:!1,enumerable:!1,writable:!0,value:null}),Object.defineProperty(a,"_debugStack",{configurable:!1,enumerable:!1,writable:!0,value:T}),Object.defineProperty(a,"_debugTask",{configurable:!1,enumerable:!1,writable:!0,value:z}),Object.freeze&&(Object.freeze(a.props),Object.freeze(a)),a}function w(a,$,S,f,T,z){var Y=$.children;if(Y!==void 0)if(f)if(M(Y)){for(f=0;f<Y.length;f++)x(Y[f]);Object.freeze&&Object.freeze(Y)}else console.error("React.jsx: Static children should always be an array. You are likely explicitly calling React.jsxs or React.jsxDEV. Use the Babel transform instead.");else x(Y);if(c.call($,"key")){Y=e(a);var U=Object.keys($).filter(function(J){return J!=="key"});f=0<U.length?"{key: someKey, "+U.join(": ..., ")+": ...}":"{key: someKey}",L[Y+f]||(U=0<U.length?"{"+U.join(": ..., ")+": ...}":"{}",console.error(`A props object containing a "key" prop is being spread into JSX:
   let props = %s;
   <%s {...props} />
 React keys must be passed directly to JSX without using spread:
   let props = %s;
-  <%s key={someKey} {...props} />`,C,W,U,W),L[W+C]=!0)}if(W=null,x!==void 0&&(s(x),W=""+x),u(M)&&(s(M.key),W=""+M.key),"key"in M){x={};for(var q in M)q!=="key"&&(x[q]=M[q])}else x=M;return W&&m(x,typeof a=="function"?a.displayName||a.name||"Unknown":a),b(a,W,x,r(),D,Y)}function f(a){y(a)?a._store&&(a._store.validated=1):typeof a=="object"&&a!==null&&a.$$typeof===z&&(a._payload.status==="fulfilled"?y(a._payload.value)&&a._payload.value._store&&(a._payload.value._store.validated=1):a._store&&(a._store.validated=1))}function y(a){return typeof a=="object"&&a!==null&&a.$$typeof===h}var d=w,h=Symbol.for("react.transitional.element"),l=Symbol.for("react.portal"),T=Symbol.for("react.fragment"),j=Symbol.for("react.strict_mode"),R=Symbol.for("react.profiler"),I=Symbol.for("react.consumer"),_=Symbol.for("react.context"),A=Symbol.for("react.forward_ref"),P=Symbol.for("react.suspense"),H=Symbol.for("react.suspense_list"),B=Symbol.for("react.memo"),z=Symbol.for("react.lazy"),N=Symbol.for("react.activity"),F=Symbol.for("react.client.reference"),g=d.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE,p=Object.prototype.hasOwnProperty,S=Array.isArray,E=console.createTask?console.createTask:function(){return null};d={react_stack_bottom_frame:function(a){return a()}};var O,V={},Z=d.react_stack_bottom_frame.bind(d,c)(),$=E(i(c)),L={};K.Fragment=T,K.jsx=function(a,M,x){var C=1e4>g.recentlyCreatedOwnerStacks++;return v(a,M,x,!1,C?Error("react-stack-top-frame"):Z,C?E(i(a)):$)},K.jsxs=function(a,M,x){var C=1e4>g.recentlyCreatedOwnerStacks++;return v(a,M,x,!0,C?Error("react-stack-top-frame"):Z,C?E(i(a)):$)}})()),K}var he;function We(){return he||(he=1,process.env.NODE_ENV==="production"?ee.exports=Ne():ee.exports=Ye()),ee.exports}var t=We();const se=({x:e,y:o,items:s,onClose:i,...r})=>{const c=w.useRef(null),[u,m]=w.useState(null);w.useEffect(()=>{const d=h=>{c.current&&!c.current.contains(h.target)&&i()};return document.addEventListener("mousedown",d),()=>{document.removeEventListener("mousedown",d)}},[i]);const b=(()=>{if(!c.current)return{x:e,y:o};const d=c.current.offsetWidth,h=c.current.offsetHeight,l=window.innerWidth,T=window.innerHeight;let j=e,R=o;return j+d>l&&(j=e-d),R+h>T&&(R=o-h),{x:j,y:R}})(),v=(d,h)=>{d.submenu?m(u===h?null:h):d.action&&(d.action(),i())},f=d=>{s[d].submenu&&m(d)},y=d=>{const h=d.relatedTarget;c.current?.contains(h)||m(null)};return t.jsx(He,{ref:c,initial:{opacity:0,scale:.8},animate:{opacity:1,scale:1},exit:{opacity:0,scale:.8},transition:{duration:.15},style:{position:"absolute",top:b.y,left:b.x},onClick:d=>d.stopPropagation(),onMouseLeave:y,...r,children:s.map((d,h)=>t.jsxs(Ve,{$hasSubmenu:!!d.submenu,$disabled:d.disabled,children:[t.jsx(Ze,{onClick:l=>{l.stopPropagation(),d.disabled||v(d,h)},onMouseEnter:()=>!d.disabled&&f(h),whileHover:d.disabled?{}:{backgroundColor:"#f3f4f6"},initial:{backgroundColor:"#ffffff"},$color:d.color,$disabled:d.disabled,children:t.jsxs(Ue,{children:[d.label,d.submenu&&t.jsx(Xe,{children:t.jsx("svg",{width:"8",height:"12",viewBox:"0 0 8 12",fill:"none",children:t.jsx("path",{d:"M1.5 1.5L6 6L1.5 10.5",stroke:"currentColor",strokeWidth:"2"})})})]})}),d.submenu&&u===h&&t.jsx(qe,{initial:{opacity:0,x:10},animate:{opacity:1,x:0},exit:{opacity:0,x:10},transition:{duration:.15},children:t.jsx(se,{x:0,y:-h*40,items:d.submenu,onClose:()=>m(null)})})]},h))})},He=n(X.motion.div)`
+  <%s key={someKey} {...props} />`,f,Y,U,Y),L[Y+f]=!0)}if(Y=null,S!==void 0&&(i(S),Y=""+S),u($)&&(i($.key),Y=""+$.key),"key"in $){S={};for(var G in $)G!=="key"&&(S[G]=$[G])}else S=$;return Y&&g(S,typeof a=="function"?a.displayName||a.name||"Unknown":a),b(a,Y,S,s(),T,z)}function x(a){y(a)?a._store&&(a._store.validated=1):typeof a=="object"&&a!==null&&a.$$typeof===_&&(a._payload.status==="fulfilled"?y(a._payload.value)&&a._payload.value._store&&(a._payload.value._store.validated=1):a._store&&(a._store.validated=1))}function y(a){return typeof a=="object"&&a!==null&&a.$$typeof===h}var p=m,h=Symbol.for("react.transitional.element"),d=Symbol.for("react.portal"),I=Symbol.for("react.fragment"),k=Symbol.for("react.strict_mode"),P=Symbol.for("react.profiler"),E=Symbol.for("react.consumer"),O=Symbol.for("react.context"),A=Symbol.for("react.forward_ref"),R=Symbol.for("react.suspense"),H=Symbol.for("react.suspense_list"),B=Symbol.for("react.memo"),_=Symbol.for("react.lazy"),W=Symbol.for("react.activity"),F=Symbol.for("react.client.reference"),v=p.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE,c=Object.prototype.hasOwnProperty,M=Array.isArray,D=console.createTask?console.createTask:function(){return null};p={react_stack_bottom_frame:function(a){return a()}};var N,V={},Z=p.react_stack_bottom_frame.bind(p,l)(),C=D(r(l)),L={};Q.Fragment=I,Q.jsx=function(a,$,S){var f=1e4>v.recentlyCreatedOwnerStacks++;return w(a,$,S,!1,f?Error("react-stack-top-frame"):Z,f?D(r(a)):C)},Q.jsxs=function(a,$,S){var f=1e4>v.recentlyCreatedOwnerStacks++;return w(a,$,S,!0,f?Error("react-stack-top-frame"):Z,f?D(r(a)):C)}})()),Q}var xe;function He(){return xe||(xe=1,process.env.NODE_ENV==="production"?te.exports=We():te.exports=Ye()),te.exports}var t=He();const ae=({x:e,y:o,items:i,onClose:r,...s})=>{const l=m.useRef(null),[u,g]=m.useState(null);m.useEffect(()=>{const p=h=>{l.current&&!l.current.contains(h.target)&&r()};return document.addEventListener("mousedown",p),()=>{document.removeEventListener("mousedown",p)}},[r]);const b=(()=>{if(!l.current)return{x:e,y:o};const p=l.current.offsetWidth,h=l.current.offsetHeight,d=window.innerWidth,I=window.innerHeight;let k=e,P=o;return k+p>d&&(k=e-p),P+h>I&&(P=o-h),{x:k,y:P}})(),w=(p,h)=>{p.submenu?g(u===h?null:h):p.action&&(p.action(),r())},x=p=>{i[p].submenu&&g(p)},y=p=>{const h=p.relatedTarget;l.current?.contains(h)||g(null)};return t.jsx(Ve,{ref:l,initial:{opacity:0,scale:.8},animate:{opacity:1,scale:1},exit:{opacity:0,scale:.8},transition:{duration:.15},style:{position:"absolute",top:b.y,left:b.x},onClick:p=>p.stopPropagation(),onMouseLeave:y,...s,children:i.map((p,h)=>t.jsxs(Ze,{$hasSubmenu:!!p.submenu,$disabled:p.disabled,children:[t.jsx(Ue,{onClick:d=>{d.stopPropagation(),p.disabled||w(p,h)},onMouseEnter:()=>!p.disabled&&x(h),whileHover:p.disabled?{}:{backgroundColor:"#f3f4f6"},initial:{backgroundColor:"#ffffff"},$color:p.color,$disabled:p.disabled,children:t.jsxs(Xe,{children:[p.label,p.submenu&&t.jsx(qe,{children:t.jsx("svg",{width:"8",height:"12",viewBox:"0 0 8 12",fill:"none",children:t.jsx("path",{d:"M1.5 1.5L6 6L1.5 10.5",stroke:"currentColor",strokeWidth:"2"})})})]})}),p.submenu&&u===h&&t.jsx(Ge,{initial:{opacity:0,x:10},animate:{opacity:1,x:0},exit:{opacity:0,x:10},transition:{duration:.15},children:t.jsx(ae,{x:0,y:-h*40,items:p.submenu,onClose:()=>g(null)})})]},h))})},Ve=n(X.motion.div)`
   position: absolute;
   background: white;
   border-radius: 8px;
@@ -13,31 +13,31 @@ React keys must be passed directly to JSX without using spread:
   min-width: 180px;
   width: auto;
   overflow: visible;
-`,Ve=n.div`
+`,Ze=n.div`
   position: relative;
   opacity: ${({$disabled:e})=>e?.5:1};
-`,Ze=n(X.motion.div)`
+`,Ue=n(X.motion.div)`
   padding: 8px 16px;
   font-size: 14px;
   cursor: ${({$disabled:e})=>e?"not-allowed":"pointer"};
   color: ${({$color:e,$disabled:o})=>o?"#999":e||"#333"};
   white-space: nowrap;
   position: relative;
-`,Ue=n.div`
+`,Xe=n.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-`,Xe=n.span`
+`,qe=n.span`
   color: #666;
   margin-left: 8px;
-`,qe=n(X.motion.div)`
+`,Ge=n(X.motion.div)`
   position: absolute;
   top: 0;
   left: 100%;
   z-index: 1001;
   margin-left: 2px;
-`,Ge=({columns:e,data:o,onRowDoubleClick:s,contextMenuActions:i=[],onSort:r,sortConfig:c,onRowClick:u,selectedRow:m,fixedHeight:k,hasTotalsRow:b,debtChecker:v,rowStyles:f={},isLoading:y})=>{const[d,h]=w.useState(null),[l,T]=w.useState(null),j=w.useRef(null),R=w.useRef(null),I=500,_=m!==void 0?m:d,A=$=>{!e[$].isSortable||!r||r($)},H=v||($=>{const L=$[8];return typeof L=="string"?parseFloat(L.replace(/[^\d.]/g,""))>0:!1}),B=$=>{m===void 0&&h($===_?null:$),u&&u(o[$],$)},z=($,L)=>{s&&s($,L)},N=($,L)=>{if(i.length===0)return;$.preventDefault();const a="touches"in $?$.touches[0].clientX:$.clientX,M="touches"in $?$.touches[0].clientY:$.clientY;T({x:a,y:M,rowIndex:L})},F=($,L)=>{$.preventDefault(),N($,L)},g=($,L)=>{i.length!==0&&(R.current&&clearTimeout(R.current),R.current=window.setTimeout(()=>{N($,L)},I))},p=()=>{R.current&&(clearTimeout(R.current),R.current=null)},S=()=>{R.current&&window.clearTimeout(R.current)},E=()=>{T(null)};w.useEffect(()=>{const $=()=>{l&&E()};return document.addEventListener("click",$),()=>{document.removeEventListener("click",$),R.current&&clearTimeout(R.current)}},[l]);const O=($,L,a)=>{if(L)return{backgroundColor:"#FFFFFF",color:"#000000",fontWeight:"bold"};const M=f[$]||{};return $===_?{backgroundColor:M.backgroundColor||"#007D88",color:M.color||"#FFFFFF",fontWeight:M.fontWeight||"normal"}:a?{backgroundColor:M.backgroundColor||"#E8D8D8",color:M.color||"inherit",fontWeight:M.fontWeight||"normal"}:o[$][o[$].length-1]===!1?{backgroundColor:M.backgroundColor||"#E8F5E8",color:"#1B5E20",fontWeight:M.fontWeight||"normal"}:{backgroundColor:M.backgroundColor||"#FFFFFF",color:M.color||"inherit",fontWeight:M.fontWeight||"normal"}},V=($,L,a)=>{if(L)return"#FFFFFF";const M=O($,L,a);return M.hoverBackgroundColor?M.hoverBackgroundColor:$===_?"#007D88":a?"#E8D8D8CC":o[$][o[$].length-1]===!1?"#51D5B4CC":"#F3F4F6"},Z=()=>{if(!l||i.length===0)return null;const $=(typeof i=="function"?i(o[l.rowIndex]):i).filter(L=>typeof L=="object"&&(typeof L.shouldShow!="function"||L.shouldShow(o[l.rowIndex])));return $.length===0?null:t.jsx(tt,{initial:{opacity:0,scale:.95},animate:{opacity:1,scale:1},exit:{opacity:0,scale:.95},transition:{duration:.15},style:{position:"fixed",left:l.x,top:l.y,zIndex:1e3},onClick:L=>L.stopPropagation(),children:t.jsx(se,{items:$.map(L=>{const a={label:L.label,color:L.color,disabled:L.disabled};return L.getSubmenu?a.submenu=L.getSubmenu(o[l.rowIndex]):L.action&&(a.action=()=>{L.action(o[l.rowIndex],l.rowIndex),E()}),a}),onClose:E,x:0,y:0})})};return t.jsx(Qe,{ref:j,children:y?t.jsx(Je,{children:t.jsx(Ke,{})}):t.jsxs(t.Fragment,{children:[t.jsxs(et,{children:[t.jsx(nt,{children:t.jsx(xe,{children:e.map(($,L)=>!$.isHidden&&t.jsx(rt,{$isSortable:$.isSortable,$isActive:c?.key===L,onClick:()=>A(L),$align:$.align||"center",$isFirst:L===0,$isLast:L===e.length-1,children:t.jsxs(it,{$align:$.align||"center",children:[$.name,$.isSortable&&t.jsx(st,{$direction:c?.key===L?c.direction:"asc",animate:{rotate:c?.key===L&&c.direction==="desc"?180:0,color:c?.key===L?"#007D88":"#6B7280"},transition:{duration:.2},children:t.jsx("svg",{width:"12",height:"12",viewBox:"0 0 12 12",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:t.jsx("path",{d:"M5.77734 2.92383L5.25 3.45117L3.26953 1.47656L3.26367 12H2.51367L2.51953 1.45898L0.527344 3.45117L0 2.92383L2.88867 0.0351562L5.77734 2.92383ZM10.5059 8.54883L11.0391 9.07617L8.15039 11.9648L5.25586 9.07617L5.78906 8.54883L7.76953 10.5293L7.76367 0H8.51367L8.51953 10.5352L10.5059 8.54883Z",fill:"currentColor"})})})]})},L))})}),t.jsx(ot,{$fixedHeight:k,children:t.jsx(X.AnimatePresence,{children:o.map(($,L)=>{const a=!!(b&&L===o.length-1),M=!!(!a&&H($)),x=O(L,a,M),C=V(L,a,M);return t.jsx(xe,{initial:{opacity:0,y:-10},animate:{opacity:1,y:0,backgroundColor:x.backgroundColor||"#FFFFFF",color:x.color||"inherit",fontWeight:x.fontWeight||"normal"},exit:{opacity:0,y:10},transition:{duration:.2,ease:"easeOut"},$isLast:L===o.length-1,$isSelected:L===_,$isTotalsRow:a,onClick:()=>!a&&B(L),onDoubleClick:()=>!a&&z($,L),onContextMenu:D=>!a&&F(D,L),onTouchStart:D=>!a&&g(D,L),onTouchEnd:p,onTouchMove:S,whileHover:a?{}:{backgroundColor:C,transition:{duration:.15}},style:{backgroundColor:x.backgroundColor||"#FFFFFF",color:x.color||"inherit",fontWeight:x.fontWeight||"normal"},children:$.map((D,Y)=>!e[Y]?.isHidden&&t.jsx(at,{$align:e[Y]?.align||"center",$isFirst:Y===0,$isLast:Y===$.length-1,$isTotalsCell:a,$isBeforeTotals:a&&Y<$.findIndex(W=>W==="Итого:"),children:D},Y))},`row-${L}`)})})})]}),t.jsx(X.AnimatePresence,{children:Z()})]})})},Je=n.div`
+`,Je=({columns:e,data:o,onRowDoubleClick:i,contextMenuActions:r=[],onSort:s,sortConfig:l,onRowClick:u,selectedRow:g,fixedHeight:j,hasTotalsRow:b,debtChecker:w,rowStyles:x={},isLoading:y})=>{const[p,h]=m.useState(null),[d,I]=m.useState(null),k=m.useRef(null),P=m.useRef(null),E=500,O=g!==void 0?g:p,A=C=>{!e[C].isSortable||!s||s(C)},H=w||(C=>{const L=C[8];return typeof L=="string"?parseFloat(L.replace(/[^\d.]/g,""))>0:!1}),B=C=>{g===void 0&&h(C===O?null:C),u&&u(o[C],C)},_=(C,L)=>{i&&i(C,L)},W=(C,L)=>{if(r.length===0)return;C.preventDefault();const a="touches"in C?C.touches[0].clientX:C.clientX,$="touches"in C?C.touches[0].clientY:C.clientY;I({x:a,y:$,rowIndex:L})},F=(C,L)=>{C.preventDefault(),W(C,L)},v=(C,L)=>{r.length!==0&&(P.current&&clearTimeout(P.current),P.current=window.setTimeout(()=>{W(C,L)},E))},c=()=>{P.current&&(clearTimeout(P.current),P.current=null)},M=()=>{P.current&&window.clearTimeout(P.current)},D=()=>{I(null)};m.useEffect(()=>{const C=()=>{d&&D()};return document.addEventListener("click",C),()=>{document.removeEventListener("click",C),P.current&&clearTimeout(P.current)}},[d]);const N=(C,L,a)=>{if(L)return{backgroundColor:"#FFFFFF",color:"#000000",fontWeight:"bold"};const $=x[C]||{};return C===O?{backgroundColor:$.backgroundColor||"#007D88",color:$.color||"#FFFFFF",fontWeight:$.fontWeight||"normal"}:a?{backgroundColor:$.backgroundColor||"#E8D8D8",color:$.color||"inherit",fontWeight:$.fontWeight||"normal"}:o[C][o[C].length-1]===!1?{backgroundColor:$.backgroundColor||"#E8F5E8",color:"#1B5E20",fontWeight:$.fontWeight||"normal"}:{backgroundColor:$.backgroundColor||"#FFFFFF",color:$.color||"inherit",fontWeight:$.fontWeight||"normal"}},V=(C,L,a)=>{if(L)return"#FFFFFF";const $=N(C,L,a);return $.hoverBackgroundColor?$.hoverBackgroundColor:C===O?"#007D88":a?"#E8D8D8CC":o[C][o[C].length-1]===!1?"#51D5B4CC":"#F3F4F6"},Z=()=>{if(!d||r.length===0)return null;const C=(typeof r=="function"?r(o[d.rowIndex]):r).filter(L=>typeof L=="object"&&(typeof L.shouldShow!="function"||L.shouldShow(o[d.rowIndex])));return C.length===0?null:t.jsx(nt,{initial:{opacity:0,scale:.95},animate:{opacity:1,scale:1},exit:{opacity:0,scale:.95},transition:{duration:.15},style:{position:"fixed",left:d.x,top:d.y,zIndex:1e3},onClick:L=>L.stopPropagation(),children:t.jsx(ae,{items:C.map(L=>{const a={label:L.label,color:L.color,disabled:L.disabled};return L.getSubmenu?a.submenu=L.getSubmenu(o[d.rowIndex]):L.action&&(a.action=()=>{L.action(o[d.rowIndex],d.rowIndex),D()}),a}),onClose:D,x:0,y:0})})};return t.jsx(et,{ref:k,children:y?t.jsx(Ke,{children:t.jsx(Qe,{})}):t.jsxs(t.Fragment,{children:[t.jsxs(tt,{children:[t.jsx(ot,{children:t.jsx(fe,{children:e.map((C,L)=>!C.isHidden&&t.jsx(it,{$isSortable:C.isSortable,$isActive:l?.key===L,onClick:()=>A(L),$align:C.align||"center",$isFirst:L===0,$isLast:L===e.length-1,children:t.jsxs(st,{$align:C.align||"center",children:[C.name,C.isSortable&&t.jsx(at,{$direction:l?.key===L?l.direction:"asc",animate:{rotate:l?.key===L&&l.direction==="desc"?180:0,color:l?.key===L?"#007D88":"#6B7280"},transition:{duration:.2},children:t.jsx("svg",{width:"12",height:"12",viewBox:"0 0 12 12",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:t.jsx("path",{d:"M5.77734 2.92383L5.25 3.45117L3.26953 1.47656L3.26367 12H2.51367L2.51953 1.45898L0.527344 3.45117L0 2.92383L2.88867 0.0351562L5.77734 2.92383ZM10.5059 8.54883L11.0391 9.07617L8.15039 11.9648L5.25586 9.07617L5.78906 8.54883L7.76953 10.5293L7.76367 0H8.51367L8.51953 10.5352L10.5059 8.54883Z",fill:"currentColor"})})})]})},L))})}),t.jsx(rt,{$fixedHeight:j,children:t.jsx(X.AnimatePresence,{children:o.map((C,L)=>{const a=!!(b&&L===o.length-1),$=!!(!a&&H(C)),S=N(L,a,$),f=V(L,a,$);return t.jsx(fe,{initial:{opacity:0,y:-10},animate:{opacity:1,y:0,backgroundColor:S.backgroundColor||"#FFFFFF",color:S.color||"inherit",fontWeight:S.fontWeight||"normal"},exit:{opacity:0,y:10},transition:{duration:.2,ease:"easeOut"},$isLast:L===o.length-1,$isSelected:L===O,$isTotalsRow:a,onClick:()=>!a&&B(L),onDoubleClick:()=>!a&&_(C,L),onContextMenu:T=>!a&&F(T,L),onTouchStart:T=>!a&&v(T,L),onTouchEnd:c,onTouchMove:M,whileHover:a?{}:{backgroundColor:f,transition:{duration:.15}},style:{backgroundColor:S.backgroundColor||"#FFFFFF",color:S.color||"inherit",fontWeight:S.fontWeight||"normal"},children:C.map((T,z)=>!e[z]?.isHidden&&t.jsx(lt,{$align:e[z]?.align||"center",$isFirst:z===0,$isLast:z===C.length-1,$isTotalsCell:a,$isBeforeTotals:a&&z<C.findIndex(Y=>Y==="Итого:"),children:T},z))},`row-${L}`)})})})]}),t.jsx(X.AnimatePresence,{children:Z()})]})})},Ke=n.div`
   position: absolute;
   top: 0;
   left: 0;
@@ -48,7 +48,7 @@ React keys must be passed directly to JSX without using spread:
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.7);
   z-index: 10;
-`,Ke=n.div`
+`,Qe=n.div`
   width: 40px;
   height: 40px;
   border: 4px solid #f3f3f3;
@@ -64,7 +64,7 @@ React keys must be passed directly to JSX without using spread:
       transform: rotate(360deg);
     }
   }
-`,Qe=n.div`
+`,et=n.div`
   border: 1px solid #e2e8f0;
   border-radius: 8px;
   overflow: auto;
@@ -72,7 +72,7 @@ React keys must be passed directly to JSX without using spread:
   background-color: #ffffff;
   color: #000000;
   height: 100%;
-`,et=n.table`
+`,tt=n.table`
   width: 100%;
   border-collapse: collapse;
   background-color: #ffffff;
@@ -93,19 +93,19 @@ React keys must be passed directly to JSX without using spread:
   tbody tr:last-child {
     border-bottom: none;
   }
-`,tt=n(X.motion.div)`
+`,nt=n(X.motion.div)`
   z-index: 1000;
   pointer-events: auto;
-`,nt=n.thead`
+`,ot=n.thead`
   text-align: center;
   position: relative;
-`,ot=n.tbody`
+`,rt=n.tbody`
   ${({$fixedHeight:e})=>e&&`
     display: block;
     overflow-y: auto;
   `}
   position: relative;
-`,xe=n(X.motion.tr)`
+`,fe=n(X.motion.tr)`
   position: relative;
   cursor: ${({$isTotalsRow:e})=>e?"default":"pointer"};
   font-weight: ${({$isTotalsRow:e})=>e?"bold":"normal"};
@@ -120,7 +120,7 @@ React keys must be passed directly to JSX without using spread:
     background: #d1d5db;
     display: ${({$isLast:e,$isTotalsRow:o})=>e||o?"none":"block"};
   }
-`,rt=n.th`
+`,it=n.th`
   padding: 16px;
   padding-left: ${({$isFirst:e})=>e?"50px":"16px"};
   padding-right: ${({$isLast:e})=>e?"50px":"16px"};
@@ -135,23 +135,23 @@ React keys must be passed directly to JSX without using spread:
   &:hover {
     background-color: ${({$isSortable:e})=>e?"#f3f4f6":"inherit"};
   }
-`,it=n.div`
+`,st=n.div`
   display: inline-flex;
   align-items: center;
   gap: 4px;
   justify-content: ${({$align:e})=>e==="right"?"flex-end":e==="center"?"center":"flex-start"};
   width: 100%;
-`,st=n(X.motion.span)`
+`,at=n(X.motion.span)`
   display: inline-flex;
   align-items: center;
-`,at=n.td`
+`,lt=n.td`
   padding: 16px;
   padding-left: ${({$isFirst:e})=>e?"50px":"16px"};
   padding-right: ${({$isLast:e})=>e?"50px":"16px"};
   text-align: ${({$align:e})=>e};
   vertical-align: middle;
   border-right: ${({$isBeforeTotals:e,$isTotalsCell:o})=>e||o?"none":"0.5px solid #d1d5db"};
-`,lt=({onClick:e,tooltip:o,size:s=32,margin:i})=>t.jsx(ct,{onClick:e,size:s,margin:i,title:o,children:t.jsx(dt,{size:s})}),ct=n.button`
+`,ct=({onClick:e,tooltip:o,size:i=32,margin:r})=>t.jsx(dt,{onClick:e,size:i,margin:r,title:o,children:t.jsx(pt,{size:i})}),dt=n.button`
   width: ${e=>e.size}px;
   height: ${e=>e.size}px;
   border-radius: 50%;
@@ -173,7 +173,7 @@ React keys must be passed directly to JSX without using spread:
   &:active {
     transform: scale(0.95);
   }
-`,dt=n.div`
+`,pt=n.div`
   position: relative;
   width: ${e=>e.size*.5}px;
   height: ${e=>e.size*.5}px;
@@ -201,7 +201,7 @@ React keys must be passed directly to JSX without using spread:
     top: 0;
     transform: translateX(-50%);
   }
-`,ae="/api";async function G(e,o={}){const{method:s="GET",body:i,headers:r={},token:c,withCredentials:u=!0}=o,m=async b=>{const v={"Content-Type":"application/json",...r};b&&(v.Authorization=`Bearer ${b}`);const f=e.startsWith("http")?e:`${ae}${e}`;return await fetch(f,{method:s,headers:v,body:i?JSON.stringify(i):void 0,credentials:u?"include":"same-origin"})},k=async(b,v=!0)=>{const f=await m(b);if(f.ok){if(f.status===204)return null;const d=await f.text();if(!d)return null;try{return JSON.parse(d)}catch{return d}}if(f.status===401&&v){const d=await pt();if(d)return k(d,!1)}let y=`Request failed with status ${f.status}`;try{const d=await f.json();d&&typeof d.error=="string"?y=d.error:typeof d=="string"&&(y=d)}catch{const d=await f.text();d&&(y=d)}throw new Error(y)};return k(c)}async function pt(){const e=await fetch(`${ae}/auth/refresh`,{method:"POST",headers:{"Content-Type":"application/json"},credentials:"include"});if(!e.ok)return null;const o=await e.json();return o.access_token?o.access_token:null}const ut={async isAuthenticated(){try{return!!(await this.getSessionInfo())?.client?.id}catch{return!1}},async getSessionInfo(){try{return await G("/auth/session/info",{method:"GET"})}catch{return null}},async logout(){try{await G("/auth/session/revoke",{method:"POST"})}catch(e){throw console.error("Logout error:",e),e}},async getClientId(){return(await this.getSessionInfo())?.client?.id||null},async hasPin(){return(await this.getSessionInfo())?.has_pin||!1}},ht=n.button`
+`,le="/api";async function q(e,o={}){const{method:i="GET",body:r,headers:s={},token:l,withCredentials:u=!0}=o,g=async b=>{const w={"Content-Type":"application/json",...s};b&&(w.Authorization=`Bearer ${b}`);const x=e.startsWith("http")?e:`${le}${e}`;return await fetch(x,{method:i,headers:w,body:r?JSON.stringify(r):void 0,credentials:u?"include":"same-origin"})},j=async(b,w=!0)=>{const x=await g(b);if(x.ok){if(x.status===204)return null;const p=await x.text();if(!p)return null;try{return JSON.parse(p)}catch{return p}}if(x.status===401&&w){const p=await ut();if(p)return j(p,!1)}let y=`Request failed with status ${x.status}`;try{const p=await x.json();p&&typeof p.error=="string"?y=p.error:typeof p=="string"&&(y=p)}catch{const p=await x.text();p&&(y=p)}throw new Error(y)};return j(l)}async function ut(){const e=await fetch(`${le}/auth/refresh`,{method:"POST",headers:{"Content-Type":"application/json"},credentials:"include"});if(!e.ok)return null;const o=await e.json();return o.access_token?o.access_token:null}const ht={async isAuthenticated(){try{return!!(await this.getSessionInfo())?.client?.id}catch{return!1}},async getSessionInfo(){try{return await q("/auth/session/info",{method:"GET"})}catch{return null}},async logout(){try{await q("/auth/session/revoke",{method:"POST"})}catch(e){throw console.error("Logout error:",e),e}},async getClientId(){return(await this.getSessionInfo())?.client?.id||null},async hasPin(){return(await this.getSessionInfo())?.has_pin||!1}},xt=n.button`
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -222,13 +222,13 @@ React keys must be passed directly to JSX without using spread:
   &:hover {
     background-color: ${({disabled:e})=>e?"rgba(0, 125, 136, 1)":"rgba(0, 150, 163, 1)"};
   }
-`,xt=({children:e,onClick:o,disabled:s,...i})=>t.jsxs(ht,{onClick:o,disabled:s,...i,children:[t.jsx("svg",{width:"21",height:"13",viewBox:"0 0 21 13",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:t.jsx("path",{d:"M6.17798 0.978109L0.65625 6.4998L6.17798 12.0215L7.10604 11.0934L3.16862 7.156L20.3124 7.156V5.84351L3.16874 5.84351L7.10604 1.90621L6.17798 0.978109Z",fill:"currentColor"})}),e]}),te=({children:e="Подтвердить",icon:o,disabled:s=!1,bg:i,hoverBg:r,disabledBg:c,textColor:u,fullWidth:m=!1,minWidth:k,width:b,isPrimary:v=!0,...f})=>{const d=i?{bg:i,hoverBg:r||i,disabledBg:c||i,textColor:u||(v?"white":"black")}:v?{bg:"rgba(0, 125, 136, 1)",hoverBg:"rgba(0, 150, 163, 1)",disabledBg:"rgba(102, 177, 184, 1)",textColor:"white"}:{bg:"rgba(209, 213, 219, 1)",hoverBg:"rgba(209, 233, 239, 1)",disabledBg:"rgba(209, 213, 219, 0.7)",textColor:"black"};return t.jsxs(ft,{disabled:s,$bg:d.bg,$hoverBg:d.hoverBg,$disabledBg:d.disabledBg,$textColor:d.textColor,$fullWidth:m,$minWidth:k,$width:b,...f,children:[o&&t.jsx(gt,{children:o}),t.jsx("span",{children:e})]})},ft=n.button`
+`,ft=({children:e,onClick:o,disabled:i,...r})=>t.jsxs(xt,{onClick:o,disabled:i,...r,children:[t.jsx("svg",{width:"21",height:"13",viewBox:"0 0 21 13",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:t.jsx("path",{d:"M6.17798 0.978109L0.65625 6.4998L6.17798 12.0215L7.10604 11.0934L3.16862 7.156L20.3124 7.156V5.84351L3.16874 5.84351L7.10604 1.90621L6.17798 0.978109Z",fill:"currentColor"})}),e]}),ne=({children:e="Подтвердить",icon:o,disabled:i=!1,bg:r,hoverBg:s,disabledBg:l,textColor:u,fullWidth:g=!1,minWidth:j,width:b,isPrimary:w=!0,...x})=>{const p=r?{bg:r,hoverBg:s||r,disabledBg:l||r,textColor:u||(w?"white":"black")}:w?{bg:"rgba(0, 125, 136, 1)",hoverBg:"rgba(0, 150, 163, 1)",disabledBg:"rgba(102, 177, 184, 1)",textColor:"white"}:{bg:"rgba(209, 213, 219, 1)",hoverBg:"rgba(209, 233, 239, 1)",disabledBg:"rgba(209, 213, 219, 0.7)",textColor:"black"};return t.jsxs(gt,{disabled:i,$bg:p.bg,$hoverBg:p.hoverBg,$disabledBg:p.disabledBg,$textColor:p.textColor,$fullWidth:g,$minWidth:j,$width:b,...x,children:[o&&t.jsx(bt,{children:o}),t.jsx("span",{children:e})]})},gt=n.button`
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   padding: 8px 12px;
-  background-color: ${({disabled:e,$bg:o,$disabledBg:s})=>e?s:o};
+  background-color: ${({disabled:e,$bg:o,$disabledBg:i})=>e?i:o};
   border: none;
   border-radius: 8px;
   min-height: 25px;
@@ -245,7 +245,7 @@ React keys must be passed directly to JSX without using spread:
   min-width: ${({$minWidth:e})=>e||"auto"};
 
   &:hover {
-    background-color: ${({disabled:e,$hoverBg:o,$disabledBg:s})=>e?s:o};
+    background-color: ${({disabled:e,$hoverBg:o,$disabledBg:i})=>e?i:o};
   }
 
   &:focus {
@@ -253,10 +253,10 @@ React keys must be passed directly to JSX without using spread:
     box-shadow: 0 0 0 2px 
       ${({$bg:e})=>e==="rgba(209, 213, 219, 1)"?"rgba(209, 233, 239, 1)":"rgba(156, 163, 175, 0.5)"};
   }
-`,gt=n.span`
+`,bt=n.span`
   display: inline-flex;
   align-items: center;
-`,bt=({onClick:e,tooltip:o,size:s=32})=>t.jsx(mt,{onClick:e,size:s,title:o,children:t.jsx("svg",{width:s*.5,height:s*.5,viewBox:"0 0 17 17",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:t.jsx("path",{d:"M3.1875 14.875C3.1875 15.5625 3.75 16.125 4.4375 16.125H12.5625C13.25 16.125 13.8125 15.5625 13.8125 14.875V4.25H3.1875V14.875ZM15.125 1.5H11.7188L10.7812 0.5625H6.21875L5.28125 1.5H1.875V3.375H15.125V1.5Z",fill:"#50555C"})})}),mt=n.button`
+`,mt=({onClick:e,tooltip:o,size:i=32})=>t.jsx(wt,{onClick:e,size:i,title:o,children:t.jsx("svg",{width:i*.5,height:i*.5,viewBox:"0 0 17 17",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:t.jsx("path",{d:"M3.1875 14.875C3.1875 15.5625 3.75 16.125 4.4375 16.125H12.5625C13.25 16.125 13.8125 15.5625 13.8125 14.875V4.25H3.1875V14.875ZM15.125 1.5H11.7188L10.7812 0.5625H6.21875L5.28125 1.5H1.875V3.375H15.125V1.5Z",fill:"#50555C"})})}),wt=n.button`
   background-color: transparent;
   display: flex;
   align-items: center;
@@ -283,7 +283,7 @@ React keys must be passed directly to JSX without using spread:
   &:hover svg {
     transform: scale(1.1);
   }
-`,wt=({onClick:e,tooltip:o,size:s=32})=>t.jsx(vt,{onClick:e,size:s,title:o,children:t.jsx("svg",{width:s*.5,height:s*.5,viewBox:"0 0 17 17",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:t.jsx("path",{d:"M0.625 13.0931V16.3744H3.90625L13.5837 6.69687L10.3025 3.41562L0.625 13.0931ZM16.7337 3.54687L13.4525 0.265625L11.2387 2.48812L14.52 5.76937L16.7337 3.54687Z",fill:"#50555C"})})}),vt=n.button`
+`,vt=({onClick:e,tooltip:o,size:i=32})=>t.jsx(yt,{onClick:e,size:i,title:o,children:t.jsx("svg",{width:i*.5,height:i*.5,viewBox:"0 0 17 17",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:t.jsx("path",{d:"M0.625 13.0931V16.3744H3.90625L13.5837 6.69687L10.3025 3.41562L0.625 13.0931ZM16.7337 3.54687L13.4525 0.265625L11.2387 2.48812L14.52 5.76937L16.7337 3.54687Z",fill:"#50555C"})})}),yt=n.button`
   background-color: transparent;
   display: flex;
   align-items: center;
@@ -310,7 +310,7 @@ React keys must be passed directly to JSX without using spread:
   &:hover svg {
     transform: scale(1.1);
   }
-`,yt=()=>t.jsxs("svg",{width:"17",height:"18",viewBox:"0 0 17 18",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:[t.jsx("path",{d:"M8.50006 1.62496L8.10181 1.22671L8.50006 0.82959L8.89831 1.22671L8.50006 1.62496ZM9.06256 11.75C9.06256 11.8991 9.00329 12.0422 8.8978 12.1477C8.79232 12.2532 8.64924 12.3125 8.50006 12.3125C8.35087 12.3125 8.2078 12.2532 8.10231 12.1477C7.99682 12.0422 7.93756 11.8991 7.93756 11.75H9.06256ZM2.47681 6.85171L8.10181 1.22671L8.89831 2.02321L3.27331 7.64821L2.47681 6.85171ZM8.89831 1.22671L14.5233 6.85171L13.7268 7.64821L8.10181 2.02321L8.89831 1.22671ZM9.06256 1.62496V11.75H7.93756V1.62496H9.06256Z",fill:"black"}),t.jsx("path",{d:"M0.625 14V15.125C0.625 15.7217 0.862053 16.294 1.28401 16.716C1.70597 17.1379 2.27826 17.375 2.875 17.375H14.125C14.7217 17.375 15.294 17.1379 15.716 16.716C16.1379 16.294 16.375 15.7217 16.375 15.125V14",stroke:"black"})]}),kt=({children:e="Экспорт",icon:o=t.jsx(yt,{}),onExport:s,isExporting:i=!1,exportProgress:r=0,...c})=>{const u=async m=>{if(s)try{await s()}catch(k){console.error("Export error:",k)}c.onClick&&c.onClick(m)};return t.jsx(jt,{...c,onClick:u,disabled:i||c.disabled,children:i?t.jsxs(Ct,{children:[t.jsxs("span",{children:["Экспорт... ",r,"%"]}),t.jsx($t,{progress:r})]}):t.jsxs(t.Fragment,{children:[o,t.jsx("span",{children:e})]})})},jt=n.button`
+`,kt=()=>t.jsxs("svg",{width:"17",height:"18",viewBox:"0 0 17 18",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:[t.jsx("path",{d:"M8.50006 1.62496L8.10181 1.22671L8.50006 0.82959L8.89831 1.22671L8.50006 1.62496ZM9.06256 11.75C9.06256 11.8991 9.00329 12.0422 8.8978 12.1477C8.79232 12.2532 8.64924 12.3125 8.50006 12.3125C8.35087 12.3125 8.2078 12.2532 8.10231 12.1477C7.99682 12.0422 7.93756 11.8991 7.93756 11.75H9.06256ZM2.47681 6.85171L8.10181 1.22671L8.89831 2.02321L3.27331 7.64821L2.47681 6.85171ZM8.89831 1.22671L14.5233 6.85171L13.7268 7.64821L8.10181 2.02321L8.89831 1.22671ZM9.06256 1.62496V11.75H7.93756V1.62496H9.06256Z",fill:"black"}),t.jsx("path",{d:"M0.625 14V15.125C0.625 15.7217 0.862053 16.294 1.28401 16.716C1.70597 17.1379 2.27826 17.375 2.875 17.375H14.125C14.7217 17.375 15.294 17.1379 15.716 16.716C16.1379 16.294 16.375 15.7217 16.375 15.125V14",stroke:"black"})]}),jt=({children:e="Экспорт",icon:o=t.jsx(kt,{}),onExport:i,isExporting:r=!1,exportProgress:s=0,...l})=>{const u=async g=>{if(i)try{await i()}catch(j){console.error("Export error:",j)}l.onClick&&l.onClick(g)};return t.jsx(Ct,{...l,onClick:u,disabled:r||l.disabled,children:r?t.jsxs($t,{children:[t.jsxs("span",{children:["Экспорт... ",s,"%"]}),t.jsx(St,{progress:s})]}):t.jsxs(t.Fragment,{children:[o,t.jsx("span",{children:e})]})})},Ct=n.button`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -343,13 +343,13 @@ React keys must be passed directly to JSX without using spread:
     cursor: not-allowed;
     opacity: 0.7;
   }
-`,Ct=n.div`
+`,$t=n.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4px;
   width: 100%;
-`,$t=n.div`
+`,St=n.div`
   height: 2px;
   width: 100%;
   background-color: #e0e0e0;
@@ -365,18 +365,18 @@ React keys must be passed directly to JSX without using spread:
     background-color: #000;
     transition: width 0.3s ease;
   }
-`,St=({placeholder:e="",customPlaceholder:o,value:s,onChange:i,hasError:r=!1,errorMessage:c,options:u,name:m,disabled:k=!1,required:b=!1,...v})=>{const[f,y]=w.useState(!1),[d,h]=w.useState(!1),l=w.useRef(null),T=!!(o&&!s&&!f),j=P=>{i&&!k&&i({target:{value:P,name:m}}),h(!1),y(!1)},R=P=>{l.current&&!l.current.contains(P.target)&&(h(!1),y(!1))},I=()=>{k||(h(!d),y(!d))};w.useEffect(()=>(document.addEventListener("mousedown",R),()=>{document.removeEventListener("mousedown",R)}),[]);const _=u.find(P=>P.value===s),A=_?_.label:"";return t.jsxs(Mt,{ref:l,...v,children:[t.jsxs(Lt,{children:[t.jsxs(Dt,{hasError:r,isOpen:d,disabled:k,onClick:I,onFocus:()=>!k&&y(!0),onBlur:()=>y(!1),tabIndex:k?-1:0,children:[t.jsx(Tt,{children:A||e&&t.jsx(Et,{children:e})}),t.jsx(It,{isOpen:d,disabled:k,children:t.jsx("svg",{width:"17",height:"9",viewBox:"0 0 17 9",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:t.jsx("path",{d:"M1.5 1L8.5 8L15.5 1",stroke:k?"#CCCCCC":"#50555C",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})})})]}),d&&t.jsx(Pt,{children:u.map(P=>t.jsxs(Rt,{$isSelected:P.value===s,onClick:()=>j(P.value),children:[t.jsx(Bt,{$isSelected:P.value===s,children:P.value===s&&t.jsx(zt,{})}),t.jsx(At,{children:P.label})]},P.value))})]}),o&&t.jsx(Ft,{isVisible:T,children:o}),r&&c&&t.jsx(_t,{children:c}),t.jsx(Ot,{name:m,value:s||"",onChange:()=>{},tabIndex:-1,required:b,children:u.map(P=>t.jsx("option",{value:P.value,children:P.label},P.value))})]})},Mt=n.div`
+`,Mt=({placeholder:e="",customPlaceholder:o,value:i,onChange:r,hasError:s=!1,errorMessage:l,options:u,name:g,disabled:j=!1,required:b=!1,...w})=>{const[x,y]=m.useState(!1),[p,h]=m.useState(!1),d=m.useRef(null),I=!!(o&&!i&&!x),k=R=>{r&&!j&&r({target:{value:R,name:g}}),h(!1),y(!1)},P=R=>{d.current&&!d.current.contains(R.target)&&(h(!1),y(!1))},E=()=>{j||(h(!p),y(!p))};m.useEffect(()=>(document.addEventListener("mousedown",P),()=>{document.removeEventListener("mousedown",P)}),[]);const O=u.find(R=>R.value===i),A=O?O.label:"";return t.jsxs(Lt,{ref:d,...w,children:[t.jsxs(Dt,{children:[t.jsxs(Tt,{hasError:s,isOpen:p,disabled:j,onClick:E,onFocus:()=>!j&&y(!0),onBlur:()=>y(!1),tabIndex:j?-1:0,children:[t.jsx(Et,{children:A||e&&t.jsx(It,{children:e})}),t.jsx(Pt,{isOpen:p,disabled:j,children:t.jsx("svg",{width:"17",height:"9",viewBox:"0 0 17 9",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:t.jsx("path",{d:"M1.5 1L8.5 8L15.5 1",stroke:j?"#CCCCCC":"#50555C",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})})})]}),p&&t.jsx(Rt,{children:u.map(R=>t.jsxs(Bt,{$isSelected:R.value===i,onClick:()=>k(R.value),children:[t.jsx(zt,{$isSelected:R.value===i,children:R.value===i&&t.jsx(At,{})}),t.jsx(Ft,{children:R.label})]},R.value))})]}),o&&t.jsx(_t,{isVisible:I,children:o}),s&&l&&t.jsx(Ot,{children:l}),t.jsx(Nt,{name:g,value:i||"",onChange:()=>{},tabIndex:-1,required:b,children:u.map(R=>t.jsx("option",{value:R.value,children:R.label},R.value))})]})},Lt=n.div`
   position: relative;
   display: inline-block;
   width: 100%;
   margin-right: auto;
-`,Lt=n.div`
+`,Dt=n.div`
   position: relative;
   width: auto;
   max-width: 500px;
-`,Dt=n.div`
+`,Tt=n.div`
   border: 1px solid
-    ${({hasError:e,isOpen:o,disabled:s})=>s?"rgba(209, 213, 219, 0.5)":e?"rgba(239, 68, 68, 1)":o?"rgba(0, 125, 136, 1)":"rgba(209, 213, 219, 1)"};
+    ${({hasError:e,isOpen:o,disabled:i})=>i?"rgba(209, 213, 219, 0.5)":e?"rgba(239, 68, 68, 1)":o?"rgba(0, 125, 136, 1)":"rgba(209, 213, 219, 1)"};
   border-radius: 5px;
   font-size: 14px;
   width: 100%;
@@ -395,21 +395,21 @@ React keys must be passed directly to JSX without using spread:
   max-height: 37.5px;
 
   &:hover {
-    border-color: ${({hasError:e,disabled:o,isOpen:s})=>o?"rgba(209, 213, 219, 0.5)":e?"rgba(239, 68, 68, 1)":"rgba(0, 125, 136, 1)"};
+    border-color: ${({hasError:e,disabled:o,isOpen:i})=>o?"rgba(209, 213, 219, 0.5)":e?"rgba(239, 68, 68, 1)":"rgba(0, 125, 136, 1)"};
   }
-`,Tt=n.span`
+`,Et=n.span`
   flex: 1;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-`,Et=n.span`
+`,It=n.span`
   color: rgba(80, 85, 92, 1);
-`,It=n.div`
+`,Pt=n.div`
   transform: ${({isOpen:e})=>e?"rotate(180deg)":"rotate(0)"};
   transition: transform 0.2s ease;
   margin-left: 10px;
   flex-shrink: 0;
-`,Pt=n.div`
+`,Rt=n.div`
   position: absolute;
   top: 100%;
   left: 0;
@@ -421,7 +421,7 @@ React keys must be passed directly to JSX without using spread:
   z-index: 1001;
   max-height: 300px;
   overflow-y: auto;
-`,Rt=n.div`
+`,Bt=n.div`
   display: flex;
   align-items: center;
   padding: 10px 12px;
@@ -444,7 +444,7 @@ React keys must be passed directly to JSX without using spread:
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
   }
-`,Bt=n.div`
+`,zt=n.div`
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -454,12 +454,12 @@ React keys must be passed directly to JSX without using spread:
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-`,zt=n.div`
+`,At=n.div`
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background: #007d88;
-`,At=n.span`
+`,Ft=n.span`
   font-family: 'Manrope', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -467,7 +467,7 @@ React keys must be passed directly to JSX without using spread:
   font-size: 14px;
   line-height: 19px;
   color: #000000;
-`,Ft=n.label`
+`,_t=n.label`
   position: absolute;
   left: 12px;
   top: 50%;
@@ -479,18 +479,18 @@ React keys must be passed directly to JSX without using spread:
   opacity: ${({isVisible:e})=>e?1:0};
   background-color: white;
   padding: 0 4px;
-`,_t=n.span`
+`,Ot=n.span`
   color: rgba(239, 68, 68, 1);
   font-size: 12px;
   margin-top: 4px;
   display: block;
-`,Ot=n.select`
+`,Nt=n.select`
   position: absolute;
   opacity: 0;
   height: 0;
   width: 0;
   pointer-events: none;
-`,Nt=({checked:e=!1,onChange:o,className:s,label:i,disabled:r=!1})=>{const[c,u]=w.useState(!1),m=()=>{r||!o||o(!e)},k=b=>{r||(b.key==="Enter"||b.key===" ")&&(b.preventDefault(),m())};return t.jsxs(Yt,{className:s,onClick:m,onKeyPress:k,tabIndex:r?-1:0,disabled:r,children:[t.jsx(Wt,{checked:e,isFocused:c,disabled:r,onMouseEnter:()=>!r&&u(!0),onMouseLeave:()=>!r&&u(!1),onFocus:()=>!r&&u(!0),onBlur:()=>!r&&u(!1),children:e&&t.jsx(Vt,{viewBox:"0 0 8 8",fill:"none",xmlns:"http://www.w3.org/2000/svg",disabled:r,children:t.jsx("path",{d:"M7.375 1.1875L2.65 6.8125L0.625 4.5625",stroke:r?"rgba(173, 179, 188, 1)":"white",strokeLinecap:"round",strokeLinejoin:"round"})})}),i&&t.jsx(Ht,{disabled:r,children:i})]})},Yt=n.div`
+`,Wt=({checked:e=!1,onChange:o,className:i,label:r,disabled:s=!1})=>{const[l,u]=m.useState(!1),g=()=>{s||!o||o(!e)},j=b=>{s||(b.key==="Enter"||b.key===" ")&&(b.preventDefault(),g())};return t.jsxs(Yt,{className:i,onClick:g,onKeyPress:j,tabIndex:s?-1:0,disabled:s,children:[t.jsx(Ht,{checked:e,isFocused:l,disabled:s,onMouseEnter:()=>!s&&u(!0),onMouseLeave:()=>!s&&u(!1),onFocus:()=>!s&&u(!0),onBlur:()=>!s&&u(!1),children:e&&t.jsx(Zt,{viewBox:"0 0 8 8",fill:"none",xmlns:"http://www.w3.org/2000/svg",disabled:s,children:t.jsx("path",{d:"M7.375 1.1875L2.65 6.8125L0.625 4.5625",stroke:s?"rgba(173, 179, 188, 1)":"white",strokeLinecap:"round",strokeLinejoin:"round"})})}),r&&t.jsx(Vt,{disabled:s,children:r})]})},Yt=n.div`
   display: flex;
   align-items: center;
   cursor: ${e=>e.disabled?"not-allowed":"pointer"};
@@ -499,7 +499,7 @@ React keys must be passed directly to JSX without using spread:
   &:focus {
     outline: none;
   }
-`,Wt=n.div`
+`,Ht=n.div`
   width: 16px;
   height: 16px;
   border-radius: 5px;
@@ -516,23 +516,23 @@ React keys must be passed directly to JSX without using spread:
   box-shadow: ${e=>e.disabled?"none":e.checked&&e.isFocused?"0 0 0 4px rgba(121, 159, 162, 0.33)":"none"};
 
   opacity: ${e=>e.disabled?.6:1};
-`,Ht=n.span`
+`,Vt=n.span`
   font-size: 16px;
   color: ${e=>e.disabled?"rgba(173, 179, 188, 1)":"#333"};
   user-select: none;
   white-space: nowrap;
-`,Vt=n.svg`
+`,Zt=n.svg`
   width: 8px;
   height: 8px;
   opacity: ${e=>e.disabled?.6:1};
-`,Zt="data:image/svg+xml,%3csvg%20width='18'%20height='18'%20viewBox='0%200%2018%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M14.625%202.8125H3.375C2.44302%202.8125%201.6875%203.56802%201.6875%204.5V14.625C1.6875%2015.557%202.44302%2016.3125%203.375%2016.3125H14.625C15.557%2016.3125%2016.3125%2015.557%2016.3125%2014.625V4.5C16.3125%203.56802%2015.557%202.8125%2014.625%202.8125Z'%20stroke='%2350555C'%20stroke-linejoin='round'/%3e%3cpath%20d='M10.4062%209C10.8722%209%2011.25%208.62224%2011.25%208.15625C11.25%207.69026%2010.8722%207.3125%2010.4062%207.3125C9.94026%207.3125%209.5625%207.69026%209.5625%208.15625C9.5625%208.62224%209.94026%209%2010.4062%209Z'%20fill='%2350555C'/%3e%3cpath%20d='M13.2188%209C13.6847%209%2014.0625%208.62224%2014.0625%208.15625C14.0625%207.69026%2013.6847%207.3125%2013.2188%207.3125C12.7528%207.3125%2012.375%207.69026%2012.375%208.15625C12.375%208.62224%2012.7528%209%2013.2188%209Z'%20fill='%2350555C'/%3e%3cpath%20d='M10.4062%2011.8125C10.8722%2011.8125%2011.25%2011.4347%2011.25%2010.9688C11.25%2010.5028%2010.8722%2010.125%2010.4062%2010.125C9.94026%2010.125%209.5625%2010.5028%209.5625%2010.9688C9.5625%2011.4347%209.94026%2011.8125%2010.4062%2011.8125Z'%20fill='%2350555C'/%3e%3cpath%20d='M13.2188%2011.8125C13.6847%2011.8125%2014.0625%2011.4347%2014.0625%2010.9688C14.0625%2010.5028%2013.6847%2010.125%2013.2188%2010.125C12.7528%2010.125%2012.375%2010.5028%2012.375%2010.9688C12.375%2011.4347%2012.7528%2011.8125%2013.2188%2011.8125Z'%20fill='%2350555C'/%3e%3cpath%20d='M4.78125%2011.8125C5.24724%2011.8125%205.625%2011.4347%205.625%2010.9688C5.625%2010.5028%205.24724%2010.125%204.78125%2010.125C4.31526%2010.125%203.9375%2010.5028%203.9375%2010.9688C3.9375%2011.4347%204.31526%2011.8125%204.78125%2011.8125Z'%20fill='%2350555C'/%3e%3cpath%20d='M7.59375%2011.8125C8.05974%2011.8125%208.4375%2011.4347%208.4375%2010.9688C8.4375%2010.5028%208.05974%2010.125%207.59375%2010.125C7.12776%2010.125%206.75%2010.5028%206.75%2010.9688C6.75%2011.4347%207.12776%2011.8125%207.59375%2011.8125Z'%20fill='%2350555C'/%3e%3cpath%20d='M4.78125%2014.625C5.24724%2014.625%205.625%2014.2472%205.625%2013.7812C5.625%2013.3153%205.24724%2012.9375%204.78125%2012.9375C4.31526%2012.9375%203.9375%2013.3153%203.9375%2013.7812C3.9375%2014.2472%204.31526%2014.625%204.78125%2014.625Z'%20fill='%2350555C'/%3e%3cpath%20d='M7.59375%2014.625C8.05974%2014.625%208.4375%2014.2472%208.4375%2013.7812C8.4375%2013.3153%208.05974%2012.9375%207.59375%2012.9375C7.12776%2012.9375%206.75%2013.3153%206.75%2013.7812C6.75%2014.2472%207.12776%2014.625%207.59375%2014.625Z'%20fill='%2350555C'/%3e%3cpath%20d='M10.4062%2014.625C10.8722%2014.625%2011.25%2014.2472%2011.25%2013.7812C11.25%2013.3153%2010.8722%2012.9375%2010.4062%2012.9375C9.94026%2012.9375%209.5625%2013.3153%209.5625%2013.7812C9.5625%2014.2472%209.94026%2014.625%2010.4062%2014.625Z'%20fill='%2350555C'/%3e%3cpath%20d='M4.5%201.6875V2.8125M13.5%201.6875V2.8125'%20stroke='%2350555C'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M16.3125%205.625H1.6875'%20stroke='%2350555C'%20stroke-linejoin='round'/%3e%3c/svg%3e",fe=["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"],Ut=["Пн","Вт","Ср","Чт","Пт","Сб","Вс"],re=({prefix:e="Дата:",value:o="",placeholder:s="Выберите дату",onChange:i,onReset:r})=>{const[c,u]=w.useState(!1),[m,k]=w.useState(new Date),[b,v]=w.useState(o?new Date(o):null),[f,y]=w.useState(!1),[d,h]=w.useState(!1),l=w.useRef(null),T=w.useRef(null),j=w.useRef(null);w.useEffect(()=>{const p=S=>{l.current&&!l.current.contains(S.target)&&u(!1),T.current&&!T.current.contains(S.target)&&y(!1),j.current&&!j.current.contains(S.target)&&h(!1)};return document.addEventListener("mousedown",p),()=>{document.removeEventListener("mousedown",p)}},[]),w.useEffect(()=>{v(o?new Date(o):null)},[o]);const R=p=>{const S=new Date(Date.UTC(p.getFullYear(),p.getMonth(),p.getDate()));v(p);const E=S.toISOString().split("T")[0];i?.(E),u(!1)},I=()=>{const p=new Date;k(p);const E=new Date(Date.UTC(p.getFullYear(),p.getMonth(),p.getDate())).toISOString().split("T")[0];i?.(E),u(!1)},_=()=>{v(null),i?.(""),r?.(),u(!1)},A=p=>{const S=new Date(m);S.setMonth(p),k(S),y(!1)},P=p=>{const S=new Date(m);S.setFullYear(p),k(S),h(!1)},H=()=>{const p=m.getFullYear(),S=m.getMonth(),E=new Date(p,S,1),V=new Date(p,S+1,0).getDate(),Z=E.getDay()===0?6:E.getDay()-1,$=[],L=35,a=new Date(p,S,0).getDate();for(let x=0;x<Z;x++){const C=a-Z+x+1,D=new Date(p,S-1,C),Y=!!(b&&D.getDate()===b.getDate()&&D.getMonth()===b.getMonth()&&D.getFullYear()===b.getFullYear());$.push(t.jsx(ne,{selected:Y,onClick:()=>R(D),otherMonth:!0,children:C},`prev-${C}`))}for(let x=1;x<=V;x++){const C=new Date(p,S,x),D=!!(b&&C.getDate()===b.getDate()&&C.getMonth()===b.getMonth()&&C.getFullYear()===b.getFullYear());$.push(t.jsx(ne,{selected:D,onClick:()=>R(C),children:x},`current-${x}`))}const M=L-$.length;for(let x=1;x<=M;x++){const C=new Date(p,S+1,x),D=!!(b&&C.getDate()===b.getDate()&&C.getMonth()===b.getMonth()&&C.getFullYear()===b.getFullYear());$.push(t.jsx(ne,{selected:D,onClick:()=>R(C),otherMonth:!0,children:x},`next-${x}`))}return $},B=()=>b?b.toLocaleDateString("ru-RU",{day:"2-digit",month:"2-digit",year:"numeric"}):s,z=()=>{const p=new Date().getFullYear(),S=[];for(let E=p-10;E<=p+10;E++)S.push(E);return S},N=p=>{p.preventDefault(),p.stopPropagation(),y(!f),h(!1)},F=p=>{p.preventDefault(),p.stopPropagation(),h(!d),y(!1)},g=p=>{const S=p==="next"?1:-1,E=new Date(m);E.setMonth(E.getMonth()+S),k(E)};return t.jsxs(Xt,{ref:l,children:[t.jsxs(qt,{onClick:()=>u(!c),children:[e&&t.jsx(Gt,{children:e}),t.jsx(Jt,{isEmpty:!b,children:B()}),t.jsx(Kt,{src:Zt,alt:"Календарь"})]}),c&&t.jsxs(Qt,{className:"calendar-container",children:[t.jsxs(en,{children:[t.jsx(we,{onClick:p=>{p.preventDefault(),p.stopPropagation(),g("prev")},onMouseDown:p=>p.preventDefault(),children:t.jsx(ve,{direction:"right"})}),t.jsxs(tn,{children:[t.jsxs(rn,{ref:T,children:[t.jsxs(nn,{onClick:p=>N(p),onMouseDown:p=>p.preventDefault(),children:[fe[m.getMonth()],t.jsx(ge,{$open:f})]}),f&&t.jsx(be,{$width:120,onClick:p=>p.stopPropagation(),children:fe.map((p,S)=>t.jsx(me,{$selected:S===m.getMonth(),onClick:E=>{E.stopPropagation(),A(S)},children:p},p))})]}),t.jsxs(sn,{ref:j,children:[t.jsxs(on,{onClick:p=>F(p),onMouseDown:p=>p.preventDefault(),children:[m.getFullYear(),t.jsx(ge,{$open:d})]}),d&&t.jsx(be,{$width:80,onClick:p=>p.stopPropagation(),children:z().map(p=>t.jsx(me,{$selected:p===m.getFullYear(),onClick:S=>{S.stopPropagation(),P(p)},children:p},p))})]})]}),t.jsx(we,{onClick:p=>{p.preventDefault(),p.stopPropagation(),g("next")},onMouseDown:p=>p.preventDefault(),children:t.jsx(ve,{direction:"left"})})]}),t.jsx(an,{children:Ut.map(p=>t.jsx(ln,{children:p},p))}),t.jsx(cn,{children:H()}),t.jsxs(dn,{children:[t.jsx(ye,{onClick:_,children:"Удалить"}),t.jsx(ye,{onClick:I,children:"Сегодня"})]})]})]})},Xt=n.div`
+`,Ut="data:image/svg+xml,%3csvg%20width='18'%20height='18'%20viewBox='0%200%2018%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M14.625%202.8125H3.375C2.44302%202.8125%201.6875%203.56802%201.6875%204.5V14.625C1.6875%2015.557%202.44302%2016.3125%203.375%2016.3125H14.625C15.557%2016.3125%2016.3125%2015.557%2016.3125%2014.625V4.5C16.3125%203.56802%2015.557%202.8125%2014.625%202.8125Z'%20stroke='%2350555C'%20stroke-linejoin='round'/%3e%3cpath%20d='M10.4062%209C10.8722%209%2011.25%208.62224%2011.25%208.15625C11.25%207.69026%2010.8722%207.3125%2010.4062%207.3125C9.94026%207.3125%209.5625%207.69026%209.5625%208.15625C9.5625%208.62224%209.94026%209%2010.4062%209Z'%20fill='%2350555C'/%3e%3cpath%20d='M13.2188%209C13.6847%209%2014.0625%208.62224%2014.0625%208.15625C14.0625%207.69026%2013.6847%207.3125%2013.2188%207.3125C12.7528%207.3125%2012.375%207.69026%2012.375%208.15625C12.375%208.62224%2012.7528%209%2013.2188%209Z'%20fill='%2350555C'/%3e%3cpath%20d='M10.4062%2011.8125C10.8722%2011.8125%2011.25%2011.4347%2011.25%2010.9688C11.25%2010.5028%2010.8722%2010.125%2010.4062%2010.125C9.94026%2010.125%209.5625%2010.5028%209.5625%2010.9688C9.5625%2011.4347%209.94026%2011.8125%2010.4062%2011.8125Z'%20fill='%2350555C'/%3e%3cpath%20d='M13.2188%2011.8125C13.6847%2011.8125%2014.0625%2011.4347%2014.0625%2010.9688C14.0625%2010.5028%2013.6847%2010.125%2013.2188%2010.125C12.7528%2010.125%2012.375%2010.5028%2012.375%2010.9688C12.375%2011.4347%2012.7528%2011.8125%2013.2188%2011.8125Z'%20fill='%2350555C'/%3e%3cpath%20d='M4.78125%2011.8125C5.24724%2011.8125%205.625%2011.4347%205.625%2010.9688C5.625%2010.5028%205.24724%2010.125%204.78125%2010.125C4.31526%2010.125%203.9375%2010.5028%203.9375%2010.9688C3.9375%2011.4347%204.31526%2011.8125%204.78125%2011.8125Z'%20fill='%2350555C'/%3e%3cpath%20d='M7.59375%2011.8125C8.05974%2011.8125%208.4375%2011.4347%208.4375%2010.9688C8.4375%2010.5028%208.05974%2010.125%207.59375%2010.125C7.12776%2010.125%206.75%2010.5028%206.75%2010.9688C6.75%2011.4347%207.12776%2011.8125%207.59375%2011.8125Z'%20fill='%2350555C'/%3e%3cpath%20d='M4.78125%2014.625C5.24724%2014.625%205.625%2014.2472%205.625%2013.7812C5.625%2013.3153%205.24724%2012.9375%204.78125%2012.9375C4.31526%2012.9375%203.9375%2013.3153%203.9375%2013.7812C3.9375%2014.2472%204.31526%2014.625%204.78125%2014.625Z'%20fill='%2350555C'/%3e%3cpath%20d='M7.59375%2014.625C8.05974%2014.625%208.4375%2014.2472%208.4375%2013.7812C8.4375%2013.3153%208.05974%2012.9375%207.59375%2012.9375C7.12776%2012.9375%206.75%2013.3153%206.75%2013.7812C6.75%2014.2472%207.12776%2014.625%207.59375%2014.625Z'%20fill='%2350555C'/%3e%3cpath%20d='M10.4062%2014.625C10.8722%2014.625%2011.25%2014.2472%2011.25%2013.7812C11.25%2013.3153%2010.8722%2012.9375%2010.4062%2012.9375C9.94026%2012.9375%209.5625%2013.3153%209.5625%2013.7812C9.5625%2014.2472%209.94026%2014.625%2010.4062%2014.625Z'%20fill='%2350555C'/%3e%3cpath%20d='M4.5%201.6875V2.8125M13.5%201.6875V2.8125'%20stroke='%2350555C'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M16.3125%205.625H1.6875'%20stroke='%2350555C'%20stroke-linejoin='round'/%3e%3c/svg%3e",ge=["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"],Xt=["Пн","Вт","Ср","Чт","Пт","Сб","Вс"],ie=({prefix:e="Дата:",value:o="",placeholder:i="Выберите дату",onChange:r,onReset:s})=>{const[l,u]=m.useState(!1),[g,j]=m.useState(new Date),[b,w]=m.useState(o?new Date(o):null),[x,y]=m.useState(!1),[p,h]=m.useState(!1),d=m.useRef(null),I=m.useRef(null),k=m.useRef(null);m.useEffect(()=>{const c=M=>{d.current&&!d.current.contains(M.target)&&u(!1),I.current&&!I.current.contains(M.target)&&y(!1),k.current&&!k.current.contains(M.target)&&h(!1)};return document.addEventListener("mousedown",c),()=>{document.removeEventListener("mousedown",c)}},[]),m.useEffect(()=>{w(o?new Date(o):null)},[o]);const P=c=>{const M=new Date(Date.UTC(c.getFullYear(),c.getMonth(),c.getDate()));w(c);const D=M.toISOString().split("T")[0];r?.(D),u(!1)},E=()=>{const c=new Date;j(c);const D=new Date(Date.UTC(c.getFullYear(),c.getMonth(),c.getDate())).toISOString().split("T")[0];r?.(D),u(!1)},O=()=>{w(null),r?.(""),s?.(),u(!1)},A=c=>{const M=new Date(g);M.setMonth(c),j(M),y(!1)},R=c=>{const M=new Date(g);M.setFullYear(c),j(M),h(!1)},H=()=>{const c=g.getFullYear(),M=g.getMonth(),D=new Date(c,M,1),V=new Date(c,M+1,0).getDate(),Z=D.getDay()===0?6:D.getDay()-1,C=[],L=35,a=new Date(c,M,0).getDate();for(let S=0;S<Z;S++){const f=a-Z+S+1,T=new Date(c,M-1,f),z=!!(b&&T.getDate()===b.getDate()&&T.getMonth()===b.getMonth()&&T.getFullYear()===b.getFullYear());C.push(t.jsx(oe,{selected:z,onClick:()=>P(T),otherMonth:!0,children:f},`prev-${f}`))}for(let S=1;S<=V;S++){const f=new Date(c,M,S),T=!!(b&&f.getDate()===b.getDate()&&f.getMonth()===b.getMonth()&&f.getFullYear()===b.getFullYear());C.push(t.jsx(oe,{selected:T,onClick:()=>P(f),children:S},`current-${S}`))}const $=L-C.length;for(let S=1;S<=$;S++){const f=new Date(c,M+1,S),T=!!(b&&f.getDate()===b.getDate()&&f.getMonth()===b.getMonth()&&f.getFullYear()===b.getFullYear());C.push(t.jsx(oe,{selected:T,onClick:()=>P(f),otherMonth:!0,children:S},`next-${S}`))}return C},B=()=>b?b.toLocaleDateString("ru-RU",{day:"2-digit",month:"2-digit",year:"numeric"}):i,_=()=>{const c=new Date().getFullYear(),M=[];for(let D=c-10;D<=c+10;D++)M.push(D);return M},W=c=>{c.preventDefault(),c.stopPropagation(),y(!x),h(!1)},F=c=>{c.preventDefault(),c.stopPropagation(),h(!p),y(!1)},v=c=>{const M=c==="next"?1:-1,D=new Date(g);D.setMonth(D.getMonth()+M),j(D)};return t.jsxs(qt,{ref:d,children:[t.jsxs(Gt,{onClick:()=>u(!l),children:[e&&t.jsx(Jt,{children:e}),t.jsx(Kt,{isEmpty:!b,children:B()}),t.jsx(Qt,{src:Ut,alt:"Календарь"})]}),l&&t.jsxs(en,{className:"calendar-container",children:[t.jsxs(tn,{children:[t.jsx(ve,{onClick:c=>{c.preventDefault(),c.stopPropagation(),v("prev")},onMouseDown:c=>c.preventDefault(),children:t.jsx(ye,{direction:"right"})}),t.jsxs(nn,{children:[t.jsxs(sn,{ref:I,children:[t.jsxs(on,{onClick:c=>W(c),onMouseDown:c=>c.preventDefault(),children:[ge[g.getMonth()],t.jsx(be,{$open:x})]}),x&&t.jsx(me,{$width:120,onClick:c=>c.stopPropagation(),children:ge.map((c,M)=>t.jsx(we,{$selected:M===g.getMonth(),onClick:D=>{D.stopPropagation(),A(M)},children:c},c))})]}),t.jsxs(an,{ref:k,children:[t.jsxs(rn,{onClick:c=>F(c),onMouseDown:c=>c.preventDefault(),children:[g.getFullYear(),t.jsx(be,{$open:p})]}),p&&t.jsx(me,{$width:80,onClick:c=>c.stopPropagation(),children:_().map(c=>t.jsx(we,{$selected:c===g.getFullYear(),onClick:M=>{M.stopPropagation(),R(c)},children:c},c))})]})]}),t.jsx(ve,{onClick:c=>{c.preventDefault(),c.stopPropagation(),v("next")},onMouseDown:c=>c.preventDefault(),children:t.jsx(ye,{direction:"left"})})]}),t.jsx(ln,{children:Xt.map(c=>t.jsx(cn,{children:c},c))}),t.jsx(dn,{children:H()}),t.jsxs(pn,{children:[t.jsx(ke,{onClick:O,children:"Удалить"}),t.jsx(ke,{onClick:E,children:"Сегодня"})]})]})]})},qt=n.div`
   position: relative;
   display: inline-block;
   width: 100%;
   text-align: left;
   color: black;
   background: white;
-`,qt=n.div`
+`,Gt=n.div`
   display: flex;
   align-items: center;
   padding: 10px 12px;
@@ -555,18 +555,18 @@ React keys must be passed directly to JSX without using spread:
   &:focus-within {
     border-color: rgba(0, 125, 136, 1);
   }
-`,Gt=n.span`
+`,Jt=n.span`
   color: rgba(80, 85, 92, 1);
   margin-right: 8px;
   background: white;
-`,Jt=n.span`
+`,Kt=n.span`
   flex-grow: 1;
   color: ${({isEmpty:e})=>e?"rgba(80, 85, 92, 1)":"#000"};
-`,Kt=n.img`
+`,Qt=n.img`
   width: 20px;
   height: 20px;
   margin-left: 8px;
-`,Qt=n.div`
+`,en=n.div`
   position: fixed;
   top: unset;
   bottom: unset;
@@ -580,17 +580,17 @@ React keys must be passed directly to JSX without using spread:
   z-index: 9999;
   width: 280px;
   color: black;
-`,en=n.div`
+`,tn=n.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
   color: black;
-`,tn=n.div`
+`,nn=n.div`
   display: flex;
   gap: 8px;
   color: black;
-`,Le=n.button`
+`,Te=n.button`
   border: 1px solid rgba(209, 213, 219, 1);
   border-radius: 5px;
   padding: 6px 8px;
@@ -607,23 +607,23 @@ React keys must be passed directly to JSX without using spread:
   &:hover {
     background-color: rgba(232, 216, 216, 0.2);
   }
-`,nn=n(Le)`
+`,on=n(Te)`
   min-width: 120px;
 
   &: hover {
     border-color: rgba(209, 213, 219, 1);
   }
-`,on=n(Le)`
+`,rn=n(Te)`
   min-width: 80px;
 
   &: hover {
     border-color: rgba(209, 213, 219, 1);
   }
-`,rn=n.div`
-  position: relative;
 `,sn=n.div`
   position: relative;
-`,ge=n.div`
+`,an=n.div`
+  position: relative;
+`,be=n.div`
   width: 0;
   height: 0;
   border-left: 5px solid transparent;
@@ -632,7 +632,7 @@ React keys must be passed directly to JSX without using spread:
   margin-left: 8px;
   transform: ${({$open:e})=>e?"rotate(180deg)":"none"};
   transition: transform 0.2s ease;
-`,be=n.div`
+`,me=n.div`
   position: absolute;
   top: 100%;
   left: 0;
@@ -659,7 +659,7 @@ React keys must be passed directly to JSX without using spread:
     background: rgba(80, 85, 92, 1);
     border-radius: 3px;
   }
-`,me=n.div`
+`,we=n.div`
   padding: 8px 12px;
   font-size: 14px;
   cursor: pointer;
@@ -669,7 +669,7 @@ React keys must be passed directly to JSX without using spread:
   &:hover {
     background-color: rgba(232, 216, 216, ${({$selected:e})=>e?"1":"0.5"});
   }
-`,we=n.button`
+`,ve=n.button`
   background: none;
   border: none;
   cursor: pointer;
@@ -680,25 +680,25 @@ React keys must be passed directly to JSX without using spread:
   &:focus {
     outline: none;
   }
-`,ve=n.div`
+`,ye=n.div`
   width: 0;
   height: 0;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
   border-${({direction:e})=>e}: 5px solid rgba(80, 85, 92, 1);
-`,an=n.div`
+`,ln=n.div`
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   text-align: center;
   margin-bottom: 8px;
-`,ln=n.div`
+`,cn=n.div`
   font-size: 12px;
   color: rgba(80, 85, 92, 1);
-`,cn=n.div`
+`,dn=n.div`
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 4px;
-`,ne=n.div`
+`,oe=n.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -713,11 +713,11 @@ React keys must be passed directly to JSX without using spread:
   &:hover {
     background-color: ${({selected:e})=>e?"rgba(237, 224, 224, 1)":"rgba(0, 125, 136, 0.1)"};
   }
-`,dn=n.div`
+`,pn=n.div`
   display: flex;
   justify-content: space-between;
   margin-top: 16px;
-`,ye=n.button`
+`,ke=n.button`
   background: none;
   border: none;
   color: rgba(0, 125, 136, 1);
@@ -728,27 +728,27 @@ React keys must be passed directly to JSX without using spread:
   &:hover {
     text-decoration: underline;
   }
-`,pn=n.div`
+`,un=n.div`
   display: flex;
   align-items: center;
   gap: 12px;
   margin-bottom: 16px;
-`,un=n.span`
+`,hn=n.span`
   text-align: left;
   font-size: 14px;
   color: black;
   max-width: 90px;
-`,hn=n.div`
+`,xn=n.div`
   margin-left: auto;
   flex: 1;
   max-width: 425px;
   margin-top: 10px;
-`,le=({placeholder:e="",customPlaceholder:o,value:s,inputType:i="text",onChange:r,hasError:c=!1,errorMessage:u,...m})=>{const[k,b]=w.useState(!1),v=!!(o&&!s&&!k),f=h=>{if(!r)return;let l=h.target.value;switch(i){case"number":/^\d*$/.test(l)&&r?.(h);break;case"rubles":{const j=h.target.selectionStart,R=h.target.value;let I=R.replace(/[^\d]/g,"");if(I===""){h.target.value="",r(h);break}const _=parseInt(I,10);if(!isNaN(_)){let A=_.toLocaleString("ru-RU");A+=" ₽";const P=y(R,j||0),H=d(A,P);h.target.value=A,r(h),setTimeout(()=>{h.target.setSelectionRange(H,H)},0)}break}case"percents":{l=l.replace(/[^\d.]/g,"");const j=l.split(".");j.length>2&&(l=j[0]+"."+j.slice(1).join("")),j.length===2&&j[1].length>2&&(l=j[0]+"."+j[1].slice(0,2));const R=parseFloat(l);if(isNaN(R)||(R>100?l="100":R<0&&(l="0")),l&&l!==""){l+=" %";const I=h.target.selectionStart||0,_=l.replace(" %","");h.target.value=l,r(h),setTimeout(()=>{I<_.length&&h.target.setSelectionRange(I,I)},0)}else h.target.value=l,r(h);break}case"fullname":l=l.replace(/[^a-zA-Zа-яА-ЯёЁ'\-\s]/g,""),l=l.replace(/\s{2,}/g," "),l=l.replace(/- /g,"-"),l=l.replace(/ -/g," ");let T=l.split(" ").filter(j=>j.length>0);T=T.slice(0,3),l=T.map(j=>{if(j.startsWith("-")&&(j=j.substring(1)),(j.match(/-/g)||[]).length>1){const I=j.split("-");j=I[0]+"-"+I.slice(1).join("")}return j.includes("-")?j.split("-").map((I,_)=>I.length===0?"":(_>0,I[0].toUpperCase()+I.slice(1).toLowerCase())).join("-"):j.length>0?j[0].toUpperCase()+j.slice(1).toLowerCase():""}).join(" "),l.length>0&&l[l.length-1]!==" "&&h.target.value.length>0&&h.target.value[h.target.value.length-1]===" "&&(l+=" "),l.length>100&&(l=l.slice(0,100)),h.target.value=l,r(h);break;case"doc":l=l.replace(/\D/g,""),l.length>4&&(l=`${l.slice(0,4)} ${l.slice(4,10)}`),l.length>11&&(l=l.slice(0,11)),h.target.value=l,r(h);break;case"date":{l=l.replace(/\D/g,""),l.length>4?l=`${l.slice(0,2)}.${l.slice(2,4)}.${l.slice(4,8)}`:l.length>2&&(l=`${l.slice(0,2)}.${l.slice(2,4)}`),l.length>10&&(l=l.slice(0,10)),s?.length>l.length&&[3,6].includes(l.length)&&(l=l.slice(0,l.length-1)),h.target.value=l,r(h);break}default:r(h);break}},y=(h,l)=>{let T=0;for(let j=0;j<Math.min(l,h.length);j++)/\d/.test(h[j])&&T++;return T},d=(h,l)=>{let T=0;for(let j=0;j<h.length;j++){if(T>=l)return j;/\d/.test(h[j])&&T++}return h.length};return t.jsxs(xn,{children:[t.jsx(fn,{...m,value:s,placeholder:v?"":e,onFocus:()=>b(!0),onBlur:h=>{b(!1),m.onBlur?.(h)},onChange:f,inputMode:i==="number"||i==="doc"||i==="date"||i==="rubles"||i==="percents"?"numeric":"text",maxLength:i==="doc"?11:i==="date"?10:void 0,hasError:c}),o&&t.jsx(gn,{isVisible:v,children:o}),c&&u&&t.jsx(bn,{children:u})]})},xn=n.div`
+`,ce=({placeholder:e="",customPlaceholder:o,value:i,inputType:r="text",onChange:s,hasError:l=!1,errorMessage:u,...g})=>{const[j,b]=m.useState(!1),w=!!(o&&!i&&!j),x=h=>{if(!s)return;let d=h.target.value;switch(r){case"number":/^\d*$/.test(d)&&s?.(h);break;case"rubles":{const k=h.target.selectionStart,P=h.target.value;let E=P.replace(/[^\d]/g,"");if(E===""){h.target.value="",s(h);break}const O=parseInt(E,10);if(!isNaN(O)){let A=O.toLocaleString("ru-RU");A+=" ₽";const R=y(P,k||0),H=p(A,R);h.target.value=A,s(h),setTimeout(()=>{h.target.setSelectionRange(H,H)},0)}break}case"percents":{d=d.replace(/[^\d.]/g,"");const k=d.split(".");k.length>2&&(d=k[0]+"."+k.slice(1).join("")),k.length===2&&k[1].length>2&&(d=k[0]+"."+k[1].slice(0,2));const P=parseFloat(d);if(isNaN(P)||(P>100?d="100":P<0&&(d="0")),d&&d!==""){d+=" %";const E=h.target.selectionStart||0,O=d.replace(" %","");h.target.value=d,s(h),setTimeout(()=>{E<O.length&&h.target.setSelectionRange(E,E)},0)}else h.target.value=d,s(h);break}case"fullname":d=d.replace(/[^a-zA-Zа-яА-ЯёЁ'\-\s]/g,""),d=d.replace(/\s{2,}/g," "),d=d.replace(/- /g,"-"),d=d.replace(/ -/g," ");let I=d.split(" ").filter(k=>k.length>0);I=I.slice(0,3),d=I.map(k=>{if(k.startsWith("-")&&(k=k.substring(1)),(k.match(/-/g)||[]).length>1){const E=k.split("-");k=E[0]+"-"+E.slice(1).join("")}return k.includes("-")?k.split("-").map((E,O)=>E.length===0?"":(O>0,E[0].toUpperCase()+E.slice(1).toLowerCase())).join("-"):k.length>0?k[0].toUpperCase()+k.slice(1).toLowerCase():""}).join(" "),d.length>0&&d[d.length-1]!==" "&&h.target.value.length>0&&h.target.value[h.target.value.length-1]===" "&&(d+=" "),d.length>100&&(d=d.slice(0,100)),h.target.value=d,s(h);break;case"doc":d=d.replace(/\D/g,""),d.length>4&&(d=`${d.slice(0,4)} ${d.slice(4,10)}`),d.length>11&&(d=d.slice(0,11)),h.target.value=d,s(h);break;case"date":{d=d.replace(/\D/g,""),d.length>4?d=`${d.slice(0,2)}.${d.slice(2,4)}.${d.slice(4,8)}`:d.length>2&&(d=`${d.slice(0,2)}.${d.slice(2,4)}`),d.length>10&&(d=d.slice(0,10)),i?.length>d.length&&[3,6].includes(d.length)&&(d=d.slice(0,d.length-1)),h.target.value=d,s(h);break}default:s(h);break}},y=(h,d)=>{let I=0;for(let k=0;k<Math.min(d,h.length);k++)/\d/.test(h[k])&&I++;return I},p=(h,d)=>{let I=0;for(let k=0;k<h.length;k++){if(I>=d)return k;/\d/.test(h[k])&&I++}return h.length};return t.jsxs(fn,{children:[t.jsx(gn,{...g,value:i,placeholder:w?"":e,onFocus:()=>b(!0),onBlur:h=>{b(!1),g.onBlur?.(h)},onChange:x,inputMode:r==="number"||r==="doc"||r==="date"||r==="rubles"||r==="percents"?"numeric":"text",maxLength:r==="doc"?11:r==="date"?10:void 0,hasError:l}),o&&t.jsx(bn,{isVisible:w,children:o}),l&&u&&t.jsx(mn,{children:u})]})},fn=n.div`
   position: relative;
   display: inline-block;
   width: 100%;
   margin-right: auto;
-`,fn=n.input`
+`,gn=n.input`
   padding: 10px 12px;
   border: 1px solid ${({hasError:e})=>e?"rgba(239, 68, 68, 1)":"rgba(209, 213, 219, 1)"};
   border-radius: 5px;
@@ -776,7 +776,7 @@ React keys must be passed directly to JSX without using spread:
     color: rgba(80, 85, 92, 1);
     opacity: 1;
   }
-`,gn=n.label`
+`,bn=n.label`
   position: absolute;
   left: 12px;
   top: 50%;
@@ -788,19 +788,19 @@ React keys must be passed directly to JSX without using spread:
   opacity: ${({isVisible:e})=>e?1:0};
   background-color: white;
   padding: 0 4px;
-`,bn=n.span`
+`,mn=n.span`
   color: rgba(239, 68, 68, 1);
   font-size: 12px;
   margin-top: 4px;
   display: block;
-`,mn=({total:e,current:o=1,onChange:s,itemsPerPage:i=10})=>{const r=Math.ceil(e/i),[c,u]=w.useState(o),m=b=>{b<1||b>r||b===c||(u(b),s?.(b))},k=()=>{const b=[];let f=1,y=r;if(r>5){const d=Math.floor(2.5);f=Math.max(c-d,1),y=Math.min(c+d,r),c<=d+1?y=5:c>=r-d&&(f=r-5+1)}for(let d=f;d<=y;d++)b.push(t.jsx(Q,{active:d===c,onClick:()=>m(d),children:d},d));return f>1&&(f>2&&b.unshift(t.jsx(Q,{children:"..."},"start-ellipsis")),b.unshift(t.jsx(Q,{active:c===1,onClick:()=>m(1),children:"1"},1))),y<r&&(y<r-1&&b.push(t.jsx(Q,{children:"..."},"end-ellipsis")),b.push(t.jsx(Q,{active:r===c,onClick:()=>m(r),children:r},r))),b};return t.jsxs(wn,{children:[t.jsx(ke,{disabled:c===1,onClick:()=>m(c-1),children:t.jsx("svg",{width:"7",height:"11",viewBox:"0 0 7 11",fill:"none",children:t.jsx("path",{d:"M6 0.5L1 5.5L6 10.5",stroke:c===1?"#ccc":"black",strokeLinecap:"round",strokeLinejoin:"round"})})}),k(),t.jsx(ke,{disabled:c===r,onClick:()=>m(c+1),style:{transform:"rotate(180deg)"},children:t.jsx("svg",{width:"7",height:"11",viewBox:"0 0 7 11",fill:"none",children:t.jsx("path",{d:"M6 0.5L1 5.5L6 10.5",stroke:c===r?"#ccc":"black",strokeLinecap:"round",strokeLinejoin:"round"})})})]})},wn=n.div`
+`,wn=({total:e,current:o=1,onChange:i,itemsPerPage:r=10})=>{const s=Math.ceil(e/r),[l,u]=m.useState(o),g=b=>{b<1||b>s||b===l||(u(b),i?.(b))},j=()=>{const b=[];let x=1,y=s;if(s>5){const p=Math.floor(2.5);x=Math.max(l-p,1),y=Math.min(l+p,s),l<=p+1?y=5:l>=s-p&&(x=s-5+1)}for(let p=x;p<=y;p++)b.push(t.jsx(ee,{active:p===l,onClick:()=>g(p),children:p},p));return x>1&&(x>2&&b.unshift(t.jsx(ee,{children:"..."},"start-ellipsis")),b.unshift(t.jsx(ee,{active:l===1,onClick:()=>g(1),children:"1"},1))),y<s&&(y<s-1&&b.push(t.jsx(ee,{children:"..."},"end-ellipsis")),b.push(t.jsx(ee,{active:s===l,onClick:()=>g(s),children:s},s))),b};return t.jsxs(vn,{children:[t.jsx(je,{disabled:l===1,onClick:()=>g(l-1),children:t.jsx("svg",{width:"7",height:"11",viewBox:"0 0 7 11",fill:"none",children:t.jsx("path",{d:"M6 0.5L1 5.5L6 10.5",stroke:l===1?"#ccc":"black",strokeLinecap:"round",strokeLinejoin:"round"})})}),j(),t.jsx(je,{disabled:l===s,onClick:()=>g(l+1),style:{transform:"rotate(180deg)"},children:t.jsx("svg",{width:"7",height:"11",viewBox:"0 0 7 11",fill:"none",children:t.jsx("path",{d:"M6 0.5L1 5.5L6 10.5",stroke:l===s?"#ccc":"black",strokeLinecap:"round",strokeLinejoin:"round"})})})]})},vn=n.div`
   display: flex;
   justify-content: right;
   align-items: center;
   gap: 8px;
   margin-top: 20px;
   margin-left: auto;
-`,Q=n.div`
+`,ee=n.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -815,7 +815,7 @@ React keys must be passed directly to JSX without using spread:
   &:hover {
     color: ${({active:e})=>e?"white":"rgba(0, 125, 136, 1)"};
   }
-`,ke=n.button`
+`,je=n.button`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -834,12 +834,12 @@ React keys must be passed directly to JSX without using spread:
   &:disabled {
     cursor: not-allowed;
   }
-`,vn=({placeholder:e="",customPlaceholder:o,value:s,onChange:i,hasError:r=!1,errorMessage:c,rows:u=3,...m})=>{const[k,b]=w.useState(!1),v=!!(o&&!s&&!k);return t.jsxs(yn,{children:[t.jsx(kn,{...m,value:s,placeholder:v?"":e,onFocus:()=>b(!0),onBlur:f=>{b(!1),m.onBlur?.(f)},onChange:i,hasError:r,rows:u}),o&&t.jsx(jn,{isVisible:v,children:o}),r&&c&&t.jsx(Cn,{children:c})]})},yn=n.div`
+`,yn=({placeholder:e="",customPlaceholder:o,value:i,onChange:r,hasError:s=!1,errorMessage:l,rows:u=3,...g})=>{const[j,b]=m.useState(!1),w=!!(o&&!i&&!j);return t.jsxs(kn,{children:[t.jsx(jn,{...g,value:i,placeholder:w?"":e,onFocus:()=>b(!0),onBlur:x=>{b(!1),g.onBlur?.(x)},onChange:r,hasError:s,rows:u}),o&&t.jsx(Cn,{isVisible:w,children:o}),s&&l&&t.jsx($n,{children:l})]})},kn=n.div`
   position: relative;
   display: inline-block;
   width: 100%;
   margin-right: auto;
-`,kn=n.textarea`
+`,jn=n.textarea`
   padding: 10px 12px;
   border: 1px solid ${({hasError:e})=>e?"rgba(239, 68, 68, 1)":"rgba(209, 213, 219, 1)"};
   border-radius: 5px;
@@ -868,7 +868,7 @@ React keys must be passed directly to JSX without using spread:
     color: rgba(80, 85, 92, 1);
     opacity: 1;
   }
-`,jn=n.label`
+`,Cn=n.label`
   position: absolute;
   left: 12px;
   top: 12px;
@@ -879,12 +879,12 @@ React keys must be passed directly to JSX without using spread:
   opacity: ${({isVisible:e})=>e?1:0};
   background-color: white;
   padding: 0 4px;
-`,Cn=n.span`
+`,$n=n.span`
   color: rgba(239, 68, 68, 1);
   font-size: 12px;
   margin-top: 4px;
   display: block;
-`,De=({title:e,onClose:o,onCancel:s,onSave:i,children:r,isSaveDisabled:c=!1,isSubmitting:u=!1,mode:m="create",hideSaveButton:k=!1,hideCanselButton:b=!1,width:v="560px",saveButtonText:f="Сохранить",customLayout:y})=>{const d=m==="view",h=w.useRef(null);w.useEffect(()=>{const j=I=>{I.key==="Escape"&&o()};document.addEventListener("keydown",j);const R=document.body.style.overflow;return document.body.style.overflow="hidden",setTimeout(()=>h.current?.focus(),0),()=>{document.removeEventListener("keydown",j),document.body.style.overflow=R}},[o]);const l=j=>{j.target===j.currentTarget&&o()},T=j=>{j.preventDefault(),s()};return t.jsx($n,{onMouseDown:l,role:"presentation",children:t.jsxs(Sn,{ref:h,$width:v,role:"dialog","aria-modal":"true","aria-label":e||"Диалог",tabIndex:-1,children:[t.jsxs(Te,{children:[t.jsx(Ee,{children:e}),t.jsx(Mn,{type:"button",onClick:o,"aria-label":"Закрыть",children:t.jsx("span",{"aria-hidden":!0,children:"×"})})]}),y?t.jsx(Ln,{children:y}):null,t.jsxs(Dn,{onSubmit:i,children:[t.jsx(Tn,{children:r}),t.jsxs(En,{children:[t.jsx(In,{children:b?null:t.jsx(Rn,{isPrimary:!1,onClick:T,children:"Отменить"})}),t.jsx(Pn,{children:!d&&!k?t.jsx(Bn,{type:"submit",disabled:c||u,children:u?"Сохранение...":f}):null})]})]})]})})},$n=n.div`
+`,Ee=({title:e,onClose:o,onCancel:i,onSave:r,children:s,isSaveDisabled:l=!1,isSubmitting:u=!1,mode:g="create",hideSaveButton:j=!1,hideCanselButton:b=!1,width:w="560px",saveButtonText:x="Сохранить",customLayout:y})=>{const p=g==="view",h=m.useRef(null);m.useEffect(()=>{const k=E=>{E.key==="Escape"&&o()};document.addEventListener("keydown",k);const P=document.body.style.overflow;return document.body.style.overflow="hidden",setTimeout(()=>h.current?.focus(),0),()=>{document.removeEventListener("keydown",k),document.body.style.overflow=P}},[o]);const d=k=>{k.target===k.currentTarget&&o()},I=k=>{k.preventDefault(),i()};return t.jsx(Sn,{onMouseDown:d,role:"presentation",children:t.jsxs(Mn,{ref:h,$width:w,role:"dialog","aria-modal":"true","aria-label":e||"Диалог",tabIndex:-1,children:[t.jsxs(Ie,{children:[t.jsx(Pe,{children:e}),t.jsx(Ln,{type:"button",onClick:o,"aria-label":"Закрыть",children:t.jsx("span",{"aria-hidden":!0,children:"×"})})]}),y?t.jsx(Dn,{children:y}):null,t.jsxs(Tn,{onSubmit:r,children:[t.jsx(En,{children:s}),t.jsxs(In,{children:[t.jsx(Pn,{children:b?null:t.jsx(Bn,{isPrimary:!1,onClick:I,children:"Отменить"})}),t.jsx(Rn,{children:!p&&!j?t.jsx(zn,{type:"submit",disabled:l||u,children:u?"Сохранение...":x}):null})]})]})]})})},Sn=n.div`
   position: fixed;
   inset: 0;
   background: rgba(15, 23, 42, 0.55);
@@ -892,7 +892,7 @@ React keys must be passed directly to JSX without using spread:
   place-items: center;
   padding: 16px;
   z-index: 1000;
-`,Sn=n.div`
+`,Mn=n.div`
   width: min(100%, ${({$width:e})=>e});
   max-height: min(85vh, 820px);
   height: fit-content;
@@ -908,14 +908,14 @@ React keys must be passed directly to JSX without using spread:
   display: flex;
   flex-direction: column;
   outline: none;
-`,Te=n.div`
+`,Ie=n.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
 
   padding: 14px 18px 10px 18px;
-`,Ee=n.h2`
+`,Pe=n.h2`
   margin: 0;
   padding: 0;
 
@@ -932,7 +932,7 @@ React keys must be passed directly to JSX without using spread:
   text-overflow: ellipsis;
   white-space: nowrap;
   text-align: left;
-`,Mn=n.button`
+`,Ln=n.button`
   width: 40px;
   height: 40px;
   margin-top: 2px;
@@ -966,14 +966,14 @@ React keys must be passed directly to JSX without using spread:
     outline: none;
     box-shadow: none;
   }
-`,Ln=n.div`
+`,Dn=n.div`
   padding: 12px 18px 0 18px;
-`,Dn=n.form`
+`,Tn=n.form`
   display: flex;
   flex-direction: column;
   flex: 1;
   min-height: 0; /* важно для корректного скролла тела */
-`,Tn=n.div`
+`,En=n.div`
   padding: 12px 18px 16px 18px;
   flex: 1;
   min-height: 0;
@@ -988,7 +988,7 @@ React keys must be passed directly to JSX without using spread:
     width: 100%;
     box-sizing: border-box;
   }
-`,En=n.div`
+`,In=n.div`
   padding: 12px 18px 18px 18px;
 
   display: flex;
@@ -996,28 +996,28 @@ React keys must be passed directly to JSX without using spread:
   justify-content: space-between;
   gap: 10px;
   flex-wrap: wrap;
-`,In=n.div`
-  display: flex;
-  align-items: center;
-  gap: 10px;
 `,Pn=n.div`
   display: flex;
   align-items: center;
   gap: 10px;
-`,Rn=n(te)`
+`,Rn=n.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+`,Bn=n(ne)`
   min-width: 140px;
   padding: 10px 16px;
   border-radius: 10px;
   font-size: 16px;
-`,Bn=n(te)`
+`,zn=n(ne)`
   min-width: 140px;
   padding: 10px 16px;
   border-radius: 10px;
   font-size: 16px;
-`,zn=[{id:"Last7Days",label:"За последние 7 дней",value:"Last7Days"},{id:"ThisMonth",label:"За этот месяц",value:"ThisMonth"},{id:"Last31Days",label:"За последние 31 день",value:"Last31Days"},{id:"PreviousMonth",label:"За прошлый месяц",value:"PreviousMonth"},{id:"ThisYear",label:"За этот год",value:"ThisYear"},{id:"PreviousYear",label:"За прошлый год",value:"PreviousYear"}],An=({value:e="",placeholder:o="Выберите период",options:s=zn,showCustomPeriodButton:i=!0,onChange:r,onCustomPeriodClick:c})=>{const[u,m]=w.useState(!1),[k,b]=w.useState(!1),[v,f]=w.useState(""),[y,d]=w.useState(""),[h,l]=w.useState(""),T=w.useRef(null),j=w.useRef(null);w.useEffect(()=>{if(e==="Custom"&&y&&h){const B=P(y),z=P(h);f(`С ${B} по ${z}`)}else{const B=s.find(z=>z.value===e);f(B?B.label:"")}},[e,s,y,h]),w.useEffect(()=>{const B=z=>{T.current&&!T.current.contains(z.target)&&m(!1),k&&j.current&&!j.current.contains(z.target)&&([...document.querySelectorAll(".calendar-container, .arrow-button")].some(g=>g.contains(z.target))||b(!1))};return document.addEventListener("mousedown",B),()=>{document.removeEventListener("mousedown",B)}},[k]);const R=B=>{r?.(B.value),m(!1)},I=()=>{m(!1),c?c():b(!0)},_=()=>{r?.(""),f(""),d(""),l("")},A=()=>{if(y&&h){const B=P(y),z=P(h),N=`С ${B} по ${z}`;r?.("Custom",y,h),f(N),b(!1)}},P=B=>{const z=new Date(B),N=String(z.getDate()).padStart(2,"0"),F=String(z.getMonth()+1).padStart(2,"0"),g=z.getFullYear();return`${N}.${F}.${g}`},H=()=>t.jsxs(qn,{children:[t.jsx(Te,{style:{margin:0},children:t.jsx(Ee,{style:{margin:0},children:"Выбор периода"})}),t.jsx(Gn,{onClick:_,children:"Очистить период"})]});return t.jsxs(t.Fragment,{children:[t.jsxs(Fn,{ref:T,children:[t.jsxs(_n,{onClick:()=>m(!u),children:[t.jsx(On,{children:v||o}),t.jsx(Nn,{$isOpen:u,children:"▼"})]}),u&&t.jsxs(Yn,{children:[s.map(B=>t.jsxs(Wn,{onClick:()=>R(B),$isSelected:e===B.value,children:[t.jsx(Hn,{$isSelected:e===B.value,children:e===B.value&&t.jsx(Vn,{})}),t.jsx(Zn,{children:B.label})]},B.id)),i&&t.jsx(Un,{onClick:I,children:"Другой период"})]})]}),k&&t.jsx("div",{ref:j,children:t.jsx(De,{title:"",onClose:()=>b(!1),onCancel:()=>b(!1),onSave:B=>{B.preventDefault(),A()},saveButtonText:"Выбрать",customLayout:t.jsx(H,{}),children:t.jsxs(Xn,{children:[t.jsx(je,{children:t.jsx(re,{value:y,onChange:B=>d(B)})}),t.jsx(je,{children:t.jsx(re,{value:h,onChange:B=>l(B)})})]})})})]})},Fn=n.div`
+`,An=[{id:"Last7Days",label:"За последние 7 дней",value:"Last7Days"},{id:"ThisMonth",label:"За этот месяц",value:"ThisMonth"},{id:"Last31Days",label:"За последние 31 день",value:"Last31Days"},{id:"PreviousMonth",label:"За прошлый месяц",value:"PreviousMonth"},{id:"ThisYear",label:"За этот год",value:"ThisYear"},{id:"PreviousYear",label:"За прошлый год",value:"PreviousYear"}],Fn=({value:e="",placeholder:o="Выберите период",options:i=An,showCustomPeriodButton:r=!0,onChange:s,onCustomPeriodClick:l})=>{const[u,g]=m.useState(!1),[j,b]=m.useState(!1),[w,x]=m.useState(""),[y,p]=m.useState(""),[h,d]=m.useState(""),I=m.useRef(null),k=m.useRef(null);m.useEffect(()=>{if(e==="Custom"&&y&&h){const B=R(y),_=R(h);x(`С ${B} по ${_}`)}else{const B=i.find(_=>_.value===e);x(B?B.label:"")}},[e,i,y,h]),m.useEffect(()=>{const B=_=>{I.current&&!I.current.contains(_.target)&&g(!1),j&&k.current&&!k.current.contains(_.target)&&([...document.querySelectorAll(".calendar-container, .arrow-button")].some(v=>v.contains(_.target))||b(!1))};return document.addEventListener("mousedown",B),()=>{document.removeEventListener("mousedown",B)}},[j]);const P=B=>{s?.(B.value),g(!1)},E=()=>{g(!1),l?l():b(!0)},O=()=>{s?.(""),x(""),p(""),d("")},A=()=>{if(y&&h){const B=R(y),_=R(h),W=`С ${B} по ${_}`;s?.("Custom",y,h),x(W),b(!1)}},R=B=>{const _=new Date(B),W=String(_.getDate()).padStart(2,"0"),F=String(_.getMonth()+1).padStart(2,"0"),v=_.getFullYear();return`${W}.${F}.${v}`},H=()=>t.jsxs(Gn,{children:[t.jsx(Ie,{style:{margin:0},children:t.jsx(Pe,{style:{margin:0},children:"Выбор периода"})}),t.jsx(Jn,{onClick:O,children:"Очистить период"})]});return t.jsxs(t.Fragment,{children:[t.jsxs(_n,{ref:I,children:[t.jsxs(On,{onClick:()=>g(!u),children:[t.jsx(Nn,{children:w||o}),t.jsx(Wn,{$isOpen:u,children:"▼"})]}),u&&t.jsxs(Yn,{children:[i.map(B=>t.jsxs(Hn,{onClick:()=>P(B),$isSelected:e===B.value,children:[t.jsx(Vn,{$isSelected:e===B.value,children:e===B.value&&t.jsx(Zn,{})}),t.jsx(Un,{children:B.label})]},B.id)),r&&t.jsx(Xn,{onClick:E,children:"Другой период"})]})]}),j&&t.jsx("div",{ref:k,children:t.jsx(Ee,{title:"",onClose:()=>b(!1),onCancel:()=>b(!1),onSave:B=>{B.preventDefault(),A()},saveButtonText:"Выбрать",customLayout:t.jsx(H,{}),children:t.jsxs(qn,{children:[t.jsx(Ce,{children:t.jsx(ie,{value:y,onChange:B=>p(B)})}),t.jsx(Ce,{children:t.jsx(ie,{value:h,onChange:B=>d(B)})})]})})})]})},_n=n.div`
   position: relative;
   width: 245px;
-`,_n=n.div`
+`,On=n.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1038,7 +1038,7 @@ React keys must be passed directly to JSX without using spread:
     outline: none;
     border-color: #007d88;
   }
-`,On=n.span`
+`,Nn=n.span`
   font-family: 'Manrope', sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -1048,7 +1048,7 @@ React keys must be passed directly to JSX without using spread:
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-`,Nn=n.span`
+`,Wn=n.span`
   font-size: 10px;
   transition: transform 0.2s;
   transform: ${({$isOpen:e})=>e?"rotate(180deg)":"rotate(0)"};
@@ -1066,7 +1066,7 @@ React keys must be passed directly to JSX without using spread:
   z-index: 100;
   max-height: 350px;
   overflow-y: auto;
-`,Wn=n.div`
+`,Hn=n.div`
   display: flex;
   align-items: center;
   padding: 10px 12px;
@@ -1088,7 +1088,7 @@ React keys must be passed directly to JSX without using spread:
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
   }
-`,Hn=n.div`
+`,Vn=n.div`
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -1098,19 +1098,19 @@ React keys must be passed directly to JSX without using spread:
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-`,Vn=n.div`
+`,Zn=n.div`
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background: #007d88;
-`,Zn=n.span`
+`,Un=n.span`
   font-family: 'Manrope', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 19px;
   color: #000000;
-`,Un=n.div`
+`,Xn=n.div`
   display: flex;
   flex-direction: column;
   padding: 10px 12px 0 0;
@@ -1127,19 +1127,19 @@ React keys must be passed directly to JSX without using spread:
   &:hover {
     background: #f5f5f5;
   }
-`,Xn=n.div`
+`,qn=n.div`
   display: flex;
   gap: 20px;
   margin: 20px 25px;
-`,je=n.div`
+`,Ce=n.div`
   flex: 1;
-`,qn=n.div`
+`,Gn=n.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   padding: 0 25px;
-`,Gn=n.button`
+`,Jn=n.button`
   background: none;
   border: none;
   color: rgba(0, 125, 136, 1);
@@ -1151,12 +1151,12 @@ React keys must be passed directly to JSX without using spread:
   &:hover {
     text-decoration: underline;
   }
-`,Jn=({name:e,value:o,onChange:s,onBlur:i,onKeyPress:r,placeholder:c="8 (999) 500-50-50",customPlaceholder:u,tabIndex:m,disabled:k=!1,hasError:b=!1,errorMessage:v})=>{const[f,y]=w.useState(!1),d=w.useRef(null),h=!!(u&&!o&&!f),l=I=>{const A=I.replace(/\D/g,"").slice(0,11);let P="";return A.length>0&&(P+="8"),A.length>1&&(P+=` (${A.slice(1,4)}`),A.length>4&&(P+=`) ${A.slice(4,7)}`),A.length>7&&(P+=`-${A.slice(7,9)}`),A.length>9&&(P+=`-${A.slice(9,11)}`),P},T=I=>{const _=l(I.target.value),A={...I,target:{...I.target,name:e,value:_}};s(A)},j=I=>{y(!1),i?.(I)},R=I=>{r?.(I)};return t.jsxs(Kn,{children:[t.jsx(Qn,{ref:d,name:e,type:"tel",value:o,onChange:T,onKeyPress:R,placeholder:h?"":c,maxLength:18,tabIndex:m,disabled:k,hasError:b,onFocus:()=>y(!0),onBlur:j,inputMode:"tel"}),u&&t.jsx(eo,{isVisible:h,children:u}),b&&v&&t.jsx(to,{children:v})]})},Kn=n.div`
+`,Kn=({name:e,value:o,onChange:i,onBlur:r,onKeyPress:s,placeholder:l="8 (999) 500-50-50",customPlaceholder:u,tabIndex:g,disabled:j=!1,hasError:b=!1,errorMessage:w})=>{const[x,y]=m.useState(!1),p=m.useRef(null),h=!!(u&&!o&&!x),d=E=>{const A=E.replace(/\D/g,"").slice(0,11);let R="";return A.length>0&&(R+="8"),A.length>1&&(R+=` (${A.slice(1,4)}`),A.length>4&&(R+=`) ${A.slice(4,7)}`),A.length>7&&(R+=`-${A.slice(7,9)}`),A.length>9&&(R+=`-${A.slice(9,11)}`),R},I=E=>{const O=d(E.target.value),A={...E,target:{...E.target,name:e,value:O}};i(A)},k=E=>{y(!1),r?.(E)},P=E=>{s?.(E)};return t.jsxs(Qn,{children:[t.jsx(eo,{ref:p,name:e,type:"tel",value:o,onChange:I,onKeyPress:P,placeholder:h?"":l,maxLength:18,tabIndex:g,disabled:j,hasError:b,onFocus:()=>y(!0),onBlur:k,inputMode:"tel"}),u&&t.jsx(to,{isVisible:h,children:u}),b&&w&&t.jsx(no,{children:w})]})},Qn=n.div`
   position: relative;
   display: inline-block;
   width: 100%;
   margin-right: auto;
-`,Qn=n.input`
+`,eo=n.input`
   padding: 10px 12px;
   border: 1px solid ${({hasError:e})=>e?"rgba(239, 68, 68, 1)":"rgba(209, 213, 219, 1)"};
   border-radius: 5px;
@@ -1189,7 +1189,7 @@ React keys must be passed directly to JSX without using spread:
     background-color: rgba(248, 249, 250, 0.9);
     cursor: not-allowed;
   }
-`,eo=n.label`
+`,to=n.label`
   position: absolute;
   left: 12px;
   top: 50%;
@@ -1201,23 +1201,23 @@ React keys must be passed directly to JSX without using spread:
   opacity: ${({isVisible:e})=>e?1:0};
   background-color: white;
   padding: 0 4px;
-`,to=n.span`
+`,no=n.span`
   color: rgba(239, 68, 68, 1);
   font-size: 12px;
   margin-top: 4px;
   display: block;
-`,no=({tabs:e,activeTab:o,onChange:s,addButton:i,fontSize:r=14})=>{const c=e.find(u=>u.id===o)?.content;return t.jsxs(t.Fragment,{children:[t.jsx(oo,{children:t.jsxs(ro,{children:[e.map(u=>t.jsxs(io,{$isActive:o===u.id,onClick:()=>s(u.id),$fontSize:r,children:[u.label,o===u.id&&t.jsx(so,{})]},u.id)),i&&t.jsx(ao,{children:i})]})}),c&&t.jsx(lo,{children:c})]})},oo=n.div`
+`,oo=({tabs:e,activeTab:o,onChange:i,addButton:r,fontSize:s=14})=>{const l=e.find(u=>u.id===o)?.content;return t.jsxs(t.Fragment,{children:[t.jsx(ro,{children:t.jsxs(io,{children:[e.map(u=>t.jsxs(so,{$isActive:o===u.id,onClick:()=>i(u.id),$fontSize:s,children:[u.label,o===u.id&&t.jsx(ao,{})]},u.id)),r&&t.jsx(lo,{children:r})]})}),l&&t.jsx(co,{children:l})]})},ro=n.div`
   width: auto;
   border-bottom: 1px solid rgba(209, 213, 219, 1);
   margin-bottom: 20px;
-`,ro=n.ul`
+`,io=n.ul`
   display: flex;
   list-style: none;
   padding: 0;
   margin: 0;
   gap: 24px;
   align-items: center;
-`,io=n.li`
+`,so=n.li`
   position: relative;
   padding: 12px 0;
   cursor: pointer;
@@ -1229,7 +1229,7 @@ React keys must be passed directly to JSX without using spread:
   &:hover {
     color: rgba(0, 125, 136, 0.8);
   }
-`,so=n.div`
+`,ao=n.div`
   position: absolute;
   bottom: -1px;
   left: 0;
@@ -1237,22 +1237,22 @@ React keys must be passed directly to JSX without using spread:
   height: 2px;
   background-color: rgba(0, 125, 136, 1);
   border-radius: 2px 2px 0 0;
-`,ao=n.li`
+`,lo=n.li`
   margin-left: auto;
   padding: 4px 0;
-`,lo=n.div`
+`,co=n.div`
   margin-top: 20px;
-`,co=({mode:e,primaryValue:o,secondaryValue:s,placeholder:i="Выберите значение",onSelect:r,onClear:c,disabled:u=!1,hasError:m=!1,errorMessage:k="",customIcon:b})=>{const f=b||t.jsx("svg",{width:"27",height:"6",viewBox:"0 0 27 6",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:t.jsx("path",{d:"M2.915 0C1.31175 0 0 1.31175 0 2.915C0 4.51825 1.31175 5.83 2.915 5.83C4.51825 5.83 5.83 4.51825 5.83 2.915C5.83 1.31175 4.51825 0 2.915 0ZM23.32 0C21.7167 0 20.405 1.31175 20.405 2.915C20.405 4.51825 21.7167 5.83 23.32 5.83C24.9233 5.83 26.235 4.51825 26.235 2.915C26.235 1.31175 24.9233 0 23.32 0ZM13.1175 0C11.5142 0 10.2025 1.31175 10.2025 2.915C10.2025 4.51825 11.5142 5.83 13.1175 5.83C14.7207 5.83 16.0325 4.51825 16.0325 2.915C16.0325 1.31175 14.7207 0 13.1175 0Z",fill:"#50555C"})});return e==="view"?t.jsxs(xo,{children:[t.jsx(fo,{children:o||"Не указано"}),s&&t.jsx(go,{children:s})]}):t.jsxs(po,{children:[t.jsxs(uo,{children:[t.jsx(ho,{type:"text",value:o||"",placeholder:i,readOnly:!0,disabled:u}),o&&!u&&t.jsx(mo,{type:"button",onClick:c,"aria-label":"Очистить",children:"×"})]}),!u&&t.jsx(bo,{type:"button",onClick:r,"aria-label":"Выбрать",children:f}),m&&k&&t.jsx(wo,{children:k})]})},po=n.div`
+`,po=({mode:e,primaryValue:o,secondaryValue:i,placeholder:r="Выберите значение",onSelect:s,onClear:l,disabled:u=!1,hasError:g=!1,errorMessage:j="",customIcon:b})=>{const x=b||t.jsx("svg",{width:"27",height:"6",viewBox:"0 0 27 6",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:t.jsx("path",{d:"M2.915 0C1.31175 0 0 1.31175 0 2.915C0 4.51825 1.31175 5.83 2.915 5.83C4.51825 5.83 5.83 4.51825 5.83 2.915C5.83 1.31175 4.51825 0 2.915 0ZM23.32 0C21.7167 0 20.405 1.31175 20.405 2.915C20.405 4.51825 21.7167 5.83 23.32 5.83C24.9233 5.83 26.235 4.51825 26.235 2.915C26.235 1.31175 24.9233 0 23.32 0ZM13.1175 0C11.5142 0 10.2025 1.31175 10.2025 2.915C10.2025 4.51825 11.5142 5.83 13.1175 5.83C14.7207 5.83 16.0325 4.51825 16.0325 2.915C16.0325 1.31175 14.7207 0 13.1175 0Z",fill:"#50555C"})});return e==="view"?t.jsxs(fo,{children:[t.jsx(go,{children:o||"Не указано"}),i&&t.jsx(bo,{children:i})]}):t.jsxs(uo,{children:[t.jsxs(ho,{children:[t.jsx(xo,{type:"text",value:o||"",placeholder:r,readOnly:!0,disabled:u}),o&&!u&&t.jsx(wo,{type:"button",onClick:l,"aria-label":"Очистить",children:"×"})]}),!u&&t.jsx(mo,{type:"button",onClick:s,"aria-label":"Выбрать",children:x}),g&&j&&t.jsx(vo,{children:j})]})},uo=n.div`
   display: flex;
   align-items: center;
   width: 100%;
   flex-direction: row;
-`,uo=n.div`
+`,ho=n.div`
   position: relative;
   display: flex;
   align-items: center;
   width: 100%;
-`,ho=n.input`
+`,xo=n.input`
   width: 100%;
   padding: 10px 40px 10px 12px;
   border: 1px solid #ddd;
@@ -1261,7 +1261,7 @@ React keys must be passed directly to JSX without using spread:
   background-color: ${e=>e.disabled?"#f5f5f5":"white"};
   color: #333;
   pointer-events: none;
-`,xo=n.div`
+`,fo=n.div`
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -1269,14 +1269,14 @@ React keys must be passed directly to JSX without using spread:
   border: 1px solid #ddd;
   border-radius: 4px;
   background-color: #f5f5f5;
-`,fo=n.span`
+`,go=n.span`
   font-size: 14px;
   color: #333;
   margin-bottom: 4px;
-`,go=n.span`
+`,bo=n.span`
   font-size: 13px;
   color: #666;
-`,bo=n.button`
+`,mo=n.button`
   background: none;
   border: none;
   cursor: pointer;
@@ -1289,7 +1289,7 @@ React keys must be passed directly to JSX without using spread:
   &:hover {
     opacity: 0.8;
   }
-`,mo=n.button`
+`,wo=n.button`
   position: absolute;
   right: 10px;
   background: none;
@@ -1302,11 +1302,11 @@ React keys must be passed directly to JSX without using spread:
   &:hover {
     color: #666;
   }
-`,wo=n.div`
+`,vo=n.div`
   color: red;
   font-size: 12px;
   margin-top: 4px;
-`,ce=n.div`
+`,de=n.div`
   display: flex;
   flex-direction: row;
   text-align: left;
@@ -1315,7 +1315,7 @@ React keys must be passed directly to JSX without using spread:
   font-weight: 600;
   margin-top: 0px;
   align-items: center;
-`,vo=({total:e})=>t.jsx("div",{children:t.jsxs(yo,{children:["Всего: ",e]})}),yo=n.p`
+`,yo=({total:e})=>t.jsx("div",{children:t.jsxs(ko,{children:["Всего: ",e]})}),ko=n.p`
   display: flex;
   align-items: center;
   color: black;
@@ -1323,7 +1323,7 @@ React keys must be passed directly to JSX without using spread:
   align-items: center;
   font-size: 20px;
   white-space: nowrap;
-`,ko=n.h3`
+`,jo=n.h3`
   color: black;
   text-align: left;
   margin: 0;
@@ -1331,7 +1331,7 @@ React keys must be passed directly to JSX without using spread:
   margin-top: 15px;
   font-size: 14px;
   font-weight: 400;
-`,jo=n.h1`
+`,Co=n.h1`
   display: flex;
   text-align: left;
   font-size: 16px;
@@ -1340,7 +1340,7 @@ React keys must be passed directly to JSX without using spread:
   color: rgba(0, 125, 136, 1);
   margin-right: 15px;
   margin-top: 0px;
-`,Co=n.label`
+`,$o=n.label`
   position: relative;
   display: inline-block;
   width: 50px;
@@ -1349,7 +1349,7 @@ React keys must be passed directly to JSX without using spread:
   border: 4px solid rgba(0, 125, 136, 1);
   border-radius: 35px;
   color: black;
-`,$o=n.span`
+`,So=n.span`
   position: absolute;
   cursor: ${({disabled:e})=>e?"not-allowed":"pointer"};
   top: 0;
@@ -1373,19 +1373,19 @@ React keys must be passed directly to JSX without using spread:
     border-radius: 50%;
     transform: ${({checked:e})=>e?"translateX(26px)":"translateX(0)"};
   }
-`,So=n.input.attrs({type:"checkbox"})`
+`,Mo=n.input.attrs({type:"checkbox"})`
   opacity: 0;
   width: 0;
   color: black;
   height: 0;
-`,Mo=({checked:e,onChange:o,disabled:s})=>{const i=()=>{s||o(!e)};return t.jsxs(Co,{children:[t.jsx(So,{checked:e,onChange:i,disabled:s}),t.jsx($o,{checked:e,disabled:s})]})},Lo=({id:e,name:o,checked:s,onChange:i,children:r})=>t.jsxs(Do,{htmlFor:e,children:[t.jsx(To,{type:"radio",id:e,name:o,checked:s,onChange:i}),r]}),Do=n.label`
+`,Lo=({checked:e,onChange:o,disabled:i})=>{const r=()=>{i||o(!e)};return t.jsxs($o,{children:[t.jsx(Mo,{checked:e,onChange:r,disabled:i}),t.jsx(So,{checked:e,disabled:i})]})},Do=({id:e,name:o,checked:i,onChange:r,children:s})=>t.jsxs(To,{htmlFor:e,children:[t.jsx(Eo,{type:"radio",id:e,name:o,checked:i,onChange:r}),s]}),To=n.label`
   display: flex;
   align-items: center;
   cursor: pointer;
   font-size: 14px;
   gap: 8px;
   color: black;
-`,To=n.input`
+`,Eo=n.input`
   appearance: none;
   width: 16px;
   height: 16px;
@@ -1411,7 +1411,7 @@ React keys must be passed directly to JSX without using spread:
       transform: translate(-50%, -50%);
     }
   }
-`,Eo=({percentage:e,onChange:o,draggable:s=!1,colors:i={primary:"rgba(0, 125, 136, 1)",secondary:"rgba(37, 203, 161, 1)"}})=>{const r=w.useRef(null),[c,u]=w.useState(!1),m=f=>{!s||!o||(f.preventDefault(),u(!0),v(f))},k=f=>{!c||!o||v(f)},b=()=>{u(!1)},v=f=>{if(!r.current||!o)return;const y=r.current.getBoundingClientRect();let h=(f.clientX-y.left)/y.width*100;h=Math.max(0,Math.min(100,h)),o(Math.round(h))};return w.useEffect(()=>{if(c)return document.addEventListener("mousemove",k),document.addEventListener("mouseup",b),()=>{document.removeEventListener("mousemove",k),document.removeEventListener("mouseup",b)}},[c]),t.jsxs(Io,{ref:r,$draggable:s,onMouseDown:m,children:[t.jsx(Po,{$secondaryColor:i.secondary}),t.jsx(Ro,{$percentage:e,$primaryColor:i.primary}),s&&t.jsx(Bo,{$percentage:e,$primaryColor:i.primary})]})},Io=n.div`
+`,Io=({percentage:e,onChange:o,draggable:i=!1,colors:r={primary:"rgba(0, 125, 136, 1)",secondary:"rgba(37, 203, 161, 1)"}})=>{const s=m.useRef(null),[l,u]=m.useState(!1),g=x=>{!i||!o||(x.preventDefault(),u(!0),w(x))},j=x=>{!l||!o||w(x)},b=()=>{u(!1)},w=x=>{if(!s.current||!o)return;const y=s.current.getBoundingClientRect();let h=(x.clientX-y.left)/y.width*100;h=Math.max(0,Math.min(100,h)),o(Math.round(h))};return m.useEffect(()=>{if(l)return document.addEventListener("mousemove",j),document.addEventListener("mouseup",b),()=>{document.removeEventListener("mousemove",j),document.removeEventListener("mouseup",b)}},[l]),t.jsxs(Po,{ref:s,$draggable:i,onMouseDown:g,children:[t.jsx(Ro,{$secondaryColor:r.secondary}),t.jsx(Bo,{$percentage:e,$primaryColor:r.primary}),i&&t.jsx(zo,{$percentage:e,$primaryColor:r.primary})]})},Po=n.div`
   width: 100%;
   height: 10px;
   position: relative;
@@ -1423,7 +1423,7 @@ React keys must be passed directly to JSX without using spread:
   &:hover {
     cursor: ${e=>e.$draggable?"pointer":"default"};
   }
-`,Po=n.div`
+`,Ro=n.div`
   position: absolute;
   left: 0;
   top: 0;
@@ -1431,7 +1431,7 @@ React keys must be passed directly to JSX without using spread:
   height: 100%;
   background: ${e=>e.$secondaryColor};
   border-radius: 5px;
-`,Ro=n.div`
+`,Bo=n.div`
   position: absolute;
   left: 0;
   top: 0;
@@ -1441,7 +1441,7 @@ React keys must be passed directly to JSX without using spread:
   border-radius: ${e=>e.$percentage===100?"5px":"5px 0 0 5px"};
   transition: width 0.1s ease;
   z-index: 1;
-`,Bo=n.div`
+`,zo=n.div`
   position: absolute;
   left: ${e=>e.$percentage}%;
   top: 50%;
@@ -1459,14 +1459,14 @@ React keys must be passed directly to JSX without using spread:
   &:active {
     cursor: grabbing;
   }
-`,zo=["zoomControl","fullscreenControl"];let oe=null;const Ao=e=>typeof window>"u"?Promise.reject(new Error("Window is not available")):window.ymaps?Promise.resolve(window.ymaps):(oe||(oe=new Promise((o,s)=>{const i=document.createElement("script"),r=e?`&apikey=${e}`:"";i.src=`https://api-maps.yandex.ru/2.1/?lang=ru_RU${r}`,i.async=!0,i.onload=()=>{window.ymaps?window.ymaps.ready(()=>o(window.ymaps)):s(new Error("Yandex Maps failed to load"))},i.onerror=()=>s(new Error("Failed to load Yandex Maps script")),document.head.appendChild(i)})),oe),Fo=({onLocationSelect:e,initialAddress:o="",initialLat:s=55.751244,initialLon:i=37.618423,apiKey:r,zoom:c=12,height:u=400,width:m="100%",inputPlaceholder:k="Введите адрес или название места",searchButtonLabel:b="Найти",draggablePlacemark:v=!0,controls:f=zo,showSearch:y=!0,className:d,style:h,onError:l})=>{const[T,j]=w.useState(null),[R,I]=w.useState(o),[_,A]=w.useState(o),[P,H]=w.useState(!1),B=w.useRef(null);w.useEffect(()=>{let F=!1,g;return(async()=>{try{const S=await Ao(r);if(F||!B.current)return;g=new S.Map(B.current,{center:[s,i],zoom:c,controls:f});const E=new S.Placemark([s,i],{},{draggable:v});g.geoObjects.add(E),g.events.add("click",O=>{const V=O.get("coords");z(V,E,g)}),E.events.add("dragend",()=>{const O=E.geometry.getCoordinates();z(O,E,g)}),j(g),H(!0)}catch(S){l&&S instanceof Error&&l(S)}})(),()=>{F=!0,g&&g.destroy()}},[r,s,i,c,f,v,l]);const z=async(F,g,p)=>{if(window.ymaps)try{const O=(await window.ymaps.geocode(F)).geoObjects.get(0).getAddressLine();g.geometry.setCoordinates(F),p.panTo(F,{flying:!0}),A(O),I(O),e(O,F[0],F[1])}catch(S){l&&S instanceof Error&&l(S)}},N=async()=>{if(!(!R.trim()||!window.ymaps||!T))try{const g=(await window.ymaps.geocode(R)).geoObjects.get(0);if(g){const p=g.geometry.getCoordinates(),S=g.properties.get("boundedBy");T.setBounds(S,{checkZoomRange:!0});const E=new window.ymaps.Placemark(p,{},{draggable:v});T.geoObjects.removeAll(),T.geoObjects.add(E);const O=g.getAddressLine();A(O),e(O,p[0],p[1]),E.events.add("dragend",()=>{const V=E.geometry.getCoordinates();z(V,E,T)})}}catch(F){l&&F instanceof Error&&l(F)}};return t.jsxs(_o,{className:d,style:h,children:[y&&t.jsxs(Oo,{children:[t.jsx(le,{type:"text",value:R,onChange:F=>I(F.target.value),placeholder:k,onKeyPress:F=>F.key==="Enter"&&N(),disabled:!P}),t.jsx(No,{onClick:N,disabled:!P,children:b})]}),t.jsxs(Wo,{children:["Выбранный адрес: ",t.jsx("strong",{children:_||"Не выбран"})]}),t.jsx(Yo,{ref:B,$height:u,$width:m}),t.jsx(Ho,{children:"📍 Кликните на карте или найдите адрес через поиск"})]})},_o=n.div`
+`,Ao=["zoomControl","fullscreenControl"];let re=null;const Fo=e=>typeof window>"u"?Promise.reject(new Error("Window is not available")):window.ymaps?Promise.resolve(window.ymaps):(re||(re=new Promise((o,i)=>{const r=document.createElement("script"),s=e?`&apikey=${e}`:"";r.src=`https://api-maps.yandex.ru/2.1/?lang=ru_RU${s}`,r.async=!0,r.onload=()=>{window.ymaps?window.ymaps.ready(()=>o(window.ymaps)):i(new Error("Yandex Maps failed to load"))},r.onerror=()=>i(new Error("Failed to load Yandex Maps script")),document.head.appendChild(r)})),re),_o=({onLocationSelect:e,initialAddress:o="",initialLat:i=55.751244,initialLon:r=37.618423,apiKey:s,zoom:l=12,height:u=400,width:g="100%",inputPlaceholder:j="Введите адрес или название места",searchButtonLabel:b="Найти",draggablePlacemark:w=!0,controls:x=Ao,showSearch:y=!0,className:p,style:h,onError:d})=>{const[I,k]=m.useState(null),[P,E]=m.useState(o),[O,A]=m.useState(o),[R,H]=m.useState(!1),B=m.useRef(null);m.useEffect(()=>{let F=!1,v;return(async()=>{try{const M=await Fo(s);if(F||!B.current)return;v=new M.Map(B.current,{center:[i,r],zoom:l,controls:x});const D=new M.Placemark([i,r],{},{draggable:w});v.geoObjects.add(D),v.events.add("click",N=>{const V=N.get("coords");_(V,D,v)}),D.events.add("dragend",()=>{const N=D.geometry.getCoordinates();_(N,D,v)}),k(v),H(!0)}catch(M){d&&M instanceof Error&&d(M)}})(),()=>{F=!0,v&&v.destroy()}},[s,i,r,l,x,w,d]);const _=async(F,v,c)=>{if(window.ymaps)try{const N=(await window.ymaps.geocode(F)).geoObjects.get(0).getAddressLine();v.geometry.setCoordinates(F),c.panTo(F,{flying:!0}),A(N),E(N),e(N,F[0],F[1])}catch(M){d&&M instanceof Error&&d(M)}},W=async()=>{if(!(!P.trim()||!window.ymaps||!I))try{const v=(await window.ymaps.geocode(P)).geoObjects.get(0);if(v){const c=v.geometry.getCoordinates(),M=v.properties.get("boundedBy");I.setBounds(M,{checkZoomRange:!0});const D=new window.ymaps.Placemark(c,{},{draggable:w});I.geoObjects.removeAll(),I.geoObjects.add(D);const N=v.getAddressLine();A(N),e(N,c[0],c[1]),D.events.add("dragend",()=>{const V=D.geometry.getCoordinates();_(V,D,I)})}}catch(F){d&&F instanceof Error&&d(F)}};return t.jsxs(Oo,{className:p,style:h,children:[y&&t.jsxs(No,{children:[t.jsx(ce,{type:"text",value:P,onChange:F=>E(F.target.value),placeholder:j,onKeyPress:F=>F.key==="Enter"&&W(),disabled:!R}),t.jsx(Wo,{onClick:W,disabled:!R,children:b})]}),t.jsxs(Ho,{children:["Выбранный адрес: ",t.jsx("strong",{children:O||"Не выбран"})]}),t.jsx(Yo,{ref:B,$height:u,$width:g}),t.jsx(Vo,{children:"📍 Кликните на карте или найдите адрес через поиск"})]})},Oo=n.div`
   display: flex;
   flex-direction: column;
   gap: 12px;
-`,Oo=n.div`
+`,No=n.div`
   display: flex;
   gap: 8px;
-`,No=n.button`
+`,Wo=n.button`
   padding: 8px 16px;
   background-color: #007d88;
   color: white;
@@ -1479,14 +1479,14 @@ React keys must be passed directly to JSX without using spread:
   height: ${({$height:e})=>typeof e=="number"?`${e}px`:e};
   border-radius: 8px;
   overflow: hidden;
-`,Wo=n.div`
+`,Ho=n.div`
   font-size: 14px;
   color: #374151;
-`,Ho=n.div`
+`,Vo=n.div`
   font-size: 12px;
   color: #6b7280;
   text-align: center;
-`,de=n.h1`
+`,pe=n.h1`
   margin-right: auto;
   text-align: left;
   font-size: clamp(20px, 4vw, 30px);
@@ -1498,7 +1498,7 @@ React keys must be passed directly to JSX without using spread:
     font-size: 20px;
     line-height: 1.3;
   }
-`;function ie(e,o="₽"){if(!e||e.trim()==="")return`0${o}`;const s=e.replace(/[^\d-]/g,"");if(!s||s==="-"||s==="")return`0${o}`;const i=parseInt(s,10);if(isNaN(i))return`0${o}`;const r=new Intl.NumberFormat("ru-RU",{style:"decimal",minimumFractionDigits:0,maximumFractionDigits:0}).format(i);return!0?`${r}${o}`:r}function Vo(e){if(!e)return 0;const o=e.replace(/\D/g,"");return parseInt(o,10)}const Zo=({title:e,data:o,maxValue:s,step:i,height:r=300,titleFontSize:c})=>{const[u,m]=w.useState(null),k=[];for(let v=0;v<=s;v+=i)k.push(v);const b=o.length>0?o[0].bars.map(v=>({name:v.name,color:v.color})):[];return t.jsxs(Uo,{children:[t.jsxs(ce,{style:{marginTop:"0"},children:[t.jsx(de,{style:{fontSize:c},children:e}),t.jsx(Xo,{children:b.map((v,f)=>t.jsxs(qo,{children:[t.jsx(Go,{color:v.color}),t.jsx(Jo,{children:v.name})]},f))})]}),t.jsxs(Ko,{height:r,children:[t.jsx(Qo,{children:k.map((v,f)=>t.jsx(er,{children:v.toLocaleString()},f))}),t.jsxs(tr,{children:[t.jsxs(nr,{children:[k.map((v,f)=>{const y=v/s*100;return t.jsx(or,{position:100-y},`line-${f}`)}),o.map((v,f)=>t.jsxs(rr,{onMouseEnter:()=>m(f),onMouseLeave:()=>m(null),children:[v.bars.map((y,d)=>{const h=v.bars.slice(d+1).reduce((l,T)=>l+T.value,0);return t.jsx(ir,{height:y.value/s*100,offset:h/s*100,color:y.color,isHovered:u!==null&&u!==f},d)}),u===f&&t.jsxs(lr,{children:[t.jsxs(cr,{children:[t.jsxs(dr,{children:["Всего: ",ie(v.total.toString())]}),v.bars.map((y,d)=>t.jsxs(pr,{children:[y.name,": ",ie(y.value.toString())]},d))]}),t.jsx(ur,{})]})]},f))]}),t.jsx(sr,{children:o.map((v,f)=>t.jsx(ar,{style:{flex:1,textAlign:"center"},children:v.label},f))})]})]})]})},Uo=n.div`
+`;function se(e,o="₽"){if(!e||e.trim()==="")return`0${o}`;const i=e.replace(/[^\d-]/g,"");if(!i||i==="-"||i==="")return`0${o}`;const r=parseInt(i,10);if(isNaN(r))return`0${o}`;const s=new Intl.NumberFormat("ru-RU",{style:"decimal",minimumFractionDigits:0,maximumFractionDigits:0}).format(r);return!0?`${s}${o}`:s}function Zo(e){if(!e)return 0;const o=e.replace(/\D/g,"");return parseInt(o,10)}const Uo=({title:e,data:o,maxValue:i,step:r,height:s=300,titleFontSize:l})=>{const[u,g]=m.useState(null),j=[];for(let w=0;w<=i;w+=r)j.push(w);const b=o.length>0?o[0].bars.map(w=>({name:w.name,color:w.color})):[];return t.jsxs(Xo,{children:[t.jsxs(de,{style:{marginTop:"0"},children:[t.jsx(pe,{style:{fontSize:l},children:e}),t.jsx(qo,{children:b.map((w,x)=>t.jsxs(Go,{children:[t.jsx(Jo,{color:w.color}),t.jsx(Ko,{children:w.name})]},x))})]}),t.jsxs(Qo,{height:s,children:[t.jsx(er,{children:j.map((w,x)=>t.jsx(tr,{children:w.toLocaleString()},x))}),t.jsxs(nr,{children:[t.jsxs(or,{children:[j.map((w,x)=>{const y=w/i*100;return t.jsx(rr,{position:100-y},`line-${x}`)}),o.map((w,x)=>t.jsxs(ir,{onMouseEnter:()=>g(x),onMouseLeave:()=>g(null),children:[w.bars.map((y,p)=>{const h=w.bars.slice(p+1).reduce((d,I)=>d+I.value,0);return t.jsx(sr,{height:y.value/i*100,offset:h/i*100,color:y.color,isHovered:u!==null&&u!==x},p)}),u===x&&t.jsxs(cr,{children:[t.jsxs(dr,{children:[t.jsxs(pr,{children:["Всего: ",se(w.total.toString())]}),w.bars.map((y,p)=>t.jsxs(ur,{children:[y.name,": ",se(y.value.toString())]},p))]}),t.jsx(hr,{})]})]},x))]}),t.jsx(ar,{children:o.map((w,x)=>t.jsx(lr,{style:{flex:1,textAlign:"center"},children:w.label},x))})]})]})]})},Xo=n.div`
   background-color: white;
   border-radius: 10px;
   border: 1px solid rgba(209, 213, 219, 1);
@@ -1506,41 +1506,41 @@ React keys must be passed directly to JSX without using spread:
   position: relative;
   font-family: 'Inter', sans-serif;
   height: auto;
-`,Xo=n.div`
+`,qo=n.div`
   display: flex;
   gap: 16px;
   margin-bottom: 20px;
-`,qo=n.div`
+`,Go=n.div`
   display: flex;
   align-items: center;
   gap: 8px;
-`,Go=n.div`
+`,Jo=n.div`
   width: 16px;
   height: 16px;
   background-color: ${e=>e.color};
   border-radius: 4px;
-`,Jo=n.span`
+`,Ko=n.span`
   font-size: 14px;
   color: #4b5563;
-`,Ko=n.div`
+`,Qo=n.div`
   display: flex;
   height: ${e=>typeof e.height=="number"?`${e.height}px`:e.height||"300px"};
   position: relative;
-`,Qo=n.div`
+`,er=n.div`
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-between;
   height: 100%;
   margin-right: 10px;
-`,er=n.span`
+`,tr=n.span`
   font-size: 12px;
   color: #6b7280;
-`,tr=n.div`
+`,nr=n.div`
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   position: relative;
-`,nr=n.div`
+`,or=n.div`
   display: flex;
   flex-grow: 1;
   align-items: flex-end;
@@ -1550,7 +1550,7 @@ React keys must be passed directly to JSX without using spread:
   border-style: solid;
   border-color: rgba(209, 213, 219, 1);
   position: relative;
-`,or=n.div`
+`,rr=n.div`
   position: absolute;
   top: ${e=>e.position}%;
   left: 0;
@@ -1564,7 +1564,7 @@ React keys must be passed directly to JSX without using spread:
     transparent 4px
   );
   z-index: 0;
-`,rr=n.div`
+`,ir=n.div`
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -1575,7 +1575,7 @@ React keys must be passed directly to JSX without using spread:
   height: 100%;
   margin-bottom: 2px;
   z-index: 1;
-`,ir=n.div`
+`,sr=n.div`
   position: relative;
   width: 100%;
   height: ${e=>Math.max(0,e.height)}%;
@@ -1584,36 +1584,36 @@ React keys must be passed directly to JSX without using spread:
   border-radius: 4px;
   transition: background-color 0.2s ease;
   max-width: 50px;
-`,sr=n.div`
+`,ar=n.div`
   display: flex;
   justify-content: space-between;
   padding: 0 20px;
   margin-top: 10px;
-`,ar=n.span`
+`,lr=n.span`
   font-size: 12px;
   color: #6b7280;
   flex: 1;
   text-align: center;
-`,lr=n.div`
+`,cr=n.div`
   position: absolute;
   bottom: 100%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
   margin-bottom: 10px;
-`,cr=n.div`
+`,dr=n.div`
   background-color: #000;
   color: white;
   padding: 12px;
   border-radius: 10px;
   font-size: 14px;
   white-space: nowrap;
-`,dr=n.div`
+`,pr=n.div`
   font-weight: 600;
   margin-bottom: 6px;
-`,pr=n.div`
-  margin-bottom: 2px;
 `,ur=n.div`
+  margin-bottom: 2px;
+`,hr=n.div`
   position: absolute;
   bottom: -6px;
   left: 50%;
@@ -1623,10 +1623,10 @@ React keys must be passed directly to JSX without using spread:
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
   border-top: 6px solid #000;
-`,hr=n.keyframes`
+`,xr=n.keyframes`
   from { opacity: 0; transform: translate(-50%, -110%); }
   to { opacity: 1; transform: translate(-50%, -100%); }
-`,xr=({title:e,data:o,xAxisLabel:s,yAxisLabel:i,maxX:r,maxY:c,minY:u,xStep:m,yStep:k,height:b=300,showLegend:v=!0,xAxisCustomLabels:f,showTooltip:y=!0,titleFontSize:d="30px"})=>{const[h,l]=w.useState(null),[T,j]=w.useState({x:0,y:0}),R=w.useRef(null),I=w.useRef(null),_=Math.max(...o.map(g=>g.x),r),A=[];for(let g=0;g<=_;g+=m)A.push(g);const P=[];for(let g=u;g<=c;g+=k)P.push(g);const H=f||A.map(g=>g.toString()),B=v?Array.from(new Set(o.filter(g=>g.label).map(g=>g.label))).map(g=>{const p=o.find(S=>S.label===g);return{name:g,color:p.color}}):[],z={};o.forEach(g=>{const p=g.label||"default";z[p]||(z[p]=[]),z[p].push(g)});const N=g=>g/_*100,F=g=>{const p=c-u;return 100-(g-u)/p*100};return w.useEffect(()=>{if(h&&I.current){const g=I.current.getBoundingClientRect(),p=N(h.x)/100*g.width,S=F(h.y)/100*g.height;j({x:p+g.left,y:S+g.top})}},[h,r,c,u]),t.jsxs(fr,{children:[t.jsxs(ce,{style:{marginTop:"0"},children:[t.jsx(de,{style:{fontSize:d},children:e}),v&&B.length>0&&t.jsx(gr,{children:B.map((g,p)=>t.jsxs(br,{children:[t.jsx(mr,{color:g.color}),t.jsx(wr,{children:g.name})]},p))})]}),t.jsxs(vr,{height:b,children:[t.jsxs(yr,{children:[P.map((g,p)=>t.jsx(kr,{children:g.toLocaleString()},p)),t.jsx(Ce,{children:i})]}),t.jsxs(jr,{ref:I,children:[P.map((g,p)=>t.jsx(Cr,{position:F(g)},`hline-${p}`)),Object.values(z).map((g,p)=>g.map((S,E)=>{if(E===0)return null;const O=g[E-1],V=N(O.x),Z=F(O.y),$=N(S.x),L=F(S.y);return t.jsx("svg",{style:{position:"absolute",top:0,left:0,width:"100%",height:"100%",pointerEvents:"none",zIndex:1},children:t.jsx("line",{x1:`${V}%`,y1:`${Z}%`,x2:`${$}%`,y2:`${L}%`,stroke:S.color,strokeWidth:"1"})},`line-${p}-${E}`)})),o.map((g,p)=>t.jsx($r,{x:N(g.x),y:F(g.y),color:g.color,onMouseEnter:()=>l(g),onMouseLeave:()=>l(null),isHovered:h?.label===g.label},p))]})]}),y&&h&&t.jsxs(Lr,{ref:R,style:{left:T.x,top:T.y},children:[t.jsxs(Dr,{children:[h.name&&t.jsx(Tr,{children:h.name}),t.jsx(Er,{children:h.y.toLocaleString()})]}),t.jsx(Ir,{})]}),t.jsxs(Sr,{children:[H.map((g,p)=>{const E=A[p]/_*100;return t.jsx(Mr,{style:{left:`${E}%`,transform:"translateX(-50%)"},children:g},p)}),s&&t.jsx(Ce,{children:s})]})]})},fr=n.div`
+`,fr=({title:e,data:o,xAxisLabel:i,yAxisLabel:r,maxX:s,maxY:l,minY:u,xStep:g,yStep:j,height:b=300,showLegend:w=!0,xAxisCustomLabels:x,showTooltip:y=!0,titleFontSize:p="30px"})=>{const[h,d]=m.useState(null),[I,k]=m.useState({x:0,y:0}),P=m.useRef(null),E=m.useRef(null),O=Math.max(...o.map(v=>v.x),s),A=[];for(let v=0;v<=O;v+=g)A.push(v);const R=[];for(let v=u;v<=l;v+=j)R.push(v);const H=x||A.map(v=>v.toString()),B=w?Array.from(new Set(o.filter(v=>v.label).map(v=>v.label))).map(v=>{const c=o.find(M=>M.label===v);return{name:v,color:c.color}}):[],_={};o.forEach(v=>{const c=v.label||"default";_[c]||(_[c]=[]),_[c].push(v)});const W=v=>v/O*100,F=v=>{const c=l-u;return 100-(v-u)/c*100};return m.useEffect(()=>{if(h&&E.current){const v=E.current.getBoundingClientRect(),c=W(h.x)/100*v.width,M=F(h.y)/100*v.height;k({x:c+v.left,y:M+v.top})}},[h,s,l,u]),t.jsxs(gr,{children:[t.jsxs(de,{style:{marginTop:"0"},children:[t.jsx(pe,{style:{fontSize:p},children:e}),w&&B.length>0&&t.jsx(br,{children:B.map((v,c)=>t.jsxs(mr,{children:[t.jsx(wr,{color:v.color}),t.jsx(vr,{children:v.name})]},c))})]}),t.jsxs(yr,{height:b,children:[t.jsxs(kr,{children:[R.map((v,c)=>t.jsx(jr,{children:v.toLocaleString()},c)),t.jsx($e,{children:r})]}),t.jsxs(Cr,{ref:E,children:[R.map((v,c)=>t.jsx($r,{position:F(v)},`hline-${c}`)),Object.values(_).map((v,c)=>v.map((M,D)=>{if(D===0)return null;const N=v[D-1],V=W(N.x),Z=F(N.y),C=W(M.x),L=F(M.y);return t.jsx("svg",{style:{position:"absolute",top:0,left:0,width:"100%",height:"100%",pointerEvents:"none",zIndex:1},children:t.jsx("line",{x1:`${V}%`,y1:`${Z}%`,x2:`${C}%`,y2:`${L}%`,stroke:M.color,strokeWidth:"1"})},`line-${c}-${D}`)})),o.map((v,c)=>t.jsx(Sr,{x:W(v.x),y:F(v.y),color:v.color,onMouseEnter:()=>d(v),onMouseLeave:()=>d(null),isHovered:h?.label===v.label},c))]})]}),y&&h&&t.jsxs(Dr,{ref:P,style:{left:I.x,top:I.y},children:[t.jsxs(Tr,{children:[h.name&&t.jsx(Er,{children:h.name}),t.jsx(Ir,{children:h.y.toLocaleString()})]}),t.jsx(Pr,{})]}),t.jsxs(Mr,{children:[H.map((v,c)=>{const D=A[c]/O*100;return t.jsx(Lr,{style:{left:`${D}%`,transform:"translateX(-50%)"},children:v},c)}),i&&t.jsx($e,{children:i})]})]})},gr=n.div`
   background-color: white;
   border-radius: 10px;
   border: 1px solid rgba(209, 213, 219, 1);
@@ -1634,48 +1634,48 @@ React keys must be passed directly to JSX without using spread:
   position: relative;
   font-family: 'Inter', sans-serif;
   height: auto;
-`,gr=n.div`
+`,br=n.div`
   display: flex;
   gap: 16px;
   margin-top: 16px;
   flex-wrap: wrap;
-`,br=n.div`
+`,mr=n.div`
   display: flex;
   align-items: center;
   gap: 8px;
-`,mr=n.div`
+`,wr=n.div`
   width: 16px;
   height: 2px;
   background-color: ${e=>e.color};
-`,wr=n.span`
+`,vr=n.span`
   font-size: 14px;
   color: #4b5563;
-`,vr=n.div`
+`,yr=n.div`
   display: flex;
   height: ${e=>typeof e.height=="number"?`${e.height}px`:e.height||"300px"};
   position: relative;
-`,yr=n.div`
+`,kr=n.div`
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-between;
   height: 100%;
   margin-right: 10px;
   min-width: 40px;
-`,kr=n.span`
+`,jr=n.span`
   font-size: 12px;
   color: #6b7280;
-`,Ce=n.div`
+`,$e=n.div`
   font-size: 12px;
   color: #6b7280;
   text-align: center;
   margin-top: 10px;
-`,jr=n.div`
+`,Cr=n.div`
   position: relative;
   flex-grow: 1;
   border-width: 0 0 1px 1px;
   border-style: solid;
   border-color: rgba(209, 213, 219, 1);
-`,Cr=n.div`
+`,$r=n.div`
   position: absolute;
   top: ${e=>e.position}%;
   left: 0;
@@ -1689,7 +1689,7 @@ React keys must be passed directly to JSX without using spread:
     transparent 4px
   );
   z-index: 0;
-`,$r=n.div`
+`,Sr=n.div`
   position: absolute;
   left: ${e=>e.x}%;
   top: ${e=>e.y}%;
@@ -1707,22 +1707,22 @@ React keys must be passed directly to JSX without using spread:
     height: 12px;
     box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8);
   }
-`,Sr=n.div`
+`,Mr=n.div`
   position: relative;
   height: 20px;
   margin-top: 10px;
   margin-left: 40px;
-`,Mr=n.span`
+`,Lr=n.span`
   font-size: 12px;
   color: #6b7280;
   position: absolute;
-`,Lr=n.div`
+`,Dr=n.div`
   position: fixed;
   transform: translate(-50%, -100%);
   z-index: 100;
   pointer-events: none;
-  animation: ${hr} 0.15s ease-out forwards;
-`,Dr=n.div`
+  animation: ${xr} 0.15s ease-out forwards;
+`,Tr=n.div`
   background-color: rgba(0, 0, 0, 0.9);
   color: white;
   padding: 12px 16px;
@@ -1730,14 +1730,14 @@ React keys must be passed directly to JSX without using spread:
   font-size: 14px;
   white-space: nowrap;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-`,Tr=n.div`
+`,Er=n.div`
   font-weight: 600;
   margin-bottom: 6px;
   color: #fff;
-`,Er=n.div`
+`,Ir=n.div`
   margin-bottom: 2px;
   color: rgba(255, 255, 255, 0.9);
-`,Ir=n.div`
+`,Pr=n.div`
   position: absolute;
   bottom: -6px;
   left: 50%;
@@ -1747,7 +1747,7 @@ React keys must be passed directly to JSX without using spread:
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
   border-top: 6px solid rgba(0, 0, 0, 0.9);
-`,Pr=({images:e,initialIndex:o,onClose:s})=>{const[i,r]=w.useState(o),[c,u]=w.useState(0),m=()=>{r(f=>f>0?f-1:e.length-1),u(0)},k=()=>{r(f=>f<e.length-1?f+1:0),u(0)},b=()=>{u(f=>(f+90)%360)},v=f=>{f.key==="Escape"?s():f.key==="ArrowLeft"?m():f.key==="ArrowRight"?k():(f.key==="r"||f.key==="к")&&b()};return t.jsx(Rr,{onClick:s,onKeyDown:v,tabIndex:0,children:t.jsxs(Br,{onClick:f=>f.stopPropagation(),children:[t.jsx(zr,{onClick:s,children:t.jsxs("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:[t.jsx("path",{d:"M18 6L6 18",stroke:"white",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"}),t.jsx("path",{d:"M6 6L18 18",stroke:"white",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"})]})}),t.jsx(Ar,{children:t.jsx(Fr,{onClick:b,title:"Повернуть (R)",children:t.jsx("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:t.jsx("path",{d:"M4.077 3C6.88767 5.202 8.48267 7.15733 8.862 8.866C9.24133 10.5753 9.29867 12.202 9.034 13.746H4L12.214 21L20 13.747H15.216C15.192 10.889 14.12 8.46 12 6.46C9.88 4.46 7.239 3.30667 4.077 3Z",stroke:"#50555C",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})})})}),t.jsxs(_r,{children:[t.jsx($e,{$position:"left",onClick:m,children:t.jsx("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:t.jsx("path",{d:"M15 18L9 12L15 6",stroke:"white",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"})})}),t.jsx(Or,{src:e[i],alt:`Photo ${i+1}`,$rotation:c}),t.jsx($e,{$position:"right",onClick:k,children:t.jsx("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:t.jsx("path",{d:"M9 18L15 12L9 6",stroke:"white",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"})})})]}),t.jsx(Nr,{children:e.map((f,y)=>t.jsx(Yr,{$active:y===i,onClick:()=>{r(y),u(0)}},y))})]})})},Rr=n.div`
+`,Rr=({images:e,initialIndex:o,onClose:i})=>{const[r,s]=m.useState(o),[l,u]=m.useState(0),g=()=>{s(x=>x>0?x-1:e.length-1),u(0)},j=()=>{s(x=>x<e.length-1?x+1:0),u(0)},b=()=>{u(x=>(x+90)%360)},w=x=>{x.key==="Escape"?i():x.key==="ArrowLeft"?g():x.key==="ArrowRight"?j():(x.key==="r"||x.key==="к")&&b()};return t.jsx(Br,{onClick:i,onKeyDown:w,tabIndex:0,children:t.jsxs(zr,{onClick:x=>x.stopPropagation(),children:[t.jsx(Ar,{onClick:i,children:t.jsxs("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:[t.jsx("path",{d:"M18 6L6 18",stroke:"white",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"}),t.jsx("path",{d:"M6 6L18 18",stroke:"white",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"})]})}),t.jsx(Fr,{children:t.jsx(_r,{onClick:b,title:"Повернуть (R)",children:t.jsx("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:t.jsx("path",{d:"M4.077 3C6.88767 5.202 8.48267 7.15733 8.862 8.866C9.24133 10.5753 9.29867 12.202 9.034 13.746H4L12.214 21L20 13.747H15.216C15.192 10.889 14.12 8.46 12 6.46C9.88 4.46 7.239 3.30667 4.077 3Z",stroke:"#50555C",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})})})}),t.jsxs(Or,{children:[t.jsx(Se,{$position:"left",onClick:g,children:t.jsx("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:t.jsx("path",{d:"M15 18L9 12L15 6",stroke:"white",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"})})}),t.jsx(Nr,{src:e[r],alt:`Photo ${r+1}`,$rotation:l}),t.jsx(Se,{$position:"right",onClick:j,children:t.jsx("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:t.jsx("path",{d:"M9 18L15 12L9 6",stroke:"white",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"})})})]}),t.jsx(Wr,{children:e.map((x,y)=>t.jsx(Yr,{$active:y===r,onClick:()=>{s(y),u(0)}},y))})]})})},Br=n.div`
   position: fixed;
   top: 0;
   left: 0;
@@ -1759,7 +1759,7 @@ React keys must be passed directly to JSX without using spread:
   justify-content: center;
   z-index: 1000;
   outline: none;
-`,Br=n.div`
+`,zr=n.div`
   position: relative;
   max-width: 90vw;
   max-height: 90vh;
@@ -1767,7 +1767,7 @@ React keys must be passed directly to JSX without using spread:
   display: flex;
   flex-direction: column;
   align-items: center;
-`,zr=n.button`
+`,Ar=n.button`
   position: absolute;
   top: -40px;
   right: 0;
@@ -1780,7 +1780,7 @@ React keys must be passed directly to JSX without using spread:
   &:hover {
     opacity: 0.8;
   }
-`,Ar=n.div`
+`,Fr=n.div`
   position: absolute;
   top: -50px;
   left: 0;
@@ -1791,7 +1791,7 @@ React keys must be passed directly to JSX without using spread:
   @media (max-width: 768px) {
     top: -45px;
   }
-`,Fr=n.button`
+`,_r=n.button`
   display: flex;
   align-items: center;
   gap: 6px;
@@ -1817,21 +1817,21 @@ React keys must be passed directly to JSX without using spread:
       height: 16px;
     }
   }
-`,_r=n.div`
+`,Or=n.div`
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
-`,Or=n.img`
+`,Nr=n.img`
   max-width: 100%;
   max-height: 80vh;
   object-fit: contain;
   border-radius: 4px;
   transform: rotate(${({$rotation:e})=>e}deg);
   transition: transform 0.3s ease;
-`,$e=n.button`
+`,Se=n.button`
   position: absolute;
   ${({$position:e})=>e}: 20px;
   background: rgba(0, 0, 0, 0.7);
@@ -1868,7 +1868,7 @@ React keys must be passed directly to JSX without using spread:
       height: 24px;
     }
   }
-`,Nr=n.div`
+`,Wr=n.div`
   display: flex;
   gap: 8px;
   margin-top: 20px;
@@ -1883,7 +1883,7 @@ React keys must be passed directly to JSX without using spread:
   &:hover {
     background-color: #ffffff;
   }
-`,Ie=({isOpen:e,callPhone:o,error:s,onClose:i})=>{const[r,c]=w.useState(!1);if(!e)return null;const u=/iPhone|iPad|iPod|Android/i.test(navigator.userAgent),m=()=>{u?window.location.href=`tel:${o}`:(navigator.clipboard.writeText(o),c(!0),setTimeout(()=>c(!1),2e3))};return t.jsx(Wr,{onClick:i,children:t.jsxs(Hr,{onClick:k=>k.stopPropagation(),children:[t.jsx(Vr,{children:"Подтверждение авторизации"}),t.jsx(Se,{children:"Для завершения авторизации позвоните на номер:"}),t.jsxs(Zr,{onClick:m,title:u?"Позвонить":"Копировать номер",$clickable:!0,children:[o,!u&&r&&t.jsx(Ur,{children:"Скопировано!"})]}),t.jsx(Se,{children:"После звонка система автоматически подтвердит вашу авторизацию."}),s&&t.jsx(Xr,{children:s})]})})},Wr=n.div`
+`,Re=({isOpen:e,callPhone:o,error:i,onClose:r})=>{const[s,l]=m.useState(!1);if(!e)return null;const u=/iPhone|iPad|iPod|Android/i.test(navigator.userAgent),g=()=>{u?window.location.href=`tel:${o}`:(navigator.clipboard.writeText(o),l(!0),setTimeout(()=>l(!1),2e3))};return t.jsx(Hr,{onClick:r,children:t.jsxs(Vr,{onClick:j=>j.stopPropagation(),children:[t.jsx(Zr,{children:"Подтверждение авторизации"}),t.jsx(Me,{children:"Для завершения авторизации позвоните на номер:"}),t.jsxs(Ur,{onClick:g,title:u?"Позвонить":"Копировать номер",$clickable:!0,children:[o,!u&&s&&t.jsx(Xr,{children:"Скопировано!"})]}),t.jsx(Me,{children:"После звонка система автоматически подтвердит вашу авторизацию."}),i&&t.jsx(qr,{children:i})]})})},Hr=n.div`
   position: fixed;
   top: 0;
   left: 0;
@@ -1894,7 +1894,7 @@ React keys must be passed directly to JSX without using spread:
   justify-content: center;
   align-items: center;
   z-index: 1000;
-`,Hr=n.div`
+`,Vr=n.div`
   background: white;
   padding: 30px;
   border-radius: 12px;
@@ -1902,14 +1902,14 @@ React keys must be passed directly to JSX without using spread:
   max-width: 500px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   text-align: center;
-`,Vr=n.h2`
+`,Zr=n.h2`
   font-size: 20px;
   margin-bottom: 20px;
   color: #333;
-`,Se=n.p`
+`,Me=n.p`
   margin-bottom: 15px;
   color: #555;
-`,Zr=n.div`
+`,Ur=n.div`
   font-size: 24px;
   font-weight: bold;
   margin: 20px 0;
@@ -1927,7 +1927,7 @@ React keys must be passed directly to JSX without using spread:
             transform: scale(0.98);
         }
     `}
-`,Ur=n.span`
+`,Xr=n.span`
   position: absolute;
   bottom: -25px;
   left: 50%;
@@ -1936,10 +1936,10 @@ React keys must be passed directly to JSX without using spread:
   color: #27ae60;
   font-weight: normal;
   white-space: nowrap;
-`,Xr=n.div`
+`,qr=n.div`
   color: #e74c3c;
   margin: 10px 0;
-`,Pe=w.createContext({collapsed:!1,toggleCollapsed:()=>{},selectedSideMenuItem:null,setSelectedSideMenuItem:()=>{},selectedTopMenuItem:null,setSelectedTopMenuItem:()=>{}}),qr=({collapsed:e})=>t.jsx("svg",{width:"16",height:"14",viewBox:"0 0 16 14",fill:"none",xmlns:"http://www.w3.org/2000/svg",style:{transform:`rotate(${e?"180deg":"0deg"})`,transition:"transform 0.3s ease"},children:t.jsx("path",{d:"M0.915527 7.00049L0.922363 6.96826L0.939941 6.94092H0.940918L6.77393 1.10693C6.78967 1.09132 6.81132 1.08252 6.8335 1.08252C6.8557 1.08259 6.87736 1.09123 6.89307 1.10693C6.90877 1.12264 6.91742 1.1443 6.91748 1.1665L6.91064 1.19873L6.89307 1.22607L2.0542 6.06299L1.20068 6.9165L14.9995 6.9165C15.0106 6.9165 15.0217 6.91918 15.0317 6.92334L15.0591 6.94092C15.0747 6.95654 15.0835 6.97839 15.0835 7.00049C15.0834 7.01136 15.0807 7.02188 15.0767 7.03174L15.0591 7.05908C15.0435 7.07471 15.0216 7.0835 14.9995 7.0835L1.20068 7.0835L2.0542 7.93701L6.89307 12.7739C6.90872 12.7897 6.91748 12.8113 6.91748 12.8335L6.91064 12.8657L6.89307 12.8931C6.87736 12.9088 6.8557 12.9174 6.8335 12.9175L6.80127 12.9106L6.77393 12.8931L0.940918 7.05908H0.939941L0.922363 7.03174C0.918234 7.02176 0.915581 7.01129 0.915527 7.00049Z",fill:"#50555C",stroke:"#50555C"})}),Gr=({items:e,bottomItems:o=[],logo:s,arrowIcon:i,collapsed:r,onToggle:c,selectedKey:u,onSelect:m,autoCollapseOnSelect:k=!1,width:b="315px",collapsedWidth:v="85px",className:f,style:y,mobileBreakpoint:d=768,showBottomLabels:h=!0,children:l})=>{const T=w.useContext(Pe),[j,R]=w.useState(window.innerWidth<=d);w.useEffect(()=>{const x=()=>{R(window.innerWidth<=d)};return window.addEventListener("resize",x),()=>window.removeEventListener("resize",x)},[d]);const[I,_]=w.useState(r??T.collapsed??!1),[A,P]=w.useState(null),[H,B]=w.useState(u??T.selectedSideMenuItem??null),[z,N]=w.useState({visible:!1,x:0,y:0,items:[]}),F=w.useRef(null),g=r??T.collapsed??I,p=x=>{_(x),T.toggleCollapsed(),c?.(x)},S=u??T.selectedSideMenuItem??H,E=x=>{B(x),T.setSelectedSideMenuItem(x)};w.useEffect(()=>{r!==void 0&&(_(r),r&&P(null))},[r]),w.useEffect(()=>{u!==void 0&&E(u)},[u]),w.useEffect(()=>{const x=()=>N(C=>({...C,visible:!1}));return document.addEventListener("click",x),()=>document.removeEventListener("click",x)},[]);const O=()=>{const x=!g;p(x),x&&P(null)},V=x=>{x.disabled||x.hidden||(E(x.key),m?.(x),x.onClick?.(x),k&&(p(!0),P(null)))},Z=x=>{P(C=>C===x?null:x)},$=(x,C)=>{const D=(x.children?.length||0)>0;if(g&&D){C.stopPropagation();const Y=C.currentTarget.getBoundingClientRect();N({visible:!0,x:Y.right+6,y:Y.top,items:x.children||[]});return}D?Z(x.key):V(x)},L=(x,C=!1)=>x.filter(D=>!D.hidden).map(D=>{const Y=(D.children?.length||0)>0,W=A===D.key,U=S===D.key||!!D.children&&D.children.some(q=>q.key===S);return t.jsxs(w.Fragment,{children:[t.jsxs(li,{$collapsed:g,$selected:U,onClick:q=>$(D,q),$disabled:D.disabled,title:D.label,children:[D.icon&&t.jsx(di,{$collapsed:g,children:D.icon}),!g&&t.jsx(ci,{children:D.label}),!g&&Y&&t.jsx(ui,{$expanded:W,children:"▾"})]}),!g&&Y&&W&&t.jsx(pi,{children:L(D.children||[],!0)})]},D.key)}),a=w.useMemo(()=>z.visible?t.jsx(xi,{style:{left:z.x,top:z.y},children:z.items.map(x=>t.jsx(fi,{onClick:()=>{V(x),N({visible:!1,x:0,y:0,items:[]})},$selected:S===x.key,children:x.label},x.key))}):null,[z,S]),M=()=>{const x=[...e,...o].filter(C=>!C.hidden);return t.jsx(Qr,{children:x.map(C=>{const D=S===C.key;return t.jsxs(ei,{$selected:D,onClick:()=>V(C),$disabled:C.disabled,children:[C.icon&&t.jsx(ti,{$selected:D,children:C.icon}),h&&t.jsx(ni,{$selected:D,children:C.label})]},C.key)})})};return j?t.jsxs(Jr,{className:f,style:y,children:[t.jsx(Kr,{children:l}),M()]}):t.jsxs(oi,{ref:F,$collapsed:g,$width:b,$collapsedWidth:v,className:f,style:y,children:[t.jsxs(ri,{children:[t.jsx(ii,{onClick:O,"aria-label":"Переключить меню",children:i??t.jsx(qr,{collapsed:g})}),!g&&s&&t.jsx(si,{children:s})]}),t.jsxs(ai,{children:[t.jsx(Me,{children:L(e)}),o.length>0&&t.jsxs(t.Fragment,{children:[t.jsx(hi,{}),t.jsx(Me,{children:L(o)})]})]}),a,t.jsx(gi,{$collapsed:g}),l]})},Jr=n.div`
+`,Be=m.createContext({collapsed:!1,toggleCollapsed:()=>{},selectedSideMenuItem:null,setSelectedSideMenuItem:()=>{},selectedTopMenuItem:null,setSelectedTopMenuItem:()=>{}}),Gr=({collapsed:e})=>t.jsx("svg",{width:"16",height:"14",viewBox:"0 0 16 14",fill:"none",xmlns:"http://www.w3.org/2000/svg",style:{transform:`rotate(${e?"180deg":"0deg"})`,transition:"transform 0.3s ease"},children:t.jsx("path",{d:"M0.915527 7.00049L0.922363 6.96826L0.939941 6.94092H0.940918L6.77393 1.10693C6.78967 1.09132 6.81132 1.08252 6.8335 1.08252C6.8557 1.08259 6.87736 1.09123 6.89307 1.10693C6.90877 1.12264 6.91742 1.1443 6.91748 1.1665L6.91064 1.19873L6.89307 1.22607L2.0542 6.06299L1.20068 6.9165L14.9995 6.9165C15.0106 6.9165 15.0217 6.91918 15.0317 6.92334L15.0591 6.94092C15.0747 6.95654 15.0835 6.97839 15.0835 7.00049C15.0834 7.01136 15.0807 7.02188 15.0767 7.03174L15.0591 7.05908C15.0435 7.07471 15.0216 7.0835 14.9995 7.0835L1.20068 7.0835L2.0542 7.93701L6.89307 12.7739C6.90872 12.7897 6.91748 12.8113 6.91748 12.8335L6.91064 12.8657L6.89307 12.8931C6.87736 12.9088 6.8557 12.9174 6.8335 12.9175L6.80127 12.9106L6.77393 12.8931L0.940918 7.05908H0.939941L0.922363 7.03174C0.918234 7.02176 0.915581 7.01129 0.915527 7.00049Z",fill:"#50555C",stroke:"#50555C"})}),Jr=({items:e,bottomItems:o=[],bottomContent:i,logo:r,arrowIcon:s,collapsed:l,onToggle:u,selectedKey:g,onSelect:j,autoCollapseOnSelect:b=!1,width:w="315px",collapsedWidth:x="85px",className:y,style:p,mobileBreakpoint:h=768,showBottomLabels:d=!0,children:I})=>{const k=m.useContext(Be),[P,E]=m.useState(window.innerWidth<=h);m.useEffect(()=>{const f=()=>{E(window.innerWidth<=h)};return window.addEventListener("resize",f),()=>window.removeEventListener("resize",f)},[h]);const[O,A]=m.useState(l??k.collapsed??!1),[R,H]=m.useState(null),[B,_]=m.useState(g??k.selectedSideMenuItem??null),[W,F]=m.useState({visible:!1,x:0,y:0,items:[]}),v=m.useRef(null),c=l??k.collapsed??O,M=f=>{A(f),k.toggleCollapsed(),u?.(f)},D=g??k.selectedSideMenuItem??B,N=f=>{_(f),k.setSelectedSideMenuItem(f)};m.useEffect(()=>{l!==void 0&&(A(l),l&&H(null))},[l]),m.useEffect(()=>{g!==void 0&&N(g)},[g]),m.useEffect(()=>{const f=()=>F(T=>({...T,visible:!1}));return document.addEventListener("click",f),()=>document.removeEventListener("click",f)},[]);const V=()=>{const f=!c;M(f),f&&H(null)},Z=f=>{f.disabled||f.hidden||(N(f.key),j?.(f),f.onClick?.(f),b&&(M(!0),H(null)))},C=f=>{H(T=>T===f?null:f)},L=(f,T)=>{const z=(f.children?.length||0)>0;if(c&&z){T.stopPropagation();const Y=T.currentTarget.getBoundingClientRect();F({visible:!0,x:Y.right+6,y:Y.top,items:f.children||[]});return}z?C(f.key):Z(f)},a=(f,T=!1)=>f.filter(z=>!z.hidden).map(z=>{const Y=(z.children?.length||0)>0,U=R===z.key,G=D===z.key||!!z.children&&z.children.some(J=>J.key===D);return t.jsxs(m.Fragment,{children:[t.jsxs(ci,{$collapsed:c,$selected:G,onClick:J=>L(z,J),$disabled:z.disabled,title:z.label,children:[z.icon&&t.jsx(pi,{$collapsed:c,children:z.icon}),!c&&t.jsx(di,{children:z.label}),!c&&Y&&t.jsx(hi,{$expanded:U,children:"▾"})]}),!c&&Y&&U&&t.jsx(ui,{children:a(z.children||[],!0)})]},z.key)}),$=m.useMemo(()=>W.visible?t.jsx(xi,{style:{left:W.x,top:W.y},children:W.items.map(f=>t.jsx(fi,{onClick:()=>{Z(f),F({visible:!1,x:0,y:0,items:[]})},$selected:D===f.key,children:f.label},f.key))}):null,[W,D]),S=()=>{const f=[...e,...o].filter(T=>!T.hidden);return t.jsx(ei,{children:f.map(T=>{const z=D===T.key;return t.jsxs(ti,{$selected:z,onClick:()=>Z(T),$disabled:T.disabled,children:[T.icon&&t.jsx(ni,{$selected:z,children:T.icon}),d&&t.jsx(oi,{$selected:z,children:T.label})]},T.key)})})};return P?t.jsxs(Kr,{className:y,style:p,children:[t.jsx(Qr,{children:I}),S()]}):t.jsxs(ri,{ref:v,$collapsed:c,$width:w,$collapsedWidth:x,className:y,style:p,children:[t.jsxs(ii,{children:[t.jsx(si,{onClick:V,"aria-label":"Переключить меню",children:s??t.jsx(Gr,{collapsed:c})}),!c&&r&&t.jsx(ai,{children:r})]}),t.jsxs(li,{children:[t.jsx(Le,{children:a(e)}),o.length>0&&t.jsxs(t.Fragment,{children:[t.jsx(De,{}),t.jsx(Le,{children:a(o)})]}),i&&t.jsxs(t.Fragment,{children:[(o.length>0||e.length>0)&&t.jsx(De,{}),t.jsx(bi,{$collapsed:c,children:i})]})]}),$,t.jsx(gi,{$collapsed:c}),I]})},Kr=n.div`
   width: 100%;
   height: 100vh;
   min-height: 100vh;
@@ -1953,11 +1953,11 @@ React keys must be passed directly to JSX without using spread:
   position: relative;
   box-sizing: border-box;
   overflow: hidden;
-`,Kr=n.main`
+`,Qr=n.main`
   flex: 1;
   overflow-y: auto;
   min-height: 0; /* Важно для flex-контейнера */
-`,Qr=n.nav`
+`,ei=n.nav`
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -1969,7 +1969,7 @@ React keys must be passed directly to JSX without using spread:
   width: 100%;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
   z-index: 10;
-`,ei=n.div`
+`,ti=n.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1988,20 +1988,20 @@ React keys must be passed directly to JSX without using spread:
   &:active {
     background-color: rgba(209, 213, 219, 0.5);
   }
-`,ti=n.div`
+`,ni=n.div`
   font-size: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: ${({$selected:e})=>e?"#000":"#50555c"};
-`,ni=n.span`
+`,oi=n.span`
   font-size: 12px;
   font-weight: ${({$selected:e})=>e?"600":"400"};
   color: ${({$selected:e})=>e?"#000":"#50555c"};
   text-align: center;
   white-space: nowrap;
-`,oi=n.div`
-  width: ${({$collapsed:e,$width:o,$collapsedWidth:s})=>e?s:o};
+`,ri=n.div`
+  width: ${({$collapsed:e,$width:o,$collapsedWidth:i})=>e?i:o};
   height: 100vh;
   background-color: rgba(249, 250, 250, 1);
   color: rgba(80, 85, 92, 1);
@@ -2013,31 +2013,31 @@ React keys must be passed directly to JSX without using spread:
   transition: width 0.3s ease;
   box-shadow: 1px 0 7px rgba(0, 0, 0, 0.05);
   overflow: hidden;
-`,ri=n.div`
+`,ii=n.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 28px;
   width: 100%;
-`,ii=n.button`
+`,si=n.button`
   background: none;
   border: none;
   cursor: pointer;
   padding: 6px;
   margin-bottom: 0px;
-`,si=n.div`
+`,ai=n.div`
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 4px;
-`,ai=n.div`
+`,li=n.div`
   display: flex;
   flex-direction: column;
   gap: 4px;
   height: 100%;
   width: 100%;
-`,Me=n.div`
+`,Le=n.div`
   overflow-y: auto;
   overflow-x: hidden;
   padding-right: 4px;
@@ -2049,7 +2049,7 @@ React keys must be passed directly to JSX without using spread:
     background: rgba(0, 0, 0, 0.1);
     border-radius: 4px;
   }
-`,li=n.div`
+`,ci=n.div`
   display: flex;
   align-items: center;
   justify-content: ${({$collapsed:e})=>e?"center":"flex-start"};
@@ -2078,11 +2078,11 @@ React keys must be passed directly to JSX without using spread:
     background-color: ${({$selected:e})=>e?"rgba(209, 213, 219, 1)":"rgba(209, 213, 219, 0.5)"};
     color: #000;
   }
-`,ci=n.span`
+`,di=n.span`
   font-size: 15px;
   font-weight: 500;
   white-space: nowrap;
-`,di=n.div`
+`,pi=n.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2108,18 +2108,18 @@ React keys must be passed directly to JSX without using spread:
     max-height: 100%;
     object-fit: contain;
   }
-`,pi=n.div`
+`,ui=n.div`
   margin-left: 45px;
   padding-left: 0;
   border-left: 1px solid rgba(209, 213, 219, 0.8);
   display: flex;
   flex-direction: column;
   gap: 4px;
-`,ui=n.span`
+`,hi=n.span`
   margin-left: auto;
   transform: rotate(${({$expanded:e})=>e?"180deg":"0deg"});
   transition: transform 0.2s ease;
-`,hi=n.div`
+`,De=n.div`
   height: 1px;
   width: 100%;
   background-color: rgba(209, 213, 219, 1);
@@ -2155,7 +2155,22 @@ React keys must be passed directly to JSX without using spread:
   background-color: rgba(209, 213, 219, 1);
   transition: all 0.3s ease;
   opacity: ${({$collapsed:e})=>e?0:1};
-`,bi=e=>{const o=e.replace(/\D/g,""),i=(o.startsWith("8")||o.length===0?o:`8${o}`).slice(0,11);let r="";return i.length>0&&(r+="8"),i.length>1&&(r+=` (${i.slice(1,4)}`),i.length>4&&(r+=`) ${i.slice(4,7)}`),i.length>7&&(r+=`-${i.slice(7,9)}`),i.length>9&&(r+=`-${i.slice(9,11)}`),r},Re=({value:e,onChange:o,placeholder:s="8 (xxx) xxx-xx-xx",tabIndex:i})=>{const r=c=>{const u=bi(c.target.value);o(u)};return t.jsx(mi,{type:"text",value:e,onChange:r,placeholder:s,maxLength:18,tabIndex:i})},mi=n.input`
+`,bi=n.div`
+  width: 100%;
+  margin-top: auto;
+  padding: ${({$collapsed:e})=>e?"8px 0":"12px 0"};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  /* Адаптация для свернутого состояния */
+  ${({$collapsed:e})=>e&&`
+    & > * {
+      transform: scale(0.9);
+    }
+  `}
+`,mi=e=>{const o=e.replace(/\D/g,""),r=(o.startsWith("8")||o.length===0?o:`8${o}`).slice(0,11);let s="";return r.length>0&&(s+="8"),r.length>1&&(s+=` (${r.slice(1,4)}`),r.length>4&&(s+=`) ${r.slice(4,7)}`),r.length>7&&(s+=`-${r.slice(7,9)}`),r.length>9&&(s+=`-${r.slice(9,11)}`),s},ze=({value:e,onChange:o,placeholder:i="8 (xxx) xxx-xx-xx",tabIndex:r})=>{const s=l=>{const u=mi(l.target.value);o(u)};return t.jsx(wi,{type:"text",value:e,onChange:s,placeholder:i,maxLength:18,tabIndex:r})},wi=n.input`
   width: 100%;
   height: 54px;
   font-size: 16px;
@@ -2174,7 +2189,7 @@ React keys must be passed directly to JSX without using spread:
     box-shadow: 0 0 0 0.2rem rgba(37, 203, 161, 0.25);
     background-color: rgba(255, 255, 255, 1);
   }
-`,Be=(e,o)=>G("/auth/call/initiate",{method:"POST",body:{phone:e,user_type:o}}),ze=(e,o,s,i)=>G("/auth/call/confirm",{method:"POST",body:{phone:e,check_id:o,user_type:s,name:i}}),wi=()=>G("/auth/session/info",{method:"GET"}),vi=({isOpen:e,onClose:o,onSubmit:s,error:i,isLoading:r=!1})=>{const[c,u]=w.useState("");if(!e)return null;const m=k=>{k.preventDefault(),s(c)};return t.jsx(yi,{onClick:o,children:t.jsx(ki,{onClick:k=>k.stopPropagation(),children:t.jsxs(ji,{onSubmit:m,children:[t.jsx(Ci,{children:"Как вас зовут?"}),t.jsxs($i,{children:[t.jsx(le,{type:"text",value:c,onChange:k=>u(k.target.value),placeholder:"Иванов Иван Иванович",disabled:r,autoFocus:!0,style:{flex:1}}),t.jsx(Si,{type:"submit",disabled:r||!c.trim(),children:r?"...":"→"})]}),i&&t.jsx(Mi,{children:i})]})})})},yi=n.div`
+`,Ae=(e,o)=>q("/auth/call/initiate",{method:"POST",body:{phone:e,user_type:o}}),Fe=(e,o,i,r)=>q("/auth/call/confirm",{method:"POST",body:{phone:e,check_id:o,user_type:i,name:r}}),vi=()=>q("/auth/session/info",{method:"GET"}),yi=({isOpen:e,onClose:o,onSubmit:i,error:r,isLoading:s=!1})=>{const[l,u]=m.useState("");if(!e)return null;const g=j=>{j.preventDefault(),i(l)};return t.jsx(ki,{onClick:o,children:t.jsx(ji,{onClick:j=>j.stopPropagation(),children:t.jsxs(Ci,{onSubmit:g,children:[t.jsx($i,{children:"Как вас зовут?"}),t.jsxs(Si,{children:[t.jsx(ce,{type:"text",value:l,onChange:j=>u(j.target.value),placeholder:"Иванов Иван Иванович",disabled:s,autoFocus:!0,style:{flex:1}}),t.jsx(Mi,{type:"submit",disabled:s||!l.trim(),children:s?"...":"→"})]}),r&&t.jsx(Li,{children:r})]})})})},ki=n.div`
   position: fixed;
   top: 0;
   left: 0;
@@ -2185,27 +2200,27 @@ React keys must be passed directly to JSX without using spread:
   justify-content: center;
   align-items: center;
   z-index: 1000;
-`,ki=n.div`
+`,ji=n.div`
   background: white;
   padding: 30px;
   border-radius: 12px;
   width: 90%;
   max-width: 450px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-`,ji=n.form`
+`,Ci=n.form`
   display: flex;
   flex-direction: column;
-`,Ci=n.h2`
+`,$i=n.h2`
   display: block;
   font-size: 27px;
   color: black;
   margin-bottom: 16px;
   margin-top: 0;
-`,$i=n.div`
+`,Si=n.div`
   display: flex;
   gap: 10px;
   align-items: center;
-`,Si=n(te)`
+`,Mi=n(ne)`
   width: auto;
   min-width: 50px;
   height: 40px;
@@ -2218,12 +2233,12 @@ React keys must be passed directly to JSX without using spread:
     opacity: 0.5;
     cursor: not-allowed;
   }
-`,Mi=n.div`
+`,Li=n.div`
   color: #e74c3c;
   font-size: 12px;
   margin-top: 8px;
   text-align: left;
-`,Li=({onLoginSuccess:e,userType:o="delivery_operator",title:s="Авторизация",submitLabel:i="Войти",placeholder:r="8 (xxx) xxx-xx-xx",supportPhone:c="8 989 924 24 24",supportLinkUrl:u="https://waypay.one",supportLinkText:m="waypay.one",className:k,style:b,pollingIntervalMs:v=3e3,enableRegistration:f=!1})=>{const[y,d]=w.useState(!1),[h,l]=w.useState(""),[T,j]=w.useState(!1),[R,I]=w.useState(""),[_,A]=w.useState(""),[P,H]=w.useState(!1),[B,z]=w.useState(!1),[N,F]=w.useState(""),[g,p]=w.useState(""),[S,E]=w.useState(null),O=w.useRef(void 0);w.useEffect(()=>()=>{O.current&&clearInterval(O.current)},[]);const V=x=>{const C=x.replace(/\D/g,"");return C?C.startsWith("8")?`+7${C.slice(1)}`:C.startsWith("7")?`+${C}`:`+${C}`:""},Z=()=>{j(!1),z(!1),F(""),p(""),E(null),O.current&&window.clearInterval(O.current)},$=async x=>{if(x.preventDefault(),!h){A("Введите номер телефона");return}d(!0),A("");const C=V(h);try{const D=await Be(C,o);E({phone:C,checkId:D.check_id,callPhone:D.call_phone}),f&&"name_required"in D&&D.name_required?(z(!0),I(D.call_phone)):!f&&"name_required"in D&&D.name_required?(A("Этот номер не зарегистрирован в системе. Обратитесь в поддержку для регистрации."),E(null)):(I(D.call_phone),j(!0),a(C,D.check_id))}catch(D){console.error("Auth error:",D),A("Не удалось инициировать авторизацию. Проверьте номер.")}finally{d(!1)}},L=async x=>{if(!x.trim()){p("Введите ФИО");return}if(S){d(!0),p("");try{F(x),z(!1),j(!0),a(S.phone,S.checkId,x)}catch(C){console.error("Registration error:",C),p("Не удалось завершить регистрацию")}finally{d(!1)}}},a=(x,C,D)=>{O.current&&window.clearInterval(O.current),O.current=window.setInterval(()=>{M(x,C,D)},v)},M=async(x,C,D)=>{if(!P){H(!0);try{const Y=await ze(x,C,o,D||N);Y.access_token&&Y.refresh_token&&(O.current&&window.clearInterval(O.current),j(!1),z(!1),F(""),E(null),e(Y.access_token))}catch(Y){console.error("Verification error:",Y)}finally{H(!1)}}};return t.jsxs(Di,{className:k,style:b,children:[t.jsxs(Ti,{children:[t.jsxs(Ei,{onSubmit:$,children:[t.jsx(Ii,{children:s}),t.jsx(Pi,{children:t.jsx(Ri,{children:t.jsx(Re,{value:h,onChange:x=>l(x),placeholder:r})})}),_&&t.jsx(_i,{children:t.jsx("span",{children:_})}),t.jsx(Bi,{type:"submit",disabled:y,children:y?"Загрузка...":i})]}),t.jsxs(zi,{children:["Хотите получить доступ к нашим продуктам?",t.jsx("br",{}),"Обратитесь по номеру"," ",t.jsx(Ai,{href:`tel:${c}`,children:c}),t.jsx("br",{}),"или оставьте заявку на"," ",t.jsx(Fi,{href:u,target:"_blank",rel:"noreferrer",children:m})]})]}),t.jsx(vi,{isOpen:B,onClose:Z,onSubmit:L,error:g,isLoading:y}),t.jsx(Ie,{isOpen:T,onClose:Z,callPhone:R,error:_})]})},Di=n.div`
+`,Di=({onLoginSuccess:e,userType:o="delivery_operator",title:i="Авторизация",submitLabel:r="Войти",placeholder:s="8 (xxx) xxx-xx-xx",supportPhone:l="8 989 924 24 24",supportLinkUrl:u="https://waypay.one",supportLinkText:g="waypay.one",className:j,style:b,pollingIntervalMs:w=3e3,enableRegistration:x=!1})=>{const[y,p]=m.useState(!1),[h,d]=m.useState(""),[I,k]=m.useState(!1),[P,E]=m.useState(""),[O,A]=m.useState(""),[R,H]=m.useState(!1),[B,_]=m.useState(!1),[W,F]=m.useState(""),[v,c]=m.useState(""),[M,D]=m.useState(null),N=m.useRef(void 0);m.useEffect(()=>()=>{N.current&&clearInterval(N.current)},[]);const V=S=>{const f=S.replace(/\D/g,"");return f?f.startsWith("8")?`+7${f.slice(1)}`:f.startsWith("7")?`+${f}`:`+${f}`:""},Z=()=>{k(!1),_(!1),F(""),c(""),D(null),N.current&&window.clearInterval(N.current)},C=async S=>{if(S.preventDefault(),!h){A("Введите номер телефона");return}p(!0),A("");const f=V(h);try{const T=await Ae(f,o);D({phone:f,checkId:T.check_id,callPhone:T.call_phone}),x&&"name_required"in T&&T.name_required?(_(!0),E(T.call_phone)):!x&&"name_required"in T&&T.name_required?(A("Этот номер не зарегистрирован в системе. Обратитесь в поддержку для регистрации."),D(null)):(E(T.call_phone),k(!0),a(f,T.check_id))}catch(T){console.error("Auth error:",T),A("Не удалось инициировать авторизацию. Проверьте номер.")}finally{p(!1)}},L=async S=>{if(!S.trim()){c("Введите ФИО");return}if(M){p(!0),c("");try{F(S),_(!1),k(!0),a(M.phone,M.checkId,S)}catch(f){console.error("Registration error:",f),c("Не удалось завершить регистрацию")}finally{p(!1)}}},a=(S,f,T)=>{N.current&&window.clearInterval(N.current),N.current=window.setInterval(()=>{$(S,f,T)},w)},$=async(S,f,T)=>{if(!R){H(!0);try{const z=await Fe(S,f,o,T||W);z.access_token&&z.refresh_token&&(N.current&&window.clearInterval(N.current),k(!1),_(!1),F(""),D(null),e(z.access_token))}catch(z){console.error("Verification error:",z)}finally{H(!1)}}};return t.jsxs(Ti,{className:j,style:b,children:[t.jsxs(Ei,{children:[t.jsxs(Ii,{onSubmit:C,children:[t.jsx(Pi,{children:i}),t.jsx(Ri,{children:t.jsx(Bi,{children:t.jsx(ze,{value:h,onChange:S=>d(S),placeholder:s})})}),O&&t.jsx(Oi,{children:t.jsx("span",{children:O})}),t.jsx(zi,{type:"submit",disabled:y,children:y?"Загрузка...":r})]}),t.jsxs(Ai,{children:["Хотите получить доступ к нашим продуктам?",t.jsx("br",{}),"Обратитесь по номеру"," ",t.jsx(Fi,{href:`tel:${l}`,children:l}),t.jsx("br",{}),"или оставьте заявку на"," ",t.jsx(_i,{href:u,target:"_blank",rel:"noreferrer",children:g})]})]}),t.jsx(yi,{isOpen:B,onClose:Z,onSubmit:L,error:v,isLoading:y}),t.jsx(Re,{isOpen:I,onClose:Z,callPhone:P,error:O})]})},Ti=n.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2233,7 +2248,7 @@ React keys must be passed directly to JSX without using spread:
   padding: 20px;
   background: white; /* Меняем на белый фон */
   box-sizing: border-box; /* Учитываем padding в размерах */
-`,Ti=n.div`
+`,Ei=n.div`
   background: white;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 125, 136, 0.1);
@@ -2271,24 +2286,24 @@ React keys must be passed directly to JSX without using spread:
   /* Скрываем скроллбар для IE, Edge и Firefox */
   -ms-overflow-style: none;
   scrollbar-width: none;
-`,Ei=n.form`
+`,Ii=n.form`
   display: flex;
   flex-direction: column;
-`,Ii=n.h1`
+`,Pi=n.h1`
   font-size: 24px;
   margin-bottom: 30px;
   text-align: center;
   color: #333;
   font-weight: 600;
-`,Pi=n.div`
-  margin-bottom: 25px;
 `,Ri=n.div`
+  margin-bottom: 25px;
+`,Bi=n.div`
   position: relative;
   width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-`,Bi=n.button`
+`,zi=n.button`
   background: linear-gradient(
     90deg,
     rgba(0, 125, 136, 1) 0%,
@@ -2324,7 +2339,7 @@ React keys must be passed directly to JSX without using spread:
     transform: none;
     box-shadow: none;
   }
-`,zi=n.div`
+`,Ai=n.div`
   margin-top: 30px;
   padding-top: 20px;
   border-top: 1px solid #f0f0f0;
@@ -2332,14 +2347,6 @@ React keys must be passed directly to JSX without using spread:
   font-size: 14px;
   color: #666;
   line-height: 1.5;
-`,Ai=n.a`
-  color: rgba(0, 125, 136, 1);
-  text-decoration: none;
-  font-weight: 500;
-
-  &:hover {
-    text-decoration: underline;
-  }
 `,Fi=n.a`
   color: rgba(0, 125, 136, 1);
   text-decoration: none;
@@ -2348,7 +2355,15 @@ React keys must be passed directly to JSX without using spread:
   &:hover {
     text-decoration: underline;
   }
-`,_i=n.div`
+`,_i=n.a`
+  color: rgba(0, 125, 136, 1);
+  text-decoration: none;
+  font-weight: 500;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`,Oi=n.div`
   display: flex;
   align-items: center;
   gap: 8px;
@@ -2360,4 +2375,4 @@ React keys must be passed directly to JSX without using spread:
   margin-bottom: 16px;
   font-size: 14px;
   box-shadow: 0 6px 14px rgba(180, 35, 24, 0.08);
-`,Ae=e=>{let o=0;for(let i=0;i<e.length;i++)o=e.charCodeAt(i)+((o<<5)-o);return`hsl(${Math.abs(o%360)}, 60%, 60%)`},Oi=e=>!e||!e.trim()?"?":e.split(" ").filter(i=>i.length>0).map(i=>i[0].toUpperCase()).join("").slice(0,2)||"?",Ni=(e,o=100)=>{const s=document.createElement("canvas");s.width=o,s.height=o;const i=s.getContext("2d");if(!i)return"";const r=Ae(e);i.fillStyle=r,i.beginPath(),i.arc(o/2,o/2,o/2,0,Math.PI*2),i.fill(),i.fillStyle="#ffffff";const c=o/2;i.font=`bold ${c}px "Manrope", Arial, sans-serif`,i.textAlign="center",i.textBaseline="middle";const u=c*.1;return i.fillText(e,o/2,o/2+u),s.toDataURL("image/png")},Yi=e=>{if(!e)return"";const o=typeof e=="string"?new Date(e):e;if(isNaN(o.getTime()))return"";const s=o.getDate().toString().padStart(2,"0"),i=(o.getMonth()+1).toString().padStart(2,"0"),r=o.getFullYear();return`${s}-${i}-${r}`};function Wi(e){return new Date(e)}const Fe=e=>{let o;try{if(e instanceof Date)o=e;else if(typeof e=="string"||typeof e=="number")o=new Date(e);else throw new Error("Неподдерживаемый тип данных");if(isNaN(o.getTime()))return"неверная дата";const s=new Date;if(o>s){const v=Math.floor((o.getTime()-s.getTime())/1e3),f=Math.floor(v/60),y=Math.floor(f/60),d=Math.floor(y/24);return v<10?"скоро":v<60?`через ${v} секунд`:f===1?"через минуту":f<60?`через ${f} минут`:y===1?"через час":y<24?`через ${y} часов`:d===1?"завтра":d<7?`через ${d} дней`:"в будущем"}const i=Math.floor((s.getTime()-o.getTime())/1e3),r=Math.floor(i/60),c=Math.floor(r/60),u=Math.floor(c/24),m=Math.floor(u/7),k=Math.floor(u/30),b=Math.floor(u/365);if(i<10)return"только что";if(i<60){const v=Math.max(1,i);return v===1?"секунду назад":v<5?`${v} секунды назад`:`${v} секунд назад`}return r<60?r===1?"минуту назад":r<5?`${r} минуты назад`:`${r} минут назад`:c<24?c===1?"час назад":c<5?`${c} часа назад`:`${c} часов назад`:u<7?u===1?"вчера":u===2?"позавчера":`${u} дня назад`:m<4?m===1?"неделю назад":m<5?`${m} недели назад`:`${m} недель назад`:k<12?k===1?"месяц назад":k<5?`${k} месяца назад`:`${k} месяцев назад`:b===1?"год назад":b<5?`${b} года назад`:`${b} лет назад`}catch(s){return console.error("Ошибка форматирования относительного времени:",s),"ошибка даты"}},_e=e=>{try{return e.toLocaleDateString("ru-RU",{day:"2-digit",month:"2-digit",year:"2-digit",hour:"2-digit",minute:"2-digit"})}catch{return"неверная дата"}},Hi=(e,o={})=>{const{useExactAfterMonths:s=6,includeTime:i=!0}=o,r=new Date(e);return isNaN(r.getTime()),Math.floor((new Date().getTime()-r.getTime())/(1e3*60*60*24*30))>=s?i?_e(r):r.toLocaleDateString("ru-RU",{day:"2-digit",month:"2-digit",year:"2-digit"}):Fe(r)};exports.API_BASE_URL=ae;exports.AddButton=lt;exports.AuthCallModal=Ie;exports.AuthPage=Li;exports.BackButton=xt;exports.BaseModal=De;exports.Checkbox=Nt;exports.ColumnChart=Zo;exports.ContextMenu=se;exports.CountInfoTitle=vo;exports.CustomCalendar=re;exports.CustomInput=le;exports.CustomPhoneInput=Re;exports.CustomSelect=St;exports.CustomTable=Ge;exports.CustomTextArea=vn;exports.CustomTitle=de;exports.DefaultButton=te;exports.DeleteButton=bt;exports.EditButton=wt;exports.EntitySelectContainer=co;exports.ExportButton=kt;exports.InputContainer=hn;exports.InputLabel=un;exports.InputRow=pn;exports.InputTitle=ko;exports.ModalInfoTitle=jo;exports.Pagination=mn;exports.PeriodField=An;exports.PhoneModalInput=Jn;exports.PhotoViewerModal=Pr;exports.ProgressBar=Eo;exports.RadioButton=Lo;exports.ScatterPlot=xr;exports.SideMenu=Gr;exports.SideMenuContext=Pe;exports.Tabs=no;exports.TitleField=ce;exports.ToggleSwitch=Mo;exports.YandexMapSelector=Fo;exports.apiRequest=G;exports.authStorage=ut;exports.confirmCallAuth=ze;exports.formatDate=Yi;exports.formatExactDate=_e;exports.formatMoney=ie;exports.formatRelativeTime=Fe;exports.formatRelativeTimeExtended=Hi;exports.generateAvatar=Ni;exports.getInitials=Oi;exports.getSessionInfo=wi;exports.initiateCallAuth=Be;exports.parseDateInput=Wi;exports.parseMoney=Vo;exports.stringToColor=Ae;
+`,_e=e=>{let o=0;for(let r=0;r<e.length;r++)o=e.charCodeAt(r)+((o<<5)-o);return`hsl(${Math.abs(o%360)}, 60%, 60%)`},Ni=e=>!e||!e.trim()?"?":e.split(" ").filter(r=>r.length>0).map(r=>r[0].toUpperCase()).join("").slice(0,2)||"?",Wi=(e,o=100)=>{const i=document.createElement("canvas");i.width=o,i.height=o;const r=i.getContext("2d");if(!r)return"";const s=_e(e);r.fillStyle=s,r.beginPath(),r.arc(o/2,o/2,o/2,0,Math.PI*2),r.fill(),r.fillStyle="#ffffff";const l=o/2;r.font=`bold ${l}px "Manrope", Arial, sans-serif`,r.textAlign="center",r.textBaseline="middle";const u=l*.1;return r.fillText(e,o/2,o/2+u),i.toDataURL("image/png")},Yi=e=>{if(!e)return"";const o=typeof e=="string"?new Date(e):e;if(isNaN(o.getTime()))return"";const i=o.getDate().toString().padStart(2,"0"),r=(o.getMonth()+1).toString().padStart(2,"0"),s=o.getFullYear();return`${i}-${r}-${s}`};function Hi(e){return new Date(e)}const Oe=e=>{let o;try{if(e instanceof Date)o=e;else if(typeof e=="string"||typeof e=="number")o=new Date(e);else throw new Error("Неподдерживаемый тип данных");if(isNaN(o.getTime()))return"неверная дата";const i=new Date;if(o>i){const w=Math.floor((o.getTime()-i.getTime())/1e3),x=Math.floor(w/60),y=Math.floor(x/60),p=Math.floor(y/24);return w<10?"скоро":w<60?`через ${w} секунд`:x===1?"через минуту":x<60?`через ${x} минут`:y===1?"через час":y<24?`через ${y} часов`:p===1?"завтра":p<7?`через ${p} дней`:"в будущем"}const r=Math.floor((i.getTime()-o.getTime())/1e3),s=Math.floor(r/60),l=Math.floor(s/60),u=Math.floor(l/24),g=Math.floor(u/7),j=Math.floor(u/30),b=Math.floor(u/365);if(r<10)return"только что";if(r<60){const w=Math.max(1,r);return w===1?"секунду назад":w<5?`${w} секунды назад`:`${w} секунд назад`}return s<60?s===1?"минуту назад":s<5?`${s} минуты назад`:`${s} минут назад`:l<24?l===1?"час назад":l<5?`${l} часа назад`:`${l} часов назад`:u<7?u===1?"вчера":u===2?"позавчера":`${u} дня назад`:g<4?g===1?"неделю назад":g<5?`${g} недели назад`:`${g} недель назад`:j<12?j===1?"месяц назад":j<5?`${j} месяца назад`:`${j} месяцев назад`:b===1?"год назад":b<5?`${b} года назад`:`${b} лет назад`}catch(i){return console.error("Ошибка форматирования относительного времени:",i),"ошибка даты"}},Ne=e=>{try{return e.toLocaleDateString("ru-RU",{day:"2-digit",month:"2-digit",year:"2-digit",hour:"2-digit",minute:"2-digit"})}catch{return"неверная дата"}},Vi=(e,o={})=>{const{useExactAfterMonths:i=6,includeTime:r=!0}=o,s=new Date(e);return isNaN(s.getTime()),Math.floor((new Date().getTime()-s.getTime())/(1e3*60*60*24*30))>=i?r?Ne(s):s.toLocaleDateString("ru-RU",{day:"2-digit",month:"2-digit",year:"2-digit"}):Oe(s)};exports.API_BASE_URL=le;exports.AddButton=ct;exports.AuthCallModal=Re;exports.AuthPage=Di;exports.BackButton=ft;exports.BaseModal=Ee;exports.Checkbox=Wt;exports.ColumnChart=Uo;exports.ContextMenu=ae;exports.CountInfoTitle=yo;exports.CustomCalendar=ie;exports.CustomInput=ce;exports.CustomPhoneInput=ze;exports.CustomSelect=Mt;exports.CustomTable=Je;exports.CustomTextArea=yn;exports.CustomTitle=pe;exports.DefaultButton=ne;exports.DeleteButton=mt;exports.EditButton=vt;exports.EntitySelectContainer=po;exports.ExportButton=jt;exports.InputContainer=xn;exports.InputLabel=hn;exports.InputRow=un;exports.InputTitle=jo;exports.ModalInfoTitle=Co;exports.Pagination=wn;exports.PeriodField=Fn;exports.PhoneModalInput=Kn;exports.PhotoViewerModal=Rr;exports.ProgressBar=Io;exports.RadioButton=Do;exports.ScatterPlot=fr;exports.SideMenu=Jr;exports.SideMenuContext=Be;exports.Tabs=oo;exports.TitleField=de;exports.ToggleSwitch=Lo;exports.YandexMapSelector=_o;exports.apiRequest=q;exports.authStorage=ht;exports.confirmCallAuth=Fe;exports.formatDate=Yi;exports.formatExactDate=Ne;exports.formatMoney=se;exports.formatRelativeTime=Oe;exports.formatRelativeTimeExtended=Vi;exports.generateAvatar=Wi;exports.getInitials=Ni;exports.getSessionInfo=vi;exports.initiateCallAuth=Ae;exports.parseDateInput=Hi;exports.parseMoney=Zo;exports.stringToColor=_e;
