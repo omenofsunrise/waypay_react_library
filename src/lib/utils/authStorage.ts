@@ -28,13 +28,16 @@ export const authStorage = {
     }
   },
 
-  async logout(): Promise<void> {
+  async logout(tokenId?: string): Promise<void> {
     try {
+      const body = tokenId ? { token_id: tokenId } : {};
+      
       await apiRequest('/auth/session/revoke', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
+        body: JSON.stringify(body),
       });
     } catch (error) {
       console.error('Logout error:', error);

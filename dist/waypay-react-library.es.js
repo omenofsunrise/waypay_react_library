@@ -818,16 +818,17 @@ const ki = {
       return null;
     }
   },
-  async logout() {
+  async logout(e) {
     try {
       await oe("/auth/session/revoke", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
-        }
+        },
+        body: JSON.stringify(e ? { token_id: e } : {})
       });
-    } catch (e) {
-      throw console.error("Logout error:", e), e;
+    } catch (o) {
+      throw console.error("Logout error:", o), o;
     }
   },
   async getClientId() {

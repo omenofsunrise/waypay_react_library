@@ -8,7 +8,7 @@ export type SessionInfo = {
 export declare const authStorage: {
     isAuthenticated(): Promise<boolean>;
     getSessionInfo(): Promise<SessionInfo | null>;
-    logout(): Promise<void>;
+    logout(tokenId?: string): Promise<void>;
     getClientId(): Promise<string | null>;
     hasPin(): Promise<boolean>;
 };
