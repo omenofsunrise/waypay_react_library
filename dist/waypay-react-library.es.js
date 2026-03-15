@@ -821,7 +821,10 @@ const ki = {
   async logout() {
     try {
       await oe("/auth/session/revoke", {
-        method: "POST"
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        }
       });
     } catch (e) {
       throw console.error("Logout error:", e), e;

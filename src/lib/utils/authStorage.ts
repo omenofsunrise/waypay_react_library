@@ -32,6 +32,9 @@ export const authStorage = {
     try {
       await apiRequest('/auth/session/revoke', {
         method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
       });
     } catch (error) {
       console.error('Logout error:', error);

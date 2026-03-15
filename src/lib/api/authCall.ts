@@ -1,4 +1,3 @@
-// api/authCall.ts
 import { apiRequest } from './client';
 
 export type UserType = string;
