@@ -66,15 +66,23 @@ export async function apiRequest<T = unknown>(endpoint: string, options: Request
 
     let message = `Request failed with status ${response.status}`;
     try {
-      const data = await response.json();
-      if (data && typeof data.error === 'string') {
-        message = data.error;
-      } else if (typeof data === 'string') {
-        message = data;
+      const text = await response.text();
+      if (text) {
+        try {
+          const data = JSON.parse(text);
+          if (data && typeof data.error === 'string') {
+            message = data.error;
+          } else if (typeof data === 'string') {
+            message = data;
+          } else if (typeof data?.message === 'string') {
+            message = data.message;
+          }
+        } catch {
+          message = text;
+        }
       }
     } catch {
-      const text = await response.text();
-      if (text) message = text;
+      // ignore read errors
     }
     throw new Error(message);
   };
