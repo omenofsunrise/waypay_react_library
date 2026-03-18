@@ -908,6 +908,10 @@ React keys must be passed directly to JSX without using spread:
   display: flex;
   flex-direction: column;
   outline: none;
+
+  @media (max-width: 768px) {
+    padding: 6px;
+  }
 `,Ie=n.div`
   display: flex;
   align-items: center;

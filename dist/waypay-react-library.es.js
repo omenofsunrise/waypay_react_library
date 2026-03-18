@@ -2116,6 +2116,10 @@ const ki = {
   display: flex;
   flex-direction: column;
   outline: none;
+
+  @media (max-width: 768px) {
+    padding: 6px;
+  }
 `, Pe = n.div`
   display: flex;
   align-items: center;

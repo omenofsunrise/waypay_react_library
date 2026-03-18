@@ -152,6 +152,10 @@ const Dialog = styled.div<{ $width: string }>`
   display: flex;
   flex-direction: column;
   outline: none;
+
+  @media (max-width: 768px) {
+    padding: 6px;
+  }
 `;
 
 const Header = styled.div`
