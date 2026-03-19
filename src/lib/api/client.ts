@@ -1,4 +1,3 @@
-// Centralized API base so all requests target the same backend
 import { API_BASE_URL } from './config';
 
 type RequestOptions = {
@@ -7,6 +6,7 @@ type RequestOptions = {
   headers?: Record<string, string>;
   token?: string;
   withCredentials?: boolean;
+  isFormData?: boolean;
 };
 
 export async function apiRequest<T = unknown>(endpoint: string, options: RequestOptions = {}) {
@@ -15,14 +15,18 @@ export async function apiRequest<T = unknown>(endpoint: string, options: Request
     body, 
     headers = {}, 
     token,
-    withCredentials = true
+    withCredentials = true,
+    isFormData = false
   } = options;
 
   const performRequest = async (jwt?: string) => {
     const finalHeaders: Record<string, string> = {
-      'Content-Type': 'application/json',
       ...headers,
     };
+
+    if (!isFormData) {
+      finalHeaders['Content-Type'] = 'application/json';
+    }
 
     if (jwt) {
       finalHeaders.Authorization = `Bearer ${jwt}`;
@@ -30,10 +34,19 @@ export async function apiRequest<T = unknown>(endpoint: string, options: Request
 
     const url = endpoint.startsWith('http') ? endpoint : `${API_BASE_URL}${endpoint}`;
 
+    let requestBody: BodyInit | undefined;
+    if (body) {
+      if (isFormData) {
+        requestBody = body as FormData;
+      } else {
+        requestBody = JSON.stringify(body);
+      }
+    }
+
     const response = await fetch(url, {
       method,
       headers: finalHeaders,
-      body: body ? JSON.stringify(body) : undefined,
+      body: requestBody,
       credentials: withCredentials ? 'include' : 'same-origin',
     });
 

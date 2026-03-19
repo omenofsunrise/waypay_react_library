@@ -5,6 +5,7 @@ type RequestOptions = {
     headers?: Record<string, string>;
     token?: string;
     withCredentials?: boolean;
+    isFormData?: boolean;
 };
 export declare function apiRequest<T = unknown>(endpoint: string, options?: RequestOptions): Promise<T>;
 export { API_BASE_URL };
