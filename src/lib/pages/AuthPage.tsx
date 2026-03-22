@@ -172,7 +172,7 @@ const AuthPage: React.FC<AuthPageProps> = ({
     setIsVerifying(true);
     try {
       const response = await confirmCallAuth(phone, id, userType, name || fullName);
-      if (response.access_token && response.refresh_token) {
+      if ((response.access_token && response.refresh_token) || (response.accessToken && response.refreshToken)) {
 
         if (verificationInterval.current) {
           window.clearInterval(verificationInterval.current);
@@ -181,11 +181,10 @@ const AuthPage: React.FC<AuthPageProps> = ({
         setShowNameModal(false);
         setFullName("");
         setPendingAuthData(null);
-        onLoginSuccess(response.access_token);
+        onLoginSuccess(response.access_token ?? response.accessToken);
       }
     } catch (error) {
       console.error("Verification error:", error);
-      // setVerificationError("Ошибка проверки авторизации");
     } finally {
       setIsVerifying(false);
     }

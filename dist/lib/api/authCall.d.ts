@@ -6,7 +6,9 @@ export type InitiateCallAuthResponse = {
 };
 export type ConfirmCallAuthResponse = {
     access_token: string;
+    accessToken: string;
     refresh_token: string;
+    refreshToken: string;
     status: string;
 };
 export declare const normalizeInitiateCallAuthResponse: (data: any) => InitiateCallAuthResponse;

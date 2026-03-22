@@ -60,7 +60,7 @@ function We() {
           case F:
             var C = a.render;
             return a = a.displayName, a || (a = C.displayName || C.name || "", a = a !== "" ? "ForwardRef(" + a + ")" : "ForwardRef"), a;
-          case R:
+          case z:
             return C = a.displayName || null, C !== null ? C : e(a.type) || "Memo";
           case _:
             C = a._payload, a = a._init;
@@ -134,7 +134,7 @@ function We() {
         "Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release."
       )), a = this.props.ref, a !== void 0 ? a : null;
     }
-    function b(a, C, $, g, D, z) {
+    function b(a, C, $, g, D, R) {
       var Y = $.ref;
       return a = {
         $$typeof: p,
@@ -164,10 +164,10 @@ function We() {
         configurable: !1,
         enumerable: !1,
         writable: !0,
-        value: z
+        value: R
       }), Object.freeze && (Object.freeze(a.props), Object.freeze(a)), a;
     }
-    function m(a, C, $, g, D, z) {
+    function m(a, C, $, g, D, R) {
       var Y = C.children;
       if (Y !== void 0)
         if (g)
@@ -212,7 +212,7 @@ React keys must be passed directly to JSX without using spread:
         $,
         s(),
         D,
-        z
+        R
       );
     }
     function x(a) {
@@ -221,7 +221,7 @@ React keys must be passed directly to JSX without using spread:
     function v(a) {
       return typeof a == "object" && a !== null && a.$$typeof === p;
     }
-    var h = q, p = /* @__PURE__ */ Symbol.for("react.transitional.element"), l = /* @__PURE__ */ Symbol.for("react.portal"), E = /* @__PURE__ */ Symbol.for("react.fragment"), y = /* @__PURE__ */ Symbol.for("react.strict_mode"), I = /* @__PURE__ */ Symbol.for("react.profiler"), T = /* @__PURE__ */ Symbol.for("react.consumer"), O = /* @__PURE__ */ Symbol.for("react.context"), F = /* @__PURE__ */ Symbol.for("react.forward_ref"), P = /* @__PURE__ */ Symbol.for("react.suspense"), H = /* @__PURE__ */ Symbol.for("react.suspense_list"), R = /* @__PURE__ */ Symbol.for("react.memo"), _ = /* @__PURE__ */ Symbol.for("react.lazy"), W = /* @__PURE__ */ Symbol.for("react.activity"), A = /* @__PURE__ */ Symbol.for("react.client.reference"), w = h.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, d = Object.prototype.hasOwnProperty, M = Array.isArray, L = console.createTask ? console.createTask : function() {
+    var h = q, p = /* @__PURE__ */ Symbol.for("react.transitional.element"), l = /* @__PURE__ */ Symbol.for("react.portal"), E = /* @__PURE__ */ Symbol.for("react.fragment"), y = /* @__PURE__ */ Symbol.for("react.strict_mode"), I = /* @__PURE__ */ Symbol.for("react.profiler"), T = /* @__PURE__ */ Symbol.for("react.consumer"), O = /* @__PURE__ */ Symbol.for("react.context"), F = /* @__PURE__ */ Symbol.for("react.forward_ref"), P = /* @__PURE__ */ Symbol.for("react.suspense"), H = /* @__PURE__ */ Symbol.for("react.suspense_list"), z = /* @__PURE__ */ Symbol.for("react.memo"), _ = /* @__PURE__ */ Symbol.for("react.lazy"), W = /* @__PURE__ */ Symbol.for("react.activity"), A = /* @__PURE__ */ Symbol.for("react.client.reference"), w = h.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, d = Object.prototype.hasOwnProperty, M = Array.isArray, L = console.createTask ? console.createTask : function() {
       return null;
     };
     h = {
@@ -385,7 +385,7 @@ const De = ({ x: e, y: o, items: i, onClose: r, ...s }) => {
   }, H = m || ((j) => {
     const S = j[8];
     return typeof S == "string" ? parseFloat(S.replace(/[^\d.]/g, "")) > 0 : !1;
-  }), R = (j) => {
+  }), z = (j) => {
     f === void 0 && p(j === O ? null : j), u && u(o[j], j);
   }, _ = (j, S) => {
     i && i(j, S);
@@ -539,7 +539,7 @@ const De = ({ x: e, y: o, items: i, onClose: r, ...s }) => {
             $isLast: S === o.length - 1,
             $isSelected: S === O,
             $isTotalsRow: a,
-            onClick: () => !a && R(S),
+            onClick: () => !a && z(S),
             onDoubleClick: () => !a && _(j, S),
             onContextMenu: (D) => !a && A(D, S),
             onTouchStart: (D) => !a && w(D, S),
@@ -555,17 +555,17 @@ const De = ({ x: e, y: o, items: i, onClose: r, ...s }) => {
               fontWeight: $.fontWeight || "normal"
             },
             children: j.map(
-              (D, z) => !e[z]?.isHidden && /* @__PURE__ */ t.jsx(
+              (D, R) => !e[R]?.isHidden && /* @__PURE__ */ t.jsx(
                 st,
                 {
-                  $align: e[z]?.align || "center",
-                  $isFirst: z === 0,
-                  $isLast: z === j.length - 1,
+                  $align: e[R]?.align || "center",
+                  $isFirst: R === 0,
+                  $isLast: R === j.length - 1,
                   $isTotalsCell: a,
-                  $isBeforeTotals: a && z < j.findIndex((Y) => Y === "Итого:"),
+                  $isBeforeTotals: a && R < j.findIndex((Y) => Y === "Итого:"),
                   children: D
                 },
-                z
+                R
               )
             )
           },
@@ -1401,9 +1401,9 @@ const ji = {
   }, H = () => {
     const d = f.getFullYear(), M = f.getMonth(), L = new Date(d, M, 1), V = new Date(d, M + 1, 0).getDate(), Z = L.getDay() === 0 ? 6 : L.getDay() - 1, j = [], S = 35, a = new Date(d, M, 0).getDate();
     for (let $ = 0; $ < Z; $++) {
-      const g = a - Z + $ + 1, D = new Date(d, M - 1, g), z = !!(b && D.getDate() === b.getDate() && D.getMonth() === b.getMonth() && D.getFullYear() === b.getFullYear());
+      const g = a - Z + $ + 1, D = new Date(d, M - 1, g), R = !!(b && D.getDate() === b.getDate() && D.getMonth() === b.getMonth() && D.getFullYear() === b.getFullYear());
       j.push(
-        /* @__PURE__ */ t.jsx(ie, { selected: z, onClick: () => I(D), otherMonth: !0, children: g }, `prev-${g}`)
+        /* @__PURE__ */ t.jsx(ie, { selected: R, onClick: () => I(D), otherMonth: !0, children: g }, `prev-${g}`)
       );
     }
     for (let $ = 1; $ <= V; $++) {
@@ -1420,7 +1420,7 @@ const ji = {
       );
     }
     return j;
-  }, R = () => b ? b.toLocaleDateString("ru-RU", {
+  }, z = () => b ? b.toLocaleDateString("ru-RU", {
     day: "2-digit",
     month: "2-digit",
     year: "numeric"
@@ -1440,7 +1440,7 @@ const ji = {
   return /* @__PURE__ */ t.jsxs(_t, { ref: l, children: [
     /* @__PURE__ */ t.jsxs(Ot, { onClick: () => u(!c), children: [
       e && /* @__PURE__ */ t.jsx(Nt, { children: e }),
-      /* @__PURE__ */ t.jsx(Wt, { isEmpty: !b, children: R() }),
+      /* @__PURE__ */ t.jsx(Wt, { isEmpty: !b, children: z() }),
       /* @__PURE__ */ t.jsx(Yt, { src: Ft, alt: "Календарь" })
     ] }),
     c && /* @__PURE__ */ t.jsxs(Ht, { className: "calendar-container", children: [
@@ -2245,33 +2245,33 @@ const ji = {
   const [u, f] = B(!1), [k, b] = B(!1), [m, x] = B(""), [v, h] = B(""), [p, l] = B(""), E = X(null), y = X(null);
   U(() => {
     if (e === "Custom" && v && p) {
-      const R = P(v), _ = P(p);
-      x(`С ${R} по ${_}`);
+      const z = P(v), _ = P(p);
+      x(`С ${z} по ${_}`);
     } else {
-      const R = i.find((_) => _.value === e);
-      x(R ? R.label : "");
+      const z = i.find((_) => _.value === e);
+      x(z ? z.label : "");
     }
   }, [e, i, v, p]), U(() => {
-    const R = (_) => {
+    const z = (_) => {
       E.current && !E.current.contains(_.target) && f(!1), k && y.current && !y.current.contains(_.target) && ([...document.querySelectorAll(".calendar-container, .arrow-button")].some((w) => w.contains(_.target)) || b(!1));
     };
-    return document.addEventListener("mousedown", R), () => {
-      document.removeEventListener("mousedown", R);
+    return document.addEventListener("mousedown", z), () => {
+      document.removeEventListener("mousedown", z);
     };
   }, [k]);
-  const I = (R) => {
-    s?.(R.value), f(!1);
+  const I = (z) => {
+    s?.(z.value), f(!1);
   }, T = () => {
     f(!1), c ? c() : b(!0);
   }, O = () => {
     s?.(""), x(""), h(""), l("");
   }, F = () => {
     if (v && p) {
-      const R = P(v), _ = P(p), W = `С ${R} по ${_}`;
+      const z = P(v), _ = P(p), W = `С ${z} по ${_}`;
       s?.("Custom", v, p), x(W), b(!1);
     }
-  }, P = (R) => {
-    const _ = new Date(R), W = String(_.getDate()).padStart(2, "0"), A = String(_.getMonth() + 1).padStart(2, "0"), w = _.getFullYear();
+  }, P = (z) => {
+    const _ = new Date(z), W = String(_.getDate()).padStart(2, "0"), A = String(_.getMonth() + 1).padStart(2, "0"), w = _.getFullYear();
     return `${W}.${A}.${w}`;
   }, H = () => /* @__PURE__ */ t.jsxs(zn, { children: [
     /* @__PURE__ */ t.jsx(Pe, { style: { margin: 0 }, children: /* @__PURE__ */ t.jsx(Re, { style: { margin: 0 }, children: "Выбор периода" }) }),
@@ -2284,10 +2284,10 @@ const ji = {
         /* @__PURE__ */ t.jsx(Sn, { $isOpen: u, children: "▼" })
       ] }),
       u && /* @__PURE__ */ t.jsxs(Ln, { children: [
-        i.map((R) => /* @__PURE__ */ t.jsxs(Dn, { onClick: () => I(R), $isSelected: e === R.value, children: [
-          /* @__PURE__ */ t.jsx(Tn, { $isSelected: e === R.value, children: e === R.value && /* @__PURE__ */ t.jsx(En, {}) }),
-          /* @__PURE__ */ t.jsx(In, { children: R.label })
-        ] }, R.id)),
+        i.map((z) => /* @__PURE__ */ t.jsxs(Dn, { onClick: () => I(z), $isSelected: e === z.value, children: [
+          /* @__PURE__ */ t.jsx(Tn, { $isSelected: e === z.value, children: e === z.value && /* @__PURE__ */ t.jsx(En, {}) }),
+          /* @__PURE__ */ t.jsx(In, { children: z.label })
+        ] }, z.id)),
         r && /* @__PURE__ */ t.jsx(Pn, { onClick: T, children: "Другой период" })
       ] })
     ] }),
@@ -2297,14 +2297,14 @@ const ji = {
         title: "",
         onClose: () => b(!1),
         onCancel: () => b(!1),
-        onSave: (R) => {
-          R.preventDefault(), F();
+        onSave: (z) => {
+          z.preventDefault(), F();
         },
         saveButtonText: "Выбрать",
         customLayout: /* @__PURE__ */ t.jsx(H, {}),
         children: /* @__PURE__ */ t.jsxs(Rn, { children: [
-          /* @__PURE__ */ t.jsx(ke, { children: /* @__PURE__ */ t.jsx(xe, { value: v, onChange: (R) => h(R) }) }),
-          /* @__PURE__ */ t.jsx(ke, { children: /* @__PURE__ */ t.jsx(xe, { value: p, onChange: (R) => l(R) }) })
+          /* @__PURE__ */ t.jsx(ke, { children: /* @__PURE__ */ t.jsx(xe, { value: v, onChange: (z) => h(z) }) }),
+          /* @__PURE__ */ t.jsx(ke, { children: /* @__PURE__ */ t.jsx(xe, { value: p, onChange: (z) => l(z) }) })
         ] })
       }
     ) })
@@ -2915,14 +2915,14 @@ const xo = (e) => typeof window > "u" ? Promise.reject(new Error("Window is not 
   style: p,
   onError: l
 }) => {
-  const [E, y] = B(null), [I, T] = B(o), [O, F] = B(o), [P, H] = B(!1), R = X(null);
+  const [E, y] = B(null), [I, T] = B(o), [O, F] = B(o), [P, H] = B(!1), z = X(null);
   U(() => {
     let A = !1, w;
     return (async () => {
       try {
         const M = await xo(s);
-        if (A || !R.current) return;
-        w = new M.Map(R.current, {
+        if (A || !z.current) return;
+        w = new M.Map(z.current, {
           center: [i, r],
           zoom: c,
           controls: x
@@ -2988,7 +2988,7 @@ const xo = (e) => typeof window > "u" ? Promise.reject(new Error("Window is not 
       "Выбранный адрес: ",
       /* @__PURE__ */ t.jsx("strong", { children: O || "Не выбран" })
     ] }),
-    /* @__PURE__ */ t.jsx(mo, { ref: R, $height: u, $width: f }),
+    /* @__PURE__ */ t.jsx(mo, { ref: z, $height: u, $width: f }),
     /* @__PURE__ */ t.jsx(vo, { children: "📍 Кликните на карте или найдите адрес через поиск" })
   ] });
 }, go = n.div`
@@ -3257,7 +3257,7 @@ const Ui = ({ title: e, data: o, maxValue: i, step: r, height: s = 300, titleFon
   const P = [];
   for (let w = u; w <= c; w += k)
     P.push(w);
-  const H = x || F.map((w) => w.toString()), R = m ? Array.from(new Set(o.filter((w) => w.label).map((w) => w.label))).map((w) => {
+  const H = x || F.map((w) => w.toString()), z = m ? Array.from(new Set(o.filter((w) => w.label).map((w) => w.label))).map((w) => {
     const d = o.find((M) => M.label === w);
     return { name: w, color: d.color };
   }) : [], _ = {};
@@ -3280,7 +3280,7 @@ const Ui = ({ title: e, data: o, maxValue: i, step: r, height: s = 300, titleFon
   }, [p, s, c, u]), /* @__PURE__ */ t.jsxs(Wo, { children: [
     /* @__PURE__ */ t.jsxs(ze, { style: { marginTop: "0" }, children: [
       /* @__PURE__ */ t.jsx(Be, { style: { fontSize: h }, children: e }),
-      m && R.length > 0 && /* @__PURE__ */ t.jsx(Yo, { children: R.map((w, d) => /* @__PURE__ */ t.jsxs(Ho, { children: [
+      m && z.length > 0 && /* @__PURE__ */ t.jsx(Yo, { children: z.map((w, d) => /* @__PURE__ */ t.jsxs(Ho, { children: [
         /* @__PURE__ */ t.jsx(Vo, { color: w.color }),
         /* @__PURE__ */ t.jsx(Zo, { children: w.name })
       ] }, d)) })
@@ -3770,7 +3770,7 @@ const Ui = ({ title: e, data: o, maxValue: i, step: r, height: s = 300, titleFon
   }, [p]);
   const [O, F] = B(
     c ?? y.collapsed ?? !1
-  ), [P, H] = B(null), [R, _] = B(
+  ), [P, H] = B(null), [z, _] = B(
     f ?? y.selectedSideMenuItem ?? null
   ), [W, A] = B({
     visible: !1,
@@ -3779,7 +3779,7 @@ const Ui = ({ title: e, data: o, maxValue: i, step: r, height: s = 300, titleFon
     items: []
   }), w = X(null), d = c ?? y.collapsed ?? O, M = (g) => {
     F(g), y.toggleCollapsed(), u?.(g);
-  }, L = f ?? y.selectedSideMenuItem ?? R, N = (g) => {
+  }, L = f ?? y.selectedSideMenuItem ?? z, N = (g) => {
     _(g), y.setSelectedSideMenuItem(g);
   };
   U(() => {
@@ -3798,8 +3798,8 @@ const Ui = ({ title: e, data: o, maxValue: i, step: r, height: s = 300, titleFon
   }, j = (g) => {
     H((D) => D === g ? null : g);
   }, S = (g, D) => {
-    const z = (g.children?.length || 0) > 0;
-    if (d && z) {
+    const R = (g.children?.length || 0) > 0;
+    if (d && R) {
       D.stopPropagation();
       const Y = D.currentTarget.getBoundingClientRect();
       A({
@@ -3810,27 +3810,27 @@ const Ui = ({ title: e, data: o, maxValue: i, step: r, height: s = 300, titleFon
       });
       return;
     }
-    z ? j(g.key) : Z(g);
-  }, a = (g, D = !1) => g.filter((z) => !z.hidden).map((z) => {
-    const Y = (z.children?.length || 0) > 0, G = P === z.key, K = L === z.key || !!z.children && z.children.some((Q) => Q.key === L);
+    R ? j(g.key) : Z(g);
+  }, a = (g, D = !1) => g.filter((R) => !R.hidden).map((R) => {
+    const Y = (R.children?.length || 0) > 0, G = P === R.key, K = L === R.key || !!R.children && R.children.some((Q) => Q.key === L);
     return /* @__PURE__ */ t.jsxs(q.Fragment, { children: [
       /* @__PURE__ */ t.jsxs(
         zr,
         {
           $collapsed: d,
           $selected: K,
-          onClick: (Q) => S(z, Q),
-          $disabled: z.disabled,
-          title: z.label,
+          onClick: (Q) => S(R, Q),
+          $disabled: R.disabled,
+          title: R.label,
           children: [
-            z.icon && /* @__PURE__ */ t.jsx(Fr, { $collapsed: d, children: z.icon }),
-            !d && /* @__PURE__ */ t.jsx(Br, { children: z.label }),
+            R.icon && /* @__PURE__ */ t.jsx(Fr, { $collapsed: d, children: R.icon }),
+            !d && /* @__PURE__ */ t.jsx(Br, { children: R.label }),
             !d && Y && /* @__PURE__ */ t.jsx(_r, { $expanded: G, children: "▾" })
           ]
         }
       ),
-      !d && Y && G && /* @__PURE__ */ t.jsx(Ar, { children: a(z.children || [], !0) })
-    ] }, z.key);
+      !d && Y && G && /* @__PURE__ */ t.jsx(Ar, { children: a(R.children || [], !0) })
+    ] }, R.key);
   }), C = _e(() => W.visible ? /* @__PURE__ */ t.jsx(Or, { style: { left: W.x, top: W.y }, children: W.items.map((g) => /* @__PURE__ */ t.jsx(
     Nr,
     {
@@ -3844,16 +3844,16 @@ const Ui = ({ title: e, data: o, maxValue: i, step: r, height: s = 300, titleFon
   )) }) : null, [W, L]), $ = () => {
     const g = [...e, ...o].filter((D) => !D.hidden);
     return /* @__PURE__ */ t.jsx(Mr, { children: g.map((D) => {
-      const z = L === D.key;
+      const R = L === D.key;
       return /* @__PURE__ */ t.jsxs(
         Sr,
         {
-          $selected: z,
+          $selected: R,
           onClick: () => Z(D),
           $disabled: D.disabled,
           children: [
-            D.icon && /* @__PURE__ */ t.jsx(Lr, { $selected: z, children: D.icon }),
-            l && /* @__PURE__ */ t.jsx(Dr, { $selected: z, children: D.label })
+            D.icon && /* @__PURE__ */ t.jsx(Lr, { $selected: R, children: D.icon }),
+            l && /* @__PURE__ */ t.jsx(Dr, { $selected: R, children: D.label })
           ]
         },
         D.key
@@ -4278,7 +4278,7 @@ const Ui = ({ title: e, data: o, maxValue: i, step: r, height: s = 300, titleFon
   pollingIntervalMs: m = 3e3,
   enableRegistration: x = !1
 }) => {
-  const [v, h] = B(!1), [p, l] = B(""), [E, y] = B(!1), [I, T] = B(""), [O, F] = B(""), [P, H] = B(!1), [R, _] = B(!1), [W, A] = B(""), [w, d] = B(""), [M, L] = B(null), N = X(void 0);
+  const [v, h] = B(!1), [p, l] = B(""), [E, y] = B(!1), [I, T] = B(""), [O, F] = B(""), [P, H] = B(!1), [z, _] = B(!1), [W, A] = B(""), [w, d] = B(""), [M, L] = B(null), N = X(void 0);
   U(() => () => {
     N.current && clearInterval(N.current);
   }, []);
@@ -4333,10 +4333,10 @@ const Ui = ({ title: e, data: o, maxValue: i, step: r, height: s = 300, titleFon
     if (!P) {
       H(!0);
       try {
-        const z = await qr($, g, o, D || W);
-        z.access_token && z.refresh_token && (N.current && window.clearInterval(N.current), y(!1), _(!1), A(""), L(null), e(z.access_token));
-      } catch (z) {
-        console.error("Verification error:", z);
+        const R = await qr($, g, o, D || W);
+        (R.access_token && R.refresh_token || R.accessToken && R.refreshToken) && (N.current && window.clearInterval(N.current), y(!1), _(!1), A(""), L(null), e(R.access_token ?? R.accessToken));
+      } catch (R) {
+        console.error("Verification error:", R);
       } finally {
         H(!1);
       }
@@ -4372,7 +4372,7 @@ const Ui = ({ title: e, data: o, maxValue: i, step: r, height: s = 300, titleFon
     /* @__PURE__ */ t.jsx(
       Gr,
       {
-        isOpen: R,
+        isOpen: z,
         onClose: Z,
         onSubmit: S,
         error: w,
