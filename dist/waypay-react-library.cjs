@@ -2193,7 +2193,7 @@ React keys must be passed directly to JSX without using spread:
     box-shadow: 0 0 0 0.2rem rgba(37, 203, 161, 0.25);
     background-color: rgba(255, 255, 255, 1);
   }
-`,Ae=(e,o)=>X("/auth/call/initiate",{method:"POST",body:{phone:e,user_type:o}}),Fe=(e,o,i,r)=>X("/auth/call/confirm",{method:"POST",body:{phone:e,check_id:o,user_type:i,name:r}}),vi=()=>X("/auth/session/info",{method:"GET"}),yi=({isOpen:e,onClose:o,onSubmit:i,error:r,isLoading:s=!1})=>{const[c,u]=m.useState("");if(!e)return null;const g=j=>{j.preventDefault(),i(c)};return t.jsx(ki,{onClick:o,children:t.jsx(ji,{onClick:j=>j.stopPropagation(),children:t.jsxs(Ci,{onSubmit:g,children:[t.jsx($i,{children:"Как вас зовут?"}),t.jsxs(Si,{children:[t.jsx(ce,{type:"text",value:c,onChange:j=>u(j.target.value),placeholder:"Иванов Иван Иванович",disabled:s,autoFocus:!0,style:{flex:1}}),t.jsx(Mi,{type:"submit",disabled:s||!c.trim(),children:s?"...":"→"})]}),r&&t.jsx(Li,{children:r})]})})})},ki=n.div`
+`,vi=e=>({call_phone:e.call_phone??e.callPhone,check_id:e.check_id??e.checkId,name_required:e.name_required??e.nameRequired}),Ae=async(e,o)=>{const r=await X("/auth/call/initiate",{method:"POST",body:{phone:e,user_type:o}});return vi(r)},Fe=(e,o,i,r)=>X("/auth/call/confirm",{method:"POST",body:{phone:e,check_id:o,checkId:o,user_type:i,userType:i,name:r}}),yi=()=>X("/auth/session/info",{method:"GET"}),ki=({isOpen:e,onClose:o,onSubmit:i,error:r,isLoading:s=!1})=>{const[c,u]=m.useState("");if(!e)return null;const g=j=>{j.preventDefault(),i(c)};return t.jsx(ji,{onClick:o,children:t.jsx(Ci,{onClick:j=>j.stopPropagation(),children:t.jsxs($i,{onSubmit:g,children:[t.jsx(Si,{children:"Как вас зовут?"}),t.jsxs(Mi,{children:[t.jsx(ce,{type:"text",value:c,onChange:j=>u(j.target.value),placeholder:"Иванов Иван Иванович",disabled:s,autoFocus:!0,style:{flex:1}}),t.jsx(Li,{type:"submit",disabled:s||!c.trim(),children:s?"...":"→"})]}),r&&t.jsx(Di,{children:r})]})})})},ji=n.div`
   position: fixed;
   top: 0;
   left: 0;
@@ -2204,27 +2204,27 @@ React keys must be passed directly to JSX without using spread:
   justify-content: center;
   align-items: center;
   z-index: 1000;
-`,ji=n.div`
+`,Ci=n.div`
   background: white;
   padding: 30px;
   border-radius: 12px;
   width: 90%;
   max-width: 450px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-`,Ci=n.form`
+`,$i=n.form`
   display: flex;
   flex-direction: column;
-`,$i=n.h2`
+`,Si=n.h2`
   display: block;
   font-size: 27px;
   color: black;
   margin-bottom: 16px;
   margin-top: 0;
-`,Si=n.div`
+`,Mi=n.div`
   display: flex;
   gap: 10px;
   align-items: center;
-`,Mi=n(ne)`
+`,Li=n(ne)`
   width: auto;
   min-width: 50px;
   height: 40px;
@@ -2237,12 +2237,12 @@ React keys must be passed directly to JSX without using spread:
     opacity: 0.5;
     cursor: not-allowed;
   }
-`,Li=n.div`
+`,Di=n.div`
   color: #e74c3c;
   font-size: 12px;
   margin-top: 8px;
   text-align: left;
-`,Di=({onLoginSuccess:e,userType:o="delivery_operator",title:i="Авторизация",submitLabel:r="Войти",placeholder:s="8 (xxx) xxx-xx-xx",supportPhone:c="8 989 924 24 24",supportLinkUrl:u="https://waypay.one",supportLinkText:g="waypay.one",className:j,style:b,pollingIntervalMs:w=3e3,enableRegistration:x=!1})=>{const[y,h]=m.useState(!1),[p,l]=m.useState(""),[I,k]=m.useState(!1),[P,E]=m.useState(""),[O,A]=m.useState(""),[R,H]=m.useState(!1),[B,_]=m.useState(!1),[W,F]=m.useState(""),[v,d]=m.useState(""),[M,D]=m.useState(null),N=m.useRef(void 0);m.useEffect(()=>()=>{N.current&&clearInterval(N.current)},[]);const V=S=>{const f=S.replace(/\D/g,"");return f?f.startsWith("8")?`+7${f.slice(1)}`:f.startsWith("7")?`+${f}`:`+${f}`:""},Z=()=>{k(!1),_(!1),F(""),d(""),D(null),N.current&&window.clearInterval(N.current)},C=async S=>{if(S.preventDefault(),!p){A("Введите номер телефона");return}h(!0),A("");const f=V(p);try{const T=await Ae(f,o);D({phone:f,checkId:T.check_id,callPhone:T.call_phone}),x&&"name_required"in T&&T.name_required?(_(!0),E(T.call_phone)):!x&&"name_required"in T&&T.name_required?(A("Этот номер не зарегистрирован в системе. Обратитесь в поддержку для регистрации."),D(null)):(E(T.call_phone),k(!0),a(f,T.check_id))}catch(T){console.error("Auth error:",T),A("Не удалось инициировать авторизацию. Проверьте номер.")}finally{h(!1)}},L=async S=>{if(!S.trim()){d("Введите ФИО");return}if(M){h(!0),d("");try{F(S),_(!1),k(!0),a(M.phone,M.checkId,S)}catch(f){console.error("Registration error:",f),d("Не удалось завершить регистрацию")}finally{h(!1)}}},a=(S,f,T)=>{N.current&&window.clearInterval(N.current),N.current=window.setInterval(()=>{$(S,f,T)},w)},$=async(S,f,T)=>{if(!R){H(!0);try{const z=await Fe(S,f,o,T||W);z.access_token&&z.refresh_token&&(N.current&&window.clearInterval(N.current),k(!1),_(!1),F(""),D(null),e(z.access_token))}catch(z){console.error("Verification error:",z)}finally{H(!1)}}};return t.jsxs(Ti,{className:j,style:b,children:[t.jsxs(Ei,{children:[t.jsxs(Ii,{onSubmit:C,children:[t.jsx(Pi,{children:i}),t.jsx(Ri,{children:t.jsx(Bi,{children:t.jsx(ze,{value:p,onChange:S=>l(S),placeholder:s})})}),O&&t.jsx(Oi,{children:t.jsx("span",{children:O})}),t.jsx(zi,{type:"submit",disabled:y,children:y?"Загрузка...":r})]}),t.jsxs(Ai,{children:["Хотите получить доступ к нашим продуктам?",t.jsx("br",{}),"Обратитесь по номеру"," ",t.jsx(Fi,{href:`tel:${c}`,children:c}),t.jsx("br",{}),"или оставьте заявку на"," ",t.jsx(_i,{href:u,target:"_blank",rel:"noreferrer",children:g})]})]}),t.jsx(yi,{isOpen:B,onClose:Z,onSubmit:L,error:v,isLoading:y}),t.jsx(Re,{isOpen:I,onClose:Z,callPhone:P,error:O})]})},Ti=n.div`
+`,Ti=({onLoginSuccess:e,userType:o="delivery_operator",title:i="Авторизация",submitLabel:r="Войти",placeholder:s="8 (xxx) xxx-xx-xx",supportPhone:c="8 989 924 24 24",supportLinkUrl:u="https://waypay.one",supportLinkText:g="waypay.one",className:j,style:b,pollingIntervalMs:w=3e3,enableRegistration:x=!1})=>{const[y,h]=m.useState(!1),[p,l]=m.useState(""),[I,k]=m.useState(!1),[P,E]=m.useState(""),[O,A]=m.useState(""),[R,H]=m.useState(!1),[B,_]=m.useState(!1),[W,F]=m.useState(""),[v,d]=m.useState(""),[M,D]=m.useState(null),N=m.useRef(void 0);m.useEffect(()=>()=>{N.current&&clearInterval(N.current)},[]);const V=S=>{const f=S.replace(/\D/g,"");return f?f.startsWith("8")?`+7${f.slice(1)}`:f.startsWith("7")?`+${f}`:`+${f}`:""},Z=()=>{k(!1),_(!1),F(""),d(""),D(null),N.current&&window.clearInterval(N.current)},C=async S=>{if(S.preventDefault(),!p){A("Введите номер телефона");return}h(!0),A("");const f=V(p);try{const T=await Ae(f,o);D({phone:f,checkId:T.check_id,callPhone:T.call_phone}),x&&"name_required"in T&&T.name_required?(_(!0),E(T.call_phone)):!x&&"name_required"in T&&T.name_required?(A("Этот номер не зарегистрирован в системе. Обратитесь в поддержку для регистрации."),D(null)):(E(T.call_phone),k(!0),a(f,T.check_id))}catch(T){console.error("Auth error:",T),A("Не удалось инициировать авторизацию. Проверьте номер.")}finally{h(!1)}},L=async S=>{if(!S.trim()){d("Введите ФИО");return}if(M){h(!0),d("");try{F(S),_(!1),k(!0),a(M.phone,M.checkId,S)}catch(f){console.error("Registration error:",f),d("Не удалось завершить регистрацию")}finally{h(!1)}}},a=(S,f,T)=>{N.current&&window.clearInterval(N.current),N.current=window.setInterval(()=>{$(S,f,T)},w)},$=async(S,f,T)=>{if(!R){H(!0);try{const z=await Fe(S,f,o,T||W);z.access_token&&z.refresh_token&&(N.current&&window.clearInterval(N.current),k(!1),_(!1),F(""),D(null),e(z.access_token))}catch(z){console.error("Verification error:",z)}finally{H(!1)}}};return t.jsxs(Ei,{className:j,style:b,children:[t.jsxs(Ii,{children:[t.jsxs(Pi,{onSubmit:C,children:[t.jsx(Ri,{children:i}),t.jsx(Bi,{children:t.jsx(zi,{children:t.jsx(ze,{value:p,onChange:S=>l(S),placeholder:s})})}),O&&t.jsx(Ni,{children:t.jsx("span",{children:O})}),t.jsx(Ai,{type:"submit",disabled:y,children:y?"Загрузка...":r})]}),t.jsxs(Fi,{children:["Хотите получить доступ к нашим продуктам?",t.jsx("br",{}),"Обратитесь по номеру"," ",t.jsx(_i,{href:`tel:${c}`,children:c}),t.jsx("br",{}),"или оставьте заявку на"," ",t.jsx(Oi,{href:u,target:"_blank",rel:"noreferrer",children:g})]})]}),t.jsx(ki,{isOpen:B,onClose:Z,onSubmit:L,error:v,isLoading:y}),t.jsx(Re,{isOpen:I,onClose:Z,callPhone:P,error:O})]})},Ei=n.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2252,7 +2252,7 @@ React keys must be passed directly to JSX without using spread:
   padding: 20px;
   background: white; /* Меняем на белый фон */
   box-sizing: border-box; /* Учитываем padding в размерах */
-`,Ei=n.div`
+`,Ii=n.div`
   background: white;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 125, 136, 0.1);
@@ -2290,24 +2290,24 @@ React keys must be passed directly to JSX without using spread:
   /* Скрываем скроллбар для IE, Edge и Firefox */
   -ms-overflow-style: none;
   scrollbar-width: none;
-`,Ii=n.form`
+`,Pi=n.form`
   display: flex;
   flex-direction: column;
-`,Pi=n.h1`
+`,Ri=n.h1`
   font-size: 24px;
   margin-bottom: 30px;
   text-align: center;
   color: #333;
   font-weight: 600;
-`,Ri=n.div`
-  margin-bottom: 25px;
 `,Bi=n.div`
+  margin-bottom: 25px;
+`,zi=n.div`
   position: relative;
   width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-`,zi=n.button`
+`,Ai=n.button`
   background: linear-gradient(
     90deg,
     rgba(0, 125, 136, 1) 0%,
@@ -2343,7 +2343,7 @@ React keys must be passed directly to JSX without using spread:
     transform: none;
     box-shadow: none;
   }
-`,Ai=n.div`
+`,Fi=n.div`
   margin-top: 30px;
   padding-top: 20px;
   border-top: 1px solid #f0f0f0;
@@ -2351,14 +2351,6 @@ React keys must be passed directly to JSX without using spread:
   font-size: 14px;
   color: #666;
   line-height: 1.5;
-`,Fi=n.a`
-  color: rgba(0, 125, 136, 1);
-  text-decoration: none;
-  font-weight: 500;
-
-  &:hover {
-    text-decoration: underline;
-  }
 `,_i=n.a`
   color: rgba(0, 125, 136, 1);
   text-decoration: none;
@@ -2367,7 +2359,15 @@ React keys must be passed directly to JSX without using spread:
   &:hover {
     text-decoration: underline;
   }
-`,Oi=n.div`
+`,Oi=n.a`
+  color: rgba(0, 125, 136, 1);
+  text-decoration: none;
+  font-weight: 500;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`,Ni=n.div`
   display: flex;
   align-items: center;
   gap: 8px;
@@ -2379,4 +2379,4 @@ React keys must be passed directly to JSX without using spread:
   margin-bottom: 16px;
   font-size: 14px;
   box-shadow: 0 6px 14px rgba(180, 35, 24, 0.08);
-`,_e=e=>{let o=0;for(let r=0;r<e.length;r++)o=e.charCodeAt(r)+((o<<5)-o);return`hsl(${Math.abs(o%360)}, 60%, 60%)`},Ni=e=>!e||!e.trim()?"?":e.split(" ").filter(r=>r.length>0).map(r=>r[0].toUpperCase()).join("").slice(0,2)||"?",Wi=(e,o=100)=>{const i=document.createElement("canvas");i.width=o,i.height=o;const r=i.getContext("2d");if(!r)return"";const s=_e(e);r.fillStyle=s,r.beginPath(),r.arc(o/2,o/2,o/2,0,Math.PI*2),r.fill(),r.fillStyle="#ffffff";const c=o/2;r.font=`bold ${c}px "Manrope", Arial, sans-serif`,r.textAlign="center",r.textBaseline="middle";const u=c*.1;return r.fillText(e,o/2,o/2+u),i.toDataURL("image/png")},Yi=e=>{if(!e)return"";const o=typeof e=="string"?new Date(e):e;if(isNaN(o.getTime()))return"";const i=o.getDate().toString().padStart(2,"0"),r=(o.getMonth()+1).toString().padStart(2,"0"),s=o.getFullYear();return`${i}-${r}-${s}`};function Hi(e){return new Date(e)}const Oe=e=>{let o;try{if(e instanceof Date)o=e;else if(typeof e=="string"||typeof e=="number")o=new Date(e);else throw new Error("Неподдерживаемый тип данных");if(isNaN(o.getTime()))return"неверная дата";const i=new Date;if(o>i){const w=Math.floor((o.getTime()-i.getTime())/1e3),x=Math.floor(w/60),y=Math.floor(x/60),h=Math.floor(y/24);return w<10?"скоро":w<60?`через ${w} секунд`:x===1?"через минуту":x<60?`через ${x} минут`:y===1?"через час":y<24?`через ${y} часов`:h===1?"завтра":h<7?`через ${h} дней`:"в будущем"}const r=Math.floor((i.getTime()-o.getTime())/1e3),s=Math.floor(r/60),c=Math.floor(s/60),u=Math.floor(c/24),g=Math.floor(u/7),j=Math.floor(u/30),b=Math.floor(u/365);if(r<10)return"только что";if(r<60){const w=Math.max(1,r);return w===1?"секунду назад":w<5?`${w} секунды назад`:`${w} секунд назад`}return s<60?s===1?"минуту назад":s<5?`${s} минуты назад`:`${s} минут назад`:c<24?c===1?"час назад":c<5?`${c} часа назад`:`${c} часов назад`:u<7?u===1?"вчера":u===2?"позавчера":`${u} дня назад`:g<4?g===1?"неделю назад":g<5?`${g} недели назад`:`${g} недель назад`:j<12?j===1?"месяц назад":j<5?`${j} месяца назад`:`${j} месяцев назад`:b===1?"год назад":b<5?`${b} года назад`:`${b} лет назад`}catch(i){return console.error("Ошибка форматирования относительного времени:",i),"ошибка даты"}},Ne=e=>{try{return e.toLocaleDateString("ru-RU",{day:"2-digit",month:"2-digit",year:"2-digit",hour:"2-digit",minute:"2-digit"})}catch{return"неверная дата"}},Vi=(e,o={})=>{const{useExactAfterMonths:i=6,includeTime:r=!0}=o,s=new Date(e);return isNaN(s.getTime()),Math.floor((new Date().getTime()-s.getTime())/(1e3*60*60*24*30))>=i?r?Ne(s):s.toLocaleDateString("ru-RU",{day:"2-digit",month:"2-digit",year:"2-digit"}):Oe(s)};exports.API_BASE_URL=le;exports.AddButton=ct;exports.AuthCallModal=Re;exports.AuthPage=Di;exports.BackButton=ft;exports.BaseModal=Ee;exports.Checkbox=Wt;exports.ColumnChart=Uo;exports.ContextMenu=ae;exports.CountInfoTitle=yo;exports.CustomCalendar=ie;exports.CustomInput=ce;exports.CustomPhoneInput=ze;exports.CustomSelect=Mt;exports.CustomTable=Je;exports.CustomTextArea=yn;exports.CustomTitle=pe;exports.DefaultButton=ne;exports.DeleteButton=mt;exports.EditButton=vt;exports.EntitySelectContainer=po;exports.ExportButton=jt;exports.InputContainer=xn;exports.InputLabel=hn;exports.InputRow=un;exports.InputTitle=jo;exports.ModalInfoTitle=Co;exports.Pagination=wn;exports.PeriodField=Fn;exports.PhoneModalInput=Kn;exports.PhotoViewerModal=Rr;exports.ProgressBar=Io;exports.RadioButton=Do;exports.ScatterPlot=fr;exports.SideMenu=Jr;exports.SideMenuContext=Be;exports.Tabs=oo;exports.TitleField=de;exports.ToggleSwitch=Lo;exports.YandexMapSelector=_o;exports.apiRequest=X;exports.authStorage=ht;exports.confirmCallAuth=Fe;exports.formatDate=Yi;exports.formatExactDate=Ne;exports.formatMoney=se;exports.formatRelativeTime=Oe;exports.formatRelativeTimeExtended=Vi;exports.generateAvatar=Wi;exports.getInitials=Ni;exports.getSessionInfo=vi;exports.initiateCallAuth=Ae;exports.parseDateInput=Hi;exports.parseMoney=Zo;exports.stringToColor=_e;
+`,_e=e=>{let o=0;for(let r=0;r<e.length;r++)o=e.charCodeAt(r)+((o<<5)-o);return`hsl(${Math.abs(o%360)}, 60%, 60%)`},Wi=e=>!e||!e.trim()?"?":e.split(" ").filter(r=>r.length>0).map(r=>r[0].toUpperCase()).join("").slice(0,2)||"?",Yi=(e,o=100)=>{const i=document.createElement("canvas");i.width=o,i.height=o;const r=i.getContext("2d");if(!r)return"";const s=_e(e);r.fillStyle=s,r.beginPath(),r.arc(o/2,o/2,o/2,0,Math.PI*2),r.fill(),r.fillStyle="#ffffff";const c=o/2;r.font=`bold ${c}px "Manrope", Arial, sans-serif`,r.textAlign="center",r.textBaseline="middle";const u=c*.1;return r.fillText(e,o/2,o/2+u),i.toDataURL("image/png")},Hi=e=>{if(!e)return"";const o=typeof e=="string"?new Date(e):e;if(isNaN(o.getTime()))return"";const i=o.getDate().toString().padStart(2,"0"),r=(o.getMonth()+1).toString().padStart(2,"0"),s=o.getFullYear();return`${i}-${r}-${s}`};function Vi(e){return new Date(e)}const Oe=e=>{let o;try{if(e instanceof Date)o=e;else if(typeof e=="string"||typeof e=="number")o=new Date(e);else throw new Error("Неподдерживаемый тип данных");if(isNaN(o.getTime()))return"неверная дата";const i=new Date;if(o>i){const w=Math.floor((o.getTime()-i.getTime())/1e3),x=Math.floor(w/60),y=Math.floor(x/60),h=Math.floor(y/24);return w<10?"скоро":w<60?`через ${w} секунд`:x===1?"через минуту":x<60?`через ${x} минут`:y===1?"через час":y<24?`через ${y} часов`:h===1?"завтра":h<7?`через ${h} дней`:"в будущем"}const r=Math.floor((i.getTime()-o.getTime())/1e3),s=Math.floor(r/60),c=Math.floor(s/60),u=Math.floor(c/24),g=Math.floor(u/7),j=Math.floor(u/30),b=Math.floor(u/365);if(r<10)return"только что";if(r<60){const w=Math.max(1,r);return w===1?"секунду назад":w<5?`${w} секунды назад`:`${w} секунд назад`}return s<60?s===1?"минуту назад":s<5?`${s} минуты назад`:`${s} минут назад`:c<24?c===1?"час назад":c<5?`${c} часа назад`:`${c} часов назад`:u<7?u===1?"вчера":u===2?"позавчера":`${u} дня назад`:g<4?g===1?"неделю назад":g<5?`${g} недели назад`:`${g} недель назад`:j<12?j===1?"месяц назад":j<5?`${j} месяца назад`:`${j} месяцев назад`:b===1?"год назад":b<5?`${b} года назад`:`${b} лет назад`}catch(i){return console.error("Ошибка форматирования относительного времени:",i),"ошибка даты"}},Ne=e=>{try{return e.toLocaleDateString("ru-RU",{day:"2-digit",month:"2-digit",year:"2-digit",hour:"2-digit",minute:"2-digit"})}catch{return"неверная дата"}},Zi=(e,o={})=>{const{useExactAfterMonths:i=6,includeTime:r=!0}=o,s=new Date(e);return isNaN(s.getTime()),Math.floor((new Date().getTime()-s.getTime())/(1e3*60*60*24*30))>=i?r?Ne(s):s.toLocaleDateString("ru-RU",{day:"2-digit",month:"2-digit",year:"2-digit"}):Oe(s)};exports.API_BASE_URL=le;exports.AddButton=ct;exports.AuthCallModal=Re;exports.AuthPage=Ti;exports.BackButton=ft;exports.BaseModal=Ee;exports.Checkbox=Wt;exports.ColumnChart=Uo;exports.ContextMenu=ae;exports.CountInfoTitle=yo;exports.CustomCalendar=ie;exports.CustomInput=ce;exports.CustomPhoneInput=ze;exports.CustomSelect=Mt;exports.CustomTable=Je;exports.CustomTextArea=yn;exports.CustomTitle=pe;exports.DefaultButton=ne;exports.DeleteButton=mt;exports.EditButton=vt;exports.EntitySelectContainer=po;exports.ExportButton=jt;exports.InputContainer=xn;exports.InputLabel=hn;exports.InputRow=un;exports.InputTitle=jo;exports.ModalInfoTitle=Co;exports.Pagination=wn;exports.PeriodField=Fn;exports.PhoneModalInput=Kn;exports.PhotoViewerModal=Rr;exports.ProgressBar=Io;exports.RadioButton=Do;exports.ScatterPlot=fr;exports.SideMenu=Jr;exports.SideMenuContext=Be;exports.Tabs=oo;exports.TitleField=de;exports.ToggleSwitch=Lo;exports.YandexMapSelector=_o;exports.apiRequest=X;exports.authStorage=ht;exports.confirmCallAuth=Fe;exports.formatDate=Hi;exports.formatExactDate=Ne;exports.formatMoney=se;exports.formatRelativeTime=Oe;exports.formatRelativeTimeExtended=Zi;exports.generateAvatar=Yi;exports.getInitials=Wi;exports.getSessionInfo=yi;exports.initiateCallAuth=Ae;exports.parseDateInput=Vi;exports.parseMoney=Zo;exports.stringToColor=_e;
