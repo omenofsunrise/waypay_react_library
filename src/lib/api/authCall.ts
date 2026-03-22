@@ -6,6 +6,9 @@ export type InitiateCallAuthResponse = {
   call_phone: string;
   check_id: string;
   name_required?: boolean;
+} & {
+  callPhone?: string;
+  checkId?: string;
 };
 
 export type ConfirmCallAuthResponse = {
