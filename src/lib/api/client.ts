@@ -107,7 +107,7 @@ export { API_BASE_URL };
 
 type RefreshResponse = { access_token: string; refresh_token?: string };
 
-async function refreshAccessToken(): Promise<string | null> {
+export async function refreshAccessToken(): Promise<string | null> {
   const response = await fetch(`${API_BASE_URL}/auth/refresh`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },

@@ -9,3 +9,4 @@ type RequestOptions = {
 };
 export declare function apiRequest<T = unknown>(endpoint: string, options?: RequestOptions): Promise<T>;
 export { API_BASE_URL };
+export declare function refreshAccessToken(): Promise<string | null>;

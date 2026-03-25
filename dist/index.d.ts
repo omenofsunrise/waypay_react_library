@@ -42,7 +42,7 @@ export { SideMenuContext } from "./lib/context/SideMenuContext";
 export { default as CustomPhoneInput } from "./lib/inputs/CustomPhoneInput";
 export { initiateCallAuth, confirmCallAuth, getSessionInfo, type UserType, type InitiateCallAuthResponse, type ConfirmCallAuthResponse, } from "./lib/api/authCall";
 export { default as AuthPage } from "./lib/pages/AuthPage";
-export { apiRequest, API_BASE_URL } from "./lib/api/client";
+export { apiRequest, API_BASE_URL, refreshAccessToken } from "./lib/api/client";
 export { stringToColor, getInitials, generateAvatar } from "./lib/utils/avatar";
 export { formatMoney, parseMoney } from "./lib/utils/money";
 export { formatDate, parseDateInput, formatRelativeTime, formatExactDate, formatRelativeTimeExtended, } from "./lib/utils/date";
