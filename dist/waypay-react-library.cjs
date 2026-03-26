@@ -752,7 +752,7 @@ React keys must be passed directly to JSX without using spread:
   padding: 10px 12px;
   border: 1px solid ${({hasError:e})=>e?"rgba(239, 68, 68, 1)":"rgba(209, 213, 219, 1)"};
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 16px;
   width: 100%;
   outline: none;
   transition: border-color 0.2s ease;
