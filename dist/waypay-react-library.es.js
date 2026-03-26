@@ -1,4 +1,4 @@
-import q, { useRef as X, useState as B, useEffect as U, createContext as Fe, useContext as Ae, useMemo as _e } from "react";
+import q, { useRef as X, useState as F, useEffect as U, createContext as Fe, useContext as Ae, useMemo as _e } from "react";
 import n, { keyframes as Oe } from "styled-components";
 import { motion as J, AnimatePresence as le } from "framer-motion";
 var re = { exports: {} }, ee = {};
@@ -57,7 +57,7 @@ function We() {
             return a.displayName || "Context";
           case T:
             return (a._context.displayName || "Context") + ".Consumer";
-          case F:
+          case B:
             var C = a.render;
             return a = a.displayName, a || (a = C.displayName || C.name || "", a = a !== "" ? "ForwardRef(" + a + ")" : "ForwardRef"), a;
           case z:
@@ -134,7 +134,7 @@ function We() {
         "Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release."
       )), a = this.props.ref, a !== void 0 ? a : null;
     }
-    function b(a, C, $, g, D, R) {
+    function b(a, C, $, g, L, R) {
       var Y = $.ref;
       return a = {
         $$typeof: p,
@@ -159,7 +159,7 @@ function We() {
         configurable: !1,
         enumerable: !1,
         writable: !0,
-        value: D
+        value: L
       }), Object.defineProperty(a, "_debugTask", {
         configurable: !1,
         enumerable: !1,
@@ -167,7 +167,7 @@ function We() {
         value: R
       }), Object.freeze && (Object.freeze(a.props), Object.freeze(a)), a;
     }
-    function m(a, C, $, g, D, R) {
+    function m(a, C, $, g, L, R) {
       var Y = C.children;
       if (Y !== void 0)
         if (g)
@@ -211,7 +211,7 @@ React keys must be passed directly to JSX without using spread:
         Y,
         $,
         s(),
-        D,
+        L,
         R
       );
     }
@@ -221,7 +221,7 @@ React keys must be passed directly to JSX without using spread:
     function v(a) {
       return typeof a == "object" && a !== null && a.$$typeof === p;
     }
-    var h = q, p = /* @__PURE__ */ Symbol.for("react.transitional.element"), l = /* @__PURE__ */ Symbol.for("react.portal"), E = /* @__PURE__ */ Symbol.for("react.fragment"), y = /* @__PURE__ */ Symbol.for("react.strict_mode"), I = /* @__PURE__ */ Symbol.for("react.profiler"), T = /* @__PURE__ */ Symbol.for("react.consumer"), O = /* @__PURE__ */ Symbol.for("react.context"), F = /* @__PURE__ */ Symbol.for("react.forward_ref"), P = /* @__PURE__ */ Symbol.for("react.suspense"), H = /* @__PURE__ */ Symbol.for("react.suspense_list"), z = /* @__PURE__ */ Symbol.for("react.memo"), _ = /* @__PURE__ */ Symbol.for("react.lazy"), W = /* @__PURE__ */ Symbol.for("react.activity"), A = /* @__PURE__ */ Symbol.for("react.client.reference"), w = h.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, d = Object.prototype.hasOwnProperty, M = Array.isArray, L = console.createTask ? console.createTask : function() {
+    var h = q, p = /* @__PURE__ */ Symbol.for("react.transitional.element"), l = /* @__PURE__ */ Symbol.for("react.portal"), E = /* @__PURE__ */ Symbol.for("react.fragment"), y = /* @__PURE__ */ Symbol.for("react.strict_mode"), I = /* @__PURE__ */ Symbol.for("react.profiler"), T = /* @__PURE__ */ Symbol.for("react.consumer"), O = /* @__PURE__ */ Symbol.for("react.context"), B = /* @__PURE__ */ Symbol.for("react.forward_ref"), P = /* @__PURE__ */ Symbol.for("react.suspense"), H = /* @__PURE__ */ Symbol.for("react.suspense_list"), z = /* @__PURE__ */ Symbol.for("react.memo"), _ = /* @__PURE__ */ Symbol.for("react.lazy"), W = /* @__PURE__ */ Symbol.for("react.activity"), A = /* @__PURE__ */ Symbol.for("react.client.reference"), w = h.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, d = Object.prototype.hasOwnProperty, M = Array.isArray, D = console.createTask ? console.createTask : function() {
       return null;
     };
     h = {
@@ -232,7 +232,7 @@ React keys must be passed directly to JSX without using spread:
     var N, V = {}, Z = h.react_stack_bottom_frame.bind(
       h,
       c
-    )(), j = L(r(c)), S = {};
+    )(), j = D(r(c)), S = {};
     te.Fragment = E, te.jsx = function(a, C, $) {
       var g = 1e4 > w.recentlyCreatedOwnerStacks++;
       return m(
@@ -241,7 +241,7 @@ React keys must be passed directly to JSX without using spread:
         $,
         !1,
         g ? Error("react-stack-top-frame") : Z,
-        g ? L(r(a)) : j
+        g ? D(r(a)) : j
       );
     }, te.jsxs = function(a, C, $) {
       var g = 1e4 > w.recentlyCreatedOwnerStacks++;
@@ -251,7 +251,7 @@ React keys must be passed directly to JSX without using spread:
         $,
         !0,
         g ? Error("react-stack-top-frame") : Z,
-        g ? L(r(a)) : j
+        g ? D(r(a)) : j
       );
     };
   })()), te;
@@ -262,7 +262,7 @@ function Ye() {
 }
 var t = Ye();
 const De = ({ x: e, y: o, items: i, onClose: r, ...s }) => {
-  const c = X(null), [u, f] = B(null);
+  const c = X(null), [u, f] = F(null);
   U(() => {
     const h = (p) => {
       c.current && !c.current.contains(p.target) && r();
@@ -380,7 +380,7 @@ const De = ({ x: e, y: o, items: i, onClose: r, ...s }) => {
   rowStyles: x = {},
   isLoading: v
 }) => {
-  const [h, p] = B(null), [l, E] = B(null), y = X(null), I = X(null), T = 500, O = f !== void 0 ? f : h, F = (j) => {
+  const [h, p] = F(null), [l, E] = F(null), y = X(null), I = X(null), T = 500, O = f !== void 0 ? f : h, B = (j) => {
     !e[j].isSortable || !s || s(j);
   }, H = m || ((j) => {
     const S = j[8];
@@ -408,12 +408,12 @@ const De = ({ x: e, y: o, items: i, onClose: r, ...s }) => {
     I.current && (clearTimeout(I.current), I.current = null);
   }, M = () => {
     I.current && window.clearTimeout(I.current);
-  }, L = () => {
+  }, D = () => {
     E(null);
   };
   U(() => {
     const j = () => {
-      l && L();
+      l && D();
     };
     return document.addEventListener("click", j), () => {
       document.removeEventListener("click", j), I.current && clearTimeout(I.current);
@@ -473,10 +473,10 @@ const De = ({ x: e, y: o, items: i, onClose: r, ...s }) => {
                 disabled: S.disabled
               };
               return S.getSubmenu ? a.submenu = S.getSubmenu(o[l.rowIndex]) : S.action && (a.action = () => {
-                S.action(o[l.rowIndex], l.rowIndex), L();
+                S.action(o[l.rowIndex], l.rowIndex), D();
               }), a;
             }),
-            onClose: L,
+            onClose: D,
             x: 0,
             y: 0
           }
@@ -492,7 +492,7 @@ const De = ({ x: e, y: o, items: i, onClose: r, ...s }) => {
           {
             $isSortable: j.isSortable,
             $isActive: c?.key === S,
-            onClick: () => F(S),
+            onClick: () => B(S),
             $align: j.align || "center",
             $isFirst: S === 0,
             $isLast: S === e.length - 1,
@@ -541,8 +541,8 @@ const De = ({ x: e, y: o, items: i, onClose: r, ...s }) => {
             $isTotalsRow: a,
             onClick: () => !a && z(S),
             onDoubleClick: () => !a && _(j, S),
-            onContextMenu: (D) => !a && A(D, S),
-            onTouchStart: (D) => !a && w(D, S),
+            onContextMenu: (L) => !a && A(L, S),
+            onTouchStart: (L) => !a && w(L, S),
             onTouchEnd: d,
             onTouchMove: M,
             whileHover: a ? {} : {
@@ -555,7 +555,7 @@ const De = ({ x: e, y: o, items: i, onClose: r, ...s }) => {
               fontWeight: $.fontWeight || "normal"
             },
             children: j.map(
-              (D, R) => !e[R]?.isHidden && /* @__PURE__ */ t.jsx(
+              (L, R) => !e[R]?.isHidden && /* @__PURE__ */ t.jsx(
                 st,
                 {
                   $align: e[R]?.align || "center",
@@ -563,7 +563,7 @@ const De = ({ x: e, y: o, items: i, onClose: r, ...s }) => {
                   $isLast: R === j.length - 1,
                   $isTotalsCell: a,
                   $isBeforeTotals: a && R < j.findIndex((Y) => Y === "Итого:"),
-                  children: D
+                  children: L
                 },
                 R
               )
@@ -1157,7 +1157,7 @@ const ji = {
   q.useEffect(() => (document.addEventListener("mousedown", I), () => {
     document.removeEventListener("mousedown", I);
   }), []);
-  const O = u.find((P) => P.value === i), F = O ? O.label : "";
+  const O = u.find((P) => P.value === i), B = O ? O.label : "";
   return /* @__PURE__ */ t.jsxs(wt, { ref: l, ...m, children: [
     /* @__PURE__ */ t.jsxs(vt, { children: [
       /* @__PURE__ */ t.jsxs(
@@ -1171,7 +1171,7 @@ const ji = {
           onBlur: () => v(!1),
           tabIndex: k ? -1 : 0,
           children: [
-            /* @__PURE__ */ t.jsx(kt, { children: F || e && /* @__PURE__ */ t.jsx(jt, { children: e }) }),
+            /* @__PURE__ */ t.jsx(kt, { children: B || e && /* @__PURE__ */ t.jsx(jt, { children: e }) }),
             /* @__PURE__ */ t.jsx(Ct, { isOpen: h, disabled: k, children: /* @__PURE__ */ t.jsx("svg", { width: "17", height: "9", viewBox: "0 0 17 9", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ t.jsx("path", { d: "M1.5 1L8.5 8L15.5 1", stroke: k ? "#CCCCCC" : "#50555C", strokeWidth: "1.5", strokeLinecap: "round", strokeLinejoin: "round" }) }) })
           ]
         }
@@ -1312,7 +1312,7 @@ const ji = {
   width: 0;
   pointer-events: none;
 `, Di = ({ checked: e = !1, onChange: o, className: i, label: r, disabled: s = !1 }) => {
-  const [c, u] = B(!1), f = () => {
+  const [c, u] = F(!1), f = () => {
     s || !o || o(!e);
   }, k = (b) => {
     s || (b.key === "Enter" || b.key === " ") && (b.preventDefault(), f());
@@ -1369,7 +1369,7 @@ const ji = {
   height: 8px;
   opacity: ${(e) => e.disabled ? 0.6 : 1};
 `, Ft = "data:image/svg+xml,%3csvg%20width='18'%20height='18'%20viewBox='0%200%2018%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M14.625%202.8125H3.375C2.44302%202.8125%201.6875%203.56802%201.6875%204.5V14.625C1.6875%2015.557%202.44302%2016.3125%203.375%2016.3125H14.625C15.557%2016.3125%2016.3125%2015.557%2016.3125%2014.625V4.5C16.3125%203.56802%2015.557%202.8125%2014.625%202.8125Z'%20stroke='%2350555C'%20stroke-linejoin='round'/%3e%3cpath%20d='M10.4062%209C10.8722%209%2011.25%208.62224%2011.25%208.15625C11.25%207.69026%2010.8722%207.3125%2010.4062%207.3125C9.94026%207.3125%209.5625%207.69026%209.5625%208.15625C9.5625%208.62224%209.94026%209%2010.4062%209Z'%20fill='%2350555C'/%3e%3cpath%20d='M13.2188%209C13.6847%209%2014.0625%208.62224%2014.0625%208.15625C14.0625%207.69026%2013.6847%207.3125%2013.2188%207.3125C12.7528%207.3125%2012.375%207.69026%2012.375%208.15625C12.375%208.62224%2012.7528%209%2013.2188%209Z'%20fill='%2350555C'/%3e%3cpath%20d='M10.4062%2011.8125C10.8722%2011.8125%2011.25%2011.4347%2011.25%2010.9688C11.25%2010.5028%2010.8722%2010.125%2010.4062%2010.125C9.94026%2010.125%209.5625%2010.5028%209.5625%2010.9688C9.5625%2011.4347%209.94026%2011.8125%2010.4062%2011.8125Z'%20fill='%2350555C'/%3e%3cpath%20d='M13.2188%2011.8125C13.6847%2011.8125%2014.0625%2011.4347%2014.0625%2010.9688C14.0625%2010.5028%2013.6847%2010.125%2013.2188%2010.125C12.7528%2010.125%2012.375%2010.5028%2012.375%2010.9688C12.375%2011.4347%2012.7528%2011.8125%2013.2188%2011.8125Z'%20fill='%2350555C'/%3e%3cpath%20d='M4.78125%2011.8125C5.24724%2011.8125%205.625%2011.4347%205.625%2010.9688C5.625%2010.5028%205.24724%2010.125%204.78125%2010.125C4.31526%2010.125%203.9375%2010.5028%203.9375%2010.9688C3.9375%2011.4347%204.31526%2011.8125%204.78125%2011.8125Z'%20fill='%2350555C'/%3e%3cpath%20d='M7.59375%2011.8125C8.05974%2011.8125%208.4375%2011.4347%208.4375%2010.9688C8.4375%2010.5028%208.05974%2010.125%207.59375%2010.125C7.12776%2010.125%206.75%2010.5028%206.75%2010.9688C6.75%2011.4347%207.12776%2011.8125%207.59375%2011.8125Z'%20fill='%2350555C'/%3e%3cpath%20d='M4.78125%2014.625C5.24724%2014.625%205.625%2014.2472%205.625%2013.7812C5.625%2013.3153%205.24724%2012.9375%204.78125%2012.9375C4.31526%2012.9375%203.9375%2013.3153%203.9375%2013.7812C3.9375%2014.2472%204.31526%2014.625%204.78125%2014.625Z'%20fill='%2350555C'/%3e%3cpath%20d='M7.59375%2014.625C8.05974%2014.625%208.4375%2014.2472%208.4375%2013.7812C8.4375%2013.3153%208.05974%2012.9375%207.59375%2012.9375C7.12776%2012.9375%206.75%2013.3153%206.75%2013.7812C6.75%2014.2472%207.12776%2014.625%207.59375%2014.625Z'%20fill='%2350555C'/%3e%3cpath%20d='M10.4062%2014.625C10.8722%2014.625%2011.25%2014.2472%2011.25%2013.7812C11.25%2013.3153%2010.8722%2012.9375%2010.4062%2012.9375C9.94026%2012.9375%209.5625%2013.3153%209.5625%2013.7812C9.5625%2014.2472%209.94026%2014.625%2010.4062%2014.625Z'%20fill='%2350555C'/%3e%3cpath%20d='M4.5%201.6875V2.8125M13.5%201.6875V2.8125'%20stroke='%2350555C'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M16.3125%205.625H1.6875'%20stroke='%2350555C'%20stroke-linejoin='round'/%3e%3c/svg%3e", he = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"], At = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"], xe = ({ prefix: e = "Дата:", value: o = "", placeholder: i = "Выберите дату", onChange: r, onReset: s }) => {
-  const [c, u] = B(!1), [f, k] = B(/* @__PURE__ */ new Date()), [b, m] = B(o ? new Date(o) : null), [x, v] = B(!1), [h, p] = B(!1), l = X(null), E = X(null), y = X(null);
+  const [c, u] = F(!1), [f, k] = F(/* @__PURE__ */ new Date()), [b, m] = F(o ? new Date(o) : null), [x, v] = F(!1), [h, p] = F(!1), l = X(null), E = X(null), y = X(null);
   U(() => {
     const d = (M) => {
       l.current && !l.current.contains(M.target) && u(!1), E.current && !E.current.contains(M.target) && v(!1), y.current && !y.current.contains(M.target) && p(!1);
@@ -1383,40 +1383,40 @@ const ji = {
   const I = (d) => {
     const M = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
     m(d);
-    const L = M.toISOString().split("T")[0];
-    r?.(L), u(!1);
+    const D = M.toISOString().split("T")[0];
+    r?.(D), u(!1);
   }, T = () => {
     const d = /* @__PURE__ */ new Date();
     k(d);
-    const L = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate())).toISOString().split("T")[0];
-    r?.(L), u(!1);
+    const D = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate())).toISOString().split("T")[0];
+    r?.(D), u(!1);
   }, O = () => {
     m(null), r?.(""), s?.(), u(!1);
-  }, F = (d) => {
+  }, B = (d) => {
     const M = new Date(f);
     M.setMonth(d), k(M), v(!1);
   }, P = (d) => {
     const M = new Date(f);
     M.setFullYear(d), k(M), p(!1);
   }, H = () => {
-    const d = f.getFullYear(), M = f.getMonth(), L = new Date(d, M, 1), V = new Date(d, M + 1, 0).getDate(), Z = L.getDay() === 0 ? 6 : L.getDay() - 1, j = [], S = 35, a = new Date(d, M, 0).getDate();
+    const d = f.getFullYear(), M = f.getMonth(), D = new Date(d, M, 1), V = new Date(d, M + 1, 0).getDate(), Z = D.getDay() === 0 ? 6 : D.getDay() - 1, j = [], S = 35, a = new Date(d, M, 0).getDate();
     for (let $ = 0; $ < Z; $++) {
-      const g = a - Z + $ + 1, D = new Date(d, M - 1, g), R = !!(b && D.getDate() === b.getDate() && D.getMonth() === b.getMonth() && D.getFullYear() === b.getFullYear());
+      const g = a - Z + $ + 1, L = new Date(d, M - 1, g), R = !!(b && L.getDate() === b.getDate() && L.getMonth() === b.getMonth() && L.getFullYear() === b.getFullYear());
       j.push(
-        /* @__PURE__ */ t.jsx(ie, { selected: R, onClick: () => I(D), otherMonth: !0, children: g }, `prev-${g}`)
+        /* @__PURE__ */ t.jsx(ie, { selected: R, onClick: () => I(L), otherMonth: !0, children: g }, `prev-${g}`)
       );
     }
     for (let $ = 1; $ <= V; $++) {
-      const g = new Date(d, M, $), D = !!(b && g.getDate() === b.getDate() && g.getMonth() === b.getMonth() && g.getFullYear() === b.getFullYear());
+      const g = new Date(d, M, $), L = !!(b && g.getDate() === b.getDate() && g.getMonth() === b.getMonth() && g.getFullYear() === b.getFullYear());
       j.push(
-        /* @__PURE__ */ t.jsx(ie, { selected: D, onClick: () => I(g), children: $ }, `current-${$}`)
+        /* @__PURE__ */ t.jsx(ie, { selected: L, onClick: () => I(g), children: $ }, `current-${$}`)
       );
     }
     const C = S - j.length;
     for (let $ = 1; $ <= C; $++) {
-      const g = new Date(d, M + 1, $), D = !!(b && g.getDate() === b.getDate() && g.getMonth() === b.getMonth() && g.getFullYear() === b.getFullYear());
+      const g = new Date(d, M + 1, $), L = !!(b && g.getDate() === b.getDate() && g.getMonth() === b.getMonth() && g.getFullYear() === b.getFullYear());
       j.push(
-        /* @__PURE__ */ t.jsx(ie, { selected: D, onClick: () => I(g), otherMonth: !0, children: $ }, `next-${$}`)
+        /* @__PURE__ */ t.jsx(ie, { selected: L, onClick: () => I(g), otherMonth: !0, children: $ }, `next-${$}`)
       );
     }
     return j;
@@ -1426,16 +1426,16 @@ const ji = {
     year: "numeric"
   }) : i, _ = () => {
     const d = (/* @__PURE__ */ new Date()).getFullYear(), M = [];
-    for (let L = d - 10; L <= d + 10; L++)
-      M.push(L);
+    for (let D = d - 10; D <= d + 10; D++)
+      M.push(D);
     return M;
   }, W = (d) => {
     d.preventDefault(), d.stopPropagation(), v(!x), p(!1);
   }, A = (d) => {
     d.preventDefault(), d.stopPropagation(), p(!h), v(!1);
   }, w = (d) => {
-    const M = d === "next" ? 1 : -1, L = new Date(f);
-    L.setMonth(L.getMonth() + M), k(L);
+    const M = d === "next" ? 1 : -1, D = new Date(f);
+    D.setMonth(D.getMonth() + M), k(D);
   };
   return /* @__PURE__ */ t.jsxs(_t, { ref: l, children: [
     /* @__PURE__ */ t.jsxs(Ot, { onClick: () => u(!c), children: [
@@ -1465,8 +1465,8 @@ const ji = {
               be,
               {
                 $selected: M === f.getMonth(),
-                onClick: (L) => {
-                  L.stopPropagation(), F(M);
+                onClick: (D) => {
+                  D.stopPropagation(), B(M);
                 },
                 children: d
               },
@@ -1754,10 +1754,10 @@ const ji = {
         }
         const O = parseInt(T, 10);
         if (!isNaN(O)) {
-          let F = O.toLocaleString("ru-RU");
-          F += " ₽";
-          const P = v(I, y || 0), H = h(F, P);
-          p.target.value = F, s(p), setTimeout(() => {
+          let B = O.toLocaleString("ru-RU");
+          B += " ₽";
+          const P = v(I, y || 0), H = h(B, P);
+          p.target.value = B, s(p), setTimeout(() => {
             p.target.setSelectionRange(H, H);
           }, 0);
         }
@@ -1885,7 +1885,7 @@ const ji = {
   margin-top: 4px;
   display: block;
 `, Pi = ({ total: e, current: o = 1, onChange: i, itemsPerPage: r = 10 }) => {
-  const s = Math.ceil(e / r), [c, u] = B(o), f = (b) => {
+  const s = Math.ceil(e / r), [c, u] = F(o), f = (b) => {
     b < 1 || b > s || b === c || (u(b), i?.(b));
   }, k = () => {
     const b = [];
@@ -2242,7 +2242,7 @@ const ji = {
   onChange: s,
   onCustomPeriodClick: c
 }) => {
-  const [u, f] = B(!1), [k, b] = B(!1), [m, x] = B(""), [v, h] = B(""), [p, l] = B(""), E = X(null), y = X(null);
+  const [u, f] = F(!1), [k, b] = F(!1), [m, x] = F(""), [v, h] = F(""), [p, l] = F(""), E = X(null), y = X(null);
   U(() => {
     if (e === "Custom" && v && p) {
       const z = P(v), _ = P(p);
@@ -2265,7 +2265,7 @@ const ji = {
     f(!1), c ? c() : b(!0);
   }, O = () => {
     s?.(""), x(""), h(""), l("");
-  }, F = () => {
+  }, B = () => {
     if (v && p) {
       const z = P(v), _ = P(p), W = `С ${z} по ${_}`;
       s?.("Custom", v, p), x(W), b(!1);
@@ -2298,7 +2298,7 @@ const ji = {
         onClose: () => b(!1),
         onCancel: () => b(!1),
         onSave: (z) => {
-          z.preventDefault(), F();
+          z.preventDefault(), B();
         },
         saveButtonText: "Выбрать",
         customLayout: /* @__PURE__ */ t.jsx(H, {}),
@@ -2460,11 +2460,11 @@ const ji = {
   errorMessage: m
 }) => {
   const [x, v] = q.useState(!1), h = q.useRef(null), p = !!(u && !o && !x), l = (T) => {
-    const F = T.replace(/\D/g, "").slice(0, 11);
+    const B = T.replace(/\D/g, "").slice(0, 11);
     let P = "";
-    return F.length > 0 && (P += "8"), F.length > 1 && (P += ` (${F.slice(1, 4)}`), F.length > 4 && (P += `) ${F.slice(4, 7)}`), F.length > 7 && (P += `-${F.slice(7, 9)}`), F.length > 9 && (P += `-${F.slice(9, 11)}`), P;
+    return B.length > 0 && (P += "8"), B.length > 1 && (P += ` (${B.slice(1, 4)}`), B.length > 4 && (P += `) ${B.slice(4, 7)}`), B.length > 7 && (P += `-${B.slice(7, 9)}`), B.length > 9 && (P += `-${B.slice(9, 11)}`), P;
   }, E = (T) => {
-    const O = l(T.target.value), F = {
+    const O = l(T.target.value), B = {
       ...T,
       target: {
         ...T.target,
@@ -2472,7 +2472,7 @@ const ji = {
         value: O
       }
     };
-    i(F);
+    i(B);
   }, y = (T) => {
     v(!1), r?.(T);
   }, I = (T) => {
@@ -2820,7 +2820,7 @@ const ji = {
     secondary: "rgba(37, 203, 161, 1)"
   }
 }) => {
-  const s = X(null), [c, u] = B(!1), f = (x) => {
+  const s = X(null), [c, u] = F(!1), f = (x) => {
     !i || !o || (x.preventDefault(), u(!0), m(x));
   }, k = (x) => {
     !c || !o || m(x);
@@ -2915,7 +2915,7 @@ const xo = (e) => typeof window > "u" ? Promise.reject(new Error("Window is not 
   style: p,
   onError: l
 }) => {
-  const [E, y] = B(null), [I, T] = B(o), [O, F] = B(o), [P, H] = B(!1), z = X(null);
+  const [E, y] = F(null), [I, T] = F(o), [O, B] = F(o), [P, H] = F(!1), z = X(null);
   U(() => {
     let A = !1, w;
     return (async () => {
@@ -2927,13 +2927,13 @@ const xo = (e) => typeof window > "u" ? Promise.reject(new Error("Window is not 
           zoom: c,
           controls: x
         });
-        const L = new M.Placemark([i, r], {}, { draggable: m });
-        w.geoObjects.add(L), w.events.add("click", (N) => {
+        const D = new M.Placemark([i, r], {}, { draggable: m });
+        w.geoObjects.add(D), w.events.add("click", (N) => {
           const V = N.get("coords");
-          _(V, L, w);
-        }), L.events.add("dragend", () => {
-          const N = L.geometry.getCoordinates();
-          _(N, L, w);
+          _(V, D, w);
+        }), D.events.add("dragend", () => {
+          const N = D.geometry.getCoordinates();
+          _(N, D, w);
         }), y(w), H(!0);
       } catch (M) {
         l && M instanceof Error && l(M);
@@ -2946,7 +2946,7 @@ const xo = (e) => typeof window > "u" ? Promise.reject(new Error("Window is not 
     if (window.ymaps)
       try {
         const N = (await window.ymaps.geocode(A)).geoObjects.get(0).getAddressLine();
-        w.geometry.setCoordinates(A), d.panTo(A, { flying: !0 }), F(N), T(N), e(N, A[0], A[1]);
+        w.geometry.setCoordinates(A), d.panTo(A, { flying: !0 }), B(N), T(N), e(N, A[0], A[1]);
       } catch (M) {
         l && M instanceof Error && l(M);
       }
@@ -2957,12 +2957,12 @@ const xo = (e) => typeof window > "u" ? Promise.reject(new Error("Window is not 
         if (w) {
           const d = w.geometry.getCoordinates(), M = w.properties.get("boundedBy");
           E.setBounds(M, { checkZoomRange: !0 });
-          const L = new window.ymaps.Placemark(d, {}, { draggable: m });
-          E.geoObjects.removeAll(), E.geoObjects.add(L);
+          const D = new window.ymaps.Placemark(d, {}, { draggable: m });
+          E.geoObjects.removeAll(), E.geoObjects.add(D);
           const N = w.getAddressLine();
-          F(N), e(N, d[0], d[1]), L.events.add("dragend", () => {
-            const V = L.geometry.getCoordinates();
-            _(V, L, E);
+          B(N), e(N, d[0], d[1]), D.events.add("dragend", () => {
+            const V = D.geometry.getCoordinates();
+            _(V, D, E);
           });
         }
       } catch (A) {
@@ -3053,7 +3053,7 @@ function Zi(e) {
   return parseInt(o, 10);
 }
 const Ui = ({ title: e, data: o, maxValue: i, step: r, height: s = 300, titleFontSize: c }) => {
-  const [u, f] = B(null), k = [];
+  const [u, f] = F(null), k = [];
   for (let m = 0; m <= i; m += r)
     k.push(m);
   const b = o.length > 0 ? o[0].bars.map((m) => ({ name: m.name, color: m.color })) : [];
@@ -3251,13 +3251,13 @@ const Ui = ({ title: e, data: o, maxValue: i, step: r, height: s = 300, titleFon
   showTooltip: v = !0,
   titleFontSize: h = "30px"
 }) => {
-  const [p, l] = B(null), [E, y] = B({ x: 0, y: 0 }), I = X(null), T = X(null), O = Math.max(...o.map((w) => w.x), s), F = [];
+  const [p, l] = F(null), [E, y] = F({ x: 0, y: 0 }), I = X(null), T = X(null), O = Math.max(...o.map((w) => w.x), s), B = [];
   for (let w = 0; w <= O; w += f)
-    F.push(w);
+    B.push(w);
   const P = [];
   for (let w = u; w <= c; w += k)
     P.push(w);
-  const H = x || F.map((w) => w.toString()), z = m ? Array.from(new Set(o.filter((w) => w.label).map((w) => w.label))).map((w) => {
+  const H = x || B.map((w) => w.toString()), z = m ? Array.from(new Set(o.filter((w) => w.label).map((w) => w.label))).map((w) => {
     const d = o.find((M) => M.label === w);
     return { name: w, color: d.color };
   }) : [], _ = {};
@@ -3292,16 +3292,16 @@ const Ui = ({ title: e, data: o, maxValue: i, step: r, height: s = 300, titleFon
       ] }),
       /* @__PURE__ */ t.jsxs(Go, { ref: T, children: [
         P.map((w, d) => /* @__PURE__ */ t.jsx(Jo, { position: A(w) }, `hline-${d}`)),
-        Object.values(_).map((w, d) => w.map((M, L) => {
-          if (L === 0) return null;
-          const N = w[L - 1], V = W(N.x), Z = A(N.y), j = W(M.x), S = A(M.y);
+        Object.values(_).map((w, d) => w.map((M, D) => {
+          if (D === 0) return null;
+          const N = w[D - 1], V = W(N.x), Z = A(N.y), j = W(M.x), S = A(M.y);
           return /* @__PURE__ */ t.jsx(
             "svg",
             {
               style: { position: "absolute", top: 0, left: 0, width: "100%", height: "100%", pointerEvents: "none", zIndex: 1 },
               children: /* @__PURE__ */ t.jsx("line", { x1: `${V}%`, y1: `${Z}%`, x2: `${j}%`, y2: `${S}%`, stroke: M.color, strokeWidth: "1" })
             },
-            `line-${d}-${L}`
+            `line-${d}-${D}`
           );
         })),
         o.map((w, d) => /* @__PURE__ */ t.jsx(
@@ -3327,8 +3327,8 @@ const Ui = ({ title: e, data: o, maxValue: i, step: r, height: s = 300, titleFon
     ] }),
     /* @__PURE__ */ t.jsxs(Qo, { children: [
       H.map((w, d) => {
-        const L = F[d] / O * 100;
-        return /* @__PURE__ */ t.jsx(er, { style: { left: `${L}%`, transform: "translateX(-50%)" }, children: w }, d);
+        const D = B[d] / O * 100;
+        return /* @__PURE__ */ t.jsx(er, { style: { left: `${D}%`, transform: "translateX(-50%)" }, children: w }, d);
       }),
       i && /* @__PURE__ */ t.jsx(Ce, { children: i })
     ] })
@@ -3455,7 +3455,7 @@ const Ui = ({ title: e, data: o, maxValue: i, step: r, height: s = 300, titleFon
   border-right: 6px solid transparent;
   border-top: 6px solid rgba(0, 0, 0, 0.9);
 `, qi = ({ images: e, initialIndex: o, onClose: i }) => {
-  const [r, s] = B(o), [c, u] = B(0), f = () => {
+  const [r, s] = F(o), [c, u] = F(0), f = () => {
     s((x) => x > 0 ? x - 1 : e.length - 1), u(0);
   }, k = () => {
     s((x) => x < e.length - 1 ? x + 1 : 0), u(0);
@@ -3632,7 +3632,7 @@ const Ui = ({ title: e, data: o, maxValue: i, step: r, height: s = 300, titleFon
     background-color: #ffffff;
   }
 `, gr = ({ isOpen: e, callPhone: o, error: i, onClose: r }) => {
-  const [s, c] = B(!1);
+  const [s, c] = F(!1);
   if (!e) return null;
   const u = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent), f = () => {
     u ? window.location.href = `tel:${o}` : (navigator.clipboard.writeText(o), c(!0), setTimeout(() => c(!1), 2e3));
@@ -3761,33 +3761,33 @@ const Ui = ({ title: e, data: o, maxValue: i, step: r, height: s = 300, titleFon
   showBottomLabels: l = !0,
   children: E
 }) => {
-  const y = Ae(kr), [I, T] = B(window.innerWidth <= p);
+  const y = Ae(kr), [I, T] = F(window.innerWidth <= p);
   U(() => {
     const g = () => {
       T(window.innerWidth <= p);
     };
     return window.addEventListener("resize", g), () => window.removeEventListener("resize", g);
   }, [p]);
-  const [O, F] = B(
+  const [O, B] = F(
     c ?? y.collapsed ?? !1
-  ), [P, H] = B(null), [z, _] = B(
+  ), [P, H] = F(null), [z, _] = F(
     f ?? y.selectedSideMenuItem ?? null
-  ), [W, A] = B({
+  ), [W, A] = F({
     visible: !1,
     x: 0,
     y: 0,
     items: []
   }), w = X(null), d = c ?? y.collapsed ?? O, M = (g) => {
-    F(g), y.toggleCollapsed(), u?.(g);
-  }, L = f ?? y.selectedSideMenuItem ?? z, N = (g) => {
+    B(g), y.toggleCollapsed(), u?.(g);
+  }, D = f ?? y.selectedSideMenuItem ?? z, N = (g) => {
     _(g), y.setSelectedSideMenuItem(g);
   };
   U(() => {
-    c !== void 0 && (F(c), c && H(null));
+    c !== void 0 && (B(c), c && H(null));
   }, [c]), U(() => {
     f !== void 0 && N(f);
   }, [f]), U(() => {
-    const g = () => A((D) => ({ ...D, visible: !1 }));
+    const g = () => A((L) => ({ ...L, visible: !1 }));
     return document.addEventListener("click", g), () => document.removeEventListener("click", g);
   }, []);
   const V = () => {
@@ -3796,12 +3796,12 @@ const Ui = ({ title: e, data: o, maxValue: i, step: r, height: s = 300, titleFon
   }, Z = (g) => {
     g.disabled || g.hidden || (N(g.key), k?.(g), g.onClick?.(g), b && (M(!0), H(null)));
   }, j = (g) => {
-    H((D) => D === g ? null : g);
-  }, S = (g, D) => {
+    H((L) => L === g ? null : g);
+  }, S = (g, L) => {
     const R = (g.children?.length || 0) > 0;
     if (d && R) {
-      D.stopPropagation();
-      const Y = D.currentTarget.getBoundingClientRect();
+      L.stopPropagation();
+      const Y = L.currentTarget.getBoundingClientRect();
       A({
         visible: !0,
         x: Y.right + 6,
@@ -3811,8 +3811,8 @@ const Ui = ({ title: e, data: o, maxValue: i, step: r, height: s = 300, titleFon
       return;
     }
     R ? j(g.key) : Z(g);
-  }, a = (g, D = !1) => g.filter((R) => !R.hidden).map((R) => {
-    const Y = (R.children?.length || 0) > 0, G = P === R.key, K = L === R.key || !!R.children && R.children.some((Q) => Q.key === L);
+  }, a = (g, L = !1) => g.filter((R) => !R.hidden).map((R) => {
+    const Y = (R.children?.length || 0) > 0, G = P === R.key, K = D === R.key || !!R.children && R.children.some((Q) => Q.key === D);
     return /* @__PURE__ */ t.jsxs(q.Fragment, { children: [
       /* @__PURE__ */ t.jsxs(
         zr,
@@ -3837,26 +3837,26 @@ const Ui = ({ title: e, data: o, maxValue: i, step: r, height: s = 300, titleFon
       onClick: () => {
         Z(g), A({ visible: !1, x: 0, y: 0, items: [] });
       },
-      $selected: L === g.key,
+      $selected: D === g.key,
       children: g.label
     },
     g.key
-  )) }) : null, [W, L]), $ = () => {
-    const g = [...e, ...o].filter((D) => !D.hidden);
-    return /* @__PURE__ */ t.jsx(Mr, { children: g.map((D) => {
-      const R = L === D.key;
+  )) }) : null, [W, D]), $ = () => {
+    const g = [...e, ...o].filter((L) => !L.hidden);
+    return /* @__PURE__ */ t.jsx(Mr, { children: g.map((L) => {
+      const R = D === L.key;
       return /* @__PURE__ */ t.jsxs(
         Sr,
         {
           $selected: R,
-          onClick: () => Z(D),
-          $disabled: D.disabled,
+          onClick: () => Z(L),
+          $disabled: L.disabled,
           children: [
-            D.icon && /* @__PURE__ */ t.jsx(Lr, { $selected: R, children: D.icon }),
-            l && /* @__PURE__ */ t.jsx(Dr, { $selected: R, children: D.label })
+            L.icon && /* @__PURE__ */ t.jsx(Lr, { $selected: R, children: L.icon }),
+            l && /* @__PURE__ */ t.jsx(Dr, { $selected: R, children: L.label })
           ]
         },
-        D.key
+        L.key
       );
     }) });
   };
@@ -4184,7 +4184,7 @@ const Ui = ({ title: e, data: o, maxValue: i, step: r, height: s = 300, titleFon
   error: r,
   isLoading: s = !1
 }) => {
-  const [c, u] = B("");
+  const [c, u] = F("");
   if (!e) return null;
   const f = (k) => {
     k.preventDefault(), i(c);
@@ -4278,7 +4278,7 @@ const Ui = ({ title: e, data: o, maxValue: i, step: r, height: s = 300, titleFon
   pollingIntervalMs: m = 3e3,
   enableRegistration: x = !1
 }) => {
-  const [v, h] = B(!1), [p, l] = B(""), [E, y] = B(!1), [I, T] = B(""), [O, F] = B(""), [P, H] = B(!1), [z, _] = B(!1), [W, A] = B(""), [w, d] = B(""), [M, L] = B(null), N = X(void 0);
+  const [v, h] = F(!1), [p, l] = F(""), [E, y] = F(!1), [I, T] = F(""), [O, B] = F(""), [P, H] = F(!1), [z, _] = F(!1), [W, A] = F(""), [w, d] = F(""), [M, D] = F(null), N = X(void 0);
   U(() => () => {
     N.current && clearInterval(N.current);
   }, []);
@@ -4286,27 +4286,25 @@ const Ui = ({ title: e, data: o, maxValue: i, step: r, height: s = 300, titleFon
     const g = $.replace(/\D/g, "");
     return g ? g.startsWith("8") ? `+7${g.slice(1)}` : g.startsWith("7") ? `+${g}` : `+${g}` : "";
   }, Z = () => {
-    y(!1), _(!1), A(""), d(""), L(null), N.current && window.clearInterval(N.current);
+    y(!1), _(!1), A(""), d(""), D(null), N.current && window.clearInterval(N.current);
   }, j = async ($) => {
     if ($.preventDefault(), !p) {
-      F("Введите номер телефона");
+      B("Введите номер телефона");
       return;
     }
-    h(!0), F("");
+    h(!0), B("");
     const g = V(p);
     try {
-      const D = await Xr(g, o);
-      L({
+      const L = await Xr(g, o);
+      D({
         phone: g,
-        checkId: D.check_id,
-        callPhone: D.call_phone
-      }), x && "name_required" in D && D.name_required ? (_(!0), T(D.call_phone)) : !x && "name_required" in D && D.name_required ? (F(
+        checkId: L.check_id,
+        callPhone: L.call_phone
+      }), x && "name_required" in L && L.name_required ? (_(!0), T(L.call_phone)) : !x && "name_required" in L && L.name_required ? (B(
         "Этот номер не зарегистрирован в системе. Обратитесь в поддержку для регистрации."
-      ), L(null)) : (T(D.call_phone), y(!0), a(g, D.check_id));
-    } catch (D) {
-      console.error("Auth error:", D), F(
-        "Не удалось инициировать авторизацию. Проверьте номер."
-      );
+      ), D(null)) : (T(L.call_phone), y(!0), a(g, L.check_id));
+    } catch (L) {
+      console.error("Auth error:", L), L && L.response && L.response.data ? B(L.response.data) : L instanceof Error ? B(L.message) : B("Произошла ошибка при авторизации");
     } finally {
       h(!1);
     }
@@ -4325,16 +4323,16 @@ const Ui = ({ title: e, data: o, maxValue: i, step: r, height: s = 300, titleFon
         h(!1);
       }
     }
-  }, a = ($, g, D) => {
+  }, a = ($, g, L) => {
     N.current && window.clearInterval(N.current), N.current = window.setInterval(() => {
-      C($, g, D);
+      C($, g, L);
     }, m);
-  }, C = async ($, g, D) => {
+  }, C = async ($, g, L) => {
     if (!P) {
       H(!0);
       try {
-        const R = await qr($, g, o, D || W);
-        (R.access_token && R.refresh_token || R.accessToken && R.refreshToken) && (N.current && window.clearInterval(N.current), y(!1), _(!1), A(""), L(null), e(R.access_token ?? R.accessToken));
+        const R = await qr($, g, o, L || W);
+        (R.access_token && R.refresh_token || R.accessToken && R.refreshToken) && (N.current && window.clearInterval(N.current), y(!1), _(!1), A(""), D(null), e(R.access_token ?? R.accessToken));
       } catch (R) {
         console.error("Verification error:", R);
       } finally {

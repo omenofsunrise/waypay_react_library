@@ -119,15 +119,21 @@ const AuthPage: React.FC<AuthPageProps> = ({
         setShowCallModal(true);
         startVerificationPolling(normalizedPhone, response.check_id);
       }
-    } catch (error: unknown) {
-      console.error("Auth error:", error);
-      setVerificationError(
-        "Не удалось инициировать авторизацию. Проверьте номер."
-      );
-    } finally {
-      setIsLoading(false);
-    }
-  };
+    } 
+    catch (error: any) {
+        console.error("Auth error:", error);
+        
+        if (error && error.response && error.response.data) {
+          setVerificationError(error.response.data);
+        } else if (error instanceof Error) {
+          setVerificationError(error.message);
+        } else {
+          setVerificationError("Произошла ошибка при авторизации");
+        }
+      } finally {
+        setIsLoading(false);
+      }
+    };
 
   const handleNameSubmit = async (name: string) => {
     if (!name.trim()) {
