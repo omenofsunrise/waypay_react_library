@@ -14,6 +14,7 @@ type AuthPageProps = {
     style?: React.CSSProperties;
     pollingIntervalMs?: number;
     enableRegistration?: boolean;
+    enableSupport?: boolean;
 };
 declare const AuthPage: React.FC<AuthPageProps>;
 export default AuthPage;

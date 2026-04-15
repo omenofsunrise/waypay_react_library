@@ -23,6 +23,7 @@ type AuthPageProps = {
   style?: React.CSSProperties;
   pollingIntervalMs?: number;
   enableRegistration?: boolean;
+  enableSupport?: boolean;
 };
 
 const AuthPage: React.FC<AuthPageProps> = ({
@@ -38,6 +39,7 @@ const AuthPage: React.FC<AuthPageProps> = ({
   style,
   pollingIntervalMs = 3000,
   enableRegistration = false,
+  enableSupport = true,
 }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [rawPhone, setRawPhone] = useState("");
@@ -223,17 +225,19 @@ const AuthPage: React.FC<AuthPageProps> = ({
           </SubmitButton>
         </AuthForm>
         
-        <InfoText>
-          Хотите получить доступ к нашим продуктам?
-          <br />
-          Обратитесь по номеру{" "}
-          <InfoPhone href={`tel:${supportPhone}`}>{supportPhone}</InfoPhone>
-          <br />
-          или оставьте заявку на{" "}
-          <InfoLink href={supportLinkUrl} target="_blank" rel="noreferrer">
-            {supportLinkText}
-          </InfoLink>
-        </InfoText>
+        {enableSupport && (
+          <InfoText>
+            Хотите получить доступ к нашим продуктам?
+            <br />
+            Обратитесь по номеру{" "}
+            <InfoPhone href={`tel:${supportPhone}`}>{supportPhone}</InfoPhone>
+            <br />
+            или оставьте заявку на{" "}
+            <InfoLink href={supportLinkUrl} target="_blank" rel="noreferrer">
+              {supportLinkText}
+            </InfoLink>
+          </InfoText>
+        )}
       </AuthCard>
 
       {/* Модалка для ввода ФИО */}
