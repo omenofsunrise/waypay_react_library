@@ -42,6 +42,7 @@ export { SideMenuContext } from "./lib/context/SideMenuContext";
 export { default as CustomPhoneInput } from "./lib/inputs/CustomPhoneInput";
 export { default as SubscriptionPendingPage } from "./lib/Subscription/SubscriptionPending";
 export { default as SubscriptionBlock } from "./lib/Subscription/SubscriptionBlock";
+export { default as useSubscription } from "./lib/Subscription/useSubscription";
 export { initiateCallAuth, confirmCallAuth, getSessionInfo, type UserType, type InitiateCallAuthResponse, type ConfirmCallAuthResponse, } from "./lib/api/authCall";
 export { default as AuthPage } from "./lib/pages/AuthPage";
 export { apiRequest, API_BASE_URL, refreshAccessToken, FILE_BASE_URL, BASE_URL } from "./lib/api/client";
