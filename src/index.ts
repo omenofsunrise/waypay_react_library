@@ -54,6 +54,8 @@ export { default as SideMenu } from "./lib/navigation/SideMenu";
 export type { SideMenuItem, SideMenuProps } from "./lib/navigation/SideMenu";
 export { SideMenuContext } from "./lib/context/SideMenuContext";
 export { default as CustomPhoneInput } from "./lib/inputs/CustomPhoneInput";
+export { default as SubscriptionPendingPage } from "./lib/Subscription/SubscriptionPending";
+export { default as SubscriptionBlock } from "./lib/Subscription/SubscriptionBlock";
 export {
   initiateCallAuth,
   confirmCallAuth,
