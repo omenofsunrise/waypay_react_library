@@ -739,7 +739,7 @@ const De = ({ x: e, y: o, items: i, onClose: r, ...s }) => {
     top: 0;
     transform: translateX(-50%);
   }
-`, Te = "/api";
+`, Te = "/api", ji = "https://web.waypay.one:5001", Ci = "https://file.waypay.one/";
 async function oe(e, o = {}) {
   const {
     method: i = "GET",
@@ -806,7 +806,7 @@ async function ct() {
   const o = await e.json();
   return o.access_token ? o.access_token : null;
 }
-const ji = {
+const $i = {
   async isAuthenticated() {
     try {
       return !!(await this.getSessionInfo())?.client?.id;
@@ -863,7 +863,7 @@ const ji = {
   &:hover {
     background-color: ${({ disabled: e }) => e ? "rgba(0, 125, 136, 1)" : "rgba(0, 150, 163, 1)"};
   }
-`, Ci = ({ children: e, onClick: o, disabled: i, ...r }) => /* @__PURE__ */ t.jsxs(dt, { onClick: o, disabled: i, ...r, children: [
+`, Mi = ({ children: e, onClick: o, disabled: i, ...r }) => /* @__PURE__ */ t.jsxs(dt, { onClick: o, disabled: i, ...r, children: [
   /* @__PURE__ */ t.jsx("svg", { width: "21", height: "13", viewBox: "0 0 21 13", fill: "none", xmlns: "http://www.w3.org/2000/svg", children: /* @__PURE__ */ t.jsx(
     "path",
     {
@@ -954,7 +954,7 @@ const ji = {
 `, ut = n.span`
   display: inline-flex;
   align-items: center;
-`, $i = ({ onClick: e, tooltip: o, size: i = 32 }) => /* @__PURE__ */ t.jsx(ht, { onClick: e, size: i, title: o, children: /* @__PURE__ */ t.jsx(
+`, Si = ({ onClick: e, tooltip: o, size: i = 32 }) => /* @__PURE__ */ t.jsx(ht, { onClick: e, size: i, title: o, children: /* @__PURE__ */ t.jsx(
   "svg",
   {
     width: i * 0.5,
@@ -997,7 +997,7 @@ const ji = {
   &:hover svg {
     transform: scale(1.1);
   }
-`, Mi = ({ onClick: e, tooltip: o, size: i = 32 }) => /* @__PURE__ */ t.jsx(xt, { onClick: e, size: i, title: o, children: /* @__PURE__ */ t.jsx(
+`, Li = ({ onClick: e, tooltip: o, size: i = 32 }) => /* @__PURE__ */ t.jsx(xt, { onClick: e, size: i, title: o, children: /* @__PURE__ */ t.jsx(
   "svg",
   {
     width: i * 0.5,
@@ -1049,7 +1049,7 @@ const ji = {
     }
   ),
   /* @__PURE__ */ t.jsx("path", { d: "M0.625 14V15.125C0.625 15.7217 0.862053 16.294 1.28401 16.716C1.70597 17.1379 2.27826 17.375 2.875 17.375H14.125C14.7217 17.375 15.294 17.1379 15.716 16.716C16.1379 16.294 16.375 15.7217 16.375 15.125V14", stroke: "black" })
-] }), Si = ({
+] }), Di = ({
   children: e = "Экспорт",
   icon: o = /* @__PURE__ */ t.jsx(gt, {}),
   onExport: i,
@@ -1132,7 +1132,7 @@ const ji = {
     background-color: #000;
     transition: width 0.3s ease;
   }
-`, Li = ({
+`, Ti = ({
   placeholder: e = "",
   customPlaceholder: o,
   value: i,
@@ -1311,7 +1311,7 @@ const ji = {
   height: 0;
   width: 0;
   pointer-events: none;
-`, Di = ({ checked: e = !1, onChange: o, className: i, label: r, disabled: s = !1 }) => {
+`, Ei = ({ checked: e = !1, onChange: o, className: i, label: r, disabled: s = !1 }) => {
   const [c, u] = B(!1), g = () => {
     s || !o || o(!e);
   }, y = (b) => {
@@ -1713,17 +1713,17 @@ const ji = {
   &:hover {
     text-decoration: underline;
   }
-`, Ti = n.div`
+`, Ii = n.div`
   display: flex;
   align-items: center;
   gap: 12px;
   margin-bottom: 16px;
-`, Ei = n.span`
+`, Pi = n.span`
   text-align: left;
   font-size: 14px;
   color: black;
   max-width: 90px;
-`, Ii = n.div`
+`, Ri = n.div`
   margin-left: auto;
   flex: 1;
   max-width: 425px;
@@ -1884,7 +1884,7 @@ const ji = {
   font-size: 12px;
   margin-top: 4px;
   display: block;
-`, Pi = ({ total: e, current: o = 1, onChange: i, itemsPerPage: r = 10 }) => {
+`, zi = ({ total: e, current: o = 1, onChange: i, itemsPerPage: r = 10 }) => {
   const s = Math.ceil(e / r), [c, u] = B(o), g = (b) => {
     b < 1 || b > s || b === c || (u(b), i?.(b));
   }, y = () => {
@@ -1950,7 +1950,7 @@ const ji = {
   &:disabled {
     cursor: not-allowed;
   }
-`, Ri = ({
+`, Bi = ({
   placeholder: e = "",
   customPlaceholder: o,
   value: i,
@@ -2234,7 +2234,7 @@ const ji = {
   { id: "PreviousMonth", label: "За прошлый месяц", value: "PreviousMonth" },
   { id: "ThisYear", label: "За этот год", value: "ThisYear" },
   { id: "PreviousYear", label: "За прошлый год", value: "PreviousYear" }
-], zi = ({
+], Fi = ({
   value: e = "",
   placeholder: o = "Выберите период",
   options: i = jn,
@@ -2446,7 +2446,7 @@ const ji = {
   &:hover {
     text-decoration: underline;
   }
-`, Bi = ({
+`, Ai = ({
   name: e,
   value: o,
   onChange: i,
@@ -2556,7 +2556,7 @@ const ji = {
   font-size: 12px;
   margin-top: 4px;
   display: block;
-`, Fi = ({ tabs: e, activeTab: o, onChange: i, addButton: r, fontSize: s = 14 }) => {
+`, _i = ({ tabs: e, activeTab: o, onChange: i, addButton: r, fontSize: s = 14 }) => {
   const c = e.find((u) => u.id === o)?.content;
   return /* @__PURE__ */ t.jsxs(t.Fragment, { children: [
     /* @__PURE__ */ t.jsx(Nn, { children: /* @__PURE__ */ t.jsxs(Wn, { children: [
@@ -2604,7 +2604,7 @@ const ji = {
   padding: 4px 0;
 `, Zn = n.div`
   margin-top: 20px;
-`, Ai = ({
+`, Oi = ({
   mode: e,
   primaryValue: o,
   secondaryValue: i,
@@ -2701,7 +2701,7 @@ const ji = {
   font-weight: 600;
   margin-top: 0px;
   align-items: center;
-`, _i = ({ total: e }) => /* @__PURE__ */ t.jsx("div", { children: /* @__PURE__ */ t.jsxs(no, { children: [
+`, Ni = ({ total: e }) => /* @__PURE__ */ t.jsx("div", { children: /* @__PURE__ */ t.jsxs(no, { children: [
   "Всего: ",
   e
 ] }) }), no = n.p`
@@ -2712,7 +2712,7 @@ const ji = {
   align-items: center;
   font-size: 20px;
   white-space: nowrap;
-`, Oi = n.h3`
+`, Wi = n.h3`
   color: black;
   text-align: left;
   margin: 0;
@@ -2720,7 +2720,7 @@ const ji = {
   margin-top: 15px;
   font-size: 14px;
   font-weight: 400;
-`, Ni = n.h1`
+`, Yi = n.h1`
   display: flex;
   text-align: left;
   font-size: 16px;
@@ -2767,7 +2767,7 @@ const ji = {
   width: 0;
   color: black;
   height: 0;
-`, Wi = ({ checked: e, onChange: o, disabled: i }) => {
+`, Hi = ({ checked: e, onChange: o, disabled: i }) => {
   const r = () => {
     i || o(!e);
   };
@@ -2775,7 +2775,7 @@ const ji = {
     /* @__PURE__ */ t.jsx(io, { checked: e, onChange: r, disabled: i }),
     /* @__PURE__ */ t.jsx(ro, { checked: e, disabled: i })
   ] });
-}, Yi = ({ id: e, name: o, checked: i, onChange: r, children: s }) => /* @__PURE__ */ t.jsxs(so, { htmlFor: e, children: [
+}, Vi = ({ id: e, name: o, checked: i, onChange: r, children: s }) => /* @__PURE__ */ t.jsxs(so, { htmlFor: e, children: [
   /* @__PURE__ */ t.jsx(ao, { type: "radio", id: e, name: o, checked: i, onChange: r }),
   s
 ] }), so = n.label`
@@ -2811,7 +2811,7 @@ const ji = {
       transform: translate(-50%, -50%);
     }
   }
-`, Hi = ({
+`, Zi = ({
   percentage: e,
   onChange: o,
   draggable: i = !1,
@@ -2897,7 +2897,7 @@ const xo = (e) => typeof window > "u" ? Promise.reject(new Error("Window is not 
   r.src = `https://api-maps.yandex.ru/2.1/?lang=ru_RU${s}`, r.async = !0, r.onload = () => {
     window.ymaps ? window.ymaps.ready(() => o(window.ymaps)) : i(new Error("Yandex Maps failed to load"));
   }, r.onerror = () => i(new Error("Failed to load Yandex Maps script")), document.head.appendChild(r);
-})), se), Vi = ({
+})), se), Ui = ({
   onLocationSelect: e,
   initialAddress: o = "",
   initialLat: i = 55.751244,
@@ -3047,12 +3047,12 @@ function je(e, o = "₽") {
   }).format(r);
   return !0 ? `${s}${o}` : s;
 }
-function Zi(e) {
+function Xi(e) {
   if (!e) return 0;
   const o = e.replace(/\D/g, "");
   return parseInt(o, 10);
 }
-const Ui = ({ title: e, data: o, maxValue: i, step: r, height: s = 300, titleFontSize: c }) => {
+const qi = ({ title: e, data: o, maxValue: i, step: r, height: s = 300, titleFontSize: c }) => {
   const [u, g] = B(null), y = [];
   for (let m = 0; m <= i; m += r)
     y.push(m);
@@ -3235,7 +3235,7 @@ const Ui = ({ title: e, data: o, maxValue: i, step: r, height: s = 300, titleFon
 `, No = Oe`
   from { opacity: 0; transform: translate(-50%, -110%); }
   to { opacity: 1; transform: translate(-50%, -100%); }
-`, Xi = ({
+`, Gi = ({
   title: e,
   data: o,
   xAxisLabel: i,
@@ -3454,7 +3454,7 @@ const Ui = ({ title: e, data: o, maxValue: i, step: r, height: s = 300, titleFon
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
   border-top: 6px solid rgba(0, 0, 0, 0.9);
-`, qi = ({ images: e, initialIndex: o, onClose: i }) => {
+`, Ji = ({ images: e, initialIndex: o, onClose: i }) => {
   const [r, s] = B(o), [c, u] = B(0), g = () => {
     s((x) => x > 0 ? x - 1 : e.length - 1), u(0);
   }, y = () => {
@@ -3742,7 +3742,7 @@ const Ui = ({ title: e, data: o, maxValue: i, step: r, height: s = 300, titleFon
       }
     )
   }
-), Gi = ({
+), Ki = ({
   items: e,
   bottomItems: o = [],
   bottomContent: i,
@@ -4177,7 +4177,7 @@ const Ui = ({ title: e, data: o, maxValue: i, step: r, height: s = 300, titleFon
     userType: i,
     name: r
   }
-}), Ji = () => oe("/auth/session/info", { method: "GET" }), Gr = ({
+}), Qi = () => oe("/auth/session/info", { method: "GET" }), Gr = ({
   isOpen: e,
   onClose: o,
   onSubmit: i,
@@ -4264,7 +4264,7 @@ const Ui = ({ title: e, data: o, maxValue: i, step: r, height: s = 300, titleFon
   font-size: 12px;
   margin-top: 8px;
   text-align: left;
-`, Ki = ({
+`, es = ({
   onLoginSuccess: e,
   userType: o = "delivery_operator",
   title: i = "Авторизация",
@@ -4530,7 +4530,7 @@ const Ui = ({ title: e, data: o, maxValue: i, step: r, height: s = 300, titleFon
   for (let r = 0; r < e.length; r++)
     o = e.charCodeAt(r) + ((o << 5) - o);
   return `hsl(${Math.abs(o % 360)}, 60%, 60%)`;
-}, Qi = (e) => !e || !e.trim() ? "?" : e.split(" ").filter((r) => r.length > 0).map((r) => r[0].toUpperCase()).join("").slice(0, 2) || "?", es = (e, o = 100) => {
+}, ts = (e) => !e || !e.trim() ? "?" : e.split(" ").filter((r) => r.length > 0).map((r) => r[0].toUpperCase()).join("").slice(0, 2) || "?", ns = (e, o = 100) => {
   const i = document.createElement("canvas");
   i.width = o, i.height = o;
   const r = i.getContext("2d");
@@ -4541,14 +4541,14 @@ const Ui = ({ title: e, data: o, maxValue: i, step: r, height: s = 300, titleFon
   r.font = `bold ${c}px "Manrope", Arial, sans-serif`, r.textAlign = "center", r.textBaseline = "middle";
   const u = c * 0.1;
   return r.fillText(e, o / 2, o / 2 + u), i.toDataURL("image/png");
-}, ts = (e) => {
+}, os = (e) => {
   if (!e) return "";
   const o = typeof e == "string" ? new Date(e) : e;
   if (isNaN(o.getTime())) return "";
   const i = o.getDate().toString().padStart(2, "0"), r = (o.getMonth() + 1).toString().padStart(2, "0"), s = o.getFullYear();
   return `${i}-${r}-${s}`;
 };
-function ns(e) {
+function rs(e) {
   return new Date(e);
 }
 const fi = (e) => {
@@ -4590,7 +4590,7 @@ const fi = (e) => {
   } catch {
     return "неверная дата";
   }
-}, os = (e, o = {}) => {
+}, is = (e, o = {}) => {
   const { useExactAfterMonths: i = 6, includeTime: r = !0 } = o, s = new Date(e);
   return isNaN(s.getTime()), Math.floor(((/* @__PURE__ */ new Date()).getTime() - s.getTime()) / (1e3 * 60 * 60 * 24 * 30)) >= i ? r ? bi(s) : s.toLocaleDateString("ru-RU", {
     day: "2-digit",
@@ -4602,57 +4602,59 @@ export {
   Te as API_BASE_URL,
   ki as AddButton,
   gr as AuthCallModal,
-  Ki as AuthPage,
-  Ci as BackButton,
+  es as AuthPage,
+  ji as BASE_URL,
+  Mi as BackButton,
   pn as BaseModal,
-  Di as Checkbox,
-  Ui as ColumnChart,
+  Ei as Checkbox,
+  qi as ColumnChart,
   De as ContextMenu,
-  _i as CountInfoTitle,
+  Ni as CountInfoTitle,
   xe as CustomCalendar,
   Ie as CustomInput,
   Vr as CustomPhoneInput,
-  Li as CustomSelect,
+  Ti as CustomSelect,
   yi as CustomTable,
-  Ri as CustomTextArea,
+  Bi as CustomTextArea,
   Be as CustomTitle,
   ae as DefaultButton,
-  $i as DeleteButton,
-  Mi as EditButton,
-  Ai as EntitySelectContainer,
-  Si as ExportButton,
-  Ii as InputContainer,
-  Ei as InputLabel,
-  Ti as InputRow,
-  Oi as InputTitle,
-  Ni as ModalInfoTitle,
-  Pi as Pagination,
-  zi as PeriodField,
-  Bi as PhoneModalInput,
-  qi as PhotoViewerModal,
-  Hi as ProgressBar,
-  Yi as RadioButton,
-  Xi as ScatterPlot,
-  Gi as SideMenu,
+  Si as DeleteButton,
+  Li as EditButton,
+  Oi as EntitySelectContainer,
+  Di as ExportButton,
+  Ci as FILE_BASE_URL,
+  Ri as InputContainer,
+  Pi as InputLabel,
+  Ii as InputRow,
+  Wi as InputTitle,
+  Yi as ModalInfoTitle,
+  zi as Pagination,
+  Fi as PeriodField,
+  Ai as PhoneModalInput,
+  Ji as PhotoViewerModal,
+  Zi as ProgressBar,
+  Vi as RadioButton,
+  Gi as ScatterPlot,
+  Ki as SideMenu,
   kr as SideMenuContext,
-  Fi as Tabs,
+  _i as Tabs,
   ze as TitleField,
-  Wi as ToggleSwitch,
-  Vi as YandexMapSelector,
+  Hi as ToggleSwitch,
+  Ui as YandexMapSelector,
   oe as apiRequest,
-  ji as authStorage,
+  $i as authStorage,
   qr as confirmCallAuth,
-  ts as formatDate,
+  os as formatDate,
   bi as formatExactDate,
   je as formatMoney,
   fi as formatRelativeTime,
-  os as formatRelativeTimeExtended,
-  es as generateAvatar,
-  Qi as getInitials,
-  Ji as getSessionInfo,
+  is as formatRelativeTimeExtended,
+  ns as generateAvatar,
+  ts as getInitials,
+  Qi as getSessionInfo,
   Xr as initiateCallAuth,
-  ns as parseDateInput,
-  Zi as parseMoney,
+  rs as parseDateInput,
+  Xi as parseMoney,
   ct as refreshAccessToken,
   gi as stringToColor
 };

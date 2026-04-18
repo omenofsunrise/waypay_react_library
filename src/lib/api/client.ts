@@ -1,4 +1,4 @@
-import { API_BASE_URL } from './config';
+import { API_BASE_URL, FILE_BASE_URL, BASE_URL } from './config';
 
 type RequestOptions = {
   method?: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
@@ -103,7 +103,7 @@ export async function apiRequest<T = unknown>(endpoint: string, options: Request
   return tryRequest(token);
 }
 
-export { API_BASE_URL };
+export { API_BASE_URL, FILE_BASE_URL, BASE_URL };
 
 type RefreshResponse = { access_token: string; refresh_token?: string };
 

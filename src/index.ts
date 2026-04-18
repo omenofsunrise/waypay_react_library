@@ -63,7 +63,7 @@ export {
   type ConfirmCallAuthResponse,
 } from "./lib/api/authCall";
 export { default as AuthPage } from "./lib/pages/AuthPage";
-export { apiRequest, API_BASE_URL, refreshAccessToken } from "./lib/api/client";
+export { apiRequest, API_BASE_URL, refreshAccessToken, FILE_BASE_URL, BASE_URL } from "./lib/api/client";
 export { stringToColor, getInitials, generateAvatar } from "./lib/utils/avatar";
 export { formatMoney, parseMoney } from "./lib/utils/money";
 export {
