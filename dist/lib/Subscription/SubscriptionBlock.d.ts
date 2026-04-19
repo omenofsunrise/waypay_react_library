@@ -21,6 +21,8 @@ interface SubscriptionBlockProps {
     loadingText?: string;
     showSelectedIndicator?: boolean;
     className?: string;
+    title?: string;
+    subTitle?: string;
 }
 declare const SubscriptionBlock: React.FC<SubscriptionBlockProps>;
 export default SubscriptionBlock;

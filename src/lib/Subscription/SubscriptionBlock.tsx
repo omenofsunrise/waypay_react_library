@@ -26,6 +26,8 @@ interface SubscriptionBlockProps {
   loadingText?: string;
   showSelectedIndicator?: boolean;
   className?: string;
+  title?: string;
+  subTitle?: string;
 }
 
 const defaultPlans: SubscriptionPlan[] = [
@@ -53,6 +55,8 @@ const SubscriptionBlock: React.FC<SubscriptionBlockProps> = ({
   loadingText = 'Обработка...',
   showSelectedIndicator = true,
   className,
+  title = 'Подписка',
+  subTitle = 'WayPay CRM',
 }) => {
   const [selectedPlan, setSelectedPlan] = useState<SubscriptionPlan | null>(null);
   
@@ -72,7 +76,6 @@ const SubscriptionBlock: React.FC<SubscriptionBlockProps> = ({
     },
   });
 
-  // Инициализация выбранного плана при монтировании
   React.useEffect(() => {
     if (!selectedPlan && plans.length > 0) {
       const defaultPlan = plans.find(plan => plan.popular) || plans[0];
@@ -104,10 +107,8 @@ const SubscriptionBlock: React.FC<SubscriptionBlockProps> = ({
   return (
     <Container className={className}>
       <Header>
-        <Title>Подписка</Title>
-        <Subtitle>
-          {subscriptionType === 'days' ? 'WayPay CRM' : 'Разовые использования'}
-        </Subtitle>
+        <Title>{title}</Title>
+        <Subtitle>{subTitle}</Subtitle>
       </Header>
 
       {(error || (typeof error === 'string' && error)) && (
@@ -152,19 +153,6 @@ const SubscriptionBlock: React.FC<SubscriptionBlockProps> = ({
           );
         })}
       </PlansList>
-
-      {selectedPlan && (
-        <SelectedInfo>
-          <SelectedInfoText>
-            {subscriptionType === 'days' 
-              ? `Вы выбрали: ${selectedPlan.label} (${selectedPlan.days} дней)`
-              : `Вы выбрали: ${selectedPlan.label} (${selectedPlan.ones} использований)`}
-          </SelectedInfoText>
-          <SelectedPrice>
-            Итого: {formatPrice(selectedPlan.price)} ₽
-          </SelectedPrice>
-        </SelectedInfo>
-      )}
 
       <SubscribeButton onClick={handleConfirmSubscribe} disabled={isLoading}>
         {isLoading ? loadingText : buttonText}
@@ -289,28 +277,6 @@ const SelectedIndicator = styled.div`
   border-width: 0 20px 20px 0;
   border-color: transparent #007D88 transparent transparent;
   border-radius: 0 12px 0 0;
-`;
-
-const SelectedInfo = styled.div`
-  background: #f8f9fa;
-  border-radius: 12px;
-  padding: 12px 16px;
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-const SelectedInfoText = styled.div`
-  font-size: 13px;
-  color: #1a1a1a;
-  font-weight: 500;
-`;
-
-const SelectedPrice = styled.div`
-  font-size: 16px;
-  color: #007D88;
-  font-weight: 600;
 `;
 
 const SubscribeButton = styled.button`
