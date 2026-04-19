@@ -25,6 +25,7 @@ export interface SubscriptionStatusResponse {
     expiresAt: string | null;
     totalOnes: number;
     leftOnes: number;
+    url: string;
 }
 declare class SubscriptionService {
     /**
