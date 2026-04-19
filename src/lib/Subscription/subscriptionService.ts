@@ -30,6 +30,8 @@ export interface SubscriptionStatusResponse {
   isActive: boolean;
   endAt: string | null;
   expiresAt: string | null;
+  totalOnes: number;
+  leftOnes: number;
 }
 
 class SubscriptionService {
