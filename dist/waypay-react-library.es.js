@@ -42,9 +42,9 @@ function Ve() {
           return "StrictMode";
         case C:
           return "Suspense";
-        case W:
+        case N:
           return "SuspenseList";
-        case H:
+        case W:
           return "Activity";
       }
       if (typeof p == "object")
@@ -135,14 +135,14 @@ function Ve() {
       )), p = this.props.ref, p !== void 0 ? p : null;
     }
     function b(p, D, B, k, F, P) {
-      var N = B.ref;
+      var H = B.ref;
       return p = {
         $$typeof: u,
         type: p,
         key: D,
         props: B,
         _owner: k
-      }, (N !== void 0 ? N : null) !== null ? Object.defineProperty(p, "ref", {
+      }, (H !== void 0 ? H : null) !== null ? Object.defineProperty(p, "ref", {
         enumerable: !1,
         get: v
       }) : Object.defineProperty(p, "ref", { enumerable: !1, value: null }), p._store = {}, Object.defineProperty(p._store, "validated", {
@@ -168,24 +168,24 @@ function Ve() {
       }), Object.freeze && (Object.freeze(p.props), Object.freeze(p)), p;
     }
     function y(p, D, B, k, F, P) {
-      var N = D.children;
-      if (N !== void 0)
+      var H = D.children;
+      if (H !== void 0)
         if (k)
-          if ($(N)) {
-            for (k = 0; k < N.length; k++)
-              g(N[k]);
-            Object.freeze && Object.freeze(N);
+          if ($(H)) {
+            for (k = 0; k < H.length; k++)
+              g(H[k]);
+            Object.freeze && Object.freeze(H);
           } else
             console.error(
               "React.jsx: Static children should always be an array. You are likely explicitly calling React.jsxs or React.jsxDEV. Use the Babel transform instead."
             );
-        else g(N);
+        else g(H);
       if (s.call(D, "key")) {
-        N = e(p);
+        H = e(p);
         var J = Object.keys(D).filter(function(te) {
           return te !== "key";
         });
-        k = 0 < J.length ? "{key: someKey, " + J.join(": ..., ") + ": ...}" : "{key: someKey}", L[N + k] || (J = 0 < J.length ? "{" + J.join(": ..., ") + ": ...}" : "{}", console.error(
+        k = 0 < J.length ? "{key: someKey, " + J.join(": ..., ") + ": ...}" : "{key: someKey}", L[H + k] || (J = 0 < J.length ? "{" + J.join(": ..., ") + ": ...}" : "{}", console.error(
           `A props object containing a "key" prop is being spread into JSX:
   let props = %s;
   <%s {...props} />
@@ -193,22 +193,22 @@ React keys must be passed directly to JSX without using spread:
   let props = %s;
   <%s key={someKey} {...props} />`,
           k,
-          N,
+          H,
           J,
-          N
-        ), L[N + k] = !0);
+          H
+        ), L[H + k] = !0);
       }
-      if (N = null, B !== void 0 && (r(B), N = "" + B), d(D) && (r(D.key), N = "" + D.key), "key" in D) {
+      if (H = null, B !== void 0 && (r(B), H = "" + B), d(D) && (r(D.key), H = "" + D.key), "key" in D) {
         B = {};
         for (var ee in D)
           ee !== "key" && (B[ee] = D[ee]);
       } else B = D;
-      return N && h(
+      return H && h(
         B,
         typeof p == "function" ? p.displayName || p.name || "Unknown" : p
       ), b(
         p,
-        N,
+        H,
         B,
         a(),
         F,
@@ -221,7 +221,7 @@ React keys must be passed directly to JSX without using spread:
     function w(p) {
       return typeof p == "object" && p !== null && p.$$typeof === u;
     }
-    var x = G, u = /* @__PURE__ */ Symbol.for("react.transitional.element"), l = /* @__PURE__ */ Symbol.for("react.portal"), S = /* @__PURE__ */ Symbol.for("react.fragment"), j = /* @__PURE__ */ Symbol.for("react.strict_mode"), T = /* @__PURE__ */ Symbol.for("react.profiler"), E = /* @__PURE__ */ Symbol.for("react.consumer"), _ = /* @__PURE__ */ Symbol.for("react.context"), z = /* @__PURE__ */ Symbol.for("react.forward_ref"), C = /* @__PURE__ */ Symbol.for("react.suspense"), W = /* @__PURE__ */ Symbol.for("react.suspense_list"), R = /* @__PURE__ */ Symbol.for("react.memo"), A = /* @__PURE__ */ Symbol.for("react.lazy"), H = /* @__PURE__ */ Symbol.for("react.activity"), O = /* @__PURE__ */ Symbol.for("react.client.reference"), m = x.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, s = Object.prototype.hasOwnProperty, $ = Array.isArray, f = console.createTask ? console.createTask : function() {
+    var x = G, u = /* @__PURE__ */ Symbol.for("react.transitional.element"), l = /* @__PURE__ */ Symbol.for("react.portal"), S = /* @__PURE__ */ Symbol.for("react.fragment"), j = /* @__PURE__ */ Symbol.for("react.strict_mode"), T = /* @__PURE__ */ Symbol.for("react.profiler"), E = /* @__PURE__ */ Symbol.for("react.consumer"), _ = /* @__PURE__ */ Symbol.for("react.context"), z = /* @__PURE__ */ Symbol.for("react.forward_ref"), C = /* @__PURE__ */ Symbol.for("react.suspense"), N = /* @__PURE__ */ Symbol.for("react.suspense_list"), R = /* @__PURE__ */ Symbol.for("react.memo"), A = /* @__PURE__ */ Symbol.for("react.lazy"), W = /* @__PURE__ */ Symbol.for("react.activity"), O = /* @__PURE__ */ Symbol.for("react.client.reference"), m = x.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, s = Object.prototype.hasOwnProperty, $ = Array.isArray, f = console.createTask ? console.createTask : function() {
       return null;
     };
     x = {
@@ -382,14 +382,14 @@ const Ie = ({ x: e, y: o, items: r, onClose: i, ...a }) => {
 }) => {
   const [x, u] = I(null), [l, S] = I(null), j = Z(null), T = Z(null), E = 500, _ = h !== void 0 ? h : x, z = (M) => {
     !e[M].isSortable || !a || a(M);
-  }, W = y || ((M) => {
+  }, N = y || ((M) => {
     const L = M[8];
     return typeof L == "string" ? parseFloat(L.replace(/[^\d.]/g, "")) > 0 : !1;
   }), R = (M) => {
     h === void 0 && u(M === _ ? null : M), d && d(o[M], M);
   }, A = (M, L) => {
     r && r(M, L);
-  }, H = (M, L) => {
+  }, W = (M, L) => {
     if (i.length === 0) return;
     M.preventDefault();
     const p = "touches" in M ? M.touches[0].clientX : M.clientX, D = "touches" in M ? M.touches[0].clientY : M.clientY;
@@ -399,10 +399,10 @@ const Ie = ({ x: e, y: o, items: r, onClose: i, ...a }) => {
       rowIndex: L
     });
   }, O = (M, L) => {
-    M.preventDefault(), H(M, L);
+    M.preventDefault(), W(M, L);
   }, m = (M, L) => {
     i.length !== 0 && (T.current && clearTimeout(T.current), T.current = window.setTimeout(() => {
-      H(M, L);
+      W(M, L);
     }, E));
   }, s = () => {
     T.current && (clearTimeout(T.current), T.current = null);
@@ -522,7 +522,7 @@ const Ie = ({ x: e, y: o, items: r, onClose: i, ...a }) => {
         )
       ) }) }),
       /* @__PURE__ */ t.jsx(it, { $fixedHeight: v, children: /* @__PURE__ */ t.jsx(de, { children: o.map((M, L) => {
-        const p = !!(b && L === o.length - 1), D = !!(!p && W(M)), B = Y(L, p, D), k = V(L, p, D);
+        const p = !!(b && L === o.length - 1), D = !!(!p && N(M)), B = Y(L, p, D), k = V(L, p, D);
         return /* @__PURE__ */ t.jsx(
           he,
           {
@@ -562,7 +562,7 @@ const Ie = ({ x: e, y: o, items: r, onClose: i, ...a }) => {
                   $isFirst: P === 0,
                   $isLast: P === M.length - 1,
                   $isTotalsCell: p,
-                  $isBeforeTotals: p && P < M.findIndex((N) => N === "Итого:"),
+                  $isBeforeTotals: p && P < M.findIndex((H) => H === "Итого:"),
                   children: F
                 },
                 P
@@ -1398,7 +1398,7 @@ const Zi = {
   }, C = (s) => {
     const $ = new Date(h);
     $.setFullYear(s), v($), u(!1);
-  }, W = () => {
+  }, N = () => {
     const s = h.getFullYear(), $ = h.getMonth(), f = new Date(s, $, 1), V = new Date(s, $ + 1, 0).getDate(), U = f.getDay() === 0 ? 6 : f.getDay() - 1, M = [], L = 35, p = new Date(s, $, 0).getDate();
     for (let B = 0; B < U; B++) {
       const k = p - U + B + 1, F = new Date(s, $ - 1, k), P = !!(b && F.getDate() === b.getDate() && F.getMonth() === b.getMonth() && F.getFullYear() === b.getFullYear());
@@ -1429,7 +1429,7 @@ const Zi = {
     for (let f = s - 10; f <= s + 10; f++)
       $.push(f);
     return $;
-  }, H = (s) => {
+  }, W = (s) => {
     s.preventDefault(), s.stopPropagation(), w(!g), u(!1);
   }, O = (s) => {
     s.preventDefault(), s.stopPropagation(), u(!x), w(!1);
@@ -1457,7 +1457,7 @@ const Zi = {
         ),
         /* @__PURE__ */ t.jsxs(Xt, { children: [
           /* @__PURE__ */ t.jsxs(Kt, { ref: S, children: [
-            /* @__PURE__ */ t.jsxs(Gt, { onClick: (s) => H(s), onMouseDown: (s) => s.preventDefault(), children: [
+            /* @__PURE__ */ t.jsxs(Gt, { onClick: (s) => W(s), onMouseDown: (s) => s.preventDefault(), children: [
               ge[h.getMonth()],
               /* @__PURE__ */ t.jsx(be, { $open: g })
             ] }),
@@ -1503,7 +1503,7 @@ const Zi = {
         )
       ] }),
       /* @__PURE__ */ t.jsx(en, { children: Wt.map((s) => /* @__PURE__ */ t.jsx(tn, { children: s }, s)) }),
-      /* @__PURE__ */ t.jsx(nn, { children: W() }),
+      /* @__PURE__ */ t.jsx(nn, { children: N() }),
       /* @__PURE__ */ t.jsxs(on, { children: [
         /* @__PURE__ */ t.jsx(ke, { onClick: _, children: "Удалить" }),
         /* @__PURE__ */ t.jsx(ke, { onClick: E, children: "Сегодня" })
@@ -1756,9 +1756,9 @@ const Zi = {
         if (!isNaN(_)) {
           let z = _.toLocaleString("ru-RU");
           z += " ₽";
-          const C = w(T, j || 0), W = x(z, C);
+          const C = w(T, j || 0), N = x(z, C);
           u.target.value = z, a(u), setTimeout(() => {
-            u.target.setSelectionRange(W, W);
+            u.target.setSelectionRange(N, N);
           }, 0);
         }
         break;
@@ -2267,13 +2267,13 @@ const Zi = {
     a?.(""), g(""), x(""), l("");
   }, z = () => {
     if (w && u) {
-      const R = C(w), A = C(u), H = `С ${R} по ${A}`;
-      a?.("Custom", w, u), g(H), b(!1);
+      const R = C(w), A = C(u), W = `С ${R} по ${A}`;
+      a?.("Custom", w, u), g(W), b(!1);
     }
   }, C = (R) => {
-    const A = new Date(R), H = String(A.getDate()).padStart(2, "0"), O = String(A.getMonth() + 1).padStart(2, "0"), m = A.getFullYear();
-    return `${H}.${O}.${m}`;
-  }, W = () => /* @__PURE__ */ t.jsxs(An, { children: [
+    const A = new Date(R), W = String(A.getDate()).padStart(2, "0"), O = String(A.getMonth() + 1).padStart(2, "0"), m = A.getFullYear();
+    return `${W}.${O}.${m}`;
+  }, N = () => /* @__PURE__ */ t.jsxs(An, { children: [
     /* @__PURE__ */ t.jsx(Fe, { style: { margin: 0 }, children: /* @__PURE__ */ t.jsx(Be, { style: { margin: 0 }, children: "Выбор периода" }) }),
     /* @__PURE__ */ t.jsx(_n, { onClick: _, children: "Очистить период" })
   ] });
@@ -2301,7 +2301,7 @@ const Zi = {
           R.preventDefault(), z();
         },
         saveButtonText: "Выбрать",
-        customLayout: /* @__PURE__ */ t.jsx(W, {}),
+        customLayout: /* @__PURE__ */ t.jsx(N, {}),
         children: /* @__PURE__ */ t.jsxs(Bn, { children: [
           /* @__PURE__ */ t.jsx(Ce, { children: /* @__PURE__ */ t.jsx(fe, { value: w, onChange: (R) => x(R) }) }),
           /* @__PURE__ */ t.jsx(Ce, { children: /* @__PURE__ */ t.jsx(fe, { value: u, onChange: (R) => l(R) }) })
@@ -2915,7 +2915,7 @@ const bo = (e) => typeof window > "u" ? Promise.reject(new Error("Window is not 
   style: u,
   onError: l
 }) => {
-  const [S, j] = I(null), [T, E] = I(o), [_, z] = I(o), [C, W] = I(!1), R = Z(null);
+  const [S, j] = I(null), [T, E] = I(o), [_, z] = I(o), [C, N] = I(!1), R = Z(null);
   q(() => {
     let O = !1, m;
     return (async () => {
@@ -2934,7 +2934,7 @@ const bo = (e) => typeof window > "u" ? Promise.reject(new Error("Window is not 
         }), f.events.add("dragend", () => {
           const Y = f.geometry.getCoordinates();
           A(Y, f, m);
-        }), j(m), W(!0);
+        }), j(m), N(!0);
       } catch ($) {
         l && $ instanceof Error && l($);
       }
@@ -2950,7 +2950,7 @@ const bo = (e) => typeof window > "u" ? Promise.reject(new Error("Window is not 
       } catch ($) {
         l && $ instanceof Error && l($);
       }
-  }, H = async () => {
+  }, W = async () => {
     if (!(!T.trim() || !window.ymaps || !S))
       try {
         const m = (await window.ymaps.geocode(T)).geoObjects.get(0);
@@ -2978,11 +2978,11 @@ const bo = (e) => typeof window > "u" ? Promise.reject(new Error("Window is not 
           value: T,
           onChange: (O) => E(O.target.value),
           placeholder: v,
-          onKeyPress: (O) => O.key === "Enter" && H(),
+          onKeyPress: (O) => O.key === "Enter" && W(),
           disabled: !C
         }
       ),
-      /* @__PURE__ */ t.jsx(vo, { onClick: H, disabled: !C, children: b })
+      /* @__PURE__ */ t.jsx(vo, { onClick: W, disabled: !C, children: b })
     ] }),
     /* @__PURE__ */ t.jsxs(ko, { children: [
       "Выбранный адрес: ",
@@ -3257,7 +3257,7 @@ const bs = ({ title: e, data: o, maxValue: r, step: i, height: a = 300, titleFon
   const C = [];
   for (let m = d; m <= c; m += v)
     C.push(m);
-  const W = g || z.map((m) => m.toString()), R = y ? Array.from(new Set(o.filter((m) => m.label).map((m) => m.label))).map((m) => {
+  const N = g || z.map((m) => m.toString()), R = y ? Array.from(new Set(o.filter((m) => m.label).map((m) => m.label))).map((m) => {
     const s = o.find(($) => $.label === m);
     return { name: m, color: s.color };
   }) : [], A = {};
@@ -3265,13 +3265,13 @@ const bs = ({ title: e, data: o, maxValue: r, step: i, height: a = 300, titleFon
     const s = m.label || "default";
     A[s] || (A[s] = []), A[s].push(m);
   });
-  const H = (m) => m / _ * 100, O = (m) => {
+  const W = (m) => m / _ * 100, O = (m) => {
     const s = c - d;
     return 100 - (m - d) / s * 100;
   };
   return q(() => {
     if (u && E.current) {
-      const m = E.current.getBoundingClientRect(), s = H(u.x) / 100 * m.width, $ = O(u.y) / 100 * m.height;
+      const m = E.current.getBoundingClientRect(), s = W(u.x) / 100 * m.width, $ = O(u.y) / 100 * m.height;
       j({
         x: s + m.left,
         y: $ + m.top
@@ -3294,7 +3294,7 @@ const bs = ({ title: e, data: o, maxValue: r, step: i, height: a = 300, titleFon
         C.map((m, s) => /* @__PURE__ */ t.jsx(er, { position: O(m) }, `hline-${s}`)),
         Object.values(A).map((m, s) => m.map(($, f) => {
           if (f === 0) return null;
-          const Y = m[f - 1], V = H(Y.x), U = O(Y.y), M = H($.x), L = O($.y);
+          const Y = m[f - 1], V = W(Y.x), U = O(Y.y), M = W($.x), L = O($.y);
           return /* @__PURE__ */ t.jsx(
             "svg",
             {
@@ -3307,7 +3307,7 @@ const bs = ({ title: e, data: o, maxValue: r, step: i, height: a = 300, titleFon
         o.map((m, s) => /* @__PURE__ */ t.jsx(
           tr,
           {
-            x: H(m.x),
+            x: W(m.x),
             y: O(m.y),
             color: m.color,
             onMouseEnter: () => l(m),
@@ -3326,7 +3326,7 @@ const bs = ({ title: e, data: o, maxValue: r, step: i, height: a = 300, titleFon
       /* @__PURE__ */ t.jsx(lr, {})
     ] }),
     /* @__PURE__ */ t.jsxs(nr, { children: [
-      W.map((m, s) => {
+      N.map((m, s) => {
         const f = z[s] / _ * 100;
         return /* @__PURE__ */ t.jsx(or, { style: { left: `${f}%`, transform: "translateX(-50%)" }, children: m }, s);
       }),
@@ -3770,9 +3770,9 @@ const bs = ({ title: e, data: o, maxValue: r, step: i, height: a = 300, titleFon
   }, [u]);
   const [_, z] = I(
     c ?? j.collapsed ?? !1
-  ), [C, W] = I(null), [R, A] = I(
+  ), [C, N] = I(null), [R, A] = I(
     h ?? j.selectedSideMenuItem ?? null
-  ), [H, O] = I({
+  ), [W, O] = I({
     visible: !1,
     x: 0,
     y: 0,
@@ -3783,7 +3783,7 @@ const bs = ({ title: e, data: o, maxValue: r, step: i, height: a = 300, titleFon
     A(k), j.setSelectedSideMenuItem(k);
   };
   q(() => {
-    c !== void 0 && (z(c), c && W(null));
+    c !== void 0 && (z(c), c && N(null));
   }, [c]), q(() => {
     h !== void 0 && Y(h);
   }, [h]), q(() => {
@@ -3792,27 +3792,27 @@ const bs = ({ title: e, data: o, maxValue: r, step: i, height: a = 300, titleFon
   }, []);
   const V = () => {
     const k = !s;
-    $(k), k && W(null);
+    $(k), k && N(null);
   }, U = (k) => {
-    k.disabled || k.hidden || (Y(k.key), v?.(k), k.onClick?.(k), b && ($(!0), W(null)));
+    k.disabled || k.hidden || (Y(k.key), v?.(k), k.onClick?.(k), b && ($(!0), N(null)));
   }, M = (k) => {
-    W((F) => F === k ? null : k);
+    N((F) => F === k ? null : k);
   }, L = (k, F) => {
     const P = (k.children?.length || 0) > 0;
     if (s && P) {
       F.stopPropagation();
-      const N = F.currentTarget.getBoundingClientRect();
+      const H = F.currentTarget.getBoundingClientRect();
       O({
         visible: !0,
-        x: N.right + 6,
-        y: N.top,
+        x: H.right + 6,
+        y: H.top,
         items: k.children || []
       });
       return;
     }
     P ? M(k.key) : U(k);
   }, p = (k, F = !1) => k.filter((P) => !P.hidden).map((P) => {
-    const N = (P.children?.length || 0) > 0, J = C === P.key, ee = f === P.key || !!P.children && P.children.some((te) => te.key === f);
+    const H = (P.children?.length || 0) > 0, J = C === P.key, ee = f === P.key || !!P.children && P.children.some((te) => te.key === f);
     return /* @__PURE__ */ t.jsxs(G.Fragment, { children: [
       /* @__PURE__ */ t.jsxs(
         Ar,
@@ -3825,13 +3825,13 @@ const bs = ({ title: e, data: o, maxValue: r, step: i, height: a = 300, titleFon
           children: [
             P.icon && /* @__PURE__ */ t.jsx(Or, { $collapsed: s, children: P.icon }),
             !s && /* @__PURE__ */ t.jsx(_r, { children: P.label }),
-            !s && N && /* @__PURE__ */ t.jsx(Nr, { $expanded: J, children: "▾" })
+            !s && H && /* @__PURE__ */ t.jsx(Nr, { $expanded: J, children: "▾" })
           ]
         }
       ),
-      !s && N && J && /* @__PURE__ */ t.jsx(Wr, { children: p(P.children || [], !0) })
+      !s && H && J && /* @__PURE__ */ t.jsx(Wr, { children: p(P.children || [], !0) })
     ] }, P.key);
-  }), D = Ne(() => H.visible ? /* @__PURE__ */ t.jsx(Hr, { style: { left: H.x, top: H.y }, children: H.items.map((k) => /* @__PURE__ */ t.jsx(
+  }), D = Ne(() => W.visible ? /* @__PURE__ */ t.jsx(Hr, { style: { left: W.x, top: W.y }, children: W.items.map((k) => /* @__PURE__ */ t.jsx(
     Yr,
     {
       onClick: () => {
@@ -3841,7 +3841,7 @@ const bs = ({ title: e, data: o, maxValue: r, step: i, height: a = 300, titleFon
       children: k.label
     },
     k.key
-  )) }) : null, [H, f]), B = () => {
+  )) }) : null, [W, f]), B = () => {
     const k = [...e, ...o].filter((F) => !F.hidden);
     return /* @__PURE__ */ t.jsx(Lr, { children: k.map((F) => {
       const P = f === F.key;
@@ -4227,27 +4227,36 @@ const se = new Gr(), ys = ({
       return "00:00";
     const M = Math.floor(U % (1e3 * 60 * 60) / (1e3 * 60)), L = Math.floor(U % (1e3 * 60) / 1e3);
     return `${M.toString().padStart(2, "0")}:${L.toString().padStart(2, "0")}`;
-  }, []), W = X(() => {
+  }, []), N = X(() => {
     r && d === 1 && S === "Pending" && C(r) === "00:00" && (l("Время ожидания оплаты истекло"), z.current && (clearInterval(z.current), z.current = null));
   }, [r, d, S, C]), R = X(() => {
-    !r || d !== 1 || S !== "Pending" || (W(), z.current && clearInterval(z.current), z.current = window.setInterval(() => {
-      E.current && d === 1 && S === "Pending" && W();
+    !r || d !== 1 || S !== "Pending" || (N(), z.current && clearInterval(z.current), z.current = window.setInterval(() => {
+      E.current && d === 1 && S === "Pending" && N();
     }, 1e3));
-  }, [r, d, S, W]), A = X(() => {
+  }, [r, d, S, N]), A = X(() => {
     z.current && (clearInterval(z.current), z.current = null);
-  }, []), H = X(async () => {
-    if (!(T.current || d === 3 || S === "Active"))
-      try {
-        if (T.current = !0, l(null), c) {
-          const f = await c();
-          f.success && f.status === "Active" ? (j("Active"), h(3), A(), o && o()) : f.status === "Pending" ? (j("Pending"), h(1), f.transaction_status === "Authorized" && h(2)) : f.status === "Expired" && (l("Время ожидания оплаты истекло"), A());
-        }
-      } catch (f) {
-        console.error("Ошибка при проверке статуса:", f), l("Не удалось проверить статус оплаты");
-      } finally {
-        E.current && (T.current = !1);
+  }, []), W = X(() => {
+    _.current && (clearInterval(_.current), _.current = null);
+  }, []), O = X(async () => {
+    if (T.current || d === 3 || S === "Active") {
+      console.log("Пропуск проверки:", {
+        isChecking: T.current,
+        paymentStep: d,
+        currentStatus: S
+      });
+      return;
+    }
+    try {
+      if (T.current = !0, l(null), c) {
+        const f = await c();
+        f.success && f.status === "Active" ? (j("Active"), h(3), A(), W(), o && o()) : f.status === "Pending" ? (j("Pending"), h(1), f.transaction_status === "Authorized" && h(2)) : f.status === "Expired" && (l("Время ожидания оплаты истекло"), A(), W());
       }
-  }, [c, o, d, S, A]);
+    } catch (f) {
+      console.error("Ошибка при проверке статуса:", f), l("Не удалось проверить статус оплаты");
+    } finally {
+      E.current && (T.current = !1);
+    }
+  }, [c, o, S, A, W]);
   q(() => {
     if (d === 3) {
       const f = setTimeout(() => {
@@ -4256,21 +4265,19 @@ const se = new Gr(), ys = ({
       return () => clearTimeout(f);
     }
   }, [d, o]);
-  const O = X(() => {
-    _.current || S === "Active" || (H(), _.current = window.setInterval(() => {
-      E.current && S !== "Active" && H();
+  const m = X(() => {
+    _.current || S === "Active" || (O(), _.current = window.setInterval(() => {
+      E.current && S !== "Active" && O();
     }, 5e3));
-  }, [H, S]), m = X(() => {
-    _.current && (clearInterval(_.current), _.current = null);
-  }, []);
-  q(() => (E.current = !0, S === "Active" ? h(3) : S === "Pending" && (O(), R()), () => {
-    E.current = !1, m(), A();
-  }), [S, O, R, m, A]), q(() => {
+  }, [O, S]);
+  q(() => (E.current = !0, S === "Active" ? h(3) : S === "Pending" && (m(), R()), () => {
+    E.current = !1, W(), A();
+  }), [S, m, R, W, A]), q(() => {
     d === 1 && S === "Pending" ? R() : A();
   }, [d, S, R, A]);
   const s = (f) => d > f ? "completed" : d === f ? "current" : "pending", $ = async () => {
     try {
-      await se.cancelSubscription(a), b(!0), g(null), m(), A(), window.location.reload();
+      await se.cancelSubscription(a), b(!0), g(null), W(), A(), window.location.reload();
     } catch (f) {
       console.error("Ошибка при отмене подписки:", f), g("Произошла ошибка при отмене подписки");
     } finally {
@@ -4703,7 +4710,7 @@ const se = new Gr(), ys = ({
     onSuccess: i,
     onCancel: a,
     onError: c
-  } = e, [d, h] = I(!1), [v, b] = I(!1), [y, g] = I(!1), [w, x] = I(!1), [u, l] = I(null), [S, j] = I(null), [T, E] = I(null), [_, z] = I(null), [C, W] = I(!1), R = X(async (m, s, $) => {
+  } = e, [d, h] = I(!1), [v, b] = I(!1), [y, g] = I(!1), [w, x] = I(!1), [u, l] = I(null), [S, j] = I(null), [T, E] = I(null), [_, z] = I(null), [C, N] = I(!1), R = X(async (m, s, $) => {
     b(!0), h(!0), l(null), j(null);
     try {
       const f = await se.subscribe(m, s, $);
@@ -4725,11 +4732,11 @@ const se = new Gr(), ys = ({
     } finally {
       g(!1), h(!1);
     }
-  }, [o, a, c]), H = X(async (m) => {
+  }, [o, a, c]), W = X(async (m) => {
     x(!0), l(null);
     try {
       const s = m ?? o, $ = await se.getSubscriptionInfo(s);
-      return z($), W($.isActive), $;
+      return z($), N($.isActive), $;
     } catch (s) {
       const $ = s instanceof Error ? s.message : "Unknown error occurred";
       return l($), c?.($), null;
@@ -4737,7 +4744,7 @@ const se = new Gr(), ys = ({
       x(!1);
     }
   }, [o, c]), O = X(() => {
-    h(!1), b(!1), g(!1), x(!1), l(null), j(null), E(null), z(null), W(!1);
+    h(!1), b(!1), g(!1), x(!1), l(null), j(null), E(null), z(null), N(!1);
   }, []);
   return {
     isLoading: d,
@@ -4751,7 +4758,7 @@ const se = new Gr(), ys = ({
     isActive: C,
     subscribe: R,
     cancelSubscription: A,
-    getSubscriptionStatus: H,
+    getSubscriptionStatus: W,
     resetState: O
   };
 }, Kr = [
@@ -4790,7 +4797,7 @@ const se = new Gr(), ys = ({
   });
   G.useEffect(() => {
     if (!w && u.length > 0) {
-      const C = u.find((W) => W.popular) || u[0];
+      const C = u.find((N) => N.popular) || u[0];
       x(C);
     }
   }, [u, w]);
@@ -4799,8 +4806,8 @@ const se = new Gr(), ys = ({
       a?.("Выберите тарифный план");
       return;
     }
-    const C = o === "days" ? w.days : void 0, W = o === "ones" ? w.ones : void 0;
-    await j(e, C, W);
+    const C = o === "days" ? w.days : void 0, N = o === "ones" ? w.ones : void 0;
+    await j(e, C, N);
   }, _ = (C) => new Intl.NumberFormat("ru-RU").format(C), z = (C) => o === "days" ? C.days : C.ones;
   return /* @__PURE__ */ t.jsxs(ei, { className: b, children: [
     /* @__PURE__ */ t.jsxs(ti, { children: [
@@ -4812,7 +4819,7 @@ const se = new Gr(), ys = ({
       /* @__PURE__ */ t.jsx(hi, { onClick: T, children: "×" })
     ] }),
     /* @__PURE__ */ t.jsx(ri, { children: u.map((C) => {
-      const W = z(C), R = w?.id === C.id;
+      const N = z(C), R = w?.id === C.id;
       return /* @__PURE__ */ t.jsxs(
         ii,
         {
@@ -4826,12 +4833,12 @@ const se = new Gr(), ys = ({
                 C.popular && /* @__PURE__ */ t.jsx(li, { children: "Популярный" })
               ] }),
               C.description && /* @__PURE__ */ t.jsx(ci, { children: C.description }),
-              W !== void 0 && o === "days" && /* @__PURE__ */ t.jsxs(Te, { children: [
-                W,
+              N !== void 0 && o === "days" && /* @__PURE__ */ t.jsxs(Te, { children: [
+                N,
                 " дней"
               ] }),
-              W !== void 0 && o === "ones" && /* @__PURE__ */ t.jsxs(Te, { children: [
-                W,
+              N !== void 0 && o === "ones" && /* @__PURE__ */ t.jsxs(Te, { children: [
+                N,
                 " шт."
               ] })
             ] }),
@@ -5098,7 +5105,7 @@ const se = new Gr(), ys = ({
   enableRegistration: g = !1,
   enableSupport: w = !0
 }) => {
-  const [x, u] = I(!1), [l, S] = I(""), [j, T] = I(!1), [E, _] = I(""), [z, C] = I(""), [W, R] = I(!1), [A, H] = I(!1), [O, m] = I(""), [s, $] = I(""), [f, Y] = I(null), V = Z(void 0);
+  const [x, u] = I(!1), [l, S] = I(""), [j, T] = I(!1), [E, _] = I(""), [z, C] = I(""), [N, R] = I(!1), [A, W] = I(!1), [O, m] = I(""), [s, $] = I(""), [f, Y] = I(null), V = Z(void 0);
   q(() => () => {
     V.current && clearInterval(V.current);
   }, []);
@@ -5106,7 +5113,7 @@ const se = new Gr(), ys = ({
     const F = k.replace(/\D/g, "");
     return F ? F.startsWith("8") ? `+7${F.slice(1)}` : F.startsWith("7") ? `+${F}` : `+${F}` : "";
   }, M = () => {
-    T(!1), H(!1), m(""), $(""), Y(null), V.current && window.clearInterval(V.current);
+    T(!1), W(!1), m(""), $(""), Y(null), V.current && window.clearInterval(V.current);
   }, L = async (k) => {
     if (k.preventDefault(), !l) {
       C("Введите номер телефона");
@@ -5120,7 +5127,7 @@ const se = new Gr(), ys = ({
         phone: F,
         checkId: P.check_id,
         callPhone: P.call_phone
-      }), g && "name_required" in P && P.name_required ? (H(!0), _(P.call_phone)) : !g && "name_required" in P && P.name_required ? (C(
+      }), g && "name_required" in P && P.name_required ? (W(!0), _(P.call_phone)) : !g && "name_required" in P && P.name_required ? (C(
         "Этот номер не зарегистрирован в системе. Обратитесь в поддержку для регистрации."
       ), Y(null)) : (_(P.call_phone), T(!0), D(F, P.check_id));
     } catch (P) {
@@ -5136,7 +5143,7 @@ const se = new Gr(), ys = ({
     if (f) {
       u(!0), $("");
       try {
-        m(k), H(!1), T(!0), D(f.phone, f.checkId, k);
+        m(k), W(!1), T(!0), D(f.phone, f.checkId, k);
       } catch (F) {
         console.error("Registration error:", F), $("Не удалось завершить регистрацию");
       } finally {
@@ -5148,13 +5155,13 @@ const se = new Gr(), ys = ({
       B(k, F, P);
     }, y);
   }, B = async (k, F, P) => {
-    if (!W) {
+    if (!N) {
       R(!0);
       try {
-        const N = await bi(k, F, o, P || O);
-        (N.access_token && N.refresh_token || N.accessToken && N.refreshToken) && (V.current && window.clearInterval(V.current), T(!1), H(!1), m(""), Y(null), e(N.access_token ?? N.accessToken));
-      } catch (N) {
-        console.error("Verification error:", N);
+        const H = await bi(k, F, o, P || O);
+        (H.access_token && H.refresh_token || H.accessToken && H.refreshToken) && (V.current && window.clearInterval(V.current), T(!1), W(!1), m(""), Y(null), e(H.access_token ?? H.accessToken));
+      } catch (H) {
+        console.error("Verification error:", H);
       } finally {
         R(!1);
       }

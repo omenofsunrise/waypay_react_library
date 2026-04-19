@@ -81,8 +81,20 @@ const SubscriptionPendingPage: React.FC<SubscriptionPendingPageProps> = ({
     }
   }, []);
 
+  const stopAutoCheck = useCallback(() => {
+    if (checkIntervalRef.current) {
+      clearInterval(checkIntervalRef.current);
+      checkIntervalRef.current = null;
+    }
+  }, []);
+
   const performStatusCheck = useCallback(async () => {
     if (isCheckingRef.current || paymentStep === 3 || currentStatus === 'Active') {
+      console.log('Пропуск проверки:', { 
+        isChecking: isCheckingRef.current, 
+        paymentStep, 
+        currentStatus 
+      });
       return;
     }
 
@@ -97,6 +109,7 @@ const SubscriptionPendingPage: React.FC<SubscriptionPendingPageProps> = ({
           setCurrentStatus('Active');
           setPaymentStep(3);
           stopTimer();
+          stopAutoCheck();
           if (onPaymentComplete) {
             onPaymentComplete();
           }
@@ -110,6 +123,7 @@ const SubscriptionPendingPage: React.FC<SubscriptionPendingPageProps> = ({
         } else if (statusResponse.status === 'Expired') {
           setAutoCheckError('Время ожидания оплаты истекло');
           stopTimer();
+          stopAutoCheck();
         }
       }
       
@@ -121,7 +135,7 @@ const SubscriptionPendingPage: React.FC<SubscriptionPendingPageProps> = ({
         isCheckingRef.current = false;
       }
     }
-  }, [onCheckStatus, onPaymentComplete, paymentStep, currentStatus, stopTimer]);
+  }, [onCheckStatus, onPaymentComplete, currentStatus, stopTimer, stopAutoCheck]);
 
   useEffect(() => {
     if (paymentStep === 3) {
@@ -149,13 +163,6 @@ const SubscriptionPendingPage: React.FC<SubscriptionPendingPageProps> = ({
     }, 5000);
     
   }, [performStatusCheck, currentStatus]);
-
-  const stopAutoCheck = useCallback(() => {
-    if (checkIntervalRef.current) {
-      clearInterval(checkIntervalRef.current);
-      checkIntervalRef.current = null;
-    }
-  }, []);
 
   useEffect(() => {
     isMounted.current = true;
