@@ -121,9 +121,13 @@ const SubscriptionPendingPage: React.FC<SubscriptionPendingPageProps> = ({
             setPaymentStep(2);
           }
         } else if (statusResponse.status === 'Expired') {
-          setAutoCheckError('Время ожидания оплаты истекло');
+          setCurrentStatus('Active');
+          setPaymentStep(3);
           stopTimer();
           stopAutoCheck();
+          if (onPaymentComplete) {
+            onPaymentComplete();
+          }
         }
       }
       

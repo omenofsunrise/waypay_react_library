@@ -4249,7 +4249,7 @@ const se = new Gr(), ys = ({
     try {
       if (T.current = !0, l(null), c) {
         const f = await c();
-        f.success && f.status === "Active" ? (j("Active"), h(3), A(), W(), o && o()) : f.status === "Pending" ? (j("Pending"), h(1), f.transaction_status === "Authorized" && h(2)) : f.status === "Expired" && (l("Время ожидания оплаты истекло"), A(), W());
+        f.success && f.status === "Active" ? (j("Active"), h(3), A(), W(), o && o()) : f.status === "Pending" ? (j("Pending"), h(1), f.transaction_status === "Authorized" && h(2)) : f.status === "Expired" && (j("Active"), h(3), A(), W(), o && o());
       }
     } catch (f) {
       console.error("Ошибка при проверке статуса:", f), l("Не удалось проверить статус оплаты");
