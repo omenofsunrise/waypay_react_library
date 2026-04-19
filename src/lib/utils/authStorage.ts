@@ -6,6 +6,10 @@ export type SessionInfo = {
     id: string;
     is_moderated: boolean;
   };
+  user: {
+    id: string;
+    phone: string;
+  }
 };
 
 export const authStorage = {

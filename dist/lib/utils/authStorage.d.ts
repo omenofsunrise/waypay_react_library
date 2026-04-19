@@ -4,6 +4,10 @@ export type SessionInfo = {
         id: string;
         is_moderated: boolean;
     };
+    user: {
+        id: string;
+        phone: string;
+    };
 };
 export declare const authStorage: {
     isAuthenticated(): Promise<boolean>;
