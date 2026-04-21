@@ -45,7 +45,7 @@ export { default as SubscriptionBlock } from "./lib/Subscription/SubscriptionBlo
 export { default as useSubscription } from "./lib/Subscription/useSubscription";
 export { initiateCallAuth, confirmCallAuth, getSessionInfo, type UserType, type InitiateCallAuthResponse, type ConfirmCallAuthResponse, } from "./lib/api/authCall";
 export { default as AuthPage } from "./lib/pages/AuthPage";
-export { apiRequest, API_BASE_URL, refreshAccessToken, FILE_BASE_URL, BASE_URL } from "./lib/api/client";
+export { apiRequest, downloadFile, API_BASE_URL, refreshAccessToken, FILE_BASE_URL, BASE_URL } from "./lib/api/client";
 export { stringToColor, getInitials, generateAvatar } from "./lib/utils/avatar";
 export { formatMoney, parseMoney } from "./lib/utils/money";
 export { formatDate, parseDateInput, formatRelativeTime, formatExactDate, formatRelativeTimeExtended, } from "./lib/utils/date";

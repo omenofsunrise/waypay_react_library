@@ -103,6 +103,74 @@ export async function apiRequest<T = unknown>(endpoint: string, options: Request
   return tryRequest(token);
 }
 
+export async function downloadFile(endpoint: string, options: Omit<RequestOptions, 'isFormData'> = {}) {
+  const { 
+    method = 'GET', 
+    headers = {}, 
+    token,
+    withCredentials = true
+  } = options;
+  
+  const performRequest = async (jwt?: string) => {
+    const finalHeaders: Record<string, string> = {
+      ...headers,
+    };
+
+    if (jwt) {
+      finalHeaders.Authorization = `Bearer ${jwt}`;
+    }
+
+    const url = endpoint.startsWith('http') ? endpoint : `${API_BASE_URL}${endpoint}`;
+
+    const response = await fetch(url, {
+      method,
+      headers: finalHeaders,
+      credentials: withCredentials ? 'include' : 'same-origin',
+    });
+
+    return response;
+  };
+
+  const tryRequest = async (jwt?: string, allowRefresh = true): Promise<Blob> => {
+    const response = await performRequest(jwt);
+
+    if (response.ok) {
+      return await response.blob();
+    }
+
+    if (response.status === 401 && allowRefresh) {
+      const refreshed = await refreshAccessToken();
+      if (refreshed) {
+        return tryRequest(refreshed, false);
+      }
+    }
+
+    let message = `Request failed with status ${response.status}`;
+    try {
+      const text = await response.text();
+      if (text) {
+        try {
+          const data = JSON.parse(text);
+          if (data && typeof data.error === 'string') {
+            message = data.error;
+          } else if (typeof data === 'string') {
+            message = data;
+          } else if (typeof data?.message === 'string') {
+            message = data.message;
+          }
+        } catch {
+          message = text;
+        }
+      }
+    } catch {
+      // ignore read errors
+    }
+    throw new Error(message);
+  };
+
+  return tryRequest(token);
+}
+
 export { API_BASE_URL, FILE_BASE_URL, BASE_URL };
 
 type RefreshResponse = { access_token: string; refresh_token?: string };
