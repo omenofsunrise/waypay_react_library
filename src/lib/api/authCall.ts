@@ -1,6 +1,7 @@
 import { apiRequest } from './client';
 
 export type UserType = string;
+export type AuthWay = 'CallCheck' | 'WhatsAppCode';
 
 export type InitiateCallAuthResponse = {
   call_phone: string;
@@ -25,12 +26,16 @@ export const normalizeInitiateCallAuthResponse = (data: any): InitiateCallAuthRe
 };
 
 export const initiateCallAuth = async (
-  phone: string, 
+  phone: string,
   userType: UserType,
+  authWay: AuthWay = 'CallCheck',
 ): Promise<InitiateCallAuthResponse> => {
   const body: any = {
     phone,
     user_type: userType,
+    userType,
+    auth_way: authWay,
+    authWay,
   };
   
   const response = await apiRequest<any>('/auth/call/initiate', {
@@ -41,7 +46,13 @@ export const initiateCallAuth = async (
   return normalizeInitiateCallAuthResponse(response);
 };
 
-export const confirmCallAuth = (phone: string, checkId: string, userType: UserType, name?: string) =>
+export const confirmCallAuth = (
+  phone: string,
+  checkId: string,
+  userType: UserType,
+  name?: string,
+  authWay: AuthWay = 'CallCheck',
+) =>
   apiRequest<ConfirmCallAuthResponse>('/auth/call/confirm', {
     method: 'POST',
     body: {
@@ -50,7 +61,9 @@ export const confirmCallAuth = (phone: string, checkId: string, userType: UserTy
       checkId: checkId,
       user_type: userType,
       userType: userType,
-      name: name
+      name,
+      auth_way: authWay,
+      authWay,
     },
   });
 

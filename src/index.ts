@@ -50,6 +50,7 @@ export { default as ScatterPlot } from "./lib/charts/ScatterPlot";
 export { default as CustomTitle } from "./lib/inputs/CustomTitle";
 export { default as PhotoViewerModal } from "./lib/modal/PhotoViewerModal";
 export { default as AuthCallModal } from "./lib/modal/AuthCallModal";
+export { default as AuthWhatsAppModal } from "./lib/modal/AuthWhatsAppModal";
 export { default as SideMenu } from "./lib/navigation/SideMenu";
 export type { SideMenuItem, SideMenuProps } from "./lib/navigation/SideMenu";
 export { SideMenuContext } from "./lib/context/SideMenuContext";
@@ -62,6 +63,7 @@ export {
   confirmCallAuth,
   getSessionInfo,
   type UserType,
+  type AuthWay,
   type InitiateCallAuthResponse,
   type ConfirmCallAuthResponse,
 } from "./lib/api/authCall";
