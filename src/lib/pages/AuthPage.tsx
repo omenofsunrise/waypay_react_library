@@ -2,9 +2,11 @@ import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import CustomPhoneInput from "../inputs/CustomPhoneInput";
 import AuthCallModal from "../modal/AuthCallModal";
+import AuthWhatsAppModal from "../modal/AuthWhatsAppModal";
 import {
   confirmCallAuth,
   initiateCallAuth,
+  type AuthWay,
   type UserType,
 } from "../api/authCall";
 import AuthNameModal from "../modal/AuthNameModal";
@@ -43,7 +45,9 @@ const AuthPage: React.FC<AuthPageProps> = ({
 }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [rawPhone, setRawPhone] = useState("");
+  const [authWay, setAuthWay] = useState<AuthWay>("CallCheck");
   const [showCallModal, setShowCallModal] = useState(false);
+  const [showWhatsAppModal, setShowWhatsAppModal] = useState(false);
   const [callPhone, setCallPhone] = useState("");
   const [verificationError, setVerificationError] = useState("");
   const [isVerifying, setIsVerifying] = useState(false);
@@ -77,6 +81,7 @@ const AuthPage: React.FC<AuthPageProps> = ({
 
   const closeAllModals = () => {
     setShowCallModal(false);
+    setShowWhatsAppModal(false);
     setShowNameModal(false);
     setFullName("");
     setNameError("");
@@ -98,7 +103,7 @@ const AuthPage: React.FC<AuthPageProps> = ({
     const normalizedPhone = normalizePhone(rawPhone);
 
     try {
-      const response = await initiateCallAuth(normalizedPhone, userType);
+      const response = await initiateCallAuth(normalizedPhone, userType, authWay);
       
       setPendingAuthData({
         phone: normalizedPhone,
@@ -116,6 +121,8 @@ const AuthPage: React.FC<AuthPageProps> = ({
           "Этот номер не зарегистрирован в системе. Обратитесь в поддержку для регистрации."
         );
         setPendingAuthData(null);
+      } else if (authWay === "WhatsAppCode") {
+        setShowWhatsAppModal(true);
       } else {
         setCallPhone(response.call_phone);
         setShowCallModal(true);
@@ -153,9 +160,12 @@ const AuthPage: React.FC<AuthPageProps> = ({
       
       setShowNameModal(false);
       
-      setShowCallModal(true);
-      
-      startVerificationPolling(pendingAuthData.phone, pendingAuthData.checkId, name);
+      if (authWay === "WhatsAppCode") {
+        setShowWhatsAppModal(true);
+      } else {
+        setShowCallModal(true);
+        startVerificationPolling(pendingAuthData.phone, pendingAuthData.checkId, name);
+      }
     } catch (error: unknown) {
       console.error("Registration error:", error);
       setNameError("Не удалось завершить регистрацию");
@@ -179,7 +189,13 @@ const AuthPage: React.FC<AuthPageProps> = ({
 
     setIsVerifying(true);
     try {
-      const response = await confirmCallAuth(phone, id, userType, name || fullName);
+      const response = await confirmCallAuth(
+        phone,
+        id,
+        userType,
+        name || fullName,
+        "CallCheck",
+      );
       if ((response.access_token && response.refresh_token) || (response.accessToken && response.refreshToken)) {
 
         if (verificationInterval.current) {
@@ -193,6 +209,42 @@ const AuthPage: React.FC<AuthPageProps> = ({
       }
     } catch (error) {
       console.error("Verification error:", error);
+    } finally {
+      setIsVerifying(false);
+    }
+  };
+
+  const verifyWhatsAppCode = async (code: string) => {
+    if (isVerifying || !pendingAuthData) return;
+
+    setIsVerifying(true);
+    setVerificationError("");
+    try {
+      const response = await confirmCallAuth(
+        pendingAuthData.phone,
+        code,
+        userType,
+        fullName || undefined,
+        "WhatsAppCode",
+      );
+
+      if (
+        (response.access_token && response.refresh_token) ||
+        (response.accessToken && response.refreshToken)
+      ) {
+        setShowWhatsAppModal(false);
+        setFullName("");
+        setPendingAuthData(null);
+        onLoginSuccess(response.access_token ?? response.accessToken);
+      } else {
+        setVerificationError("Неверный код. Попробуйте ещё раз.");
+      }
+    } catch (error: unknown) {
+      console.error("WhatsApp verification error:", error);
+      const message = error instanceof Error ? error.message : undefined;
+      setVerificationError(
+        message || "Неверный код. Попробуйте ещё раз.",
+      );
     } finally {
       setIsVerifying(false);
     }
@@ -213,6 +265,27 @@ const AuthPage: React.FC<AuthPageProps> = ({
               />
             </InputContainer>
           </FormGroup>
+
+          <MethodToggle role="tablist" aria-label="Способ авторизации">
+            <MethodOption
+              type="button"
+              role="tab"
+              aria-selected={authWay === "CallCheck"}
+              $active={authWay === "CallCheck"}
+              onClick={() => setAuthWay("CallCheck")}
+            >
+              Звонок
+            </MethodOption>
+            <MethodOption
+              type="button"
+              role="tab"
+              aria-selected={authWay === "WhatsAppCode"}
+              $active={authWay === "WhatsAppCode"}
+              onClick={() => setAuthWay("WhatsAppCode")}
+            >
+              WhatsApp
+            </MethodOption>
+          </MethodToggle>
 
           {verificationError && (
             <ErrorBanner>
@@ -254,6 +327,15 @@ const AuthPage: React.FC<AuthPageProps> = ({
         isOpen={showCallModal}
         onClose={closeAllModals}
         callPhone={callPhone}
+        error={verificationError}
+      />
+
+      <AuthWhatsAppModal
+        isOpen={showWhatsAppModal}
+        onClose={closeAllModals}
+        onSubmit={verifyWhatsAppCode}
+        phone={pendingAuthData?.phone ?? normalizePhone(rawPhone)}
+        isVerifying={isVerifying}
         error={verificationError}
       />
     </AuthContainer>
@@ -328,6 +410,33 @@ const Title = styled.h1`
 
 const FormGroup = styled.div`
   margin-bottom: 25px;
+`;
+
+const MethodToggle = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  padding: 4px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background: #f1f4f5;
+`;
+
+const MethodOption = styled.button<{ $active: boolean }>`
+  border: 0;
+  border-radius: 8px;
+  padding: 11px 14px;
+  color: ${({ $active }) => ($active ? "#ffffff" : "#667085")};
+  background: ${({ $active }) =>
+    $active
+      ? "linear-gradient(90deg, rgba(0, 125, 136, 1), rgba(37, 203, 161, 1))"
+      : "transparent"};
+  box-shadow: ${({ $active }) =>
+    $active ? "0 2px 8px rgba(0, 125, 136, 0.18)" : "none"};
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
 `;
 
 const InputContainer = styled.div`
